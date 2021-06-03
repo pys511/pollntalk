@@ -1,0 +1,564 @@
+<?php
+?>
+<div class="messagecontent">
+	<!-- 구입 쿠폰 상황 시작 -->
+	<div class="messagestatus">
+		<div class="messagebox title">
+			<span>구입 쿠폰</span>
+		</div>
+	</div>
+	<div class="pointstatus">
+		<!-- 쿠폰 목록 영역 시작 -->
+		<div class="table">
+			<div class="tablebox">
+				<div class="tableborder">
+					<div class="tablefield">
+						<div class="defaulttableitem wrline">
+							<span>구입 쿠폰</span>
+						</div>
+						<div class="defaulttableitemshort wrline">
+							<span>구입일</span>
+						</div>
+						<div class="defaulttableitemshort wrline">
+							<span>포인트 사용</span>
+						</div>
+						<div class="defaulttableitemshort wrline">
+							<span>쿠폰 유효기간</span>
+						</div>
+						<div class="defaulttableitemshort">
+							<span>사용현황</span>
+						</div>
+					</div>
+					<div class="tablelist">
+						<!-- 쿠폰 요약 목록 시작 -->
+						<ul>
+							<li>
+								<div class="defaulttableli">
+									<div class="defaulttableitem wrline">
+										<div class="defaulttablefield mline">
+											<span>구입 쿠폰</span>
+										</div>
+										<div class="defaulttabledata mrline">
+											<span>삼성카드 혜택 이벤트</span>
+										</div>
+									</div>
+									<div class="defaulttableitemshort wrline">
+										<div class="defaulttablefield mline">
+											<span>구입일</span>
+										</div>
+										<div class="defaulttabledata mrline">
+											<span>2020.07.04</span>
+										</div>
+									</div>
+									<div class="pointnumbershort wrline">
+										<div class="defaulttablefield mline">
+											<span>포인트 사용</span>
+										</div>
+										<div class="defaulttabledata mrline">
+											<span>12500p</span>
+										</div>
+									</div>
+									<div class="defaulttableitemshort wrline">
+										<div class="defaulttablefield mline">
+											<span>쿠폰 유효기간</span>
+										</div>
+										<div class="defaulttabledata mrline">
+											<span>2020.08.05</span>
+										</div>
+									</div>
+									<div class="defaulttableitemshort ">
+										<div class="defaulttablefield mline mbline">
+											<span>사용 현황</span>
+										</div>
+										<div class="defaulttabledata mrline mbline">
+											<span>사용 대기</span>
+										</div>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="defaulttableli">
+									<div class="defaulttableitem wrline">
+										<div class="defaulttablefield mline">
+											<span>구입 쿠폰</span>
+										</div>
+										<div class="defaulttabledata mrline">
+											<span>삼성카드 혜택 이벤트</span>
+										</div>
+									</div>
+									<div class="defaulttableitemshort wrline">
+										<div class="defaulttablefield mline">
+											<span>구입일</span>
+										</div>
+										<div class="defaulttabledata mrline">
+											<span>2020.07.04</span>
+										</div>
+									</div>
+									<div class="pointnumbershort wrline">
+										<div class="defaulttablefield mline">
+											<span>포인트 사용</span>
+										</div>
+										<div class="defaulttabledata mrline">
+											<span>12500p</span>
+										</div>
+									</div>
+									<div class="defaulttableitemshort wrline">
+										<div class="defaulttablefield mline">
+											<span>쿠폰 유효기간</span>
+										</div>
+										<div class="defaulttabledata mrline">
+											<span>2020.08.05</span>
+										</div>
+									</div>
+									<div class="defaulttableitemshort ">
+										<div class="defaulttablefield mline mbline">
+											<span>사용 현황</span>
+										</div>
+										<div class="defaulttabledata mrline mbline">
+											<span>사용 대기</span>
+										</div>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="defaulttableli">
+									<div class="defaulttableitem wrline">
+										<div class="defaulttablefield mline">
+											<span>구입 쿠폰</span>
+										</div>
+										<div class="defaulttabledata mrline">
+											<span>삼성카드 혜택 이벤트</span>
+										</div>
+									</div>
+									<div class="defaulttableitemshort wrline">
+										<div class="defaulttablefield mline">
+											<span>구입일</span>
+										</div>
+										<div class="defaulttabledata mrline">
+											<span>2020.07.04</span>
+										</div>
+									</div>
+									<div class="pointnumbershort wrline">
+										<div class="defaulttablefield mline">
+											<span>포인트 사용</span>
+										</div>
+										<div class="defaulttabledata mrline">
+											<span>12500p</span>
+										</div>
+									</div>
+									<div class="defaulttableitemshort wrline">
+										<div class="defaulttablefield mline">
+											<span>쿠폰 유효기간</span>
+										</div>
+										<div class="defaulttabledata mrline">
+											<span>2020.08.05</span>
+										</div>
+									</div>
+									<div class="defaulttableitemshort ">
+										<div class="defaulttablefield mline mbline">
+											<span>사용 현황</span>
+										</div>
+										<div class="defaulttabledata mrline mbline">
+											<span>사용 대기</span>
+										</div>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="defaulttableli">
+									<div class="defaulttableitem wrline">
+										<div class="defaulttablefield mline">
+											<span>구입 쿠폰</span>
+										</div>
+										<div class="defaulttabledata mrline">
+											<span>삼성카드 혜택 이벤트</span>
+										</div>
+									</div>
+									<div class="defaulttableitemshort wrline">
+										<div class="defaulttablefield mline">
+											<span>구입일</span>
+										</div>
+										<div class="defaulttabledata mrline">
+											<span>2020.07.04</span>
+										</div>
+									</div>
+									<div class="pointnumbershort wrline">
+										<div class="defaulttablefield mline">
+											<span>포인트 사용</span>
+										</div>
+										<div class="defaulttabledata mrline">
+											<span>12500p</span>
+										</div>
+									</div>
+									<div class="defaulttableitemshort wrline">
+										<div class="defaulttablefield mline">
+											<span>쿠폰 유효기간</span>
+										</div>
+										<div class="defaulttabledata mrline">
+											<span>2020.08.05</span>
+										</div>
+									</div>
+									<div class="defaulttableitemshort ">
+										<div class="defaulttablefield mline mbline">
+											<span>사용 현황</span>
+										</div>
+										<div class="defaulttabledata mrline mbline">
+											<span>사용 대기</span>
+										</div>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="defaulttableli">
+									<div class="defaulttableitem wrline">
+										<div class="defaulttablefield mline">
+											<span>구입 쿠폰</span>
+										</div>
+										<div class="defaulttabledata mrline">
+											<span>삼성카드 혜택 이벤트</span>
+										</div>
+									</div>
+									<div class="defaulttableitemshort wrline">
+										<div class="defaulttablefield mline">
+											<span>구입일</span>
+										</div>
+										<div class="defaulttabledata mrline">
+											<span>2020.07.04</span>
+										</div>
+									</div>
+									<div class="pointnumbershort wrline">
+										<div class="defaulttablefield mline">
+											<span>포인트 사용</span>
+										</div>
+										<div class="defaulttabledata mrline">
+											<span>12500p</span>
+										</div>
+									</div>
+									<div class="defaulttableitemshort wrline">
+										<div class="defaulttablefield mline">
+											<span>쿠폰 유효기간</span>
+										</div>
+										<div class="defaulttabledata mrline">
+											<span>2020.08.05</span>
+										</div>
+									</div>
+									<div class="defaulttableitemshort ">
+										<div class="defaulttablefield mline mbline">
+											<span>사용 현황</span>
+										</div>
+										<div class="defaulttabledata mrline mbline">
+											<span>사용 대기</span>
+										</div>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="defaulttableli">
+									<div class="defaulttableitem wrline">
+										<div class="defaulttablefield mline">
+											<span>구입 쿠폰</span>
+										</div>
+										<div class="defaulttabledata mrline">
+											<span>삼성카드 혜택 이벤트</span>
+										</div>
+									</div>
+									<div class="defaulttableitemshort wrline">
+										<div class="defaulttablefield mline">
+											<span>구입일</span>
+										</div>
+										<div class="defaulttabledata mrline">
+											<span>2020.07.04</span>
+										</div>
+									</div>
+									<div class="pointnumbershort wrline">
+										<div class="defaulttablefield mline">
+											<span>포인트 사용</span>
+										</div>
+										<div class="defaulttabledata mrline">
+											<span>12500p</span>
+										</div>
+									</div>
+									<div class="defaulttableitemshort wrline">
+										<div class="defaulttablefield mline">
+											<span>쿠폰 유효기간</span>
+										</div>
+										<div class="defaulttabledata mrline">
+											<span>2020.08.05</span>
+										</div>
+									</div>
+									<div class="defaulttableitemshort ">
+										<div class="defaulttablefield mline mbline">
+											<span>사용 현황</span>
+										</div>
+										<div class="defaulttabledata mrline mbline">
+											<span>사용 대기</span>
+										</div>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="defaulttableli">
+									<div class="defaulttableitem wrline">
+										<div class="defaulttablefield mline">
+											<span>구입 쿠폰</span>
+										</div>
+										<div class="defaulttabledata mrline">
+											<span>삼성카드 혜택 이벤트</span>
+										</div>
+									</div>
+									<div class="defaulttableitemshort wrline">
+										<div class="defaulttablefield mline">
+											<span>구입일</span>
+										</div>
+										<div class="defaulttabledata mrline">
+											<span>2020.07.04</span>
+										</div>
+									</div>
+									<div class="pointnumbershort wrline">
+										<div class="defaulttablefield mline">
+											<span>포인트 사용</span>
+										</div>
+										<div class="defaulttabledata mrline">
+											<span>12500p</span>
+										</div>
+									</div>
+									<div class="defaulttableitemshort wrline">
+										<div class="defaulttablefield mline">
+											<span>쿠폰 유효기간</span>
+										</div>
+										<div class="defaulttabledata mrline">
+											<span>2020.08.05</span>
+										</div>
+									</div>
+									<div class="defaulttableitemshort ">
+										<div class="defaulttablefield mline mbline">
+											<span>사용 현황</span>
+										</div>
+										<div class="defaulttabledata mrline mbline">
+											<span>사용 대기</span>
+										</div>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="defaulttableli">
+									<div class="defaulttableitem wrline">
+										<div class="defaulttablefield mline">
+											<span>구입 쿠폰</span>
+										</div>
+										<div class="defaulttabledata mrline">
+											<span>삼성카드 혜택 이벤트</span>
+										</div>
+									</div>
+									<div class="defaulttableitemshort wrline">
+										<div class="defaulttablefield mline">
+											<span>구입일</span>
+										</div>
+										<div class="defaulttabledata mrline">
+											<span>2020.07.04</span>
+										</div>
+									</div>
+									<div class="pointnumbershort wrline">
+										<div class="defaulttablefield mline">
+											<span>포인트 사용</span>
+										</div>
+										<div class="defaulttabledata mrline">
+											<span>12500p</span>
+										</div>
+									</div>
+									<div class="defaulttableitemshort wrline">
+										<div class="defaulttablefield mline">
+											<span>쿠폰 유효기간</span>
+										</div>
+										<div class="defaulttabledata mrline">
+											<span>2020.08.05</span>
+										</div>
+									</div>
+									<div class="defaulttableitemshort ">
+										<div class="defaulttablefield mline mbline">
+											<span>사용 현황</span>
+										</div>
+										<div class="defaulttabledata mrline mbline">
+											<span>사용 대기</span>
+										</div>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="defaulttableli">
+									<div class="defaulttableitem wrline">
+										<div class="defaulttablefield mline">
+											<span>구입 쿠폰</span>
+										</div>
+										<div class="defaulttabledata mrline">
+											<span>삼성카드 혜택 이벤트</span>
+										</div>
+									</div>
+									<div class="defaulttableitemshort wrline">
+										<div class="defaulttablefield mline">
+											<span>구입일</span>
+										</div>
+										<div class="defaulttabledata mrline">
+											<span>2020.07.04</span>
+										</div>
+									</div>
+									<div class="pointnumbershort wrline">
+										<div class="defaulttablefield mline">
+											<span>포인트 사용</span>
+										</div>
+										<div class="defaulttabledata mrline">
+											<span>12500p</span>
+										</div>
+									</div>
+									<div class="defaulttableitemshort wrline">
+										<div class="defaulttablefield mline">
+											<span>쿠폰 유효기간</span>
+										</div>
+										<div class="defaulttabledata mrline">
+											<span>2020.08.05</span>
+										</div>
+									</div>
+									<div class="defaulttableitemshort ">
+										<div class="defaulttablefield mline mbline">
+											<span>사용 현황</span>
+										</div>
+										<div class="defaulttabledata mrline mbline">
+											<span>사용 대기</span>
+										</div>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="defaulttableli">
+									<div class="defaulttableitem wrline">
+										<div class="defaulttablefield mline">
+											<span>구입 쿠폰</span>
+										</div>
+										<div class="defaulttabledata mrline">
+											<span>삼성카드 혜택 이벤트</span>
+										</div>
+									</div>
+									<div class="defaulttableitemshort wrline">
+										<div class="defaulttablefield mline">
+											<span>구입일</span>
+										</div>
+										<div class="defaulttabledata mrline">
+											<span>2020.07.04</span>
+										</div>
+									</div>
+									<div class="pointnumbershort wrline">
+										<div class="defaulttablefield mline">
+											<span>포인트 사용</span>
+										</div>
+										<div class="defaulttabledata mrline">
+											<span>12500p</span>
+										</div>
+									</div>
+									<div class="defaulttableitemshort wrline">
+										<div class="defaulttablefield mline">
+											<span>쿠폰 유효기간</span>
+										</div>
+										<div class="defaulttabledata mrline">
+											<span>2020.08.05</span>
+										</div>
+									</div>
+									<div class="defaulttableitemshort ">
+										<div class="defaulttablefield mline mbline">
+											<span>사용 현황</span>
+										</div>
+										<div class="defaulttabledata mrline mbline">
+											<span>사용 대기</span>
+										</div>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="defaulttableli">
+									<div class="defaulttableitem wrline">
+										<div class="defaulttablefield mline">
+											<span>구입 쿠폰</span>
+										</div>
+										<div class="defaulttabledata mrline">
+											<span>삼성카드 혜택 이벤트</span>
+										</div>
+									</div>
+									<div class="defaulttableitemshort wrline">
+										<div class="defaulttablefield mline">
+											<span>구입일</span>
+										</div>
+										<div class="defaulttabledata mrline">
+											<span>2020.07.04</span>
+										</div>
+									</div>
+									<div class="pointnumbershort wrline">
+										<div class="defaulttablefield mline">
+											<span>포인트 사용</span>
+										</div>
+										<div class="defaulttabledata mrline">
+											<span>12500p</span>
+										</div>
+									</div>
+									<div class="defaulttableitemshort wrline">
+										<div class="defaulttablefield mline">
+											<span>쿠폰 유효기간</span>
+										</div>
+										<div class="defaulttabledata mrline">
+											<span>2020.08.05</span>
+										</div>
+									</div>
+									<div class="defaulttableitemshort ">
+										<div class="defaulttablefield mline mbline">
+											<span>사용 현황</span>
+										</div>
+										<div class="defaulttabledata mrline mbline">
+											<span>사용 대기</span>
+										</div>
+									</div>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<!-- 쿠폰 요약 목록 끝 -->
+				<!-- 페이징 시작 -->
+				<div class="paging">
+					<div class="pagingbutton pageleft pagenavinoselect"></div>
+					<div class="pagingbutton">
+						<span>1</span>
+					</div>
+					<div class="pagingbutton pageselect">
+						<span>2</span>
+					</div>
+					<div class="pagingbutton">
+						<span>3</span>
+					</div>
+					<div class="pagingbutton">
+						<span>4</span>
+					</div>
+					<div class="pagingbutton">
+						<span>5</span>
+					</div>
+					<div class="pagingbutton">
+						<span>6</span>
+					</div>
+					<div class="pagingbutton">
+						<span>7</span>
+					</div>
+					<div class="pagingbutton">
+						<span>8</span>
+					</div>
+					<div class="pagingbutton">
+						<span>9</span>
+					</div>
+					<div class="pagingbutton">
+						<span>10</span>
+					</div>
+					<div class="pagingbutton pageright pagenaviselect"></div>
+				</div>
+				<!-- 페이징 끝 -->
+			</div>
+		</div>
+		<!-- 쿠폰 목록 영역 끝 -->
+	</div>
+	<!-- 쿠폰 현황 끝 -->
+</div>

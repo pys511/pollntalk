@@ -1,0 +1,118 @@
+<?php
+/**
+ *  @auth   : 
+ *  @date   : 
+ *  
+ */
+try {
+    // 공지 사항 처리
+    $num = $_GET["num"];
+    $ask = new CApp_Handler_Admin_board();
+    $result = $ask->getBoardContext("notice", $num);
+    
+} catch (CException $ex) {
+    $ex->printException();
+}
+
+?>
+<!doctype html>
+<html id="start" xmlns="http://www.w3.org/1999/xhtml">
+<?php
+require_once ('./app/view/admin/header.php');
+?>
+<body id="body">
+	<div id="mobilemenu" class="mobileMenu" style="display: none;">
+		<!-- 서브메뉴 -->
+	</div>
+	<div class="pageArea">
+<?php
+require_once ('./app/view/admin/common.php');
+?>	
+		<div id="content" class="pageBox">
+			<!-- content -->
+			<div class="contentArea">
+<?php
+require_once ('./app/view/admin/submenu.php');
+?>
+            <!-- 컨탠츠 -->
+				<div class="contentBox">
+					<form id="frmBoardInfo" action="/?request=admin" method="post">
+						<div class="boardTitle">
+							<img src="/app/images/admin/title_mark.gif" /> <span>게시글 내용</span>
+						</div>
+						<!-- 관리자 등록 -->
+						<div class="boardBox">
+							<input type="hidden" id="board_seq" name="board_seq"/> 
+							<input type="hidden" id="board_type" name="board_type"/> 
+							<input type="hidden" id="board_kind" name="board_kind"/>
+							<div class="boardWriteItem">
+								<div class="boardName">
+									<span>제목</span>
+								</div>
+								<div class="boardInputBox">
+									<span id="board_subject"><?php echo($result[0]["subject"]); ?></span>
+								</div>
+							</div>
+							<div class="boardWriteItem">
+								<div class="boardName">
+									<span>작성자</span>
+								</div>
+								<div class="boardInputBox">
+									<span id="writer"><?php echo($result[0]["ADMINNAME"]); ?></span>
+								</div>
+							</div>
+							<div class="boardWriteItem">
+								<div class="boardName">
+									<span>등록일</span>
+								</div>
+								<div class="boardInputBox">
+									<span id="update_date"><?php echo($result[0]["creat_date"]); ?></span>
+								</div>
+							</div>
+							<div class="boardWriteItem">
+								<div class="boardName">
+									<span>조회수</span>
+								</div>
+								<div class="boardInputBox">
+									<span id="view_count"><?php echo($result[0]["count"]); ?></span>
+								</div>
+							</div>
+							<div class="boardWriteItem">
+								<div class="boardName">
+									<span>내용</span>
+								</div>
+								<div class="boardContextBox" id="context"><?php echo($result[0]["context"]); ?></div>
+							</div>
+						</div>
+						<!-- 버튼 -->
+						<div class="boardListButtonBox">
+							<div id="registerArticle" class="buttonBox">
+								<a href="/admin_manager.php?mode=boardnoticewrite&num=<?php echo($result[0]["num"]); ?>">
+								<span class="buttonText">수정하기</span>
+								</a>
+							</div>
+							<div id="deleteArticle" class="buttonBox">
+								<a href="#">
+								<span class="buttonText">삭제하기</span>
+								</a>
+							</div>
+							<div id="boardListBack" class="buttonBox">
+								<a href="/admin_manager.php?mode=boardnoticelist">
+								<span class="buttonText">목 록</span>
+								</a>
+							</div>
+						</div>
+
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript" src="/app/js/editor.js">
+	</script>
+
+<?php
+require_once ('./app/view/admin/footer.php');
+?>
+</body>
+</html>

@@ -1,0 +1,785 @@
+@CHARSET "UTF-8";
+
+.contentBox 
+{
+	float: left;
+}
+
+.contentBox .boardTitle 
+{
+	float: left;
+	width: 100%;
+	padding: 5px 5px 5px 5px;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	margin-bottom: 5px;
+}
+
+.contentBox .boardTitle img 
+{
+	float: left;
+	margin-right: 10px;
+}
+
+.contentBox .boardTitle span 
+{
+	float: left;
+	font-weight: bold;
+}
+
+.contentBox .boardArea 
+{
+	float: left;
+	width: 100%;
+}
+
+.contentBox .boardBox 
+{
+	float: left;
+	width: 100%;
+	margin-bottom: 10px;
+}
+
+.contentBox .boardBox span 
+{
+	float: left;
+}
+
+.contentBox .boardBox .boardList 
+{
+	float: left;
+	width: 100%;
+}
+
+.contentBox .boardBox .boardList ul 
+{
+	float: left;
+	width: 100%;
+	margin: 10px 0px 10px 0px;
+	padding: 5px 5px 0px 5px;
+	list-style: none;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.contentBox .boardBox .boardList ul li 
+{
+	float: left;
+	width: 100%;
+	text-align: center;
+	margin-bottom: 15px;
+	color: #304777;
+}
+
+.contentBox .boardBox .boardList ul li .boardListItem 
+{
+	float: left;
+	width: 100%;
+}
+
+.contentBox .boardBox .borderListItemGuide 
+{
+	float: left;
+	width: 100%;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	padding: 5px 5px 5px 5px;
+}
+
+.contentBox .boardBox .borderListItemBox, .contentBox .boardBox .borderListItemBox img,
+.contentBox .boardBox .borderListItemBox div 
+{
+	float: left;
+}
+
+.contentBox .boardBox .boardListItemCell 
+{
+	float: left;
+}
+
+.contentBox .boardBox .boardListItemCell span 
+{
+	width: 100%;
+}
+
+.contentBox .boardBox .boardListItemTop 
+{
+	float: left;
+}
+
+.contentBox .boardBox .boardListItemBottom 
+{
+	float: left;
+}
+
+.contentBox .boardBox .votewriteitem 
+{
+	border-bottom: 1px #9d1cd9 solid;
+	margin-bottom: 20px;
+}
+
+.contentBox .boardBox .boardWriteItem 
+{
+	float: left;
+	width: 100%;
+	border-bottom: 1px #91b2e0 solid;
+}
+
+.contentBox .boardBox .boardName, .contentBox .boardBox .boardLineItem .boardItemName
+{
+	float: left;
+	height: 35px;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.contentBox .boardBox .boardName 
+{
+	padding: 12px 5px 0px 5px;
+}
+
+.contentBox .boardBox .boardLineItem .boardItemName 
+{
+	padding: 5px 5px 5px 5px;
+}
+
+.contentBox .boardBox .boardName 
+{
+	background-color: #afc8e9;
+}
+
+.contentBox .boardBox .boardWriteItem .boardName span 
+{
+	float: left;
+	width: 100%;
+	text-align: center;
+	font-weight: bold;
+	color: #304777;
+}
+
+.contentBox .boardBox .boardLineItem .boardItemName 
+{
+	float: left;
+	border-right: 1px #91b2e0 solid;
+}
+
+.contentBox .boardBox .boardLineItem .boardItemName input 
+{
+	float: left;
+}
+
+.contentBox .boardBox .boardLineItem .boardItemName span 
+{
+	float: left;
+	margin-top: 5px;
+}
+
+.contentBox .boardBox .boardLineItem .boardItemContext 
+{
+	float: left;
+	padding: 5px 5px 5px 5px;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.contentBox .boardBox .boardLineItem .boardItemContext input,
+.contentBox .boardBox .boardLineItem .boardItemContext span 
+{
+	float: left;
+}
+
+.contentBox .boardBox .boardLineItem .boardItemContext span 
+{
+	margin-top: 5px;
+	margin-right: 5px;
+}
+
+.contentBox .boardListButtonBox 
+{
+	float: left;
+	width: 100%;
+	margin-bottom: 10px;
+}
+
+.contentBox .boardListButtonBox .buttonBox 
+{
+	float: right;
+}
+
+.contentBox .boardListButtonBox .buttonLeftBox 
+{
+	float: left;
+}
+
+.contentBox .boardListButtonBox .buttonBox, .contentBox .boardListButtonBox .buttonLeftBox
+{
+	height: 30px;
+	background-image: url('/app/images/admin/buttonback.png');
+	text-align: center;
+	padding: 8px 5px 0px 5px;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	border: 1px #91b2e0 solid;
+	margin-left: 1px;
+	margin-right: 1px;
+}
+
+.contentBox .boardListButtonBox .boardPaging 
+{
+	float: left;
+}
+
+.contentBox .boardBox .boardInputBox, .contentBox .boardBox .boardThumb,
+.contentBox .boardBox .boardImageInputBox, .contentBox .boardBox .boardTopInputBox,
+.contentBox .boardBox .boardLargeInputBox, .contentBox .boardBox .boardContextBox
+{
+	float: left;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	padding: 5px 5px 5px 5px;
+}
+
+.contentBox .boardBox .boardInputBox input, .contentBox .boardBox .boardTopInputBox input,
+.contentBox .boardBox .boardImageInputBox input, .contentBox .boardBox .boardLargeInputBox input,
+.contentBox .boardBox .boardLargeInputBox input, .contentBox .boardBox .boardLargeInputBox textarea
+{
+	float: left;
+	margin-right: 5px;
+}
+
+.contentBox .boardBox .boardInputBox .inputDefault, .contentBox .boardBox .boardImageInputBox .inputDefault,
+.contentBox .boardBox .boardTopInputBox .inputDefault, .contentBox .boardBox .boardLargeInputBox .inputDefault,
+.contentBox .boardBox .boardLargeInputBox .inputDefault 
+{
+	width: 100px;
+}
+
+.contentBox .boardBox .boardInputBox select, .contentBox .boardBox .boardImageInputBox select,
+.contentBox .boardBox .boardTopInputBox select, .contentBox .boardBox .boardLargeInputBox select,
+.contentBox .boardBox .boardLargeInputBox select 
+{
+	float: left;
+}
+
+.contentBox .boardBox .boardInputBox .inputName, .contentBox .boardBox .boardImageInputBox .inputName,
+.contentBox .boardBox .boardTopInputBox .inputName, .contentBox .boardBox .boardLargeInputBox .inputName,
+.contentBox .boardBox .boardLargeInputBox .inputName 
+{
+	float: left;
+	margin-top: 5px;
+	margin-left: 5px;
+	margin-right: 5px;
+}
+
+.contentBox .boardBox .boardInputBox .boardInputItem, .contentBox .boardBox .boardImageInputBox .boardInputItem,
+.contentBox .boardBox .boardTopInputBox .boardInputItem, .contentBox .boardBox .boardLargeInputBox .boardInutItem,
+.contentBox .boardBox .boardLargeInputBox .boardInputItem 
+{
+	float: left;
+}
+
+.contentBox .boardBox .boardInputBox span, .contentBox .boardBox .boardImageInputBox span,
+.contentBox .boardBox .boardTopInputBox span, .contentBox .boardBox .boardLargeInputBox span,
+.contentBox .boardBox .boardLargeInputBox span 
+{
+	font-size: 14px;
+}
+
+.contentBox .boardBox .boardInputBox img, .contentBox .boardBox .boardImageInputBox img,
+.contentBox .boardBox .boardTopInputBox img, .contentBox .boardBox .boardLargeInputBox img,
+.contentBox .boardBox .boardLargeInputBox img 
+{
+	float: left;
+}
+
+.contentBox .boardBox .boardImageInputBox 
+{
+	margin-bottom: 10px;
+}
+
+.contentBox .boardBox .boardImageInputBox .imageList 
+{
+	float: left;
+	width: calc(100% - 145px);
+}
+
+.boardinputarea
+{
+	float: left;
+	width: 100%;
+	margin-bottom: 5px;
+}
+
+.boardinputarea iframe
+{
+	float: left;
+}
+
+.uploadBox 
+{
+	float: left;
+	width: 100%;
+	padding: 5px 5px 5px 5px;
+	margin-bottom: 5px;
+	border: 1px #7790ba solid;
+}
+
+.uploadBox .imageList 
+{
+	width: calc(100% - 145px);
+}
+
+.uploadButton 
+{
+	float: right;
+	margin-top: 7px;
+}
+
+.imageBox 
+{
+	float: left;
+	width: 50px;
+	height: 50px;
+	margin-right: 5px;
+	padding: 5px 5px 5px 5px;
+}
+
+.imageBox .thumb 
+{
+	position: absolute;
+	margin-left: -15px;
+	width: 40px;
+	height: 40px;
+}
+
+.imageBox .del 
+{
+	position: relative;
+	top: -5px;
+	left: 35px;
+	z-index: 101;
+}
+
+.contentBox .boardBox .buttonBox 
+{
+	float: left;
+}
+
+.contentBox .boardBox .buttonrightBox 
+{
+	float: right;
+}
+
+.contentBox .boardBox .boardLineItem 
+{
+	float: left;
+	width: 100%;
+	border-bottom: 1px #91b2e0 solid;
+}
+
+.contentBox .boardBox .boardContextBox .images, .contentBox .boardBox .boardContextBox .images img
+{
+	width: 95%;
+}
+
+.contentBox .boardBox .boardContextBox, .contentBox .boardBox .boardListItemBottom .fieldLong
+{
+	width: 100%;
+}
+
+.editToolBox 
+{
+	float: left;
+	width: 100%;
+}
+
+.editToolBox select 
+{
+	float: left;
+	margin-right: 5px;
+}
+
+.editToolGroup 
+{
+	float: left;
+	width: 70%;
+}
+
+.editToolGroup a 
+{
+	float: left;
+	margin-right: 5px;
+}
+
+.subContentWriteControl 
+{
+	float: left;
+	width: 100%;
+	padding: 5px;
+	margin-bottom: 5px;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.subContentWriteControl 
+{
+	border: 1px #b8c5f0 solid;
+	background-color: #e1e6f7;
+}
+
+.subContentWriteControl .buttonFontGroup .contentListButton,
+.subContentWriteControl .buttonStyleGroup .contentListButton,
+.subContentWriteControl .buttonContextGroup .contentListButton,
+.subContentWriteControl .buttonExtraGroup .contentListButton 
+{
+	float: left;
+	margin-left: -1px;
+}
+
+.subContentWriteControl .buttonText .buttonContextShort,
+.subContentWriteControl .buttonText .buttonContextLarge 
+{
+	float: left;
+}
+
+/*
+ *	버튼
+ */
+.contentListButton 
+{
+	height: 35px;
+	background-image: url('/app/images/buttonBack_02.gif');
+}
+
+.contentListButton .buttonLeft 
+{
+	float: left;
+}
+
+.contentListButton .buttonRight 
+{
+	float: right;
+}
+
+.contentListButton .buttonText 
+{
+	float: left;
+	padding: 10px 3px 10px 3px;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.contentListButton .buttonText span 
+{
+	float: left;
+	margin-top: 2px;
+	text-align: center;
+	color: #384d91;
+}
+
+.contentTextArea 
+{
+	float: left;
+	width: 100%;
+	margin-bottom: 5px;
+}
+
+.contentTextArea .contentTextBox 
+{
+	float: left;
+	width: 100%;
+	border: 1px #b8c5f0 solid;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.contentTextArea select
+{
+	float: left;
+	width: 350px;
+}
+
+.categorybox, .banklistbox 
+{
+	float: left;
+	width: 150px;
+	margin-right: 5px;
+}
+
+.categorybox span, .categorybox select, .banklistbox select 
+{
+	float: left;
+}
+
+.categorybox select 
+{
+	width: 130px;
+}
+
+.banklistbox select
+{
+	width: 250px;
+}
+
+.answer_lst_item 
+{
+	padding: 5px 10px 5px 10px;
+}
+
+.contentBox .boardBox .boardInputBox, .contentBox .boardBox .boardTopInputBox
+{
+	height: 35px;
+}
+
+.boardInputFileBox 
+{
+	height: 100px;
+}
+
+.contentBox .boardBox .boardLargeInputBox 
+{
+	height: 100px;
+}
+
+.contentBox 
+{
+	width: calc(100% - 230px);
+	margin: 10px 0px 0px 10px;
+}
+
+.contentBox .boardTitle span 
+{
+	font-size: 12px;
+	margin-top: 7px;
+}
+
+.contentBox .boardBox 
+{
+	border: 1px #91b2e0 solid;
+}
+
+.contentBox .boardBox .boardField 
+{
+	display: block;
+	float: left;
+	width: 100%;
+	padding: 5px 5px 5px 5px;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	background-color: #afc8e9;
+	border-bottom: 1px #91b2e0 solid;
+}
+
+.contentBox .boardBox .boardField span 
+{
+	font-size: 12px;
+	font-weight: bold;
+	color: #304777;
+	text-align: center;
+}
+
+.contentBox .boardBox .boardList ul li 
+{
+	font-size: 12px;
+}
+
+.contentBox .boardBox .boardListItemCell 
+{
+	width: 10%;
+}
+
+.contentBox .boardBox .borderListItemBox 
+{
+	width: 90%;
+}
+
+.contentBox .boardBox .boardListItemTop 
+{
+	width: 45%;
+}
+
+.contentBox .boardBox .boardListItemBottom 
+{
+	width: 55%;
+}
+
+/*
+.contentBox .boardBox .boardField .fieldCommon 
+{
+	width: 20%;
+}
+
+.contentBox .boardBox .boardField .fieldLong 
+{
+	width: 50%;
+}
+*/
+
+.contentBox .boardBox .fieldCommon 
+{
+	width: 20%;
+}
+
+.contentBox .boardBox .fieldLong 
+{
+	width: 50%;
+}
+
+.contentBox .boardBox .boardListItemBottom .fieldCommon 
+{
+	width: 40%;
+}
+
+.contentBox .boardBox .boardField .fieldDefault 
+{
+	width: 15%;
+}
+
+.contentBox .boardBox .boardListItemTop .fieldDefault 
+{
+	width: 37%;
+}
+
+.contentBox .boardBox .fieldDefault 
+{
+	width: 15%;
+}
+
+.contentBox .boardBox .fieldShortShort 
+{
+	float: left;
+	width: 30px;
+}
+
+.contentBox .boardBox .boardField .fieldGrade, .contentBox .boardBox .boardField .fieldNumber,
+.contentBox .boardBox .boardField .fieldShort 
+{
+	width: 10%;
+}
+
+.contentBox .boardBox .boardListItem .fieldGrade, .contentBox .boardBox .boardListItem .fieldNumber,
+.contentBox .boardBox .boardListItem .fieldShort 
+{
+	width: 10%;
+}
+
+.contentBox .boardBox .boardListItemBottom 
+.fieldGrade, .contentBox .boardBox .boardListItemBottom .fieldNumber 
+{
+	width: 20%;
+}
+
+.fieldCommonMobile 
+{
+	display: none;
+}
+
+.contentBox .boardBox .boardInputBox, .contentBox .boardBox .boardThumb,
+.contentBox .boardBox .boardImageInputBox, .contentBox .boardBox .boardContextBox
+{
+	width: calc(100% - 150px);
+}
+
+.contentBox .boardBox .boardTopInputBox, .contentBox .boardBox .boardLargeInputBox,
+.contentBox .boardBox .boardLargeInputBox 
+{
+	width: calc(100% - 25px);
+}
+
+.contentBox .boardBox .boardInputBox .boardInputItem, .contentBox .boardBox .boardImageInputBox .boardInputItem,
+.contentBox .boardBox .boardTopInputBox .boardInputItem, .contentBox .boardBox .boardLargeInputBox .boardInputItem,
+.contentBox .boardBox .boardLargeInputBox .boardInputItem 
+{
+	margin-right: 5px;
+}
+
+.contentBox .boardBox .boardInputBox .inputName, .contentBox .boardBox .boardImageInputBox .inputName,
+.contentBox .boardBox .boardTopInputBox .inputName, .contentBox .boardBox .boardLargeInputBox .inputName,
+.contentBox .boardBox .boardLargeInputBox .inputName 
+{
+	font-size: 12px;
+}
+
+.contentBox .boardBox .boardName 
+{
+	width: 150px;
+}
+
+.contentBox .boardBox .boardLineItem .boardItemName 
+{
+	width: 115px;
+}
+
+.contentBox .boardBox .boardLineItem .boardItemContext 
+{
+	width: calc(100% - 115px);
+}
+
+.contentBox .boardBox .boardWriteItem .boardName span, .contentBox .boardBox .boardLineItem .boardItemName span,
+.contentBox .boardBox .boardLineItem .boardItemContext span 
+{
+	font-size: 12px;
+}
+
+.subContentWriteControl .buttonFontGroup 
+{
+	float: left;
+	width: 115px;
+}
+
+.subContentWriteControl .buttonStyleGroup 
+{
+	float: left;
+	width: 112px;
+}
+
+.subContentWriteControl .buttonContextGroup 
+{
+	float: left;
+	width: 93px;
+}
+
+.subContentWriteControl .buttonExtraGroup 
+{
+	float: left;
+	width: 185px;
+}
+
+.subContentWriteControl 
+{
+	font-size: 12px;
+}
+
+.subContentWriteControl .buttonText .buttonContextShort 
+{
+	display: block;
+}
+
+.subContentWriteControl .buttonText .buttonContextLarge 
+{
+	display: none;
+}
+
+.contentTextArea .contentTextBox 
+{
+	height: 520px;
+}
+
+textarea
+{
+  border:1px solid #999999;
+  width:95%;
+  margin:5px 0;
+  padding:3px;
+}

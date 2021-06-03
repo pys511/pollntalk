@@ -1,0 +1,313 @@
+<?php
+
+// 회원리스트
+// 페이지당 보여줄 회원수
+if ($list_size == "")
+    $list_size = 20;
+    
+    $startNum = (int) $_GET["startNum"];
+    // 회원리스트 시작 번호
+    if ($startNum == "")
+        $startNum = 0;
+        
+        // 보여줄 페이지수
+        $page_num = 10;
+
+
+$sub = $_GET["sub"];
+if($sub != 'support'){
+    try {
+        // 공지 사항 처리
+        $ask = new CApp_Handler_Admin_board();
+        $result = $ask->getBoardList($sub, $startNum, $list_size);
+        // 회원수
+        $boardcount = $ask->getboardcount($sub);
+        
+    } catch (CException $ex) {
+        $ex->printException();
+    }
+}
+else{
+    try {
+        // 공지 사항 처리
+        $ask = new CApp_Handler_Admin_board();
+        $result = $ask->getBoardList($sub, $startNum, $list_size);
+        // 회원수
+        $boardcount = $ask->getboardcount($sub);
+        
+    } catch (CException $ex) {
+        $ex->printException();
+    }
+}
+
+// 페이지수
+$page_size = floor(($boardcount - 1) / $list_size);
+
+// 현재페이지
+$current_page = floor($startNum / $list_size);
+
+$PHP_SELF = "/?mode=customer&sub=".$sub;
+
+
+
+?>
+<div class="content">
+	<!-- 게시판 영역 시작 -->
+	<div class="boardarea">
+		<div class="boardbox">
+			<div class="tabmenu">
+				<?php 
+				if($sub == "notice"){
+				    echo("<div class='tabbuttonbox'>
+				        <button class='tabbuttonon'>
+				        <span class='title'>공지사항/이벤트</span>
+				        </button>
+				        </div>
+				        <div class='tabbuttonbox'>
+				        <a href='/?mode=customer&sub=qna'>
+                        <button class='tabbuttonoff'>                        				        
+                        <span class='disabletitle'>자주하는 질문</span>
+				        </button>
+                        </a>
+				        </div>
+				        <div class='tabbuttonbox'>
+                        <a href='/?mode=customer&sub=support'>
+				        <button class='tabbuttonoff'>
+				        <span class='disabletitle'>서비스요청/에러신고</span>
+				        </button>
+				        </a>
+                        </div>"
+				        );
+				}
+				else if($sub == "qna"){
+				    echo("<div class='tabbuttonbox'>
+                        <a href='/?mode=customer&sub=notice'>
+				        <button class='tabbuttonoff'>
+				        <span class='disabletitle'>공지사항/이벤트</span>
+				        </button>
+                        </a>
+				        </div>
+				        <div class='tabbuttonbox'>
+				        <button class='tabbuttonon'>
+				        <span class='title'>자주하는 질문</span>
+				        </button>
+				        </div>
+				        <div class='tabbuttonbox'>
+				        <a href='/?mode=customer&sub=support'>
+                        <button class='tabbuttonoff'>
+				        <span class='disabletitle'>서비스요청/에러신고</span>
+				        </button>
+                        </a>
+				        </div>"
+				        );
+				}else{
+				    echo("<div class='tabbuttonbox'>
+                        <a href='/?mode=customer&sub=notice'>
+				        <button class='tabbuttonoff'>
+				        <span class='disabletitle'>공지사항/이벤트</span>
+				        </button>
+                        </a>
+				        </div>
+				        <div class='tabbuttonbox'>
+                        <a href='/?mode=customer&sub=qna'>
+				        <button class='tabbuttonoff'>
+				        <span class='disabletitle'>자주하는 질문</span>
+				        </button>
+                        </a>
+				        </div>
+				        <div class='tabbuttonbox'>
+				        <button class='tabbuttonon'>
+				        <span class='title'>서비스요청/에러신고</span>
+				        </button>
+				        </div>"
+				        );
+				}
+				?>
+			</div>
+			<!-- 게시판 안내 -->
+			<div class="boardguide">
+			<?php 
+				if($sub == "notice"){
+				    echo("<div class='boardtopic'>
+				        <span>공지사항/이벤트</span>
+				        </div>
+				        <div class='boarddoc'>
+				        <span>폴앤톡에서 알려드리는 공지사항과 이벤트입니다.</span>
+				        </div>"
+				        );
+				}
+				else if($sub == "qna"){
+				    echo("<div class='boardtopic'>
+				        <span>자주하는 질문</span>
+				        </div>
+				        <div class='boarddoc'>
+				        <span>폴앤톡에 자주하는질문입니다.</span>
+				        </div>"
+				        );
+				}
+				else{
+				    echo("<div class='boardtopic'>
+				        <span>서비스요청/에러신고</span>
+				        </div>
+				        <div class='boarddoc'>
+				        <span>폴앤톡에 서비스요청및 에러신고입니다.</span>
+				        </div>"
+				        );
+				}
+		    ?>
+			</div>
+			<div class="boardcontent">
+				<!-- 게시판 시작  -->
+				<div class="board">
+					<!-- 게시판 필드 시작 -->
+					<div class="boardfieldbox">
+						<div class="larealong">
+							<div class="boardnumber">
+								<span>번호</span>
+							</div>
+							<div class="boardmember">
+								<span>작성자</span>
+							</div>
+						</div>
+						<div class="rareashort">
+							<div class="boardtitlelong">
+								<span>제목</span>
+							</div>
+							<div class="boarddate">
+								<span>날짜</span>
+							</div>
+							<div class="boardshort">
+								<span>조회</span>
+							</div>
+						</div>
+					</div>
+					<!-- 게시판 필드 끝 -->
+					<!-- 게시판 목록 시작 -->
+					<div class="boardlist">
+						<ul>
+						<!-- 게시판 목록 시작 	-->
+						<?php 
+						  foreach ($result as $items) {
+                        ?>
+        					<li>
+								<div class="larealong">
+									<div class="boardnumber">
+										<span><?php echo($items["num"]); ?></span>
+									</div>
+									<div class="boardmember">
+										<span><?php echo($items["ADMINNAME"]); ?></span>
+									</div>
+								</div>
+								<div class="rareashort">
+									<div class="boardtitlelong">
+										<a href="/?mode=boardView&sub=<?php echo($sub.'&num='.$items['num']);?>">
+											<span><?php echo($items["subject"]); ?></span>
+										</a>
+									</div>
+									<div class="boarddate wview">
+										<span><?php echo($items["creat_date"]); ?></span>
+									</div>
+									<div class="boardshort">
+										<span><?php echo($items["count"]); ?></span>
+									</div>
+								</div>
+							</li>
+						<?php
+                           }
+                         ?>
+
+						</ul>
+						
+						<!-- 게시판 목록 끝 -->
+						<!-- 페이징 시작 -->
+						<div class="paging">
+						<?php
+                            $start_page = (int) ($current_page / $page_num) * $page_num;
+                            $end_page = $start_page + $page_num - 1;
+
+                            if ($page_size < $end_page)
+                                $end_page = $page_size;
+
+                            if ($start_page >= $page_num)
+                            {
+                                $prev_page = ($start_page - 1) * $list_size;
+                                echo ("<a id='boardprev' href=\"$PHP_SELF&startNum=$prev_page\"><div class='pagingbutton pageleft pagenavinoselect'></div></a>");
+                            }
+                        
+                            for ($i = $start_page; $i <= $end_page; $i ++)
+                            {
+                                $page = $list_size * $i; // 페이지 값을 no 값으로 변환
+                                $page_num = $i + 1; // 실제 페이지 값이 0부터 시작하므로 표시할때는 1을 더해준다.
+                                
+                                if ($startNum != $page){
+                                    echo ("<div class='pagingbutton'>");
+                                }
+                                else{
+                                    echo ("<div class='pagingbutton pageselect'>");
+                                }
+                                
+                                if ($startNum != $page)
+                                {
+                                    echo ("<a href=\"$PHP_SELF&startNum=$page\">");
+                                }
+                        
+                                echo ("<span>$page_num</span>"); // 페이지를 표시
+                        
+                                if ($startNum != $page)
+                                {
+                                    echo ("</a>");
+                                }
+                        
+                                echo ("</div>");
+                            }
+                        
+                            if ($page_size > $end_page)
+                            {
+                                // 다음 페이지 리스트는 마지막 리스트 페이지보다 한 페이지 증가하면 된다.
+                                $next_page = ($end_page + 1) * $list_size;
+                                echo ("<a id='boardprev' href=\"$PHP_SELF&startNum=$next_page\"><div class='pagingbutton pageright pagenaviselect'></div></a>");
+                            }
+                        ?>
+						</div>
+						<!-- 페이징 끝 -->
+					</div>
+					<!-- 게시판 목록 영역 끝 -->
+				</div>
+				<!-- 게시판 끝 -->
+				<?php 
+				if($sub == 'support'){
+				?>
+				<!-- 게시판 버튼 시작 -->
+				<div class="boardbuttonbox">
+					<div class="boardbuttonright">						
+						<?php 
+if ($_SESSION["member_seq"] != "")
+{
+?>
+							<a href='/?mode=boardwrite&sub=<?php $sub?>'>
+<?php
+}
+else
+{
+?>
+							<a href="#" onclick="javascript:alert('로그인 후 이용해 주세요.')">
+<?php    
+}
+?>
+							<button>
+								<span>글쓰기</span>
+							</button>
+						</a>
+						<?php ?>
+					</div>
+				</div>
+				<!-- 게시판 버튼 끝 -->
+				<?php 
+				}
+				?>
+			</div>
+			<!-- 텝 컨텐츠 끝 -->
+		</div>
+	</div>
+	<!-- 게시판 영역 끝 -->
+</div>

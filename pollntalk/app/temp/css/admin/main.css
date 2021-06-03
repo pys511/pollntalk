@@ -1,0 +1,67 @@
+@CHARSET "UTF-8";
+
+.summeryArea {
+	margin-top: 10px;
+	margin-left: 5px;
+	width: 320px;
+}
+
+.summeryBox {
+	float: left;
+	padding: 5px 0px 5px 0px;
+	margin-bottom: 10px;
+	border: 1px #7ba0d3 solid;
+	width: 100%;
+}
+
+.summeryBox .summeryTitle {
+	border-bottom: 1px #7ba0d3 solid;
+}
+
+.summeryBox .summeryTitle, .summeryBox .summeryList {
+	float: left;
+	width: 100%;
+	padding: 5px 5px 5px 5px;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.summeryBox .summeryTitle span {
+	float: left;
+	text-align: left;
+	font-weight: bold;
+	color: #2d3847;
+}
+
+.summeryBox .summeryList .summeryContext span {
+	color: #474f5b;
+}
+
+.summeryBox .summeryList .summeryContext .summeryKey, .summeryBox .summeryList .summeryContext .summeryValue
+	{
+	float: left;
+	width: 50%;
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+
+.summeryBox .summeryList .summeryContext .summeryKey {
+	float: left;
+	text-align: left;
+}
+
+.summeryBox .summeryList .summeryContext .summeryValue {
+	float: right;
+	text-align: right;
+}
+
+.summeryArea {
+	float: left;
+	margin-right: 5px;
+}
+
+.summeryBox .summeryTitle span, .summeryBox .summeryList .summeryContext span
+	{
+	font-size: 12px;
+}

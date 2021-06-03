@@ -1,0 +1,149 @@
+<?php
+
+/**
+ *  @auth   : JEON JY
+ *  @date   : 20200605
+ *  파일 업로드 처리
+ */
+class CApp_Handler_Util_Fileupload extends CCore_Lib_Routines_Handler
+{
+
+    private function getComplateNumber($nNumber)
+    {
+        if (strlen($nNumber) < 2)
+            $nNumber = "0" . $nNumber;
+
+        return $nNumber;
+    }
+
+    private function getNameByDate()
+    {
+        $arrTime = getDate();
+
+        $strResultName = "";
+        $strResultName .= $arrTime['year'];
+        $strMonth = (string) $arrTime['mon'];
+        $strResultName .= $this->getComplateNumber($strMonth);
+        $strDay = (string) $arrTime['mday'];
+        $strResultName .= $this->getComplateNumber($strDay);
+        $strHour = $arrTime['hours'];
+        $strResultName .= $this->getComplateNumber($strHour);
+        $strMinutes = $arrTime['minutes'];
+        $strResultName .= $this->getComplateNumber($strMinutes);
+        $strSeconds = $arrTime['seconds'];
+        $strResultName .= $this->getComplateNumber($strSeconds);
+
+        return $strResultName;
+    }
+
+    public function uploadFile()
+    {
+        $seedNumber = (integer) microtime() * 1234567;
+        srand($seedNumber);
+        $strRand = rand(0, 1000);
+        $fileName = $this->getNameByDate();
+        $fileName .= $strRand;
+        $curName = $_FILES['uploadName']['name'];
+
+        $arrExt = explode(".", $curName);
+        $fileName .= "." . $arrExt[1];
+
+        if (! @is_uploaded_file($_FILES['uploadName']['tmp_name']))
+        {
+            trigger_error("임시파일에 업로드한 파일이 존재하지 않습니다. file : " . print_r($_FILES, true), E_USER_ERROR);
+            return false;
+        }
+
+        // 파일을 임시경로에 이동시킨다.
+        $targetFileName = "app/file/" . $fileName;
+        $realFileName   = "app/file/" . "real_".$fileName;
+        if (! @move_uploaded_file($_FILES['uploadName']['tmp_name'], "./" . $targetFileName))
+        {
+            trigger_error("임시파일에서 파일 복사가 실패되었습니다.", E_USER_ERROR);
+            return false;
+        }
+        
+        //$tempTargetName = $_FILES['uploadName']['tmp_name'], "./" 
+        $imgResult      = CCore_Util_Image_Control::instance()->resizeImage(350, 350, $targetFileName, $realFileName);
+        if ($imgResult == -2)
+            $realFileName   = $targetFileName;
+
+        $result = array(
+            "temp_path" => $targetFileName,
+            "real_name" => $realFileName
+        );
+
+        return $result;
+    }
+
+    public function uploadVoteFile()
+    {
+        $seedNumber = (integer) microtime() * 1234567;
+        srand($seedNumber);
+        $strRand = rand(0, 1000);
+        $fileName = $this->getNameByDate();
+        $fileName .= $strRand;
+        $curName = $_FILES['uploadName']['name'];
+
+        $arrExt = explode(".", $curName);
+        $fileName .= "." . $arrExt[1];
+
+        if (! @is_uploaded_file($_FILES['uploadName']['tmp_name']))
+        {
+            trigger_error("임시파일에 업로드한 파일이 존재하지 않습니다. file : " . print_r($_FILES, true), E_USER_ERROR);
+            return false;
+        }
+
+        // 파일을 임시경로에 이동시킨다.
+        $targetFileName = "app/file/" . $fileName;
+        if (! @move_uploaded_file($_FILES['uploadName']['tmp_name'], "./" . $targetFileName))
+        {
+            trigger_error("임시파일에서 파일 복사가 실패되었습니다.", E_USER_ERROR);
+            return false;
+        }
+
+        $result = array(
+            "temp_path" => $_SERVER['SCRIPT_URI'] . $targetFileName,
+            "real_name" => $targetFileName
+        );
+
+        return $result;
+    }
+
+    // 유저사진 업로드
+    public function uploadPicFile()
+    {
+        $fileName = "pic_" . $_SESSION["member_seq"];
+        $curName = $_FILES['myPic']['name'];
+
+        $arrExt = explode(".", $curName);
+        $fileName .= "." . $arrExt[1];
+
+        if (! @is_uploaded_file($_FILES['myPic']['tmp_name']))
+        {
+            trigger_error("임시파일에 업로드한 파일이 존재하지 않습니다. file : " . print_r($_FILES, true), E_USER_ERROR);
+            return false;
+        }
+
+        // 파일을 임시경로에 이동시킨다.
+        $targetFileName = "pic/" . $fileName;
+        if (! @move_uploaded_file($_FILES['myPic']['tmp_name'], "./" . $targetFileName))
+        {
+            trigger_error("임시파일에서 파일 복사가 실패되었습니다.", E_USER_ERROR);
+            return false;
+        }
+
+        $result = array(
+            "temp_path" => $_SERVER['SCRIPT_URI'] . $targetFileName,
+            "real_name" => $targetFileName
+        );
+
+        $query = "UPDATE MEMBER set pic = :FILE where member_seq = :MEMBER_SEQ";
+        $this->query($query);
+        $this->bind("FILE", $targetFileName);
+        $this->bind("MEMBER_SEQ", $_SESSION["member_seq"]);
+        $result = $this->execute(CCore_Lib_Routines_Handler::UPDATE);
+
+        return $result;
+    }
+}

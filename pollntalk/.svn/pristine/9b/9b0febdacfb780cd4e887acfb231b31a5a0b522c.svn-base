@@ -1,0 +1,581 @@
+﻿<!doctype html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link type="text/css" rel="stylesheet" href="css/common.css" />
+<link type="text/css" rel="stylesheet" href="css/sub.css" />
+<link type="text/css" rel="stylesheet" href="css/category.css" />
+<link type="text/css" rel="stylesheet" href="css/tabmenu.css" />
+<link type="text/css" rel="stylesheet" href="css/mypage.css" />
+<link type="text/css" rel="stylesheet" href="css/tables.css" />
+<title>온라인 투표 설문 폴앤톡</title>
+</head>
+<body>
+	<div class="page">
+		<!-- 공통 상단 시작 -->
+		<div class="top">
+			<!-- 상단 로고 영역 시작 -->
+			<div class="toparea">
+				<dir class="logo" alt="폴앤톡 로고">
+					<img class="mobilemenubutton" src="images/mobile_menu.png" />
+				</dir>
+				<!-- 로그인, 회원가입 버튼 시작 -->
+				<div class="accountbox">
+					<div class="login">
+						<img src="images/login.png" /> <span>로그인</span>
+					</div>
+					<div class="join">
+						<img src="images/join.png" /> <span>회원가입</span>
+					</div>
+				</div>
+				<!-- 로그인, 회원가입 버튼 끝 -->
+			</div>
+			<!-- 상단 로고 영역 끝 -->
+			<!-- top 메뉴 영역 시작 -->
+			<div class="menubar">
+				<div class="menuarea">
+					<div class="menuitem">
+						<div class="menusign noselect">
+							<span>투표리스트</span>
+						</div>
+					</div>
+					<div class="menuitem">
+						<div class="menusign select">
+							<span>투표만들기</span>
+						</div>
+					</div>
+					<div class="menuitem">
+						<div class="menusign noselect">
+							<span>투표양식</span>
+						</div>
+					</div>
+					<div class="menuitem">
+						<div class="menusign noselect">
+							<span>고객센터</span>
+						</div>
+					</div>
+					<div class="menuitem">
+						<div class="menusign noselect">
+							<span>폴앤톡 mall</span>
+						</div>
+					</div>
+					<div class="menuitem">
+						<div class="menusign noselect">
+							<span>마이페이지</span>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- top 메뉴 영역 끝 -->
+			<!-- 검색 영역 시작 -->
+			<div class="searchbar">
+				<div class="searcharea">
+					<!-- 검색 입력란 시작 -->
+					<dir class="searchbox">
+						<input type="text" class="search" value="검색어를 입력하세요." />
+						<img src="images/search.png" />
+					</dir>
+					<!-- 검색 입력란 끝 -->
+					<!-- 추천 검색어 시작 -->
+					<div class="recommandsearch">
+						<span class="recommandtitle">추천검색어</span>
+						<div class="searchitem">
+							<span>코로나</span>
+						</div>
+						<div class="searchitem">
+							<span>애플</span>
+						</div>
+						<div class="searchitem">
+							<span>부동산</span>
+						</div>
+						<div class="searchitem">
+							<span>야구</span>
+						</div>
+						<div class="searchitem">
+							<span>맛집</span>
+						</div>
+						<div class="searchitem">
+							<span>1인 가구</span>
+						</div>
+						<div class="searchitem">
+							<span>영화</span>
+						</div>
+					</div>
+					<!-- 추천 검색어 끝 -->
+				</div>
+			</div>
+			<!-- 검색 영역 끝 -->
+		</div>
+		<!-- 공통 상단 끝 -->
+		<!-- 컨텐츠 시작-->
+		<div class="content">
+			<div class="mypagearea">
+				<div class="mypagebox">
+					<div class="tabmenu">
+						<div class="tabbuttonbox">
+							<button class="tabbuttonon">
+								<span class="title">마이페이지홈</span>
+							</button>
+						</div>
+						<div class="tabbuttonbox">
+							<button class="tabbuttonoff">
+								<span class="disabletitle">쪽지</span>
+							</button>
+						</div>
+						<div class="tabbuttonbox">
+							<button class="tabbuttonoff">
+								<span class="disabletitle">투표함</span>
+							</button>
+						</div>
+						<div class="tabbuttonbox">
+							<button class="tabbuttonoff">
+								<span class="disabletitle">포인트</span>
+							</button>
+						</div>
+						<div class="tabbuttonbox">
+							<button class="tabbuttonoff">
+								<span class="disabletitle">구입쿠폰</span>
+							</button>
+						</div>
+						<div class="tabbuttonbox">
+							<button class="tabbuttonoff">
+								<span class="disabletitle">주문내역</span>
+							</button>
+						</div>
+						<div class="tabbuttonbox">
+							<button class="tabbuttonoff">
+								<span class="disabletitle">회원정보</span>
+							</button>
+						</div>
+					</div>
+					<!-- 텝 컨텐츠 시작 -->
+					<div class="messagecontent">
+						<!-- 회원 정보 시작 -->
+						<div class="messagestatus">
+							<div class="messagebox title">
+								<span>회원 정보</span>
+							</div>
+						</div>
+						<!-- 회원 정보 상세 시작 -->
+						<div class="memberstatus">
+							<!-- 회원 정보  영역 시작 -->
+							<div class="table">
+								<div class="tablebox">
+									<div class="tableborder">
+										<div class="tablefield">
+											<div class="membertableitem">
+												<span>구분</span>
+											</div>
+											<div class="membertableitemlong wrline wlline">
+												<div class="memberinfoitem wrline">
+													<span>항목</span>
+												</div>
+												<div class="memberinfoitem wrline">
+													<span>내용</span>
+												</div>
+												<div class="memberinfoitem">
+													<span>정보수정</span>
+												</div>
+											</div>
+											<div class="membertableitem">
+												<span>비고</span>
+											</div>
+										</div>
+										<div class="tablelist">
+											<!-- 회원 정보 내용 시작 -->
+											<ul>
+												<li>
+													<div class="membertableitem mline">
+														<span>가입 필수 항목</span>
+													</div>
+													<div class="membertableitemlong wlline wrline">
+														<div class="memberinfolong">
+															<div class="memberinfolayer wbline">
+																<div class="memberinfoitem mlline mrline wrline">
+																	<span>아이디</span>
+																</div>
+																<div class="memberinfoitem mrline wrline">
+																	<span>test@test.com</span>
+																</div>
+															</div>
+															<div class="memberinfolayer wbline">
+																<div class="memberinfoitem mlline mrline wrline">
+																	<span>비밀번호</span>
+																</div>
+																<div class="memberinfoitem mrline wrline">
+																	<span>***********</span>
+																</div>
+															</div>
+															<div class="memberinfolayer wbline">
+																<div class="memberinfoitem mlline mrline wrline">
+																	<span>닉네임</span>
+																</div>
+																<div class="memberinfoitem mrline wrline">
+																	<span>폴액톡1004</span>
+																</div>
+															</div>
+															<div class="memberinfolayer">
+																<div class="memberinfoitem mlline mrline wrline">
+																	<span>거주지역</span>
+																</div>
+																<div class="memberinfoitem mrline wrline">
+																	<span>서울특별시</span>
+																</div>
+															</div>
+														</div>
+														<div class="memberinfo mlline mbline mrline wrline">
+															<button class="messagebutton">
+																<span class="title">수정</span>
+															</button>
+														</div>
+													</div>
+													<div class="membertableitem wview">
+														<span>회원가입시</span>
+													</div>
+												</li>
+												<li>
+													<div class="membertableitem mline">
+														<span>인증 추가 항목</span>
+													</div>
+													<div class="membertableitemlong wlline wrline">
+														<div class="memberinfolong">
+															<div class="memberinfolayer wbline">
+																<div class="memberinfoitem mlline mrline wrline">
+																	<span>이름</span>
+																</div>
+																<div class="memberinfoitem mrline wrline">
+																	<span>홍길동</span>
+																</div>
+															</div>
+															<div class="memberinfolayer wbline">
+																<div class="memberinfoitem mlline mrline wrline">
+																	<span>성별</span>
+																</div>
+																<div class="memberinfoitem mrline wrline">
+																	<span>남자</span>
+																</div>
+															</div>
+															<div class="memberinfolayer">
+																<div class="memberinfoitem mlline mrline wrline">
+																	<span>생년월일</span>
+																</div>
+																<div class="memberinfoitem mrline wrline">
+																	<span>1998년 8월 2일</span>
+																</div>
+															</div>
+														</div>
+														<div class="memberinfo mlline mbline mrline wrline">
+															<button class="messagebutton">
+																<span class="title">본인인증</span>
+															</button>
+														</div>
+													</div>
+													<div class="membertableitem wview">
+														<span>외부인증시<br />(1,000포인트 적립)
+														</span>
+													</div>
+												</li>
+											</ul>
+											<!-- 회원 정보 내용 끝 -->
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- 회원 정보 상세 끝 -->
+						<!-- 회원 정보 끝 -->
+					</div>
+					<!-- 텝 컨텐츠 끝 -->
+				</div>
+			</div>
+		</div>
+		<!-- 컨텐츠 끝-->
+		<!-- 하단 시작 -->
+		<div class="footer">
+			<!-- 하단 메뉴 시작 -->
+			<div class="footermenuarea">
+				<div class="footermenubox">
+					<div class="footermenu fspace">
+						<img class="wfootermenu" src="images/footer_menu_01.png" /> <img
+							class="mfootermenu" src="images/footer_menu_m_01.png" />
+						<div class="footermenuitem mfooterline">
+							<span class="footermenutitle">공지사항 / 이벤트</span> <span
+								class="footermenutext">폴앤톡에서 알려드리는 공지사항과 이벤트입니다.</span>
+						</div>
+					</div>
+					<div class="footermenu fspace">
+						<img class="wfootermenu" src="images/footer_menu_02.png" /> <img
+							class="mfootermenu" src="images/footer_menu_m_02.png" />
+						<div class="footermenuitem mfooterline">
+							<span class="footermenutitle">자주하는<br />질문
+							</span> <span class="footermenutext">폴앤톡에 대한 정보가 궁금하다면 이용해주세요.</span>
+						</div>
+					</div>
+					<div class="footermenu">
+						<img class="wfootermenu" src="images/footer_menu_03.png" /> <img
+							class="mfootermenu" src="images/footer_menu_m_03.png" />
+						<div class="footermenuitem">
+							<span class="footermenutitle">서비스요청 / 에러신고</span> <span
+								class="footermenutext">필요한 서비스/기능이나 에러가 있으면 알려주세요.</span>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- 하단 메뉴 끝 -->
+			<!-- 하단 공통 시작 -->
+			<div class="footercommonarea">
+				<div class="footercommonbox">
+					<img src="images/footer_logo.png" />
+					<div class="footercommon">
+						<!-- 하단 안내 메뉴 시작 -->
+						<div class="footerlayer">
+							<div class="footerguidemenu">
+								<span class="glspace grspace">서비스 소개</span> <span
+									class="grspace">이용약관</span> <span class="grspace">개인정보처리방침</span>
+								<span class="grspace">이메일 무단수집거부</span> <span>책임의 한계와
+									법적고지</span>
+							</div>
+						</div>
+						<!-- 하단 안내 메뉴 끝 -->
+						<!-- 하단 안내 시작 -->
+						<div class="footerlayer">
+							<div class="footerguidebox">
+								<div class="footerguide">
+									<span>피에스발텍</span> <span>주소 : 경기도 평택시 서탄면 수월암2길 88-12,
+										2층 1호</span> <span>사업자등록번호 : 578-76-00226</span>
+								</div>
+								<div class="footerguide">
+									<span>통신판매업신고 : 2020-경기평택-*****</span> <span>개인정보책임자 :
+										고형석</span> <span>이메일 : admin@pollntalk.com</span>
+								</div>
+								<div class="footerguide">
+									<span>대표전화 : 070-7633-4520</span>
+								</div>
+								<div class="footerguide fbottom">
+									<span>Copyright(c) 2020 PS VALTEC Corp. All right
+										Reserved.</span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- 하단 안내 끝 -->
+				</div>
+			</div>
+			<!-- 하단 공통 끝 -->
+		</div>
+		<!-- 하단 끝 -->
+		<!-- 모바일 추천 검색어 시작 -->
+		<div class="mrecommsearchlayer" style="display: none">
+			<div class="mrecommsearcharea">
+				<div class="msearch">
+					<img class="msearchclose" src="images/search_close.png" />
+					<!-- 검색 입력란 시작 -->
+					<div class="msearchbox">
+						<input type="text" class="search" value="검색어를 입력하세요." /> <img
+							src="images/search.png" />
+					</div>
+					<!-- 검색 입력란 끝 -->
+				</div>
+				<div class="mrecommsearch">
+					<div class="mrecommtitle">
+						<span>추천 검색어</span>
+					</div>
+					<div class="mrecommlist">
+						<ul>
+							<li><span class="mrecommnumber">1</span> <span>코로나</span></li>
+							<li><span class="mrecommnumber">2</span> <span>애플</span></li>
+							<li><span class="mrecommnumber">3</span> <span>부동산</span></li>
+							<li><span class="mrecommnumber">4</span> <span>야구</span></li>
+							<li><span class="mrecommnumber">5</span> <span>맛집</span></li>
+							<li><span class="mrecommnumber">6</span> <span>1인 가구</span>
+							</li>
+							<li><span class="mrecommnumber">7</span> <span>영화</span></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- 모바일 추천 검색어 끝 -->
+		<!-- 모바일 메뉴 시작 -->
+		<div class="mmenulayer" style="display: none;">
+			<div class="mobilemenuarea">
+				<div class="mobilemenu">
+					<div class="mobilemenubox">
+						<div class="menutop">
+							<img class="mobilelogo" src="images/mobile_logo.png" /> <img
+								class="close" src="images/close.png" />
+						</div>
+					</div>
+					<!-- 로그인, 회원가입 버튼 시작 -->
+					<div class="accountbox">
+						<div class="login">
+							<img src="images/mobile_login.png" /> <span>로그인</span>
+						</div>
+						<div class="join">
+							<img src="images/mobile_join.png" /> <span>회원가입</span>
+						</div>
+					</div>
+					<div class="menubox">
+						<ul>
+							<li><span>투표리스트</span></li>
+							<li><span>투표만들기</span></li>
+							<li><span>투표양식</span></li>
+							<li><span>고객센터</span></li>
+							<li><span>폴앤톡 mall</span></li>
+							<li><span>마이페이지</span></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- 모바일 메뉴 끝 -->
+		<!-- 로그인 팝업 시작 -->
+		<div class="layerarea" style="display: none">
+			<div class="layerbox">
+				<div class="popuparea">
+					<div class="popupbox">
+						<div class="popcontxtarea">
+							<div class="popuplogo">
+								<img src="images/close.png" />
+							</div>
+						</div>
+						<div class="popcontxtarea">
+							<div class="popcontxtbox">
+								<div class="inputer">
+									<input type="text" value="이메일주소" /> <img src="images/init.png" />
+								</div>
+							</div>
+						</div>
+						<div class="popcontxtarea">
+							<div class="popcontxtbox">
+								<div class="inputer">
+									<input type="text" value="비밀번호" style="display: block;" /> <input
+										type="password" style="display: none;" /> <img
+										src="images/init.png" />
+								</div>
+							</div>
+						</div>
+						<div class="popcontxtarealspace">
+							<div class="popcontxtbox">
+								<input id="saveid" type="checkbox" /> <label for="saveid"><span>아이디
+										저장</span></label>
+							</div>
+						</div>
+						<div class="popcontxtarea">
+							<div class="popcontxtbox">
+								<div class="loginbutton">
+									<span>로그인</span>
+								</div>
+							</div>
+						</div>
+						<div class="popcontxtarea lspace">
+							<div class="linkbox">
+								<div class="linkitem normal">
+									<span>아이디 찾기</span>
+								</div>
+								<div class="linkline"></div>
+								<div class="linkitem long">
+									<span>비밀번호 찾기</span>
+								</div>
+								<div class="linkline"></div>
+								<div class="linkitem short">
+									<span>회원가입</span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- 로그인 팝업 끝 -->
+		<!-- 회원가입 팝업 시작 -->
+		<div class="layerarea" style="display: none">
+			<div class="layerbox">
+				<div class="popuparea">
+					<div class="popupbox">
+						<div class="popcontxtarea">
+							<div class="popcontxtbox popcontxttitle">
+								<span>회원가입</span> <img src="images/close.png" />
+							</div>
+						</div>
+						<div class="popcontxtarea">
+							<div class="popcontxtbox">
+								<div class="inputer">
+									<input type="text" value="이메일주소" />
+								</div>
+							</div>
+						</div>
+						<div class="popcontxtarea">
+							<div class="popcontxtbox">
+								<div class="inputer">
+									<input type="text" value="비밀번호" style="display: block;" /> <input
+										type="password" style="display: none;" />
+								</div>
+							</div>
+						</div>
+						<div class="popcontxtarea">
+							<div class="popcontxtbox">
+								<div class="inputer">
+									<input type="text" value="비밀번호 확인" style="display: block;" />
+									<input type="password" style="display: none;" />
+								</div>
+							</div>
+						</div>
+						<div class="popcontxtarea">
+							<div class="popcontxtbox">
+								<div class="inputer">
+									<input type="text" value="이름" style="display: block;" />
+								</div>
+							</div>
+						</div>
+						<div class="popcontxtarea">
+							<div class="popcontxtbox">
+								<div class="inputer">
+									<input type="text" value="닉네임" style="display: block;" />
+								</div>
+							</div>
+						</div>
+						<div class="popcontxtarea">
+							<div class="popcontxtbox">
+								<div class="shortinputer">
+									<input type="text" value="생년월일" style="display: block;" /> <input
+										type="radio" id="female" name="sex" /> <label for="male">
+										<span>여자</span>
+									</label> <input type="radio" id="male" name="sex" /> <label for="male">
+										<span>남자</span>
+									</label>
+								</div>
+							</div>
+						</div>
+						<div class="popcontxtarea">
+							<div class="linkbox">
+								<div class="linkitem short">
+									<span>이용약관</span>
+								</div>
+								<div class="linkline"></div>
+								<div class="linkitem longlong">
+									<span>개인정보처리방침</span>
+								</div>
+								<div class="linkitem shortshort">
+									<input type="checkbox" class="agree" id="agree" /> <label
+										for="agree"> <span>동의</span>
+									</label>
+								</div>
+							</div>
+						</div>
+						<div class="popcontxtarea">
+							<div class="popcontxtbox">
+								<div class="popupbutton">
+									<span>회원가입</span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- 회원가입 팝업 끝 -->
+	</div>
+</body>
+</html>

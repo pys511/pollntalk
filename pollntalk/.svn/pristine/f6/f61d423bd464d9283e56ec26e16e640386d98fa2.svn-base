@@ -1,0 +1,11 @@
+<?php
+/*
+ * 투표 쓰기
+ */
+require_once ('./app/view/head/css_sub.php');
+?>
+<link type="text/css" rel="stylesheet" href="/app/css/voteslide.css?v=1.8" />
+<link type="text/css" rel="stylesheet" href="/app/css/vote.css?v=1.12" />
+<link type="text/css" rel="stylesheet" href="/app/css/voteview.css?v=1.22" />
+<link type="text/css" rel="stylesheet" href="/app/css/reply.css?v=1.16" />
+<link type="text/css" rel="stylesheet" href="/app/css/paging.css" />

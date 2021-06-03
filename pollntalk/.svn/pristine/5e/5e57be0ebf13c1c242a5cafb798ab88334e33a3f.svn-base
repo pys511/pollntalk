@@ -1,0 +1,75 @@
+/**
+ * @auth   	: JEON JY
+ * @date	: 20201003
+ * 투표 보기 처리
+ */
+window.addEventListener("load", function()
+{
+	var goVote	= document.getElementById("goVote");
+	if (goVote != null)
+	{
+		goVote.addEventListener("click", function()
+		{
+			var vote_seq	= document.getElementById("vote_seq");
+			location.href	= "/index.php?mode=voteview&vote_seq=" + vote_seq.value;
+		});
+	}
+	
+	/*
+     *	투표 응답 등록
+     */
+	var registerVoteResp	= document.getElementById("registerVoteResp");
+	if (registerVoteResp != null)
+	{
+		registerVoteResp.addEventListener("click", function()
+		{
+			var is_answer	= false;
+			var is_error	= false;
+			var question_indexs	= document.getElementsByName("question_index[]");
+			var question_length	= question_indexs.length;
+			for (var i = 0; i < question_length; i++)
+			{
+				var question_index	= question_indexs[i];
+				if (question_index == null)
+				{
+					alert("투표 질문에 오류가 발생하였습니다. 관리자에게 문의하시기 바랍니다.");
+					is_answer	= false;
+					is_error	= true;
+					break;
+				} 	
+							
+				var answerName		= "answer_" + question_index.value + "[]";
+				var answers			= document.getElementsByName(answerName);
+				var answer_length	= answers.length;
+				for (var j = 0; j < answer_length; j++)
+				{
+					var answerVal	= answers[j];
+					if (answerVal.checked)
+					{
+						is_answer	= true;
+						break;
+					}
+				}
+				
+				if (!is_answer)
+					break;				
+			}
+			
+			if (!is_error)
+			{
+				if (!is_answer)
+				{
+					alert("모든 질문에 응답을 하셔야 합니다.");
+					return;
+				}
+			}
+			else
+				return;
+			
+			var frmVote	= document.getElementById("frmVote");
+			frmVote.submit();
+			
+			return;
+		});
+	}
+});

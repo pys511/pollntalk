@@ -1,0 +1,134 @@
+﻿@CHARSET "UTF-8";
+
+/*
+ *	-----------------------------------
+ *	카테고리
+ *	-----------------------------------
+ */
+.categoryarea, .category, .categorybar, .category span, .categorylist,
+.categoryitem, .categorysubarea, .categorysublist 
+{
+	float: left;
+}
+
+.categoryarea, .category, .categorysubarea, .categorysublist 
+{
+	width: 100%;
+}
+
+.categorybox 
+{
+	background-color: #e7e7e7;
+	height: 65px;
+}
+
+.category 
+{
+	padding: 15px 20px 15px 20px;
+}
+
+.category .leftbutton 
+{
+	float: left;
+}
+
+.category .rightbutton 
+{
+	float: right;
+}
+
+.categorybar 
+{
+	width: calc(100% - 50px);
+	overflow: hidden;
+}
+
+.categorylist, .categorySubitem 
+{
+	padding: 5px 5px 5px 5px;
+}
+
+.categorysublist 
+{
+	margin: 0px 0px 0px 0px;
+	padding: 0px 0px 0px 0px;
+}
+
+.categoryitem span 
+{
+	float: left;
+	width: 100%;
+	text-align: center;
+	font-weight: bold;
+	font-size: 1.25rem;
+}
+
+.categorySubitem span
+{
+	font-size: 1.125rem;
+}
+
+/*
+ *	-----------------------------------
+ *	1024 이상 화면
+ *	-----------------------------------
+ */
+@media screen and (min-width:1025px) 
+{
+	.categorybox, .categorysubbox 
+	{
+		width: 1024px;
+		margin: 0 auto;
+	}
+}
+
+/*
+ *	-----------------------------------
+ *	800 이상 화면
+ *	-----------------------------------
+ */
+@media screen and (min-width:800px) 
+{
+	.categorylist 
+	{
+		width: calc(16 * 118px);
+	}
+	
+	.categoryitem 
+	{
+		width: 80px;
+	}
+}
+
+/*
+ *	-----------------------------------
+ *	1024 이하 화면
+ *	-----------------------------------
+ */
+@media screen and (max-width:1024px) 
+{
+	.categorybox, .categorysubbox 
+	{
+		float: left;
+		width: 100%;
+	}
+}
+
+/*
+ *	-----------------------------------
+ *	800 이상 화면
+ *	-----------------------------------
+ */
+@media screen and (max-width:800px) 
+{
+	.categorylist 
+	{
+		width: calc(19 * 90px);
+		padding: 5px 5px 5px 5px;
+	}
+	
+	.categoryitem 
+	{
+		width: 70px;
+	}
+}

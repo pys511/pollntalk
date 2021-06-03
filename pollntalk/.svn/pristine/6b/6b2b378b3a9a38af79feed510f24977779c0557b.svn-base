@@ -1,0 +1,11 @@
+<?php
+/*
+ * 투표 리스트
+ */
+?>
+<link type="text/css" rel="stylesheet" href="/app/css/sub.css?v=1.3" />
+<link type="text/css" rel="stylesheet" href="/app/css/category.css?v=1.3" />
+<link type="text/css" rel="stylesheet" href="/app/css/voteslide.css" />
+<link type="text/css" rel="stylesheet" href="/app/css/votelist.css?v=1.2" />
+<link type="text/css" rel="stylesheet" href="/app/css/vote.css?v=1.0" />
+<link type="text/css" rel="stylesheet" href="/app/css/paging.css" />

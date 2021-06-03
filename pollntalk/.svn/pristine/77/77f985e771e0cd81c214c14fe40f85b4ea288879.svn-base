@@ -1,0 +1,330 @@
+<?php
+/**
+ *  @auth   : JEON JY
+ *  @date   : 20200529
+ *  투표 양식 페이지
+ */
+try
+{
+    $vote_form_seq = $_GET["vote_form_seq"];
+    
+    $voteForm   = new CApp_Handler_Vote_Ctrl();
+    $result     = $voteForm->getVoteFormInfo($vote_form_seq);
+    
+    $vote_kind      = $result["VOTE_FORM_KIND"];
+    $vote_type      = $result["VOTE_TYPE"];
+    $vote_subject   = $result["VOTE_SUBJECT"];
+    $vote_cate1_seq = $result["VOTE_CATE_SEQ"];
+    $cate_2dept_seq = $result["VOTE_CATE_SUB_SEQ"];
+    $vote_real_name = $result["VOTE_RESOURCE_PATH"];
+    $vote_real_type = $result["VOTE_RESOURCE_TYPE"];
+    $vote_context   = $result["VOTE_FORM_CONTEXT"];
+    $vote_url       = $result["VOTE_URL"];
+    //$vote_end_date = $result["VOTE_END_DATE"];
+}
+catch (CException $ex)
+{
+    $ex->printException();
+}
+?>
+<div class="content">
+		<!-- 카테고리 영역 시작 -->
+	<div class="defaultarea grayback">
+<?php
+require_once ('./app/view/common/category.php');
+?>
+	</div>
+	<!-- 광고 베너 영역 시작 -->
+	<div class="adverbannerarea boundray">
+		<div class="adverbannerbox">
+			<img class="wad" src="/app/images/ad_sample_03.jpg" /> 
+			<img class="mad" src="/app/images/ad_sample_m_01.png" />
+		</div>
+	</div>
+	<!-- 광고 베너 영역 끝 -->
+	<div class="votedisparea  boundray">
+		<div class="votedispbox">
+			<div class="votecontbox">
+        		<div class="voteguide">
+        			<div class="votetopic">
+        				<span>투표양식</span>
+        			</div>
+        			<div class="votedoc">
+        				<span>투표 양식 설명....</span>
+        			</div>
+        		</div>
+    		</div>
+		</div>
+	</div>
+	<div class="votewritearea">
+		<div class="votewritebox">
+			<!-- 투표 입력란 시작 -->
+			<div class="votewrite">
+				<div class="votewritetitle">
+					<img src="/app/images/mark_01.png" /> <span class="votetitle">기본 정보</span>
+				</div>
+				<div class="votewritecont vtbline">
+					<div class="votewritecontitem">
+						<span class="altright semistress">빨간색 : 필수항목</span>
+						<div class="votewriteinputer">
+							<div class="votewritefield">
+								<img class="votemark" src="/app/images/mark_03.png" /> 
+								<span class="stress">유형</span>
+							</div>
+							<div class="votewriteinputbox">
+								<div class="inputcont">
+									<select class="vrspace">
+										<option>-유형 선택-</option>
+									</select>
+								</div>
+							</div>
+						</div>
+						<div class="votewriteinputer">
+							<div class="votewritefield">
+								<img class="votemark" src="/app/images/mark_03.png" /> 
+								<span class="stress">제목</span>
+							</div>
+							<div class="votewriteinputbox">
+								<div class="inputcont">
+									<input type="text" value="제목을 입력하세요." />
+								</div>
+							</div>
+						</div>
+						<div class="votewriteinputer">
+							<div class="votewritefield">
+								<img class="votemark" src="/app/images/mark_03.png" /> 
+								<span class="stress">카테고리</span>
+							</div>
+							<div class="votewriteinputbox">
+								<div class="inputcont">
+									<select class="vrspace">
+										<option value="0">-1차 카테고리 선택-</option>
+<?php
+for ($i = 0; $i < count($depth1Cate); $i ++) 
+{
+    $cate_seq = $depth1Cate[$i]["CATE_SEQ"];
+    $cate_name = $depth1Cate[$i]["CATE_NAME"];
+
+    $selected = "selected";
+?>										
+										<option value="<?php echo($cate_seq);?>" <?php if ($vote_cate1_seq == $cate_seq) echo($selected);?>><?php echo($cate_name); ?></option>
+<?php
+}
+?>
+									</select> 
+									<select>
+										<option value="0">-2차 카테고리 선택-</option>
+<?php
+if ($cate_2dept_seq != "" && $cate_2dept_seq != "0") 
+{
+    $cate_sub_seqs = $cateCtrl->getCategorySubList($vote_cate1_seq);
+    foreach ($cate_sub_seqs as $items) 
+    {
+        $cate_sub_seq = $items["CATE_SEQ"];
+        $cate_sub_name = $items["CATE_NAME"];
+?>
+										<option value="<?php echo($cate_sub_seq); ?>" <?php if ($cate_2dept_seq == $cate_sub_seq) echo($selected);?>><?php echo($cate_sub_name); ?></option>						
+<?php
+    }
+}
+?>
+									</select>
+								</div>
+							</div>
+						</div>
+						<div class="votewriteinputer">
+							<div class="votewritefield">
+								<img class="votemark" src="/app/images/mark_03.png" /> <span>내용</span>
+							</div>
+							<div class="votewriteinputbox">
+								<div class="inputcont">
+									<textarea rows="3">투표설문에 대해 설명할 내용이 있으시면 입력하세요.</textarea>
+								</div>
+							</div>
+						</div>
+						<div class="votewriteinputer">
+							<div class="votewritefield">
+								<img class="votemark" src="/app/images/mark_03.png" /> <span>관련사진</span>
+							</div>
+							<div class="votewriteinputbox">
+								<div class="inputcont">
+									<div class="imgbox">
+										<span>사진</span>
+									</div>
+									<button class="votebutton">
+										<img src="/app/images/up.png" /> <span>사진파일선택</span>
+									</button>
+								</div>
+							</div>
+						</div>
+						<div class="votewriteinputer">
+							<div class="votewritefield">
+								<img class="votemark" src="/app/images/mark_03.png" /> <span>관련링크</span>
+							</div>
+							<div class="votewriteinputbox">
+								<div class="inputcont">
+									<input type="text" value="www.***" />
+								</div>
+							</div>
+						</div>
+						<div class="votewriteinputer">
+							<div class="votewritefield">
+								<img class="votemark" src="/app/images/mark_03.png" /> <span>양식 설명</span>
+							</div>
+							<div class="votewriteinputbox">
+								<button class="votebutton">
+									<span class="top05">마감일 선택</span>
+								</button>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="votewritecont vtbline">
+					<div class="votewritecontitem">
+						<div class="votewriteinputer questionline">
+							<div class="votewritefield">
+								<img class="votemark" src="/app/images/mark_03.png" /> 
+								<span class="stress">질문1</span> 
+								<img class="bcontrol" src="/app/images/bminus.jpg" />
+							</div>
+							<div class="votewriteinputbox">
+								<div class="inputcontli vbspace">
+									<input type="text" value="질문을 입력하세요." /> 
+									<img src="/app/images/bminus.jpg" />
+								</div>
+								<div class="inputcont">
+									<div class="imgbox">
+										<span>사진</span>
+									</div>
+									<button class="votebutton">
+										<img src="/app/images/up.png" /> 
+										<span>사진파일선택</span>
+									</button>
+									<select>
+										<option>-응답종류 선택-</option>
+									</select>
+								</div>
+							</div>
+						</div>
+						<div class="votewriteinputer">
+							<ul>
+								<li>
+									<div class="votewritefield">
+										<img class="votemark" src="/app/images/mark_03.png" /> 
+										<span class="stress">응답1</span> 
+										<img class="bcontrol" src="/app/images/bplus.jpg" /> 
+										<img class="bcontrol" src="/app/images/bminus.jpg" />
+									</div>
+									<div class="votewriteinputbox">
+										<div class="inputcontli vbspace">
+											<input type="text" value="응답을 입력하세요." />
+											<img src="/app/images/bminus.jpg" /> 
+											<img src="/app/images/bplus.jpg" />
+										</div>
+										<div class="inputcont">
+											<div class="imgbox">
+												<span>사진</span>
+											</div>
+											<button class="votebutton">
+												<img src="/app/images/up.png" /> 
+												<span>사진파일선택</span>
+											</button>
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="votewritefield">
+										<img class="votemark" src="/app/images/mark_03.png" /> 
+										<span class="stress">응답2</span> 
+										<img class="bcontrol" src="/app/images/bplus.jpg" /> 
+										<img class="bcontrol" src="/app/images/bminus.jpg" />
+									</div>
+									<div class="votewriteinputbox">
+										<div class="inputcontli vbspace">
+											<input type="text" value="응답을 입력하세요." /> 
+											<img src="/app/images/bminus.jpg" /> 
+											<img src="/app/images/bplus.jpg" />
+										</div>
+										<div class="inputcont">
+											<div class="imgbox">
+												<span>사진</span>
+											</div>
+											<button class="votebutton">
+												<img src="/app/images/up.png" /> 
+												<span>사진파일선택</span>
+											</button>
+										</div>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="votewritecont vtbline">
+					<div class="votewritecontitem">
+						<div class="votewriteinputer questionline">
+							<div class="votewritefield">
+								<img class="votemark" src="/app/images/mark_03.png" /> 
+								<span class="stress">질문2</span>
+							</div>
+							<div class="votewriteinputbox">
+								<div class="inputcontli vbspace">
+									<input type="text" value="질문을 입력하세요." /> 
+									<img class="bcontrol" src="/app/images/bminus.jpg" />
+								</div>
+								<div class="inputcont">
+									<div class="imgbox">
+										<span>사진</span>
+									</div>
+									<button class="votebutton">
+										<img src="/app/images/up.png" /> 
+										<span>사진파일선택</span>
+									</button>
+									<select>
+										<option>-응답종류 선택-</option>
+									</select>
+								</div>
+							</div>
+						</div>
+						<div class="votewriteinputer">
+							<ul>
+								<li>
+									<div class="votewritefield">
+										<img class="votemark" src="/app/images/mark_03.png" /> 
+										<span class="stress">응답1</span> 
+										<img class="bcontrol" src="/app/images/bplus.jpg" /> 
+										<img class="bcontrol" src="/app/images/bminus.jpg" />
+									</div>
+									<div class="votewriteinputbox">
+										<div class="inputcontli vbspace">
+											<input type="text" value="응답을 입력하세요." /> 
+											<img src="/app/images/bminus.jpg" /> 
+											<img src="/app/images/bplus.jpg" />
+										</div>
+										<div class="inputcont">
+											<div class="imgbox">
+												<span>사진</span>
+											</div>
+											<button class="votebutton">
+												<img src="/app/images/up.png" /> 
+												<span>사진파일선택</span>
+											</button>
+										</div>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="votewritebtncont vttspace">
+					<div class="votewritebuttonlongbox">
+						<div class="votewriterightbutton stressbutton">
+							<span>이 투표를 사용</span>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- 투표 입력란 끝 -->
+		</div>
+	</div>
+</div>

@@ -1,0 +1,1232 @@
+﻿@CHARSET "UTF-8";
+
+@import url(http://fonts.googleapis.com/earlyaccess/notosanskr.css);
+/*
+ *	-----------------------------------
+ *	기본 설정
+ *	-----------------------------------
+ */
+html 
+{
+	font-family: 'Noto Sans KR';
+	font-size: 16px;
+}
+
+html, body, .page 
+{
+	height: 100%;
+	margin: 0px 0px 0px 0px;
+}
+
+html, body, .page, .top, .content, .footer, .logo, .searchbar,
+.adverbannerarea, .footermenuarea, .footermenuitem span,
+.footercommonarea, .footerlayer, .layerarea, .layerbox, .popupbox,
+.inputer, .loginbutton, .loginbutton span,
+.messagearea, .messageboxtop, .messagetitle, .messagesender, .messageboxbottom, .messageboxbottom,
+.alertarea, .sortitem span
+{
+	width: 100%;
+}
+
+html, body, .page, .content, .footer, .logo 
+{
+	padding: 0px 0px 0px 0px;
+}
+
+ul, li, .page, .top, .content, .footer, .searchbar img, .recommandsearch,
+.recommandtitle, .searchitem, .adverbannerarea, input[type=text], input[type=password],
+input[type=checkbox], input[type=radio], textarea, iframe,
+.footermenuarea, .footermenu, .footermenu img, .fspace, .footermenuitem,
+.footermenuitem span, .footercommonarea, .footerlayer, .footercommon,
+.footerguidemenu span, .fbottom, .layerarea, .layerbox, .popupbox,
+.inputer, .loginbutton, .loginbutton span, .shortinputer span, 
+.messagearea, .messagebutton span, .messageboxtop, .messagetitletext, .messagesender, .messagecontext, .messageboxbottom,
+.alertarea, .sortlink, .sortitem, .sortitem span
+{
+	float: left;
+}
+
+.sortitem 
+{
+	text-align: center;
+}
+
+.sortitem span 
+{
+	font-weight: bold;
+}
+
+div, ul, li, input[type=text] 
+{
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+ul, li 
+{
+	list-style: none;
+}
+
+input[type=text], input[type=password], input[type=checkbox], input[type=radio],
+select, textarea 
+{
+	font-size: 16px;
+	font-family: 'Noto Sans KR';
+}
+
+textarea 
+{
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	padding: 10px 20px 10px 20px;
+	border-radius: 0px;
+	border: 1px #d9d9d9 solid;
+}
+
+::placeholder 
+{
+	color: #b7b7b7;
+} 
+
+select 
+{
+	padding: 5px 20px 5px 20px;
+	background: url('../images/select.png') no-repeat 95% 50%;
+	background-color: #ffffff;
+	border: 1px solid #d9d9d9;
+	border-radius: 0px;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+}
+
+a, a:link, a:visited, a:hover 
+{
+	text-decoration: none;
+	color: inherit;
+}
+
+iframe 
+{
+	background-color: #ffffff;
+}
+
+/*
+ *	alert
+ */
+.alertarea
+{
+	border-bottom: 1px #cccccc solid;
+}
+
+.alertbox
+{
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+.alertmark
+{
+	float: left;
+	margin-right: 10px;
+}
+
+.alertbox span
+{
+	margin-top: 15px;
+}
+
+.alertMessage
+{
+	float: left;
+}
+
+.alerter
+{
+	margin-top: 15px;
+	float: right;
+}
+
+/*
+ *	logo
+ */
+.logo 
+{
+	float: left;
+}
+
+/*
+ *	login, logout
+ */
+.accountbox 
+{
+	color: #aeaeae;
+}
+
+/*
+ *	search
+ */
+.searchbar 
+{
+	float: left;
+}
+
+.searchbox 
+{
+	padding: 5px 5px 5px 20px;
+	border: 1px #cccccc solid;
+	border-radius: 30px;
+}
+
+.search 
+{
+	height: 25px;
+	width: 91%;
+	border: 0px;
+	margin-right: 5px;
+	color: #999999;
+}
+
+.searchbox img 
+{
+	float: left;
+}
+
+.recommandtitle 
+{
+	margin-right: 15px;
+	margin-top: 15px;
+	font-weight: bold;
+}
+
+.searchitem 
+{
+	padding: 5px 10px 5px 10px;
+	margin-right: 5px;
+	margin-top: 10px;
+	border-radius: 15px;
+	border: 1px #1c9cd9 solid;
+}
+
+.strong, .effect 
+{
+	font-weight: bold;
+}
+
+.strong 
+{
+	color: #333333;
+}
+
+.effect 
+{
+	color: #666666;
+}
+
+.semistress, .stress 
+{
+	color: #ff4200;
+}
+
+.stress 
+{
+	font-weight: bold;
+}
+
+.boundray 
+{
+	border-bottom: 1px #e2e2e2 solid;
+}
+
+.title, .largetitle 
+{
+	color: #1c9cd9;
+	font-weight: bold;
+}
+
+.altright 
+{
+	float: right;
+}
+
+.largetitle 
+{
+	font-size: 2.375rem;
+}
+
+/*
+ *	-----------------------------------
+ *	footer
+ *	-----------------------------------
+ */
+.footermenuitem span 
+{
+	color: #ffffff;
+}
+
+.footercommonarea 
+{
+	padding-bottom: 40px;
+}
+
+.footerguidemenu 
+{
+	margin-bottom: 20px;
+}
+
+.footerguidebox span 
+{
+	font-size: 0.75rem;
+}
+
+.fbottom 
+{
+	margin-top: 10px;
+	margin-bottom: 20px;
+}
+
+/*
+ *	팝업
+ */
+.layerarea, .messagearea
+{
+	position: absolute;
+}
+
+.popuparea 
+{
+	margin: 0 auto;
+}
+
+/*
+ *	input 영역
+ */
+.popupbox 
+{
+	background-color: #ffffff;
+	box-shadow: 0px 3px 8px 0px #9d9d9d;
+	padding-bottom: 40px;
+}
+
+.shortinputer, .inputer 
+{
+	height: 45px;
+	border: 1px #cccccc solid;
+}
+
+.inputer img 
+{
+	margin-right: 10px;
+	margin-top: 10px;
+}
+
+.shortinputer span 
+{
+	margin-top: 8px;
+}
+
+.shortinputer input[type=radio], .shortinputer input[type=checkbox] 
+{
+	margin-top: 13px;
+	margin-left: 10px;
+}
+
+.shortinputer input[type=text], .inputer input[type=text], .inputer input[type=password]
+{
+	margin-top: 5px;
+	margin-left: 5px;
+}
+
+.shortinputer input[type=text], .inputer input[type=text], .inputer input[type=password]
+{
+	height: 30px;
+	border: 0px;
+	color: #cccccc;
+}
+
+.inputer input[type=text], .inputer input[type=password] 
+{
+	width: calc(100% - 50px);
+}
+
+.shortinputer input[type=text] 
+{
+	width: calc(100% - 130px);
+}
+
+.lspace 
+{
+	margin-top: 8px;
+	margin-bottom: 8px;
+}
+
+.brspace
+{
+	margin-right: 5px;
+}
+
+.bspace
+{
+	margin-bottom: 10px;
+}
+
+.loginbutton 
+{
+	height: 55px;
+	background-color: #1c9cd9;
+	text-align: center;
+	margin-top: 35px;
+}
+
+.loginbutton span 
+{
+	margin-top: 11px;
+	color: #ffffff;
+	font-weight: bold;
+	font-size: 1.375rem;
+}
+
+.agree 
+{
+	display: none;
+}
+
+.agree+label 
+{
+	display: inline-block;
+	color: #333333;
+}
+
+.agree+label span 
+{
+	float: left;
+}
+
+.agree+label:before 
+{
+	float: left;
+	background-image: url('../images/stress_uncheck.jpg');
+	content: "";
+	display: inline-block;
+	width: 16px;
+	height: 16px;
+	margin-top: 4px;
+	margin-right: 5px;
+	border: 1px #9d9d9d solid;
+	border-radius: 30px;
+}
+
+.agree:checked+label:before 
+{
+	background-image: url('../images/stress_check.jpg');
+	background-repeat: no-repeat;
+	background-position: center center;
+}
+
+.imgbox 
+{
+	width: 150px;
+	height: 150px;
+	border: 1px #d9d9d9 solid;
+	text-align: center;
+	color: #666666;
+	padding-top: 55px;
+	margin-right: 10px;
+}
+
+.grayback 
+{
+	background-color: #f9f9f9;
+	height: 135px;
+}
+
+.width100
+{
+	width: 100%;
+}
+
+/*
+ *	팝업 메뉴
+ */
+.popupmenubox
+{
+	position:absolute;
+	width: 130px;
+	border: 1px #dddddd solid;
+	top: 100px;
+	background-color: #ffffff;
+}
+
+.bline
+{
+	border-bottom: 1px #dddddd solid;
+}
+
+.memuitem
+{
+	float: left;
+	width: 100%;
+	padding: 5px 5px 5px 5px;
+	cursor: pointer;
+}
+
+.menuname
+{
+	float: left;
+	text-align: left;
+}
+
+.menuarrow
+{
+	float: right;
+	text-align: right;
+}
+
+/*
+ *	메시지 보내기
+ */
+.messagearea
+{
+	z-index:1111;
+}
+
+.messagebox
+{
+	margin: 0 auto;
+	width: 320px;
+	height: 300px;
+	border: 1px #dddddd solid;
+	background-color: #ffffff;
+	padding: 10px 10px 10px 10px;
+}
+
+.messageboxtop
+{
+	margin-bottom: 10px;
+}
+
+.messagetitle
+{
+	margin-bottom: 5px;
+	color: #1c9cd9;
+	font-weight: bold;
+}
+
+.messagetitle .messagetitletext
+{
+	text-align: left;
+}
+
+.messagesender span
+{
+	float: right;
+	text-align: right;
+}
+
+.messagesender .messagesendertext
+{
+	text-align: right;
+}
+
+.messagebox textarea
+{
+	width: 100%;
+	height: 180px;
+}
+
+.messageboxbottom
+{
+	margin-top: 10px;
+}
+
+.messagebutton
+{
+	float: right;
+	width: 95px;
+	height: 30px;
+	border: 1px #cccccc solid;
+	margin-bottom: 20px;
+}
+
+.messagebutton span
+{
+	width: 100%;
+	height: 100%;
+	/*margin-top: 3px;*/
+	text-align: center;
+	font-weight: bold;
+	color: #666666;
+}
+
+.defaultbutton
+{
+	border: 1px #cccccc solid;
+	padding: 5px 10px 5px 10px;
+	background-color: #ffffff;
+}
+
+.defaultbutton span
+{
+	width: 100%;
+	height: 100%;
+	margin-top: 3px;
+	text-align: center;
+	font-weight: bold;
+	color: #666666;
+}
+
+.messageclose
+{
+	float: right;
+}
+
+/*
+ *	-----------------------------------
+ *	1024 이상 화면
+ *	-----------------------------------
+ */
+@media screen and (min-width:1025px) 
+{
+	/*
+	 *	top
+	 */
+	.toparea, .menuarea, .searcharea, .footermenubox, .footercommonbox, .alertbox
+	{
+		width: 1024px;
+		margin: 0 auto;
+	}
+	
+	.boundray 
+	{
+		margin-bottom: 25px;
+	}
+
+	/*
+	 *	footer
+	 */
+	.footermenu 
+	{
+		width: 320px;
+	}
+	
+	.fspace 
+	{
+		margin-right: 32px;
+	}
+	
+	.mnavi 
+	{
+		display: none;
+	}
+	
+	.mleft, .mright 
+	{
+		display: none;
+	}
+
+	/*
+	 *	팝업
+	 */
+	.layerarea 
+	{
+		top: 210px;
+	}
+
+	/*
+	 *	정렬 버튼
+	 */	
+	.sortlink 
+	{
+		width: 250px;
+		margin-bottom: 25px;
+	}
+	
+	.sortitem 
+	{
+		width: 80px;
+	}
+
+	.sortitem span 
+	{
+		font-size: 1.3125rem;
+	}
+}
+
+/*
+ *	-----------------------------------
+ *	1024 이하 화면
+ *	-----------------------------------
+ */
+@media screen and (max-width:1024px) 
+{
+	.sortlink 
+	{
+		width: 200px;
+		margin-bottom: 15px;
+	}
+	
+	.sortitem 
+	{
+		width: 65px;
+	}
+	
+	.sortitem span 
+	{
+		font-size: 1.125rem;
+	}
+}
+
+/*
+ *	-----------------------------------
+ *	800 이상 1024 이하 화면
+ *	-----------------------------------
+ */
+@media screen and (min-width:801px) and (max-width:1024px) 
+{
+	/*
+	 *	top
+	 */
+	.toparea, .menuarea, .searcharea, .footermenubox, .footercommonbox, .alertbox
+	{
+		width: 800px;
+		margin: 0 auto;
+	}
+	
+	.boundray 
+	{
+		margin-bottom: 20px;
+	}
+
+	/*
+	 *	footer
+	 */
+	.footermenu 
+	{
+		width: 260px;
+	}
+	
+	.fspace 
+	{
+		margin-right: 12px;
+	}
+	
+	.wleft, .wright 
+	{
+		display: block;
+	}
+
+	/*
+	 *	팝업
+	 */
+	.layerarea 
+	{
+		top: 125px;
+	}
+}
+
+/*
+ *	-----------------------------------
+ *	800 이상 화면
+ *	-----------------------------------
+ */
+@media screen and (min-width:801px) 
+{
+	/*
+	 *	로고
+	 */
+	.logo 
+	{
+		/*background-image:url('../images/logo.png');*/
+		height: 100px;
+	}
+	
+	.logobox 
+	{
+		margin: 15px auto;
+		width: 228px;
+	}
+	
+	.logowindow 
+	{
+		display: block;
+	}
+	
+	.logomobile 
+	{
+		display: none;
+	}
+
+	/*
+	 *	-----------------------------------
+	 *	top
+	 *	-----------------------------------
+	 */
+	.top 
+	{
+		padding: 0px 0px 10px 0px;
+	}
+
+	/*
+	 *	모바일 메뉴
+	 */
+	.mobilemenubutton 
+	{
+		display: none;
+	}
+
+	/*
+	 *	회원 컨트롤 영역
+	 */
+	.toparea .accountbox, .memberbox, .menubar 
+	{
+		display: block;
+	}
+	
+	.toparea .accountbox, .memberbox 
+	{
+		float: right;
+		margin-left: 5px;
+		margin-top: -40px;
+	}
+	
+	.toparea .accountbox 
+	{
+		width: 210px;
+	}
+	
+	.memberbox 
+	{
+		width: 250px;
+	}
+	
+	.toparea .accountbox div, .memberbox div, .toparea .accountbox img,
+	.memberbox img, .menubar, .menuitem, .menuitem span, .recommandsearch span
+	{
+		float: left;
+	}
+
+	.toparea .accountbox img, .memberbox img 
+	{
+		margin-left: 10px;
+		margin-right: 5px;
+	}
+	
+	.toparea .accountbox .login 
+	{
+		width: 100px;
+	}
+	.memberbox .logout {
+		width: 110px;
+	}
+	
+	.member img 
+	{
+		margin-top: -3px;
+	}
+	
+	.menubar 
+	{
+		width: 100%;
+	}
+
+	/*
+	 *	메뉴바 영역
+	 */
+	.menubar 
+	{
+		height: 45px;
+		background-color: #1c9cd9;
+	}
+	
+	.menuitem 
+	{
+		width: 204px;
+		height: 100%;
+	}
+	
+	.menuitem .menusign 
+	{
+		width: 100px;
+		height: 35px;
+		margin: 10px auto;
+	}
+	
+	.menuitem span 
+	{
+		width: 100%;
+		text-align: center;
+		font-size: 1.063rem;
+	}
+	
+	.noselect 
+	{
+		color: #ffffff;
+	}
+	
+	.select 
+	{
+		color: #000000;
+		font-weight: bold;
+		border-bottom: 5px #6effff solid;
+	}
+
+	/*
+	 *	search
+	 */
+	.searchbox 
+	{
+		float: left;
+		width: 400px;
+		margin-top: 11px;
+	}
+	
+	.searchbox img 
+	{
+		margin-top: 3px;
+	}
+	
+	.search 
+	{
+		margin-right: 5px;
+	}
+	
+	.recommandsearch 
+	{
+		display: block;
+		width: calc(100% - 450px);
+		margin-left: 20px;
+	}
+
+	/*
+	 *	footer
+	 */
+	.footerguidemenu, .footerguidebox 
+	{
+		float: left;
+		width: 100%;
+	}
+	
+	.footermenuarea 
+	{
+		background-color: #3b3a38;
+		padding: 60px 0px 60px 0px;
+	}
+	
+	.footermenuitem 
+	{
+		width: calc(100% - 75px);
+		margin-left: 10px;
+	}
+	
+	.footermenutitle 
+	{
+		font-weight: bold;
+		/*font-size: 1.125rem;*/
+		font-size: 1.5rem;
+	}
+	
+	.wfootermenu, .footermenutext 
+	{
+		display: block;
+	}
+	
+	.mfootermenu 
+	{
+		display: none;
+	}
+	
+	.glspace 
+	{
+		margin-left: 0px;
+	}
+	
+	.grspace 
+	{
+		margin-right: 20px;
+	}
+	
+	.footerguidebox span 
+	{
+		margin-right: 5px;
+	}
+	
+	.footercommonbox 
+	{
+		padding-top: 40px;
+	}
+	
+	.footercommonbox img 
+	{
+		float: left;
+		display: block;
+	}
+	
+	.footercommon 
+	{
+		width: calc(100% - 330px);
+		margin-left: 50px;
+	}
+	
+	.wleft, .wright 
+	{
+		display: block;
+	}
+
+	/*
+	 *	팝업
+	 */
+	.popuparea 
+	{
+		width: 560px;
+	}
+
+	/* 추후 삭제 */
+	.mrecommsearchlayer 
+	{
+		display: none;
+	}
+	
+	.grayback 
+	{
+		padding-top: 25px;
+		padding-bottom: 5px;
+	}
+}
+
+/*	
+ *	-----------------------------------
+ *	800 이하 화면
+ *	-----------------------------------
+ */
+@media screen and (max-width:800px) 
+{
+	/*
+	 *	top
+	 */
+	.toparea, .menuarea, .searcharea, .alertbox 
+	{
+		float: left;
+		width: 100%;
+	}
+	
+	.boundray 
+	{
+		margin-bottom: 10px;
+	}
+
+	/*
+	 *	로고
+	 */
+	.logo 
+	{
+		/*background-image:url('../images/mobile_logo.png');*/
+		height: 70px;
+		border-bottom: 1px #cccccc solid;
+	}
+	
+	.logobox 
+	{
+		margin: 10px auto;
+		width: 180px;
+	}
+	
+	.logowindow 
+	{
+		display: none;
+	}
+	
+	.logomobile 
+	{
+		display: block;
+	}
+
+	/*
+	 *	로고
+	 */
+	.mobilemenubutton 
+	{
+		display: block;
+		float: right;
+		margin-top: -60px;
+		margin-right: 15px;
+	}
+	
+	.toparea .accountbox, .memberbox, .menubar 
+	{
+		display: none;
+	}
+
+	/*
+	 *	search
+	 */
+	.searchbox 
+	{
+		margin: 15px auto;
+		width: 90%;
+		height: 35px;
+	}
+	
+	.search 
+	{
+		margin-right: 2px;
+	}
+	
+	.searchbox img 
+	{
+		margin-top: 2px;
+	}
+	
+	.recommandsearch 
+	{
+		display: none;
+	}
+
+	/*
+	 *	footer
+	 */
+	.footermenuarea 
+	{
+		background-color: #3b3a38;
+		padding: 30px 0px 30px 0px;
+	}
+	
+	.footermenubox 
+	{
+		margin: 0 auto;
+		width: 97%;
+	}
+	
+	.footermenu 
+	{
+		width: 33%;
+	}
+	
+	.footermenuitem 
+	{
+		width: calc(100% - 48px);
+	}
+	
+	.footermenutitle 
+	{
+		font-size: 0.8125rem;
+	}
+	
+	.mfooterline 
+	{
+		border-right: 1px #62615f solid;
+	}
+	
+	.footercommonbox 
+	{
+		float: left;
+		padding-top: 20px;
+		width: 100%;
+	}
+	
+	.footercommonbox img 
+	{
+		display: none;
+	}
+	
+	.footercommon 
+	{
+		width: 100%;
+	}
+	
+	.wfootermenu, .footermenutext 
+	{
+		display: none;
+	}
+	
+	.mfootermenu 
+	{
+		display: block;
+	}
+	
+	.footerlayer 
+	{
+		margin-bottom: 20px;
+	}
+	
+	.footerguidemenu 
+	{
+		margin: 0 auto;
+		width: 83%;
+	}
+	
+	.footerguidemenu span 
+	{
+		font-size: 0.875rem;
+		font-weight: bold;
+	}
+	
+	.footerguidebox 
+	{
+		margin: 0 auto;
+		width: 90%;
+	}
+	
+	.footerguidebox span 
+	{
+		float: left;
+		margin-right: 10px;
+	}
+	
+	.glspace 
+	{
+		margin-left: 10px;
+	}
+	
+	.grspace 
+	{
+		margin-right: 15px;
+	}
+	
+	.mnavi 
+	{
+		position: absolute;
+		width: 100%;
+		display: block;
+	}
+	
+	.wleft, .wright 
+	{
+		display: none;
+	}
+	
+	.mleft 
+	{
+		float: left;
+		margin-left: 5px;
+	}
+	
+	.mright 
+	{
+		float: right;
+		margin-right: 5px;
+	}
+	
+	.mleft, .mright 
+	{
+		margin-top: 130px;
+	}
+
+	/*
+	 *	팝업
+	 */
+	.layerarea 
+	{
+		top: 15px;
+	}
+	
+	.popuparea 
+	{
+		width: 340px;
+	}
+	
+	.grayback 
+	{
+		padding-top: 10px;
+		padding-bottom: 5px;
+	}
+}

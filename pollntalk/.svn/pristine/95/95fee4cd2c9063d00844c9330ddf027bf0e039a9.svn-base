@@ -1,0 +1,59 @@
+<?php
+$mode = $_GET[CONST_WEB_MESSAGE::MODE];
+if ($mode == "")
+    $mode   = "main";
+if ($mode == "main" || 
+    $mode == "votelist" || 
+    $mode == "voteform" || 
+    $mode == "voteformlist" || 
+    $mode == "votewrite" ||
+    $mode == "vote_register" ||
+    $mode == "voteview") 
+{
+?>
+<script type="text/javascript" src="/app/js/category.js?v=1.2" charset="utf-8">
+</script>
+<?php
+}
+
+if ($mode == "votewrite")
+{
+    
+?>
+<script type="text/javascript" src="/app/js/vote.js?v=1.0" charset="utf-8">
+</script>
+<script type="text/javascript" src="/app/js/calendar.js?v=1.2" charset="utf-8">
+</script>
+<script type="text/javascript" src="/app/js/votewrite.js?v=1.20" charset="utf-8">
+</script>
+<?php
+}
+
+if ($mode == "vote_register")
+{
+?>
+<script type="text/javascript" src="/app/js/vote_register.js?v=1.2" charset="utf-8">
+</script>
+<?php
+}
+
+$mypage = "";
+if ($mode == "mypage")
+{
+    $sub        = $_GET["sub"]; 
+    $mypage     .= "mypage_";
+    if ($sub == "vote")
+    {
+        $mypage     .= "vote";
+    }
+}
+if ($mode == "voteview" || $mypage == "mypage_vote")
+{
+?>
+<script type="text/javascript" src="/app/js/voteview.js?v=1.1" charset="utf-8">
+</script>
+<?php 
+}
+?>
+<script type="text/javascript" src="/resource/core_js.js?v=1.2" charset="utf-8">
+</script>

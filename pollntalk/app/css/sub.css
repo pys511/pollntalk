@@ -1,0 +1,204 @@
+﻿@CHARSET "UTF-8";
+
+/*
+ *	-----------------------------------
+ *	서브페이지
+ *	-----------------------------------
+ */
+.defaultarea, .txtline, .continputer, .inputfield, .inputbox span,
+.inputrec 
+{
+	float: left;
+}
+
+.defaultarea, .continputer, .inputrec 
+{
+	width: 100%;
+}
+
+.defaultarea 
+{
+	margin-bottom: 25px;
+}
+
+/*
+ *	-----------------------------------
+ *	베너
+ *	-----------------------------------
+ */
+.adverbannerarea 
+{
+	padding-bottom: 25px;
+}
+
+.txtline 
+{
+	margin-top: 5px;
+	height: 20px;
+	border-right: 1px #d1d1d1 solid;
+}
+
+/*
+ *	세금계산서
+ */
+.inputbox 
+{
+	margin: 0 auto;
+	width: 95%;
+}
+
+.inputrec 
+{
+	padding-bottom: 5px;
+}
+
+.inputfield 
+{
+	padding-top: 5px;
+	font-weight: bold;
+	color: #666666;
+}
+
+.inputbox input[type=text] 
+{
+	height: 35px;
+	border-radius: 0px;
+	border: 1px #d9d9d9 solid;
+}
+
+.inputlong 
+{
+	float: right;
+}
+
+.inputshort 
+{
+	float: left;
+	width: 100px;
+}
+
+.inputbutton 
+{
+	float: left;
+	margin-left: 10px;
+	padding: 8px 10px 8px 10px;
+	border: 1px #1c9cd9 solid;
+	color: #1c9cd9;
+	font-weight: bold;
+}
+
+/*
+ *	기타
+ */
+.bsline 
+{
+	border-bottom: 1px #333333 solid;
+	padding-bottom: 10px;
+}
+
+.answerreplybox
+{
+	float: left;
+	width: 100%;
+}
+
+.answerreplybox button
+{
+	float: right;
+}
+
+.answerreplybox li
+{
+	float: left;
+	width: 100%;
+}
+
+/*
+ *	-----------------------------------
+ *	1024 이상 화면
+ *	-----------------------------------
+ */
+@media screen and (min-width:1025px) 
+{
+	.adverbannerbox 
+	{
+		margin: 0px auto;
+		text-align: center;
+	}
+
+	/*
+	 *	세금계산서
+	 */
+	.inputfield 
+	{
+		width: 150px;
+	}
+	
+	.inputlong 
+	{
+		width: calc(100% - 160px);
+	}
+}
+
+/*
+ *	-----------------------------------
+ *	1024 이하 화면
+ *	-----------------------------------
+ */
+@media screen and (max-width:1024px) 
+{
+	.adverbannerbox 
+	{
+		float: float;
+		width: 100%;
+		text-align: center;
+	}
+	
+	.inputfield 
+	{
+		width: 100px;
+	}
+	
+	.inputlong 
+	{
+		width: calc(100% - 110px);
+	}
+}
+
+/*
+ *	-----------------------------------
+ *	800 이상 화면
+ *	-----------------------------------
+ */
+@media screen and (min-width:801px) 
+{
+	.wad 
+	{
+		display: block;
+		margin: 0 auto;
+	}
+	
+	.mad 
+	{
+		display: none;
+	}
+}
+
+/*	
+ *	-----------------------------------
+ *	800 이하 화면
+ *	-----------------------------------
+ */
+@media screen and (max-width:800px) 
+{
+	.wad 
+	{
+		display: none;
+	}
+	
+	.mad 
+	{
+		display: block;
+		margin: 0 auto;
+	}
+}

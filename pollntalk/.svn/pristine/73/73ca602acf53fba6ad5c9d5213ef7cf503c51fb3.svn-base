@@ -1,0 +1,17 @@
+<?php
+/**
+ *  @auth   : JEON JY
+ *  @date   : 20200529
+ *  ajax로 받은 문의사항 정보를 처리
+ */
+try {
+    $update = new CApp_Handler_Admin_Ctrl();
+    $result = $update->registerAdmin($_POST);
+    if (! $result)
+        $result = "FALSE";
+
+    Header("Location:/?mode=admin_register&is_register=" . $result);
+} catch (CException $ex) {
+    $ex->printException();
+}
+?>

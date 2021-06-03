@@ -1,0 +1,38 @@
+@CHARSET "UTF-8";
+
+.contentArea .loginArea {
+	margin: 100px auto 0px;
+	width: 295px;
+	height: 140px;
+	padding: 20px 30px 10px 30px;
+	border: 1px #b7c0c0 solid;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.contentArea .loginArea .loginBox {
+	float: left;
+	height: 35px;
+}
+
+.contentArea .loginArea .loginBox .loginInputText {
+	float: left;
+	width: 135px;
+	height: 20px;
+	border: 1px #d5d5d5 solid;
+}
+
+.contentArea .loginArea .loginBox span {
+	float: left;
+	margin-top: 5px;
+}
+
+.contentArea .loginArea .loginBox img {
+	float: left;
+	margin-left: 5px;
+}
+
+.loginArea .loginBox span, .loginArea .loginBottom span {
+	font-size: 12px;
+}

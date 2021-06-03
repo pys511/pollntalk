@@ -1,0 +1,499 @@
+<?php
+?>
+<div class="content">
+	<!-- 카테고리 영역 시작 -->
+	<div class="defaultarea grayback">
+<?php
+require_once ('./app/view/common/category.php');
+?>
+	</div>
+<?php
+$cate_seq = $_GET["cate_seq"];
+$cate_sub_seq = $_GET["cate_sub_seq"];
+$cate_name = "";
+$cate_sub_name = "";
+if ($cate_seq != "" || $cate_sub_seq != "") {
+    $cateInfo = $cateCtrl->getCategory4View($cate_seq, $cate_sub_seq);
+    $cate_name = $cateInfo[0]["CATE_NAME"];
+    $cate_sub_name = $cateInfo[0]["CATE_SUB_NAME"];
+    ?>
+	<div class="defaultarea">
+		<div class="catetitle">
+<?php
+    if ($cate_name != "") {
+        ?>			
+			<span class="largetitle"><?php echo($cate_name); ?></span>
+<?php
+    }
+
+    if ($cate_sub_name != "") {
+        ?>
+			<span class="largetitle">></span> <span class="largetitle"><?php echo($cate_sub_name); ?></span>
+<?php
+    }
+    ?>
+		</div>
+	</div>
+<?php
+}
+?>
+	<!-- 카테고리 영역 끝 -->
+	<!-- 광고 베너 영역 시작 -->
+	<div class="adverbannerarea boundray">
+		<div class="adverbannerbox">
+			<img class="wad" src="/app/images/ad_sample_03.jpg" /> <img
+				class="mad" src="/app/images/ad_sample_m_01.png" />
+		</div>
+	</div>
+	<!-- 광고 베너 영역 끝 -->
+	<!-- 투표 전시 목록 영역 시작 -->
+	<div class="votedisparea">
+		<div class="votedispcont boundray">
+			<div class="votedispbox">
+				<div class="votedisptitle">
+					<img class="wtitle" src="/app/images/vote_title_02.png" /> 
+					<img class="mtitle" src="/app/images/vote_title_m_02.png" />
+				</div>
+				<div class="allviewbutton">
+					<span>전체보기 + </span>
+				</div>
+				<div class="votedisplist">
+					<div class="mnavi">
+						<img class="navileft mleft" src="/app/images/vote_m_left.png" /> <img
+							class="naviright mright" src="/app/images/vote_m_right.png" />
+					</div>
+					<img class="navileft wleft" src="/app/images/vote_left.png" />
+					<div class="votedisp">
+						<div class="votedispview">
+							<div class="votedispitem rspace"
+								style="background-image: url('/app/images/sample_01.png')">
+								<div class="votedispinfobox">
+									<div class="votedispitemtitle title">
+										<span>내 생애 최고의 화장품은 무엇인가요?</span>
+									</div>
+									<div class="votedispuser">
+										<img src="/app/images/user_icon.png" /> <span>폴앤톡1004</span>
+									</div>
+									<div class="votedispinfo">
+										<span class="normal">카테고리 : 문화 > 여행</span>
+									</div>
+									<div class="votedispinfo">
+										<span>참여 : </span> <span class="stress">245</span> <span>/</span>
+										<span>댓글 : </span> <span class="stress">12</span> <span>/</span>
+										<span>좋아요 : </span> <span class="stress">50</span>
+									</div>
+								</div>
+							</div>
+							<div class="votedispitem rspace"
+								style="background-image: url('/app/images/sample_02.png')">
+								<div class="votedispinfobox">
+									<div class="votedispitemtitle title">
+										<span>내 생애 최고의 화장품은 무엇인가요?</span>
+									</div>
+									<div class="votedispuser">
+										<img src="/app/images/user_icon.png" /> <span>폴앤톡1004</span>
+									</div>
+									<div class="votedispinfo">
+										<span class="normal">카테고리 : 문화 > 여행</span>
+									</div>
+									<div class="votedispinfo">
+										<span>참여 : </span> <span class="stress">245</span> <span>/</span>
+										<span>댓글 : </span> <span class="stress">12</span> <span>/</span>
+										<span>좋아요 : </span> <span class="stress">50</span>
+									</div>
+
+								</div>
+							</div>
+							<div class="votedispitem rspace"
+								style="background-image: url('/app/images/sample_03.png')">
+								<div class="votedispinfobox">
+									<div class="votedispitemtitle title">
+										<span>내 생애 최고의 화장품은 무엇인가요?</span>
+									</div>
+									<div class="votedispuser">
+										<img src="/app/images/user_icon.png" /> <span>폴앤톡1004</span>
+									</div>
+									<div class="votedispinfo">
+										<span class="normal">카테고리 : 문화 > 여행</span>
+									</div>
+									<div class="votedispinfo">
+										<span>참여 : </span> <span class="stress">245</span> <span>/</span>
+										<span>댓글 : </span> <span class="stress">12</span> <span>/</span>
+										<span>좋아요 : </span> <span class="stress">50</span>
+									</div>
+								</div>
+							</div>
+							<div class="votedispitem"
+								style="background-image: url('/app/images/sample_03.png')">
+								<div class="votedispinfobox">
+									<div class="votedispitemtitle title">
+										<span>내 생애 최고의 화장품은 무엇인가요?</span>
+									</div>
+									<div class="votedispuser">
+										<img src="/app/images/user_icon.png" /> <span>폴앤톡1004</span>
+									</div>
+									<div class="votedispinfo">
+										<span class="normal">카테고리 : 문화 > 여행</span>
+									</div>
+									<div class="votedispinfo">
+										<span>참여 : </span> <span class="stress">245</span> <span>/</span>
+										<span>댓글 : </span> <span class="stress">12</span> <span>/</span>
+										<span>좋아요 : </span> <span class="stress">50</span>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<img class="naviright wright" src="/app/images/vote_right.png" />
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- 투표 전시 목록 영역 끝 -->
+	<!-- 투표 목록 영역 시작 -->
+	<div class="votelistarea">
+		<!-- 투표 게시판 목록 시작 -->
+		<div class="votelist">
+			<div class="sortlink">
+				<div class="sortitem">
+					<span>추천순</span>
+				</div>
+				<div class="txtline"></div>
+				<div class="sortitem">
+					<span>최신순</span>
+				</div>
+				<div class="txtline"></div>
+				<div class="sortitem">
+					<span>참여순</span>
+				</div>
+			</div>
+			<div class="votelistbox">
+				<div class="votelistview">
+					<div class="votedispitem votespace"
+						style="background-image: url('/app/images/sample_04.png')">
+						<div class="votedispinfobox">
+							<div class="votedispitemtitle title">
+								<span>내 생애 최고의 화장품은 무엇인가요?</span>
+							</div>
+							<div class="votedispuser">
+								<img src="/app/images/user_icon.png" /> <span>폴앤톡1004</span>
+							</div>
+							<div class="votedispinfo">
+								<span class="normal">카테고리 : 문화 > 여행</span>
+							</div>
+							<div class="votedispinfo">
+								<span>참여 : </span> <span class="stress">245</span> <span>/</span>
+								<span>댓글 : </span> <span class="stress">12</span> <span>/</span>
+								<span>좋아요 : </span> <span class="stress">50</span>
+							</div>
+						</div>
+					</div>
+					<div class="votedispitem votespace"
+						style="background-image: url('/app/images/sample_05.png')">
+						<div class="votedispinfobox">
+							<div class="votedispitemtitle title">
+								<span>내 생애 최고의 화장품은 무엇인가요?</span>
+							</div>
+							<div class="votedispuser">
+								<img src="/app/images/user_icon.png" /> <span>폴앤톡1004</span>
+							</div>
+							<div class="votedispinfo">
+								<span class="normal">카테고리 : 문화 > 여행</span>
+							</div>
+							<div class="votedispinfo">
+								<span>참여 : </span> <span class="stress">245</span> <span>/</span>
+								<span>댓글 : </span> <span class="stress">12</span> <span>/</span>
+								<span>좋아요 : </span> <span class="stress">50</span>
+							</div>
+						</div>
+					</div>
+					<div class="votedispitem votespace"
+						style="background-image: url('/app/images/sample_06.png')">
+						<div class="votedispinfobox">
+							<div class="votedispitemtitle title">
+								<span>내 생애 최고의 화장품은 무엇인가요?</span>
+							</div>
+							<div class="votedispuser">
+								<img src="/app/images/user_icon.png" /> <span>폴앤톡1004</span>
+							</div>
+							<div class="votedispinfo">
+								<span class="normal">카테고리 : 문화 > 여행</span>
+							</div>
+							<div class="votedispinfo">
+								<span>참여 : </span> <span class="stress">245</span> <span>/</span>
+								<span>댓글 : </span> <span class="stress">12</span> <span>/</span>
+								<span>좋아요 : </span> <span class="stress">50</span>
+							</div>
+						</div>
+					</div>
+					<div class="votedispitem votespace"
+						style="background-image: url('/app/images/sample_07.png')">
+						<div class="votedispinfobox">
+							<div class="votedispitemtitle title">
+								<span>내 생애 최고의 화장품은 무엇인가요?</span>
+							</div>
+							<div class="votedispuser">
+								<img src="/app/images/user_icon.png" /> <span>폴앤톡1004</span>
+							</div>
+							<div class="votedispinfo">
+								<span class="normal">카테고리 : 문화 > 여행</span>
+							</div>
+							<div class="votedispinfo">
+								<span>참여 : </span> <span class="stress">245</span> <span>/</span>
+								<span>댓글 : </span> <span class="stress">12</span> <span>/</span>
+								<span>좋아요 : </span> <span class="stress">50</span>
+							</div>
+						</div>
+					</div>
+					<div class="votedispitem votespace"
+						style="background-image: url('/app/images/sample_01.png')">
+						<div class="votedispinfobox">
+							<div class="votedispitemtitle title">
+								<span>내 생애 최고의 화장품은 무엇인가요?</span>
+							</div>
+							<div class="votedispuser">
+								<img src="/app/images/user_icon.png" /> <span>폴앤톡1004</span>
+							</div>
+							<div class="votedispinfo">
+								<span class="normal">카테고리 : 문화 > 여행</span>
+							</div>
+							<div class="votedispinfo">
+								<span>참여 : </span> <span class="stress">245</span> <span>/</span>
+								<span>댓글 : </span> <span class="stress">12</span> <span>/</span>
+								<span>좋아요 : </span> <span class="stress">50</span>
+							</div>
+						</div>
+					</div>
+					<div class="votedispitem votespace"
+						style="background-image: url('/app/images/sample_02.png')">
+						<div class="votedispinfobox">
+							<div class="votedispitemtitle title">
+								<span>내 생애 최고의 화장품은 무엇인가요?</span>
+							</div>
+							<div class="votedispuser">
+								<img src="/app/images/user_icon.png" /> <span>폴앤톡1004</span>
+							</div>
+							<div class="votedispinfo">
+								<span class="normal">카테고리 : 문화 > 여행</span>
+							</div>
+							<div class="votedispinfo">
+								<span>참여 : </span> <span class="stress">245</span> <span>/</span>
+								<span>댓글 : </span> <span class="stress">12</span> <span>/</span>
+								<span>좋아요 : </span> <span class="stress">50</span>
+							</div>
+						</div>
+					</div>
+					<div class="votedispitem votespace"
+						style="background-image: url('/app/images/sample_03.png')">
+						<div class="votedispinfobox">
+							<div class="votedispitemtitle title">
+								<span>내 생애 최고의 화장품은 무엇인가요?</span>
+							</div>
+							<div class="votedispuser">
+								<img src="/app/images/user_icon.png" /> <span>폴앤톡1004</span>
+							</div>
+							<div class="votedispinfo">
+								<span class="normal">카테고리 : 문화 > 여행</span>
+							</div>
+							<div class="votedispinfo">
+								<span>참여 : </span> <span class="stress">245</span> <span>/</span>
+								<span>댓글 : </span> <span class="stress">12</span> <span>/</span>
+								<span>좋아요 : </span> <span class="stress">50</span>
+							</div>
+						</div>
+					</div>
+					<div class="votedispitem votespace"
+						style="background-image: url('/app/images/sample_04.png')">
+						<div class="votedispinfobox">
+							<div class="votedispitemtitle title">
+								<span>내 생애 최고의 화장품은 무엇인가요?</span>
+							</div>
+							<div class="votedispuser">
+								<img src="/app/images/user_icon.png" /> <span>폴앤톡1004</span>
+							</div>
+							<div class="votedispinfo">
+								<span class="normal">카테고리 : 문화 > 여행</span>
+							</div>
+							<div class="votedispinfo">
+								<span>참여 : </span> <span class="stress">245</span> <span>/</span>
+								<span>댓글 : </span> <span class="stress">12</span> <span>/</span>
+								<span>좋아요 : </span> <span class="stress">50</span>
+							</div>
+						</div>
+					</div>
+					<div class="votedispitem votespace"
+						style="background-image: url('/app/images/sample_05.png')">
+						<div class="votedispinfobox">
+							<div class="votedispitemtitle title">
+								<span>내 생애 최고의 화장품은 무엇인가요?</span>
+							</div>
+							<div class="votedispuser">
+								<img src="/app/images/user_icon.png" /> <span>폴앤톡1004</span>
+							</div>
+							<div class="votedispinfo">
+								<span class="normal">카테고리 : 문화 > 여행</span>
+							</div>
+							<div class="votedispinfo">
+								<span>참여 : </span> <span class="stress">245</span> <span>/</span>
+								<span>댓글 : </span> <span class="stress">12</span> <span>/</span>
+								<span>좋아요 : </span> <span class="stress">50</span>
+							</div>
+						</div>
+					</div>
+					<div class="votedispitem votespace"
+						style="background-image: url('/app/images/sample_06.png')">
+						<div class="votedispinfobox">
+							<div class="votedispitemtitle title">
+								<span>내 생애 최고의 화장품은 무엇인가요?</span>
+							</div>
+							<div class="votedispuser">
+								<img src="/app/images/user_icon.png" /> <span>폴앤톡1004</span>
+							</div>
+							<div class="votedispinfo">
+								<span class="normal">카테고리 : 문화 > 여행</span>
+							</div>
+							<div class="votedispinfo">
+								<span>참여 : </span> <span class="stress">245</span> <span>/</span>
+								<span>댓글 : </span> <span class="stress">12</span> <span>/</span>
+								<span>좋아요 : </span> <span class="stress">50</span>
+							</div>
+						</div>
+					</div>
+					<div class="votedispitem votespace"
+						style="background-image: url('/app/images/sample_07.png')">
+						<div class="votedispinfobox">
+							<div class="votedispitemtitle title">
+								<span>내 생애 최고의 화장품은 무엇인가요?</span>
+							</div>
+							<div class="votedispuser">
+								<img src="/app/images/user_icon.png" /> <span>폴앤톡1004</span>
+							</div>
+							<div class="votedispinfo">
+								<span class="normal">카테고리 : 문화 > 여행</span>
+							</div>
+							<div class="votedispinfo">
+								<span>참여 : </span> <span class="stress">245</span> <span>/</span>
+								<span>댓글 : </span> <span class="stress">12</span> <span>/</span>
+								<span>좋아요 : </span> <span class="stress">50</span>
+							</div>
+						</div>
+					</div>
+					<div class="votedispitem votespace"
+						style="background-image: url('/app/images/sample_01.png')">
+						<div class="votedispinfobox">
+							<div class="votedispitemtitle title">
+								<span>내 생애 최고의 화장품은 무엇인가요?</span>
+							</div>
+							<div class="votedispuser">
+								<img src="/app/images/user_icon.png" /> <span>폴앤톡1004</span>
+							</div>
+							<div class="votedispinfo">
+								<span class="normal">카테고리 : 문화 > 여행</span>
+							</div>
+							<div class="votedispinfo">
+								<span>참여 : </span> <span class="stress">245</span> <span>/</span>
+								<span>댓글 : </span> <span class="stress">12</span> <span>/</span>
+								<span>좋아요 : </span> <span class="stress">50</span>
+							</div>
+						</div>
+					</div>
+					<div class="votedispitem votespace"
+						style="background-image: url('/app/images/sample_02.png')">
+						<div class="votedispinfobox">
+							<div class="votedispitemtitle title">
+								<span>내 생애 최고의 화장품은 무엇인가요?</span>
+							</div>
+							<div class="votedispuser">
+								<img src="/app/images/user_icon.png" /> <span>폴앤톡1004</span>
+							</div>
+							<div class="votedispinfo">
+								<span class="normal">카테고리 : 문화 > 여행</span>
+							</div>
+							<div class="votedispinfo">
+								<span>참여 : </span> <span class="stress">245</span> <span>/</span>
+								<span>댓글 : </span> <span class="stress">12</span> <span>/</span>
+								<span>좋아요 : </span> <span class="stress">50</span>
+							</div>
+						</div>
+					</div>
+					<div class="votedispitem votespace"
+						style="background-image: url('/app/images/sample_03.png')">
+						<div class="votedispinfobox">
+							<div class="votedispitemtitle title">
+								<span>내 생애 최고의 화장품은 무엇인가요?</span>
+							</div>
+							<div class="votedispuser">
+								<img src="/app/images/user_icon.png" /> <span>폴앤톡1004</span>
+							</div>
+							<div class="votedispinfo">
+								<span class="normal">카테고리 : 문화 > 여행</span>
+							</div>
+							<div class="votedispinfo">
+								<span>참여 : </span> <span class="stress">245</span> <span>/</span>
+								<span>댓글 : </span> <span class="stress">12</span> <span>/</span>
+								<span>좋아요 : </span> <span class="stress">50</span>
+							</div>
+						</div>
+					</div>
+					<div class="votedispitem votespace"
+						style="background-image: url('/app/images/sample_04.png')">
+						<div class="votedispinfobox">
+							<div class="votedispitemtitle title">
+								<span>내 생애 최고의 화장품은 무엇인가요?</span>
+							</div>
+							<div class="votedispuser">
+								<img src="/app/images/user_icon.png" /> <span>폴앤톡1004</span>
+							</div>
+							<div class="votedispinfo">
+								<span class="normal">카테고리 : 문화 > 여행</span>
+							</div>
+							<div class="votedispinfo">
+								<span>참여 : </span> <span class="stress">245</span> <span>/</span>
+								<span>댓글 : </span> <span class="stress">12</span> <span>/</span>
+								<span>좋아요 : </span> <span class="stress">50</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="paging">
+				<div class="pagingbutton pageleftend pagenavinoselect"></div>
+				<div class="pagingbutton pageleft pagenavinoselect"></div>
+				<div class="pagingbutton">
+					<span>1</span>
+				</div>
+				<div class="pagingbutton pageselect">
+					<span>2</span>
+				</div>
+				<div class="pagingbutton">
+					<span>3</span>
+				</div>
+				<div class="pagingbutton">
+					<span>4</span>
+				</div>
+				<div class="pagingbutton">
+					<span>5</span>
+				</div>
+				<div class="pagingbutton">
+					<span>6</span>
+				</div>
+				<div class="pagingbutton">
+					<span>7</span>
+				</div>
+				<div class="pagingbutton">
+					<span>8</span>
+				</div>
+				<div class="pagingbutton">
+					<span>9</span>
+				</div>
+				<div class="pagingbutton">
+					<span>10</span>
+				</div>
+				<div class="pagingbutton pageright pagenaviselect"></div>
+				<div class="pagingbutton pagerightend pagenavinoselect"></div>
+			</div>
+		</div>
+		<!-- 투표 게시판 목록 끝 -->
+	</div>
+	<!-- 투표 게시판 목록 영역 끝 -->
+</div>

@@ -1,0 +1,246 @@
+﻿@CHARSET "UTF-8";
+
+/*
+ *	-----------------------------------
+ *	메인 베너
+ *	-----------------------------------
+ */
+.mainscreen, .mainbannerarea, .mainbanneritem, .messagebox,
+	.votestatusarea, .votestatusbox, .votestatusitem, .votestatusitem img,
+	.status, .statusTitle, .statusData {
+	float: left;
+}
+
+.mainscreen, .mainbannerarea, .mainbanneritem, .messagebox,
+	.votestatusarea {
+	width: 100%;
+}
+
+.mainscreen {
+	background-color: #f9f9f9;
+	padding-bottom: 15px;
+	margin-bottom: 15px;
+}
+
+.mainbannerarea {
+	background-color: #ebe8ef;
+}
+
+.mainbanneritem {
+	border-image: url('') 100%;
+	background-repeat: no-repeat;
+}
+
+.messageaccessory {
+	height: 5px;
+	margin: 0 auto 10px;
+	background-color: #1c9cd9;
+}
+
+.message {
+	float: left;
+	width: 100%;
+	text-align: center;
+}
+
+.bannerbutton {
+	width: 45px;
+	margin: 0 auto;
+}
+
+.votestatusbox {
+	width: 100%;
+	background-color: #ffffff;
+	border: 1px #cccccc solid;
+	padding: 15px 0px 15px 20px;
+}
+
+/*
+ *	-----------------------------------
+ *	투표 현황
+ *	-----------------------------------
+ */
+.status {
+	width: calc(100% - 70px);
+}
+
+.statusTitle, .statusData {
+	font-weight: bold;
+}
+
+.statusTitle {
+	width: 35px;
+	margin-right: 5px;
+}
+
+.statusData {
+	width: calc(100% - 40px);
+	text-align: center;
+	color: #ff6600;
+}
+
+/*
+ *	-----------------------------------
+ *	메인 베너
+ *	-----------------------------------
+ */
+.adverbannerarea {
+	padding-bottom: 25px;
+}
+
+/*
+ *	-----------------------------------
+ *	1024 이상 화면
+ *	-----------------------------------
+ */
+@media screen and (min-width:1025px) {
+	.votestatusarea {
+		margin-bottom: 15px;
+	}
+	.votestatus {
+		width: 1024px;
+		margin: -35px auto;
+	}
+	.adverbannerbox {
+		margin: 0px auto;
+		text-align: center;
+	}
+	.votestatusitem {
+		margin-left: 40px;
+		width: 200px;
+	}
+	.votestatusitem img {
+		margin-right: 20px;
+	}
+	.votestatusitem .rightline {
+		display: block;
+	}
+	.status {
+		margin-top: 10px;
+	}
+}
+
+/*
+ *	-----------------------------------
+ *	1024 이하 화면
+ *	-----------------------------------
+ */
+@media screen and (max-width:1024px) {
+	.votestatusarea {
+		margin-bottom: 20px;
+	}
+	.votestatus {
+		margin: -50px auto;
+		width: 95%;
+	}
+	.votestatusitem {
+		margin-left: 10px;
+	}
+	.votestatusitem img {
+		margin-right: 5px;
+	}
+	.votestatusitem .rightline {
+		display: none;
+	}
+	.adverbannerbox {
+		float: float;
+		width: 100%;
+		text-align: center;
+	}
+}
+
+/*
+ *	-----------------------------------
+ *	800 이상 1024 이하 화면
+ *	-----------------------------------
+ */
+@media screen and (min-width: 801px) and (max-width: 1024px) {
+	.votestatusitem {
+		margin-left: 10px;
+		width: 160px;
+	}
+	.status {
+		margin-top: 5px;
+	}
+}
+
+/*
+ *	-----------------------------------
+ *	800 이상 화면
+ *	-----------------------------------
+ */
+@media screen and (min-width:801px) {
+	.mainbanneritem {
+		height: 320px;
+		background-position: center center;
+	}
+	.mainmessage {
+		width: 520px;
+		margin: 120px auto;
+	}
+	.messageaccessory {
+		width: 40px;
+	}
+	.message {
+		font-size: 2.188rem;
+	}
+	.rightline {
+		border-right: 1px #cccccc solid;
+	}
+	.wstatusicon {
+		display: block;
+	}
+	.mstatusicon {
+		display: none;
+	}
+	.wad {
+		display: block;
+		margin: 0 auto;
+	}
+	.mad {
+		display: none;
+	}
+}
+
+/*	
+ *	-----------------------------------
+ *	800 이하 화면
+ *	-----------------------------------
+ */
+@media screen and (max-width:800px) {
+	.mainbanneritem {
+		height: 250px;
+		background-position: center top;
+	}
+	.mainmessage {
+		float: left;
+		width: 100%;
+		margin-top: 80px;
+	}
+	.messageaccessory {
+		width: 20px;
+	}
+	.message {
+		font-size: 1.25rem;
+	}
+	.votestatusitem {
+		margin-left: 0px;
+		width: 150px;
+	}
+	.wstatusicon {
+		display: none;
+	}
+	.mstatusicon {
+		display: block;
+	}
+	.status {
+		margin-top: 3px;
+	}
+	.wad {
+		display: none;
+	}
+	.mad {
+		display: block;
+		margin: 0 auto;
+	}
+}

@@ -1,0 +1,110 @@
+<?php
+/**
+ *  @auth   : PARK Y.S.
+ *  @date   : 20210411
+ *  메인화면 셋팅
+ */
+try
+{
+    $productCtrl = new CApp_Handler_Admin_main();
+    $result      = $productCtrl->getText(1);
+}
+catch (CException $ex)
+{
+    $ex->printException();
+}
+?>
+<!doctype html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<?php
+require_once ('./app/view/admin/header.php');
+?>
+<body>
+	<div id="mobilemenu" class="mobileMenu" style="display: none;">
+		<!-- 서브메뉴 -->
+	</div>
+	<div class="pageArea">
+<?php
+require_once ('./app/view/admin/common.php');
+?>	
+		<div id="content" class="pageBox">
+			<!-- content -->
+			<div class="contentArea">
+<?php
+require_once ('./app/view/admin/submenu.php');
+?>	
+            	<form id="frmMain" name="frmMain" method="post" action="/admin_controller.php?mode=file_up_proc" enctype="multipart/form-data">
+					<div class="contentBox">
+						<div class="boardTitle">
+							<img src="/app/images/admin/title_mark.gif" /> 
+							<span>메인 문구</span>
+						</div>
+						<div class="boardBox">
+							<div class="boardWriteItem">
+								<div class="boardName">
+									<span>문구1</span>
+								</div>
+								<div class="boardInputBox">
+									<input id="main_text1" name="main_text1" class="longInput" type="text" value="<?php echo($result[0]['M_TEXT1']); ?>"/>
+								</div>
+								<div class="boardName">
+									<span>문구2</span>
+								</div>
+								<div class="boardInputBox">
+									<input id="main_text2" name="main_text2" class="longInput" type="text" value="<?php echo($result[0]['M_TEXT2']); ?>"/>
+								</div>
+							</div>
+						</div>
+						<!-- 버튼 -->
+						<div class="boardListButtonBox">
+							<div class="buttonBox">
+								<a id="registerMainText2" href="javascript:void(0)">
+									<span class="buttonText">문구2 등록하기</span>
+								</a>
+							</div>
+							<div class="buttonBox">
+								<a id="registerMainText1" href="javascript:void(0)">
+									<span class="buttonText">문구1 등록하기</span>
+								</a>
+							</div>
+						</div>
+					</div>
+					<div class="contentBox">
+						<div class="boardTitle">
+							<img src="/app/images/admin/title_mark.gif" /> 
+							<span>메인 사진</span>
+						</div>
+						<div class="boardBox">
+							<div class="boardWriteItem">
+								<div class="boardName">
+									<span>파일경로</span>
+								</div>
+								<div class="boardInputBox">
+									<input type="file" name="mainImg" id="findfile" accept="image/jpeg, image/png, image/gif"/>
+								</div>
+							</div>
+						</div>
+						<!-- 버튼 -->
+						<div class="boardListButtonBox">
+							<div class="buttonBox">
+								<a id="fileupload" href="javascript:void(0)">
+									<span class="buttonText">등록하기</span>
+								</a>
+							</div>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+<?php
+require_once ('./app/view/admin/footer.php');
+?>
+	<!-- admin 정보 등록 js -->
+	<script type="text/javascript" src="/app/js/admin_main_fileup.js?v=1.4" charset="utf-8">
+	</script>
+	<!-- admin 정보 등록 js -->
+	<iframe src="#" id="uploadFrame" name="uploadFrame" width="0" height="0" frameborder="0" style="width: 0px; height: 0px;"> 
+	</iframe>
+</body>
+</html>

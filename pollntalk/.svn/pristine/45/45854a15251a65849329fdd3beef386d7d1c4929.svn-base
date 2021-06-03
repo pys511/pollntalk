@@ -1,0 +1,255 @@
+<?php
+?>
+<div class="messagebuttonbox">
+	<button class="messagebutton">
+		<span>삭제</span>
+	</button>
+</div>
+<!-- 투표함 버튼 영역 끝 -->
+<!-- 투표함 게시판 시작  -->
+<div class="board">
+	<!-- 투표함 필드 시작 -->
+	<div class="boardfieldbox">
+		<div class="larealonglonglong">
+			<div class="boardcheckbox">
+				<input type="checkbox" />
+			</div>
+			<div class="boardmember">
+				<span>투표함 회원</span>
+			</div>
+		</div>
+		<div class="rareashortshortshort">
+			<div class="boarddefaultlong">
+				<span>참여 횟수</span>
+			</div>
+			<div class="boarddatelong">
+				<span>구독신청일</span>
+			</div>
+		</div>
+	</div>
+	<!-- 투표함 필드 끝 -->
+	<!-- 투표함 게시판 목록 시작 -->
+	<div class="boardlist">
+		<!-- 투표함 게시판 목록 시작 -->
+		<ul>
+			<li>
+				<div class="larealonglonglong">
+					<div class="boardcheckbox">
+						<input type="checkbox" />
+					</div>
+					<div class="boardmember">
+						<img src="images/thumb_sample.png" /> <span>폴앤톡1004</span>
+					</div>
+				</div>
+				<div class="rareashortshortshort">
+					<div class="boarddefaultlong">
+						<span class="boardshortfield">참여 횟수:</span> <span>25</span>
+					</div>
+					<div class="boarddatelong">
+						<span>2020.07.04</span>
+					</div>
+				</div>
+			</li>
+			<li>
+				<div class="larealonglonglong">
+					<div class="boardcheckbox">
+						<input type="checkbox" />
+					</div>
+					<div class="boardmember">
+						<img src="images/thumb_sample.png" /> <span>폴앤톡1004</span>
+					</div>
+				</div>
+				<div class="rareashortshortshort">
+					<div class="boarddefaultlong">
+						<span class="boardshortfield">참여 횟수:</span> <span>25</span>
+					</div>
+					<div class="boarddatelong">
+						<span>2020.07.04</span>
+					</div>
+				</div>
+			</li>
+			<li>
+				<div class="larealonglonglong">
+					<div class="boardcheckbox">
+						<input type="checkbox" />
+					</div>
+					<div class="boardmember">
+						<img src="images/thumb_sample.png" /> <span>폴앤톡1004</span>
+					</div>
+				</div>
+				<div class="rareashortshortshort">
+					<div class="boarddefaultlong">
+						<span class="boardshortfield">참여 횟수:</span> <span>25</span>
+					</div>
+					<div class="boarddatelong">
+						<span>2020.07.04</span>
+					</div>
+				</div>
+			</li>
+			<li>
+				<div class="larealonglonglong">
+					<div class="boardcheckbox">
+						<input type="checkbox" />
+					</div>
+					<div class="boardmember">
+						<img src="images/thumb_sample.png" /> <span>폴앤톡1004</span>
+					</div>
+				</div>
+				<div class="rareashortshortshort">
+					<div class="boarddefaultlong">
+						<span class="boardshortfield">참여 횟수:</span> <span>25</span>
+					</div>
+					<div class="boarddatelong">
+						<span>2020.07.04</span>
+					</div>
+				</div>
+			</li>
+			<li>
+				<div class="larealonglonglong">
+					<div class="boardcheckbox">
+						<input type="checkbox" />
+					</div>
+					<div class="boardmember">
+						<img src="images/thumb_sample.png" /> <span>폴앤톡1004</span>
+					</div>
+				</div>
+				<div class="rareashortshortshort">
+					<div class="boarddefaultlong">
+						<span class="boardshortfield">참여 횟수:</span> <span>25</span>
+					</div>
+					<div class="boarddatelong">
+						<span>2020.07.04</span>
+					</div>
+				</div>
+			</li>
+			<li>
+				<div class="larealonglonglong">
+					<div class="boardcheckbox">
+						<input type="checkbox" />
+					</div>
+					<div class="boardmember">
+						<img src="images/thumb_sample.png" /> <span>폴앤톡1004</span>
+					</div>
+				</div>
+				<div class="rareashortshortshort">
+					<div class="boarddefaultlong">
+						<span class="boardshortfield">참여 횟수:</span> <span>25</span>
+					</div>
+					<div class="boarddatelong">
+						<span>2020.07.04</span>
+					</div>
+				</div>
+			</li>
+			<li>
+				<div class="larealonglonglong">
+					<div class="boardcheckbox">
+						<input type="checkbox" />
+					</div>
+					<div class="boardmember">
+						<img src="images/thumb_sample.png" /> <span>폴앤톡1004</span>
+					</div>
+				</div>
+				<div class="rareashortshortshort">
+					<div class="boarddefaultlong">
+						<span class="boardshortfield">참여 횟수:</span> <span>25</span>
+					</div>
+					<div class="boarddatelong">
+						<span>2020.07.04</span>
+					</div>
+				</div>
+			</li>
+			<li>
+				<div class="larealonglonglong">
+					<div class="boardcheckbox">
+						<input type="checkbox" />
+					</div>
+					<div class="boardmember">
+						<img src="images/thumb_sample.png" /> <span>폴앤톡1004</span>
+					</div>
+				</div>
+				<div class="rareashortshortshort">
+					<div class="boarddefaultlong">
+						<span class="boardshortfield">참여 횟수:</span> <span>25</span>
+					</div>
+					<div class="boarddatelong">
+						<span>2020.07.04</span>
+					</div>
+				</div>
+			</li>
+			<li>
+				<div class="larealonglonglong">
+					<div class="boardcheckbox">
+						<input type="checkbox" />
+					</div>
+					<div class="boardmember">
+						<img src="images/thumb_sample.png" /> <span>폴앤톡1004</span>
+					</div>
+				</div>
+				<div class="rareashortshortshort">
+					<div class="boarddefaultlong">
+						<span class="boardshortfield">참여 횟수:</span> <span>25</span>
+					</div>
+					<div class="boarddatelong">
+						<span>2020.07.04</span>
+					</div>
+				</div>
+			</li>
+			<li>
+				<div class="larealonglonglong">
+					<div class="boardcheckbox">
+						<input type="checkbox" />
+					</div>
+					<div class="boardmember">
+						<img src="images/thumb_sample.png" /> <span>폴앤톡1004</span>
+					</div>
+				</div>
+				<div class="rareashortshortshort">
+					<div class="boarddefaultlong">
+						<span class="boardshortfield">참여 횟수:</span> <span>25</span>
+					</div>
+					<div class="boarddatelong">
+						<span>2020.07.04</span>
+					</div>
+				</div>
+			</li>
+		</ul>
+		<!-- 투표함 게시판 목록 끝 -->
+		<!-- 페이징 시작 -->
+		<div class="paging">
+			<div class="pagingbutton pageleft pagenavinoselect"></div>
+			<div class="pagingbutton">
+				<span>1</span>
+			</div>
+			<div class="pagingbutton pageselect">
+				<span>2</span>
+			</div>
+			<div class="pagingbutton">
+				<span>3</span>
+			</div>
+			<div class="pagingbutton">
+				<span>4</span>
+			</div>
+			<div class="pagingbutton">
+				<span>5</span>
+			</div>
+			<div class="pagingbutton">
+				<span>6</span>
+			</div>
+			<div class="pagingbutton">
+				<span>7</span>
+			</div>
+			<div class="pagingbutton">
+				<span>8</span>
+			</div>
+			<div class="pagingbutton">
+				<span>9</span>
+			</div>
+			<div class="pagingbutton">
+				<span>10</span>
+			</div>
+			<div class="pagingbutton pageright pagenaviselect"></div>
+		</div>
+		<!-- 페이징 끝 -->
+	</div>
+	<!-- 투표함 게시판 목록 영역 끝 -->
+</div>

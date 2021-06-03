@@ -1,0 +1,185 @@
+﻿@CHARSET "UTF-8";
+
+/*
+ *	-----------------------------------
+ *	투표 항목
+ *	-----------------------------------
+ */
+.votedisparea, .votedispitem, .votedispinfobox span, .votedispinfobox img,
+.votedispinfodetail,
+.votedispitemtitle, .votedispuser, .votedispinfo, .votedispInfocont,
+.votedispInfocont span, .votedispInfocont img, .voteguide, .votetopic,
+.boarddoc ,
+.questionfield, .questionsmallfield, .questionsmallfield img
+{
+	float: left;
+}
+
+.votedisparea, .voteguide, .votetopic, .votedoc
+{
+	width: 100%;
+}
+
+.voteguide 
+{
+	margin-bottom: 35px;
+}
+
+.votetopic 
+{
+	font-size: 1.875rem;
+	font-weight: bold;
+}
+
+.votedoc 
+{
+	font-size: 1.5625rem;
+}
+
+.votedispitem 
+{
+	box-shadow: 1px 2px 5px 1px #cccccc;
+	background-repeat: no-repeat;
+	background-position: center top;
+}
+
+.votedispinfobox 
+{
+	position: relative;
+	margin: 145px auto 0px;
+	height: 80px;
+}
+
+.votedispInfoItem 
+{
+	margin: 0px auto;
+	height: 40px;
+}
+
+.votedispinfobox, .votedispInfoItem 
+{
+	width: 280px;
+	background-color: #ffffff;
+}
+
+.votedispinfobox 
+{
+	padding: 15px 15px 5px 15px;
+}
+
+.votedispinfodetail
+{
+	background-color:#ffffff; 
+	padding: 30px 25px 20px 25px; 
+	margin-top: -30px;
+}
+
+.votedispInfoItem 
+{
+	padding: 5px 15px 5px 15px;
+}
+
+.votedispitemtitle 
+{
+	font-size: 1.25rem;
+}
+
+.votedispInfocont 
+{
+	margin-top: -25px;
+	background-color: #ffffff;
+	width: 100%;
+	height: 155px;
+	padding-top: 30px;
+	padding-bottom: 25px;
+}
+
+.votedispuser 
+{
+	margin-bottom: 5px;
+	cursor: pointer;
+}
+
+.votedispuser img 
+{
+	width: 20px;
+	margin-right: 5px;
+	margin-top: 2px;
+	border-radius: 40%;
+}
+
+.votedispuser span 
+{
+	font-weight: bold;
+	margin-top: 2px;
+}
+
+.votedispinfo 
+{
+	margin-bottom: 5px;
+}
+
+.votedispinfo span 
+{
+	margin-right: 3px;
+}
+
+.votedispitem 
+{
+	width: 320px;
+
+}
+
+.questionfield span, .questionsmallfield span 
+{
+	font-weight: bold;
+	color: #333333;
+}
+
+.questionfield span 
+{
+	font-size: 1.5625rem;
+}
+
+.questionsmallfield span 
+{
+	font-size: 1.125rem;
+}
+
+.questionsmallfield img
+{
+	margin-top: 3px;
+	margin-right: 3px;
+}
+
+/*
+ *	-----------------------------------
+ *	1024 이상 화면
+ *	-----------------------------------
+ */
+@media screen and (min-width:1025px) 
+{
+	.votecontbox 
+	{
+		margin: 0 auto;
+	}
+	
+	.votecontbox 
+	{
+		width: 1024px;
+	}
+}
+
+/*
+ *	-----------------------------------
+ *	1024 이하 화면
+ *	-----------------------------------
+ */
+@media screen and (max-width:1024px) 
+{
+	.votedispbox, .votecontbox 
+	{
+		float: left;
+		width: 100%;
+	}
+}

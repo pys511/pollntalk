@@ -1,0 +1,542 @@
+<?php
+try
+{
+    $vote_seq           = $_GET["vote_seq"];
+    
+    $vote               = new CApp_Handler_Vote_Ctrl();
+    $result             = $vote->getVoteInfo($vote_seq);
+    $vote_kind          = $result["VOTE_KIND"];
+    $vote_type          = $result["VOTE_TYPE"];
+    $vote_subject       = $result["VOTE_SUBJECT"];
+    $vote_context       = $result["VOTE_CONTEXT"];
+    $vote_cate1_seq     = $result["VOTE_CATE_SEQ"];
+    $vote_cate1_name    = $result["VOTE_CATE_NAME"];
+    $vote_writer_name   = $result["VOTE_WRITER_NAME"];
+    $vote_writer_image  = $result["VOTE_WRITER_IMAGE"];
+    $cate_2dept_seq     = $result["VOTE_CATE_SUB_SEQ"];
+    $cate_2dept_name    = $result["VOTE_CATE_SUB_NAME"];
+    $vote_real_name     = $result["VOTE_RESOURCE_PATH"];
+    $vote_real_type     = $result["VOTE_RESOURCE_TYPE"];
+    $vote_is_premium    = $result["VOTE_IS_PREMIUM"];
+    $vote_end_date      = $result["VOTE_END_DATE"];
+    $vote_url           = $result["VOTE_URL"];
+    $vote_security_code = $result["VOTE_SECURITY_CODE"];
+}
+catch (CException $ex)
+{
+    $ex->printException();
+}
+?>
+<!-- 컨텐츠 시작-->
+<div class="content">
+	<!-- 카테고리 영역 시작 -->
+	<div class="defaultarea grayback">
+<?php
+require_once ('./app/view/common/category.php');
+?>
+	</div>
+	<!-- 카테고리 영역 끝 -->
+	<!-- 광고 베너 영역 시작 -->
+	<div class="adverbannerarea boundray">
+		<div class="adverbannerbox">
+			<img class="wad" src="/app/images/ad_sample_03.jpg" /> 
+			<img class="mad" src="/app/images/ad_sample_m_01.png" />
+		</div>
+	</div>
+	<!-- 광고 베너 영역 끝 -->
+	<!-- 투표 보기 영역 시작 -->
+	<form id="frmVote" method="post" action="/controller.php?mode=vote_resp_proc">
+	<input type="hidden" id="vote_seq" name="vote_seq" value="<?php echo($vote_seq); ?>" />
+	<div class="voteview">
+		<!-- 투표 정보 보기 시작 -->
+		<div class="voteviewarea vvwbsline">
+			<div class="voteviewbox">
+				<div class="voteinfobox">
+<?php 
+if ($vote_real_type != "3")
+{
+?>
+					<img class="voteinfoimg" src="<?php echo($vote_real_name); ?>" />
+<?php 
+}
+else
+{
+?>
+					<iframe class="voteinfovideo" id="voteVideoFile" src="<?php echo($vote_real_name); ?>" width="350" height="350" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+                    </iframe>
+<?php 
+}
+?>
+					<div class="voteinfo">
+						<div class="votetitle">
+							<span class="strong vvwrspace">제목 : </span>
+							<span class="title"><?php echo($vote_subject); ?></span>
+						</div>
+						<div class="votecate">
+							<span class="strong vvwrspace">카테고리 : </span>
+							<span class="catetext">
+<?php 
+echo($vote_cate1_name);
+if ($cate_2dept_name != "")
+    echo("&nbsp;>&nbsp;".$cate_2dept_name);
+?>
+							</span>
+						</div>
+						<div class="voteexplain">
+							<span class="strong vvwrspace">설명 : </span>
+							<span class="default"><?php echo($vote_context); ?></span>
+						</div>
+						<div class="voteext">
+							<span class="strong vvwrspace">관련링크 : </span>
+							<span class="normal"><?php echo($vote_url); ?></span>
+						</div>
+						<div class="voteext">
+							<span class="strong vvwrspace">작성자 : </span>
+							<div class="userinfo">
+								<img src="<?php echo($vote_writer_image)?>" width="20px" />
+								<span class="normal"><?php echo($vote_writer_name)?></span>
+							</div>
+						</div>
+						<div class="voteext">
+							<span class="strong vvwrspace">참여 : </span>
+							<span class="stress vvwrspace">556</span>
+							<span class="divtxt vvwrspace">/</span>
+							<span class="strong vvwrspace">댓글 : </span>
+							<span class="stress vvwrspace">589</span>
+							<span class="divtxt vvwrspace">/</span>
+							<span class="strong vvwrspace">좋아요 : </span>
+							<span class="stress vvwrspace">50</span>
+						</div>
+<?php 
+if ($vote_end_date != "nolimit")
+{
+?>
+                		<div class="voteext vvwbspace vvwbline">
+                			<span class="strong vvwrspace">마감기간 : </span>
+                			<span class="stress"><?php echo($vote_end_date); ?></span>
+                		</div>
+<?php 
+}
+?>
+						<div class="voteext vvwbspace vvwbline">
+							<span class="strong vvwrspace">투표 적립 포인트 : </span>
+							<span class="stress">50</span>
+						</div>
+						<div class="votebuttonbox">
+							<button class="votebutton">
+								<span>구독</span>
+							</button>
+							<button class="votebutton">
+								<span>좋아요</span>
+							</button>
+							<button class="votebutton">
+								<span>신고</span>
+							</button>
+							<button class="stressvotebutton rpos">
+								<span>결과보기</span>
+							</button>
+						</div>
+					</div>
+				</div>
+				<!-- 투표 정보 보기 끝 -->
+			</div>
+		</div>
+		<!-- 투표 정보 보기 끝 -->
+		<!-- 투표 내용 시작 -->
+		<div class="voteviewarea">
+			<div class="voteviewbox">
+				<div class="voteviewcontext">
+					<ul>
+<?php
+try
+{
+    $question_vote_seq  = $vote_seq;
+    $questions = $vote->getVoteQuestions($question_vote_seq);
+    $i = 0;
+    foreach ($questions as $questionItem) 
+    {
+        $i ++;
+        $question_resource_path     = $questionItem["QUESTION_RESOURCE_PATH"];
+        $question_resource_type     = $questionItem["QUESTION_RESOURCE_TYPE"];
+        $question_resp_type         = $questionItem["QUESTION_RESP_TYPE"];
+        $question_seq               = $questionItem["QUESTION_SEQ"];
+        $question_index             = $questionItem["QUESTION_INDEX"];
+        $question_order             = $questionItem["QUESTION_ORDER"];
+        $question_subject           = $questionItem["QUESTION_SUBJECT"];
+        $question_real_path         = "";
+        if ($question_resource_path == "")
+        {
+            if ($question_resource_type != "3")
+                $question_real_path = "app/images/admin/photo.png";
+            else
+                $question_real_path = "/app/view/common/no_video.php";
+        }
+        else
+        {
+            if ($question_resource_type == "3")
+            {
+                $videoUrls          = explode("/", $question_resource_path);
+                $videoLast          = $videoUrls[count($videoUrls) - 1];
+                $question_real_path = "https://www.youtube.com/embed/".$videoLast;
+            }
+            else
+            {
+                if ($question_resource_type == "1")
+                    $question_real_path = "/".$question_resource_path;
+                else
+                    $question_real_path = $question_resource_path;
+            }
+        }
+?>
+						<li class="awibspace">
+							<input class="question_seq" type="hidden" name="question_seq[]" value="<?php echo($question_seq); ?>" /> 
+                    		<input class="question_index" type="hidden" name="question_index[]" value="<?php echo($question_index); ?>" />
+                    		<input class="question_resp_type" type="hidden" name="question_resp_type[]" value="<?php echo($question_resp_type); ?>" />
+                    		<div class="voteviewcontextbox">
+								<div class="questionfieldbox">
+<?php 
+        if ($question_resource_type != "3")
+        {
+?>
+									<img class="voteinfoimg" src="<?php echo($question_real_path); ?>" width="210" />
+<?php
+        }
+        else 
+        {
+?>
+                					<iframe class="voteinfoVideo" src="<?php echo($question_real_path); ?>" width="250" height="250" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="<?php if ($question_resource_type == "3") echo("visibility:visible;display:block;"); else echo("visibility:hidden;display:none;"); ?>">
+                    				</iframe>
+<?php 
+        }
+?>	
+									<div class="questionfieldcont">
+										<div class="questionfield">
+											<span>질문 <?php echo($question_order);?></span>
+										</div>
+										<div class="questiontext">
+											<span><?php echo($question_subject); ?></span>
+										</div>
+									</div>
+								</div>
+								<div class="questionarrow">
+									<img src="/app/images/title_arrow.png" />
+								</div>
+								<div class="answerbox">
+									<ul class="longanswer">
+<?php
+        $answers = $vote->getVoteAnswers($question_vote_seq, $question_seq);
+        $answerCount    = count($answers);
+        $j  = 0;
+        foreach ($answers as $answerItem)
+        {
+            $j++;
+            $answer_resource_path     = $answerItem["ANSWER_RESOURCE_PATH"];
+            $answer_resource_type     = $answerItem["ANSWER_RESOURCE_TYPE"];
+            $answer_index             = $answerItem["ANSWER_INDEX"];
+            $answer_seq               = $answerItem["ANSWERS_SEQ"];
+            $answer_real_path         = "";
+            if ($answer_resource_path == "")
+            {
+                if ($answer_resource_type != "3")
+                    $answer_real_path = "app/images/admin/photo.png";
+                else
+                    $answer_real_path = "/app/view/common/no_video.php";
+            }
+            else
+            {
+                if ($answer_resource_type == "3")
+                {
+                    $videoUrls      = explode("/", $answer_resource_path);
+                    $videoLast      = $videoUrls[count($videoUrls) - 1];
+                    $answer_real_path   = "https://www.youtube.com/embed/".$videoLast;
+                }
+                else
+                {
+                    if ($answer_resource_type == "1")
+                        $answer_real_path   = "/".$answer_resource_path;
+                    else
+                        $answer_real_path   = $answer_resource_path;
+                }
+            }
+            
+            $answer_text        = $answerItem["ANSWER_TEXT"];
+            $is_correct         = $answerItem["IS_CORRECT"];
+?>
+
+										<li>
+											<!--<div class="answeritem longitem">-->
+											<div class="answeritem longitem <?php if ($answerCount > $j) { ?>awibline<?php } ?>">
+												<!--<div class="answeritembox awibline">-->
+												<div class="answeritembox">
+<?php 
+            if ($answer_resource_type != "3")
+            {
+?>
+													<img class="voteinfoimg" src="<?php echo($answer_real_path); ?>" width="210" />
+<?php
+            }
+            else 
+            {
+?>
+                                					<iframe class="voteinfovideo" src="<?php echo($answer_real_path); ?>" width="210" height="210" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="<?php if ($answer_resource_type == "3") echo("visibility:visible;display:block;"); else echo("visibility:hidden;display:none;"); ?>">
+                                    				</iframe>
+<?php 
+            }
+            
+            if ($question_resp_type == "1" || $question_resp_type == "3")
+                $resp_type  = "radio";
+            else
+                $resp_type  = "checkbox";
+?>	
+													<div class="answeritemtext">
+														<input type="<?php echo($resp_type); ?>" class="agree" id="answer_<?php echo($question_index); ?>_<?php echo($answer_index); ?>" name="answer_<?php echo($question_index); ?>[]" value="<?php echo($answer_seq); ?>" />
+														<label for="answer_<?php echo($question_index); ?>_<?php echo($answer_index); ?>">
+															<span><?php echo($answer_text); ?></span>
+														</label>
+													</div>
+												</div>
+											</div>
+										</li>
+<?php
+        }
+?>
+									</ul>
+								</div>
+							</div>
+						</li>
+<?php 
+    }
+}
+catch (CException $ex)
+{
+    $ex->executeException();
+}
+?>
+					</ul>
+				</div>
+				<div class="voteviewbtncont vvwbspace">
+					<div class="voteviewbuttonbox">
+						<button type="button" id="registerVoteResp" class="votebutton">
+							<span>응답완료</span>
+						</button>
+						<button type="button" id="goVoteResult" class="stressvotebutton">
+							<span>결과보기</span>
+						</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- 투표 내용 끝 -->
+		<!-- 댓글 시작 -->
+		<div class="voteviewarea">
+			<div class="replybox">
+				<div class="replyfield">
+					<span>댓글 </span><span class="title">10</span>
+				</div>
+				<div class="replyinputer">
+					<textarea>여러분의 소중한 댓글을 입력해주세요.</textarea>
+					<button class="votebutton rpos">
+						<span>댓글 달기</span>
+					</button>
+				</div>
+				<div class="replylist">
+					<ul>
+						<li>
+							<div class="replyitem">
+								<div class="replytop">
+									<div class="userinfo">
+										<img src="/app/images/thumb_sample.png" />
+										<span class="normal">폴앤톡1004</span>
+									</div>
+									<div class="replydate">
+										<span>2020.07.19 11:45</span>
+									</div>
+									<div class="replyctrl">
+										<span>삭제</span>
+									</div>
+								</div>
+								<div class="replybottom">
+									<span>코로나19ㅣ 북한, 여전히 확진자 0명 주장속 방역 강화 뜻 밝혀.</span>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="replyitem">
+								<div class="replytop">
+									<div class="userinfo">
+										<img src="/app/images/thumb_sample.png" />
+										<span class="normal">폴앤톡1004</span>
+									</div>
+									<div class="replydate">
+										<span>2020.07.19 11:45</span>
+									</div>
+									<div class="replyctrl">
+										<span>삭제</span>
+									</div>
+								</div>
+								<div class="replybottom">
+									<span>코로나19ㅣ 북한, 여전히 확진자 0명 주장속 방역 강화 뜻 밝혀.</span>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="replyitem">
+								<div class="replytop">
+									<div class="userinfo">
+										<img src="/app/images/thumb_sample.png" />
+										<span class="normal">폴앤톡1004</span>
+									</div>
+									<div class="replydate">
+										<span>2020.07.19 11:45</span>
+									</div>
+									<div class="replyctrl">
+										<span>삭제</span>
+									</div>
+								</div>
+								<div class="replybottom">
+									<span>코로나19ㅣ 북한, 여전히 확진자 0명 주장속 방역 강화 뜻 밝혀.</span>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="replyitem">
+								<div class="replytop">
+									<div class="userinfo">
+										<img src="/app/images/thumb_sample.png" />
+										<span class="normal">폴앤톡1004</span>
+									</div>
+									<div class="replydate">
+										<span>2020.07.19 11:45</span>
+									</div>
+									<div class="replyctrl">
+										<span>삭제</span>
+									</div>
+								</div>
+								<div class="replybottom">
+									<span>코로나19ㅣ 북한, 여전히 확진자 0명 주장속 방역 강화 뜻 밝혀.</span>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="replyitem">
+								<div class="replytop">
+									<div class="userinfo">
+										<img src="/app/images/thumb_sample.png" />
+										<span class="normal">폴앤톡1004</span>
+									</div>
+									<div class="replydate">
+										<span>2020.07.19 11:45</span>
+									</div>
+									<div class="replyctrl">
+										<span>삭제</span>
+									</div>
+								</div>
+								<div class="replybottom">
+									<span>코로나19ㅣ 북한, 여전히 확진자 0명 주장속 방역 강화 뜻 밝혀.</span>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="replyitem">
+								<div class="replytop">
+									<div class="userinfo">
+										<img src="/app/images/thumb_sample.png" />
+										<span class="normal">폴앤톡1004</span>
+									</div>
+									<div class="replydate">
+										<span>2020.07.19 11:45</span>
+									</div>
+									<div class="replyctrl">
+										<span>삭제</span>
+									</div>
+								</div>
+								<div class="replybottom">
+									<span>코로나19ㅣ 북한, 여전히 확진자 0명 주장속 방역 강화 뜻 밝혀.</span>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="replyitem">
+								<div class="replytop">
+									<div class="userinfo">
+										<img src="/app/images/thumb_sample.png" />
+										<span class="normal">폴앤톡1004</span>
+									</div>
+									<div class="replydate">
+										<span>2020.07.19 11:45</span>
+									</div>
+									<div class="replyctrl">
+										<span>삭제</span>
+									</div>
+								</div>
+								<div class="replybottom">
+									<span>코로나19ㅣ 북한, 여전히 확진자 0명 주장속 방역 강화 뜻 밝혀.</span>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="replyitem">
+								<div class="replytop">
+									<div class="userinfo">
+										<img src="/app/images/thumb_sample.png" />
+										<span class="normal">폴앤톡1004</span>
+									</div>
+									<div class="replydate">
+										<span>2020.07.19 11:45</span>
+									</div>
+									<div class="replyctrl">
+										<span>삭제</span>
+									</div>
+								</div>
+								<div class="replybottom">
+									<span>코로나19ㅣ 북한, 여전히 확진자 0명 주장속 방역 강화 뜻 밝혀.</span>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="replyitem">
+								<div class="replytop">
+									<div class="userinfo">
+										<img src="/app/images/thumb_sample.png" />
+										<span class="normal">폴앤톡1004</span>
+									</div>
+									<div class="replydate">
+										<span>2020.07.19 11:45</span>
+									</div>
+									<div class="replyctrl">
+										<span>삭제</span>
+									</div>
+								</div>
+								<div class="replybottom">
+									<span>코로나19ㅣ 북한, 여전히 확진자 0명 주장속 방역 강화 뜻 밝혀.</span>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="replyitem">
+								<div class="replytop">
+									<div class="userinfo">
+										<img src="/app/images/thumb_sample.png" />
+										<span class="normal">폴앤톡1004</span>
+									</div>
+									<div class="replydate">
+										<span>2020.07.19 11:45</span>
+									</div>
+									<div class="replyctrl">
+										<span>삭제</span>
+									</div>
+								</div>
+								<div class="replybottom">
+									<span>코로나19ㅣ 북한, 여전히 확진자 0명 주장속 방역 강화 뜻 밝혀.</span>
+								</div>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<!-- 댓글 끝 -->
+	</div>
+	</form>
+</div>
+<!-- 컨텐츠 끝-->

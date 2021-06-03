@@ -1,0 +1,22 @@
+/**
+ *	@auth	: Park Yoon Sik
+ *	@date	: 20210411
+ *	파일업로드 팝업 처리 
+ */
+
+var isCheck	= false;
+
+/*
+ *  파일업로드 페이지 스크립트 처리
+ */
+
+window.addEventListener("load", function()
+{
+		
+	var fileupload = document.getElementById("fileupload");
+	fileupload.addEventListener("click", function()
+	{
+		frmMain.submit();
+	});
+	
+});

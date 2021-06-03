@@ -1,0 +1,179 @@
+@CHARSET "UTF-8";
+
+.mainMenu 
+{
+	width: 100%;
+}
+
+.mainMenu 
+{
+	margin: 0 auto 0px;
+	height: 35px;
+	background-color: #1f1e1c;
+}
+
+.mainMenu .menuBox 
+{
+	float: left;
+	width: 70%;
+	margin-top: 10px;
+}
+
+.mainMenu .adminmember 
+{
+	float: right;
+	text-align: right;
+}
+
+.mainMenu .memberLogin, .mainMenu .memberInfo 
+{
+	float: right;
+	text-align: right;
+	margin-top: 10px;
+}
+
+.mainMenu .memberLogin span, .mainMenu .memberInfo span 
+{
+	color: #ffffff;
+	margin-right: 10px;
+}
+
+.mainMenu .menuBox span 
+{
+	float: left;
+	margin-left: 10px;
+	color: #ffffff;
+}
+
+.mobileMenu, .subMenu 
+{
+	float: left;
+	width: 210px;
+	margin: 0px 0px 0px 0px;
+	background-color: #ffffff;
+	border-right: 1px #000000 solid;
+	border-bottom: 1px #000000 solid;
+}
+
+.mobileMenu 
+{
+	box-shadow: 0px 0px 10px 0px #8e8e8e;
+	position: absolute;
+	z-index: 110;
+}
+
+.mobileMenu .mobileMenuTop 
+{
+	float: left;
+	background-color: #1f1e1c;
+	width: 100%;
+	height: 55px;
+}
+
+.mobileMenu .mobileMenuTop .mobileMenuLogin span, .mobileMenu .mobileMenuTop .mobileMenuLogin a
+{
+	font-size: 15px;
+	font-weight: bold;
+	color: #ffffff;
+}
+
+.mobileMenu .mobileMenuTop img 
+{
+	float: right;
+	margin-top: 8px;
+	margin-right: 5px;
+}
+
+.mobileMenu .mobileMenuLogin 
+{
+	float: left;
+	width: 150px;
+	margin: 17px 10px;
+}
+
+.mobileMenu .mobileMenuBox 
+{
+	float: left;
+	width: 100%;
+}
+
+.sideMenu 
+{
+	float: left;
+	width: 100%;
+}
+
+.sideMenu .menuCategory, .mobileMenu .menuCategory 
+{
+	float: left;
+	width: 100%;
+	padding: 5px 0px 5px 0px;
+	background-color: #ffffff;
+}
+
+.sideMenu .menuCategory .menuCateItem, .mobileMenu .menuCategory .menuCateItem
+{
+	float: left;
+	width: 100%;
+	padding: 0px 0px 0px 0px;
+	margin-bottom: 15px;
+}
+
+.menuCategory .menuCateItem .menuCateTitle 
+{
+	float: left;
+	width: 100%;
+	padding: 5px 5px 5px 15px;
+	margin-bottom: 10px;
+	border-bottom: 1px #000000 solid;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.menuCategory .menuCateItem .menuCateTitle span 
+{
+	float: left;
+	text-align: left;
+	font-weight: bold;
+	color: #000000;
+}
+
+.menuCategory .menuCateItem .menuItem 
+{
+	float: left;
+	width: 100%;
+}
+
+.menuCategory .menuCateItem .menuItem li 
+{
+	float: left;
+	width: 100%;
+	margin-bottom: 5px;
+}
+
+.menuCategory .menuCateItem .menuItem li span 
+{
+	float: left;
+	text-align: left;
+	color: #000000;
+}
+
+.mainMenu .menuBox span, .mainMenu .memberLogin span, .mainMenu .memberInfo span,
+.sideMenu .menuCategory .menuCateItem .menuCateTitle span, .sideMenu .menuCategory .menuCateItem .menuItem li span
+{
+	font-size: 12px;
+}
+
+.mainMenu .adminmember 
+{
+	width: 30%;
+}
+
+.menuBoxMobile {
+	display: none;
+}
+
+.menuBox {
+	display: block;
+}

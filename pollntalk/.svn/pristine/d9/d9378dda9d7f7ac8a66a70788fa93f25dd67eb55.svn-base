@@ -1,0 +1,369 @@
+<?php 
+
+?>
+<!-- 컨텐츠 시작-->
+<div class="content">
+	<!-- 광고 베너 영역 시작 -->
+	<div class="adverbannerarea boundray">
+		<div class="adverbannerbox">
+			<img class="wad" src="images/ad_sample_01.jpg" /> <img class="mad"
+				src="images/ad_sample_m_01.png" />
+		</div>
+	</div>
+	<!-- 광고 베너 영역 끝 -->
+	<!-- 투표 보기 영역 시작 -->
+	<div class="voteview">
+		<!-- 투표 정보 보기 시작 -->
+		<div class="voteviewarea vvwbsline">
+			<div class="voteviewbox">
+				<div class="voteinfobox">
+					<img class="voteinfoimg" src="images/sample_08.jpg" />
+					<div class="voteinfo">
+						<div class="votetitle">
+							<span class="strong vvwrspace">제목 : </span> <span class="title">내
+								생애 최고의 화장품은 무엇인가요?</span>
+						</div>
+						<div class="votecate">
+							<span class="strong vvwrspace">카테고리 : </span> <span
+								class="catetext">문화 > 예술</span>
+						</div>
+						<div class="voteexplain">
+							<span class="strong vvwrspace">설명 : </span> <span
+								class="default">내생애 최고의 화장품은 무엇인가요? 내생애 최고의 화장품은 무엇인가요?
+								내생애 최고의 화장품은 무엇인가요? 내생애 최고의 화장품은 무엇인가요? 내생애 최고의 화장품은 무엇인가요? </span>
+						</div>
+						<div class="voteext">
+							<span class="strong vvwrspace">관련링크 : </span> <span
+								class="normal">www.naver.com</span>
+						</div>
+						<div class="voteext">
+							<span class="strong vvwrspace">작성자 : </span>
+							<div class="userinfo">
+								<img src="images/thumb_sample.png" /> <span class="normal">폴앤톡1004</span>
+							</div>
+						</div>
+						<div class="voteext">
+							<span class="strong vvwrspace">참여 : </span> <span
+								class="stress vvwrspace">556</span> <span
+								class="divtxt vvwrspace">/</span> <span
+								class="strong vvwrspace">댓글 : </span> <span
+								class="stress vvwrspace">589</span> <span
+								class="divtxt vvwrspace">/</span> <span
+								class="strong vvwrspace">좋아요 : </span> <span
+								class="stress vvwrspace">50</span>
+						</div>
+						<div class="voteext vvwbspace vvwbline">
+							<span class="strong vvwrspace">투표 적립 포인트 : </span> <span
+								class="stress">50</span>
+						</div>
+						<div class="votebuttonbox">
+							<button class="votebutton">
+								<span>구독</span>
+							</button>
+							<button class="votebutton">
+								<span>좋아요</span>
+							</button>
+							<button class="votebutton">
+								<span>신고</span>
+							</button>
+							<button class="stressvotebutton rpos">
+								<span>결과보기</span>
+							</button>
+						</div>
+					</div>
+				</div>
+				<!-- 투표 정보 보기 끝 -->
+			</div>
+		</div>
+		<!-- 투표 이벤트 정보 보기 시작 -->
+		<div class="voteviewarea vvwbsline">
+			<div class="voteviewbox awibspace">
+				<!-- 투표 결과 현황 시작 -->
+				<div class="voteviewtable">
+					<div class="votevtfield">
+						<div class="votevtdefault">
+							<span>구분</span>
+						</div>
+						<div class="votevtlong">
+							<span>내용</span>
+						</div>
+					</div>
+					<div class="votevtcontext">
+						<ul>
+							<li>
+								<div class="votevtitem">
+									<div class="votevtdefault">
+										<span>작성일</span>
+									</div>
+									<div class="votevtlong">
+										<span>2020년 07월20일</span>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="votevtitem">
+									<div class="votevtdefault">
+										<span>응답 기간</span>
+									</div>
+									<div class="votevtlong">
+										<span>20일</span>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="votevtitem">
+									<div class="votevtdefault">
+										<span>응답자 수</span>
+									</div>
+									<div class="votevtlong">
+										<span>520명</span>
+									</div>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<!-- 투표 결과 현황 끝 -->
+			</div>
+		</div>
+		<!-- 투표 이벤트 정보 보기 끝 -->
+		<!-- 투표 결과 시작 -->
+		<div class="voteviewarea">
+			<div class="voteviewbox">
+				<div class="voteviewcontext awibspace">
+					<div class="voteviewcontextbox ">
+						<div class="voteresultbuttonbox">
+							<div class="votertbtn">
+								<div class="voteresultbutton buttonselected">
+									<span>전체</span>
+								</div>
+								<div class="voteresultbutton buttonnoselected">
+									<span>연령별</span>
+								</div>
+								<div class="voteresultbutton buttonnoselected">
+									<span>남녀별</span>
+								</div>
+							</div>
+						</div>
+						<div class="chartbox">
+							<img class="chart360" src="images/sample_18.png" /> <img
+								class="chart800" src="images/sample_19.jpg" /> <img
+								class="chart1024" src="images/sample_20.jpg" />
+						</div>
+					</div>
+				</div>
+				<div class="voteviewbtncont vvwbspace">
+					<div class="voteviewbuttonbox">
+						<button class="votebutton">
+							<span>이전</span>
+						</button>
+						<button class="votebutton">
+							<span>홈으로</span>
+						</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- 투표 결과 끝 -->
+		<!-- 댓글 시작 -->
+		<div class="voteviewarea">
+			<div class="replybox">
+				<div class="replyfield">
+					<span>댓글 </span><span class="title">10</span>
+				</div>
+				<div class="replyinputer">
+					<textarea>여러분의 소중한 댓글을 입력해주세요.</textarea>
+					<button class="votebutton rpos">
+						<span>댓글 달기</span>
+					</button>
+				</div>
+				<div class="replylist">
+					<ul>
+						<li>
+							<div class="replyitem">
+								<div class="replytop">
+									<div class="userinfo">
+										<img src="images/thumb_sample.png" /> <span class="normal">폴앤톡1004</span>
+									</div>
+									<div class="replydate">
+										<span>2020.07.19 11:45</span>
+									</div>
+									<div class="replyctrl">
+										<span>삭제</span>
+									</div>
+								</div>
+								<div class="replybottom">
+									<span>코로나19ㅣ 북한, 여전히 확진자 0명 주장속 방역 강화 뜻 밝혀.</span>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="replyitem">
+								<div class="replytop">
+									<div class="userinfo">
+										<img src="images/thumb_sample.png" /> <span class="normal">폴앤톡1004</span>
+									</div>
+									<div class="replydate">
+										<span>2020.07.19 11:45</span>
+									</div>
+									<div class="replyctrl">
+										<span>삭제</span>
+									</div>
+								</div>
+								<div class="replybottom">
+									<span>코로나19ㅣ 북한, 여전히 확진자 0명 주장속 방역 강화 뜻 밝혀.</span>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="replyitem">
+								<div class="replytop">
+									<div class="userinfo">
+										<img src="images/thumb_sample.png" /> <span class="normal">폴앤톡1004</span>
+									</div>
+									<div class="replydate">
+										<span>2020.07.19 11:45</span>
+									</div>
+									<div class="replyctrl">
+										<span>삭제</span>
+									</div>
+								</div>
+								<div class="replybottom">
+									<span>코로나19ㅣ 북한, 여전히 확진자 0명 주장속 방역 강화 뜻 밝혀.</span>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="replyitem">
+								<div class="replytop">
+									<div class="userinfo">
+										<img src="images/thumb_sample.png" /> <span class="normal">폴앤톡1004</span>
+									</div>
+									<div class="replydate">
+										<span>2020.07.19 11:45</span>
+									</div>
+									<div class="replyctrl">
+										<span>삭제</span>
+									</div>
+								</div>
+								<div class="replybottom">
+									<span>코로나19ㅣ 북한, 여전히 확진자 0명 주장속 방역 강화 뜻 밝혀.</span>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="replyitem">
+								<div class="replytop">
+									<div class="userinfo">
+										<img src="images/thumb_sample.png" /> <span class="normal">폴앤톡1004</span>
+									</div>
+									<div class="replydate">
+										<span>2020.07.19 11:45</span>
+									</div>
+									<div class="replyctrl">
+										<span>삭제</span>
+									</div>
+								</div>
+								<div class="replybottom">
+									<span>코로나19ㅣ 북한, 여전히 확진자 0명 주장속 방역 강화 뜻 밝혀.</span>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="replyitem">
+								<div class="replytop">
+									<div class="userinfo">
+										<img src="images/thumb_sample.png" /> <span class="normal">폴앤톡1004</span>
+									</div>
+									<div class="replydate">
+										<span>2020.07.19 11:45</span>
+									</div>
+									<div class="replyctrl">
+										<span>삭제</span>
+									</div>
+								</div>
+								<div class="replybottom">
+									<span>코로나19ㅣ 북한, 여전히 확진자 0명 주장속 방역 강화 뜻 밝혀.</span>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="replyitem">
+								<div class="replytop">
+									<div class="userinfo">
+										<img src="images/thumb_sample.png" /> <span class="normal">폴앤톡1004</span>
+									</div>
+									<div class="replydate">
+										<span>2020.07.19 11:45</span>
+									</div>
+									<div class="replyctrl">
+										<span>삭제</span>
+									</div>
+								</div>
+								<div class="replybottom">
+									<span>코로나19ㅣ 북한, 여전히 확진자 0명 주장속 방역 강화 뜻 밝혀.</span>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="replyitem">
+								<div class="replytop">
+									<div class="userinfo">
+										<img src="images/thumb_sample.png" /> <span class="normal">폴앤톡1004</span>
+									</div>
+									<div class="replydate">
+										<span>2020.07.19 11:45</span>
+									</div>
+									<div class="replyctrl">
+										<span>삭제</span>
+									</div>
+								</div>
+								<div class="replybottom">
+									<span>코로나19ㅣ 북한, 여전히 확진자 0명 주장속 방역 강화 뜻 밝혀.</span>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="replyitem">
+								<div class="replytop">
+									<div class="userinfo">
+										<img src="images/thumb_sample.png" /> <span class="normal">폴앤톡1004</span>
+									</div>
+									<div class="replydate">
+										<span>2020.07.19 11:45</span>
+									</div>
+									<div class="replyctrl">
+										<span>삭제</span>
+									</div>
+								</div>
+								<div class="replybottom">
+									<span>코로나19ㅣ 북한, 여전히 확진자 0명 주장속 방역 강화 뜻 밝혀.</span>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="replyitem">
+								<div class="replytop">
+									<div class="userinfo">
+										<img src="images/thumb_sample.png" /> <span class="normal">폴앤톡1004</span>
+									</div>
+									<div class="replydate">
+										<span>2020.07.19 11:45</span>
+									</div>
+									<div class="replyctrl">
+										<span>삭제</span>
+									</div>
+								</div>
+								<div class="replybottom">
+									<span>코로나19ㅣ 북한, 여전히 확진자 0명 주장속 방역 강화 뜻 밝혀.</span>
+								</div>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<!-- 댓글 끝 -->
+	</div>
+</div>
+<!-- 컨텐츠 끝-->

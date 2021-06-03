@@ -1,0 +1,99 @@
+<?php
+
+class CApp_Handler_Admin_main extends CCore_Lib_Routines_Handler 
+{
+    
+    public function __construct()
+    {
+    }
+    
+    public function setText1($array)
+    {
+        $main_text1    = $array['main_text1'];
+        
+        $query  = "SELECT COUNT(*) AS CNT FROM PTP_MAIN WHERE main_seq = 1";
+        
+        $this->query($query);
+        $result = $this->execute(CCore_Lib_Routines_Handler::SELECT);
+        
+        if (intval($result[0]["CNT"]) > 0)
+        {
+            $query  = "UPDATE PTP_MAIN set m_text1 = :M_TEXT1 WHERE main_seq = 1";
+            $this->query($query);
+            $this->bind("M_TEXT1", $main_text1);
+            $result = $this->execute(CCore_Lib_Routines_Handler::UPDATE);
+            
+        }
+        else
+        {
+            $query  = "INSERT INTO PTP_MAIN
+                        (
+                          m_text1
+                        )
+                        VALUES
+                        (
+                          :M_TEXT1
+                        )";
+            $this->query($query);
+            $this->bind("M_TEXT1", $main_text1);
+            $result = $this->execute(CCore_Lib_Routines_Handler::INSERT);
+        }
+        
+        if (! $result)
+            return false;
+            
+            return true;
+    }
+    
+    public function setText2($array)
+    {
+        $main_text2    = $array['main_text2'];
+        
+        $query  = "SELECT COUNT(*) AS CNT FROM PTP_MAIN WHERE main_seq = 1";
+        
+        $this->query($query);
+        $result = $this->execute(CCore_Lib_Routines_Handler::SELECT);
+        
+        if (intval($result[0]["CNT"]) > 0)
+        {
+            $query  = "UPDATE PTP_MAIN set
+                           m_text2 = :M_TEXT2
+                           WHERE main_seq = 1";
+            $this->query($query);
+            $this->bind("M_TEXT2", $main_text2);
+            $result = $this->execute(CCore_Lib_Routines_Handler::UPDATE);
+            
+        }
+        else
+        {
+            $query  = "INSERT INTO PTP_MAIN
+                        (
+                          m_text2
+                        )
+                        VALUES
+                        (
+                          :M_TEXT2
+                        )";
+            $this->query($query);
+            $this->bind("M_TEXT2", $main_text2);
+            $result = $this->execute(CCore_Lib_Routines_Handler::INSERT);
+        }
+        
+        if (! $result)
+            return false;
+            
+            return true;
+    }
+    
+    
+    public function getText($num)
+    {
+        $query  = "SELECT * FROM PTP_MAIN WHERE main_seq = :NUM";
+        $this->query($query);
+        $this->bind("NUM", $num);
+        $result = $this->execute(CCore_Lib_Routines_Handler::SELECT);
+        
+        return $result;
+    }
+}
+?>

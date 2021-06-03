@@ -1,0 +1,132 @@
+@CHARSET "UTF-8";
+
+/*
+ *	-----------------------------------
+ *	검색 목록
+ *	-----------------------------------
+ */
+.searchlistarea, .searchlistbox, .searchlistview, .searchtypetitle,
+.searchtypetitle img, .searchtypetitle span, .itemimage,
+.searchitembox, .searchitemtitle, .searchitemdoc, .searchitemcate, .searchitemetc, .searchiteminfo,
+.searchitemwriter img, .searchlistview ul, .searchlistview li
+{
+	float: left;
+}
+
+.searchlistarea, .searchlistbox, .searchlistview, .searchtypetitle,
+.searchitemtitle, .searchitemdoc, .searchitemcate, .searchitemetc, .searchlistview ul, .searchlistview li
+{
+	width: 100%;
+}
+
+.searchitemwriter, .searchitemwriter span
+{
+	float: right;
+}
+
+.searchkeyword
+{
+	padding-top: 10px;
+	padding-bottom: 10px;
+	border-bottom: 1px #e7e7e7 solid;
+}
+
+.searchtypetitle
+{
+	padding-top: 20px;
+	padding-bottom: 10px;
+}
+
+.searchtypetitle span
+{
+	font-size: 25px;
+	font-weight: bold;
+	margin-left: 10px;
+}
+
+.searchlistview
+{
+	margin-bottom: 35px;
+}
+
+.searchlistview ul
+{
+	padding: 0px 0px 0px 0px;
+}
+
+.searchlistview ul li
+{
+	padding-top: 25px;
+	padding-bottom: 25px;
+	border-bottom: 1px #e7e7e7 solid;
+}
+
+.searchitemcate
+{
+	margin-bottom: 5px;
+}
+
+.searchitemdoc
+{
+	margin-bottom: 10px;
+}
+
+.itemimage
+{
+	margin-right: 10px;
+	width: 160px;
+}
+
+.searchitembox
+{
+	width: calc(100% - 200px);
+}
+
+.searchitemtitle 
+{
+	font-size: 20px;
+}
+
+.searchiteminfo
+{
+	width: 300px;
+}
+
+.searchitemwriter span
+{
+	margin-top: -2px;
+}
+
+.goallsearchbutton
+{
+	float: right;
+	padding: 10px 10px 10px 10px;
+	border: 1px #cccccc solid;
+}
+
+.boardmember img, .searchitemwriter img
+{
+	width: 20px;
+	margin-right: 5px;
+	margin-top: 2px;
+	border-radius: 40%;
+}
+
+/*
+ *	-----------------------------------
+ *	1024 이상 화면
+ *	-----------------------------------
+ */
+@media screen and (min-width:1025px) 
+{
+	.searchlistarea
+	{
+		margin-bottom: 80px;
+	}
+
+	.searchlist
+	{
+		margin: 0px auto;
+		width: 1024px;
+	}
+}

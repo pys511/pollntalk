@@ -1,0 +1,1043 @@
+﻿@CHARSET "UTF-8";
+
+/*
+ *	-----------------------------------
+ *	투표 만들기
+ *	-----------------------------------
+ */
+.votewritearea, .votewrite, .votewritemenuitem, .votewritetitle,
+.votewritetitle img, .votewritecont, .votewriteinputer, .votewritefield,
+.votemark, .votewritefield span, .votewritefield img, .votewriteinputbox, .inputcontshort, .inputcont, .inputconstdefault, .inputcontImage, 
+.inputcontVideo, .inputcontImage,
+.checkinput, .inputcontcheckbox,
+.inputcontbox, .inputcontbox input,
+.votebutton, .votebutton img, .appendquestion, .votewtfield,
+.votewtcontext, .imgbox, .votewritebtncont, .votewritebutton,
+.voteguidedoc, .voteguidefield, .voteguideinputer, .voteguideinputbox,
+.voteguidebuttoncont, .voteguidebtn, .voteguidebtnfield,
+.voteguidebutton, .voteguidebtndoc, .votewtcont dl, .votewtcont dl dt,
+.votewtcont dl dd, .paytable, .paytable ul, .paytable ul li, .payfield,
+.payinputer, .paytable span, .payinputer select, .payconttable,
+.payconttable ul, .payconttable ul li, .paycontfield, .paycontdefault,
+.payconteshort, .paycontdatabox, .votewtexp, .votewtbtnright 
+{
+	float: left;
+}
+
+.votewritearea, .votewritemenu, .votewrite, .votewritetitle, .votewritecontitem,
+.votewritecont, .votewriteinputer, .votewriteinputer ul li, .inputcont,
+.inputcont input[type=text], .inputcont textarea, .appendquestion,
+.inputcontcheckbox input, .inputconstdefault,
+.votewtfield, .votewtcontext, .votewtcontext ul, .votewtcontext ul li,
+.votewritebtncont, .voteguidedoc, .voteguideinputer, .voteguideinputbox,
+.voteguidebuttoncont, .voteguidebtndoc, .votewtcont dl, .votewtcont dl dt,
+.paytable, .paytable ul, .paytable ul li, .payconttable, .payconttable ul,
+.payconttable ul li, .votewtexp, .votewtbtnright
+{
+	width: 100%;
+}
+
+.inputcontbox
+{
+	width: 250px;
+}
+
+.inputconstdefault input[type=text]
+{
+	width: 370px;
+}
+
+.inputcontshort input[type=text]
+{
+	width: 125px;
+}
+
+.votewriterightbutton, .rightbutton 
+{
+	float: right;
+}
+
+.inputcontcheckbox label
+{
+	margin-right: 5px;
+}
+
+.votewritemenu 
+{
+	margin-bottom: 15px;
+}
+
+.votewritemenuitem 
+{
+	padding-top: 10px;
+	padding-bottom: 10px;
+	text-align: center;
+	font-size: 1.5625rem;
+	font-weight: bold;
+}
+
+.votewritecont 
+{
+	margin-top: 10px;
+	margin-bottom: 25px;
+}
+
+.selected 
+{
+	border: 1px #1c9cd9 solid;
+	color: #1c9cd9;
+}
+
+.noselected 
+{
+	background-color: #fafafa;
+	border-top: 1px #d9d9d9 solid;
+	border-left: 1px #d9d9d9 solid;
+	border-right: 1px #d9d9d9 solid;
+	border-bottom: 1px #d9d9d9 solid;
+	color: #cccccc;
+}
+
+.votewritetitle 
+{
+	float: left;
+	padding: 10px 15px 10px 15px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	text-align: left;
+	background-color: #ececec;
+	color: #333333;
+	font-size: 1.25rem;
+}
+
+.votewritetitle img 
+{
+	margin-right: 10px;
+	margin-top: 7px;
+}
+
+.altright 
+{
+	font-size: 1rem;
+	margin-bottom: 10px;
+	margin-right: 5px;
+}
+
+.vtbline 
+{
+	border-bottom: 1px #cccccc solid;
+}
+
+.vtallline
+{
+	border: 1px #cccccc solid;
+}
+
+.votewritefield 
+{
+	font-size: 1.125rem;
+	color: #666666;
+}
+
+.votemark 
+{
+	margin-right: 5px;
+	margin-top: 4px;
+}
+
+.votewriteinputbox input[type=text], .voteguideinputbox input[type=text],
+.payinputer input[type=text], textarea 
+{
+	padding: 10px 20px 10px 20px;
+	border-radius: 0px;
+	border: 1px #d9d9d9 solid;
+	color: #666666;
+}
+
+.inputcont select, .inputcontshort select, .inputconstdefault select
+{
+	width: 302px;
+	color: #b7b7b7;
+}
+
+.inputcont textarea, .inputcontshort textarea, .inputconstdefault textarea 
+{
+	overflow-y: auto;
+}
+
+.inputcontli input[type=text]
+{
+	margin-bottom: 5px;
+}
+
+.vtewtshort select 
+{
+	width: 160px;
+	color: #666666;
+}
+
+.vrspace 
+{
+	margin-right: 6px;
+}
+
+.vbspace 
+{
+	margin-bottom: 5px;
+}
+
+.inputcontImage, .inputcontVideo
+{
+	margin-right: 10px;
+}
+
+.checkinput
+{
+	margin-top: 10px;
+}
+
+.votebutton 
+{
+	padding: 11px 19px 11px 19px;
+	color: #666666;
+	text-align: center;
+	border: 1px #d9d9d9 solid;
+	margin-right: 9px;
+	margin-bottom: 5px;
+	font-weight: bold;
+	font-size: 1rem;
+	background-color: #ffffff;
+}
+
+.votebutton img 
+{
+	margin-right: 5px;
+	margin-top: 2px;
+}
+
+.questionline 
+{
+	border-bottom: 1px #cccccc solid;
+	padding-bottom: 15px;
+}
+
+.votewriteinputer ul, .votewtcontext ul, .paytable ul, .payconttable ul
+{
+	padding: 0px 0px 0px 0px;
+	margin-top: 0px;
+	margin-bottom: 0px;
+}
+
+.votewriteinputer ul 
+{
+	width: 100%;
+}
+
+.votewriteinputer ul li 
+{
+	margin-bottom: 25px;
+}
+
+.appendquestion 
+{
+	text-align: right;
+	margin-bottom: 25px;
+}
+
+.votewtfield 
+{
+	text-align: center;
+	background-color: #f7f7f7;
+	color: #333333;
+	font-size: 1.125rem;
+}
+
+.votewtfield div, .votewtcontext div 
+{
+	padding-top: 15px;
+	padding-bottom: 15px;
+}
+
+.votewtcontext ul 
+{
+	margin-bottom: 0px;
+}
+
+.votewtcontext div 
+{
+	color: #666666;
+}
+
+.votewtcontext .vtewtdefault 
+{
+	text-align: center;
+}
+
+.votewtcontext .votewtlong 
+{
+	padding: 15px 10px 10px 10px;
+}
+
+.votewtcontext .agree+label 
+{
+	margin-top: 10px;
+}
+
+.votewritebtncont 
+{
+	margin-bottom: 100px;
+}
+
+.votewritebuttonbox div, .votewritebutton, .votewriterightbutton,
+.votewtbutton 
+{
+	text-align: center;
+	font-size: 1.125rem;
+	margin-right: 10px;
+}
+
+.votewtbutton 
+{
+	margin: 0 auto;
+	width: 125px;
+}
+
+.defaultbutton 
+{
+	border: 1px #d9d9d9 solid;
+	color: #747474;
+}
+
+.stressbutton 
+{
+	border: 1px #1c9cd9 solid;
+	color: #1c9cd9;
+}
+
+.guidetext 
+{
+	color: #666666;
+}
+
+.voteguidedoc .title 
+{
+	font-size: 1.5625rem;
+}
+
+.voteguidedoc 
+{
+	margin-bottom: 10px;
+	color: #000000;
+}
+
+.voteguidefield 
+{
+	text-align: left;
+	color: #666666;
+}
+
+.voteguideinputbox input[type=text] 
+{
+	width: calc(100% - 145px);
+	margin-right: 5px;
+}
+
+.voteguideinputbox button 
+{
+	padding: 9px 15px 8px 15px;
+	width: 140px;
+	color: #666666;
+	text-align: center;
+	border: 1px #d9d9d9 solid;
+	font-weight: bold;
+	font-size: 1rem;
+	background-color: #ffffff;
+}
+
+.voteguideinputer 
+{
+	margin-bottom: 5px;
+}
+
+.voteguidebuttoncont 
+{
+	margin-top: 25px;
+	border-top: 1px #cccccc solid;
+	padding-top: 25px;
+}
+
+.voteguidebtn span 
+{
+	color: #666666;
+	margin-right: 22px;
+	margin-top: 3px;
+}
+
+.voteguidebtn button 
+{
+	padding-top: 5px;
+	padding-bottom: 5px;
+	text-align: center;
+	font-weight: bold;
+	font-size: 1rem;
+	background-color: #ffffff;
+}
+
+.kakao 
+{
+	border: 1px #ffcd00 solid;
+}
+
+.facebook 
+{
+	border: 1px #1877f2 solid;
+}
+
+.linkedin 
+{
+	border: 1px #0077b5 solid;
+}
+
+.mail 
+{
+	border: 1px #333333 solid;
+}
+
+.voteguidebtndoc 
+{
+	margin-top: 10px;
+	text-align: center;
+	font-size: 0.9375rem;
+	color: #ff0000;
+}
+
+.vtewtshort 
+{
+	text-align: center;
+	height: 100%;
+}
+
+.votewtcont 
+{
+	padding: 5px 5px 5px 5px;
+}
+
+.votewtcont dl 
+{
+	margin-top: 0px;
+}
+
+.paytable 
+{
+	background-color: #f7f7f7;
+	border: 1px #999999 solid;
+	padding: 30px 30px 30px 30px;
+}
+
+.paytable span 
+{
+	color: #666666;
+}
+
+.paytable ul li 
+{
+	padding-bottom: 10px;
+}
+
+.payfield 
+{
+	padding-top: 5px;
+	width: 120px;
+}
+
+.payinputer .won 
+{
+	margin-top: 5px;
+}
+
+.payinputer select 
+{
+	width: 190px;
+	margin-right: 5px;
+}
+
+.payconttable 
+{
+	border: 1px #d9d9d9 solid;
+	text-align: center;
+}
+
+.paycontdatali 
+{
+	text-align: left;
+}
+
+.payconteshort 
+{
+	width: 140px;
+}
+
+.paycontdefault 
+{
+	width: calc(100% - 140px);
+}
+
+.paycontfield, .paycontdefault, .payconteshort, .paycontdatali 
+{
+	padding: 10px 10px 10px 10px;
+}
+
+.paycontfield 
+{
+	background-color: #f7f7f7;
+}
+
+.pcbline 
+{
+	border-bottom: 1px #d9d9d9 solid;
+}
+
+.top05 
+{
+	float: left;
+	margin-top: 5px;
+}
+
+.agree 
+{
+	display: none;
+}
+
+.agree+label 
+{
+	display: inline-block;
+	color: #333333;
+}
+
+.agree+label span 
+{
+	float: left;
+	font-size: 1.125rem;
+}
+
+.agree+label:before 
+{
+	float: left;
+	background-image: url('../images/stress_uncheck.jpg');
+	background-position: center center;
+	content: "";
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	margin-top: 4px;
+	margin-right: 5px;
+	border: 1px #9d9d9d solid;
+	border-radius: 30px;
+}
+
+.agree:checked+label:before 
+{
+	background-image: url('../images/stress_check.png');
+	background-repeat: no-repeat;
+	background-position: center center;
+}
+
+.inputcalendar
+{
+	background-image:url('/app/images/calendar.png');
+	background-repeat:no-repeat;
+	background-position: 10px;
+}
+
+.answerCorrect
+{
+	margin-top: 5px;
+	padding-top: 5px;
+	border-top: 1px #d9d9d9 solid;
+}
+
+.newAnswerItem
+{
+	padding-bottom: 10px;
+	margin-bottom: 5px;
+	border-bottom: 1px #d9d9d9 dotted;
+}
+
+/*
+ *	-----------------------------------
+ *	1024 이상 화면
+ *	-----------------------------------
+ */
+@media screen and (min-width:1025px) 
+{
+	.votewritebox 
+	{
+		width: 1024px;
+	}
+	
+	.votewritefield 
+	{
+		padding: 5px 10px 0px 15px;
+	}
+	
+	.votewritetablebox 
+	{
+		width: 100%;
+	}
+	
+	.paybox 
+	{
+		width: 800px;
+	}
+	
+	.inputcontcheckbox, .checkinput
+	{
+		width: calc(100% - 355px);
+	}
+}
+
+/*
+ *	-----------------------------------
+ *	800 이상 1024 이하 화면
+ *	-----------------------------------
+ */
+@media screen and (min-width:801px) and (max-width:1024px) 
+{
+	.votewritebox, .paybox 
+	{
+		width: 800px;
+	}
+}
+
+/*
+ *	-----------------------------------
+ *	800 이상 화면
+ *	-----------------------------------
+ */
+@media screen and (min-width:801px) 
+{
+	.votewritebox, .votewritetablebox, .voteguideitem,
+	.paybox 
+	{
+		margin: 0 auto;
+	}
+	
+	.voteguidebox, .votewritemenu, .inputcontli, .inputcontli img,
+	.vtewtdefault, .vtewtshort, .votewtlong, .votewtcont, .votewritetable
+	{
+		float: left;
+	}
+	
+	.votewritetable, .voteguidebox, .votewtcont dl dd 
+	{
+		width: 100%;
+	}
+	
+	.votewriteinputer 
+	{
+		padding-bottom: 15px;
+		padding-top: 15px;
+	}
+	
+	.votewritefield 
+	{
+		width: 160px;
+	}
+	
+	.inputcontli 
+	{
+		width: calc(100% + 90px);
+	}
+	
+	.inputcontli input[type=text] 
+	{
+		width: calc(100% - 165px);
+		margin-right: 5px;
+	}
+	
+	.bcontrol 
+	{
+		display: none;
+	}
+	
+	.inputcontli img 
+	{
+		display: block;
+	}
+	
+	.votewritemenuitem 
+	{
+		width: 50%;
+	}
+	
+	.voteguideitem 
+	{
+		width: 800px;
+	}
+	
+	.votewriteinputbox 
+	{
+		width: calc(100% - 175px);
+	}
+	
+	.votewritetable 
+	{
+		border: 1px #d9d9d9 solid;
+	}
+	
+	.wterline 
+	{
+		border-right: 1px #d9d9d9 solid;
+	}
+	
+	.votewt80 div 
+	{
+		height: 80px;
+	}
+	
+	.votewt130 div 
+	{
+		height: 130px;
+	}
+	
+	.votewt240 div 
+	{
+		height: 160px;
+	}
+	
+	.vtewtdefault 
+	{
+		width: 250px;
+	}
+	
+	.vtewtshort 
+	{
+		width: 180px;
+	}
+	
+	.votewtcont 
+	{
+		width: calc(100% - 360px);
+	}
+	
+	.votewtlong 
+	{
+		width: calc(100% - 500px);
+	}
+	
+	.votewritebuttonbox 
+	{
+		margin: 0 auto;
+		width: 385px;
+	}
+	
+	.votewritebuttonbox div, .votewritebutton, .votewriterightbutton,
+	.votewtbutton 
+	{
+		padding: 5px 25px 5px 25px;
+	}
+	
+	.vtbspace 
+	{
+		margin-bottom: 20px;
+	}
+	
+	.vttspace 
+	{
+		margin-top: 20px;
+	}
+	
+	.voteguidefield 
+	{
+		width: 175px;
+		padding: 10px 0px 10px 0px;
+	}
+	
+	.voteguideinputbox 
+	{
+		width: calc(100% - 175px);
+	}
+	
+	.voteguidebtnfield 
+	{
+		width: 90px;
+		margin-top: 5px;
+	}
+	
+	.voteguidebutton 
+	{
+		width: calc(100% - 90px);
+	}
+	
+	.voteguidebuttonbox 
+	{
+		width: 560px;
+		margin: 0 auto;
+	}
+	
+	.voteguidebtn button 
+	{
+		width: 110px;
+	}
+	
+	.kakao 
+	{
+		margin-right: 6px;
+	}
+	
+	.facebook 
+	{
+		margin-right: 6px;
+	}
+	
+	.linkedin 
+	{
+		margin-right: 6px;
+	}
+	
+	.payinputer 
+	{
+		width: calc(100% - 120px);
+		margin-top: 5px;
+	}
+	
+	.payinputer .payinputshort 
+	{
+		width: 120px;
+		margin-right: 5px;
+	}
+	
+	.payinputlong 
+	{
+		width: calc(100% - 200px);
+	}
+	
+	.paycontfield 
+	{
+		width: 140px;
+	}
+	
+	.paycontdatabox 
+	{
+		width: calc(100% - 140px);
+	}
+	
+	.pcrline 
+	{
+		border-right: 1px #d9d9d9 solid;
+	}
+	
+	.pccontw90 
+	{
+		height: 90px;
+	}
+}
+
+/*	
+ *	-----------------------------------
+ *	800 이하 화면
+ *	-----------------------------------
+ */
+@media screen and (max-width:800px) 
+{
+	.votewritebox, .votewritetablebox, .votewritefield,
+	.vtewtdefault, .vtewtshort, .votewtlong, .votewtcont,
+	.voteguidebuttonbox 
+	{
+		float: left;
+	}
+	
+	.votewritebox, .votewritemenuitem, 
+	.votewritetablebox, .votewritefield, .inputcontli, .inputcontli input[type=text]
+	{
+		width: 100%;
+	}
+
+	.voteguidebox, .paybox 
+	{
+		margin: 0 auto;
+		width: 95%;
+	}
+	
+	.votewritefield 
+	{
+		padding-left: 10px;
+		margin-bottom: 5px;
+	}
+	
+	select 
+	{
+		margin-top: 5px;
+	}
+	
+	.bcontrol 
+	{
+		display: block;
+		float: right;
+	}
+	
+	.inputcontli img 
+	{
+		display: none;
+	}
+	
+	.votewritemenu 
+	{
+		margin: 0 auto;
+		width: 95%;
+	}
+	
+	.votewriteinputer 
+	{
+		margin-bottom: 35px;
+	}
+	
+	.votewriteinputbox, .voteguideinputbox 
+	{
+		width: 97%;
+		margin-left: 5px;
+	}
+	
+	.voteguidebuttonbox 
+	{
+		width: 100%;
+	}
+	
+	.noselected 
+	{
+		border-left: 1px #d9d9d9 solid;
+	}
+	
+	.appendquestion img 
+	{
+		margin-right: 5px;
+	}
+	
+	.votewritetable 
+	{
+		width: 95%;
+		margin: 0 auto;
+	}
+	
+	.votewtcont dl dd 
+	{
+		width: 95%;
+		margin-left: 20px;
+	}
+	
+	.votewtfield 
+	{
+		display: none;
+	}
+	
+	.vtewtdefault, .votewtlong, .vtewtshort 
+	{
+		width: 100%;
+	}
+	
+	.vtewtdefault 
+	{
+		border: 1px #d9d9d9 solid;
+	}
+	
+	.votewtlong 
+	{
+		border-left: 1px #d9d9d9 solid;
+		border-right: 1px #d9d9d9 solid;
+	}
+	
+	.votewtcont 
+	{
+		border-left: 1px #d9d9d9 solid;
+		border-right: 1px #d9d9d9 solid;
+	}
+	
+	.vtewtshort 
+	{
+		border: 1px #d9d9d9 solid;
+	}
+	
+	.voteguidebtnfield 
+	{
+		width: 100%;
+		padding-left: 5px;
+	}
+	
+	.voteguidebutton 
+	{
+		margin-left: 5px;
+	}
+	
+	.votewritebuttonbox 
+	{
+		margin: 0 auto;
+		width: 325px;
+	}
+	
+	.votewritebuttonbox div, .votewritebutton, .votewriterightbutton,
+	.votewtbutton 
+	{
+		padding: 5px 15px 5px 15px;
+	}
+	
+	.voteguidebtn button 
+	{
+		width: 83px;
+	}
+	
+	.kakao 
+	{
+		margin-right: 2px;
+	}
+	
+	.facebook 
+	{
+		margin-right: 2px;
+	}
+	
+	.linkedin 
+	{
+		margin-right: 2px;
+	}
+	
+	.voteguidefield 
+	{
+		width: 100%;
+		padding: 10px 10px 5px 10px;
+	}
+	
+	.payfield 
+	{
+		margin-bottom: 5px;
+	}
+	
+	.payinputlong 
+	{
+		width: 95%;
+	}
+	
+	.payinputer, .payinputlong 
+	{
+		margin-top: 5px;
+	}
+	
+	.paycontfield, .paycontdatabox 
+	{
+		width: 100%;
+	}
+	
+	.paycontm71 
+	{
+		height: 71px;
+	}
+	
+	.pcmrline 
+	{
+		border-right: 1px #d9d9d9 solid;
+	}
+	
+	.pcbwline 
+	{
+		border-bottom: 1px #d9d9d9 solid;
+	}
+}

@@ -1,0 +1,37 @@
+<?php
+/*
+ * mypage message
+ */
+$messagesub = "";
+
+if (array_key_exists(CONST_WEB_MESSAGE::MSGSUB, $_GET))
+    $messagesub = $_GET[CONST_WEB_MESSAGE::MSGSUB];
+else
+    $messagesub = "recv";
+
+// 기본은 member
+if ($messagesub == "")
+    $messagesub = "recv"; // 추후 기본으로 할 페이지로 할 것.
+
+$messagesubcontentpath = "./app/view/page/mypage_message_" . $messagesub . ".php";
+?>
+<div class="messagecontent">
+	<!-- 쪽지 상황 시작 -->
+	<div class="messagestatus">
+		<div class="messagebox title">
+			<a href="/?mode=mypage&sub=message&messagesub=recv"> <span>받은 쪽지(45)</span>
+			</a>
+		</div>
+		<div class="messagebox">
+			<a href="/?mode=mypage&sub=message&messagesub=send"> <span>보낸 쪽지(45)</span>
+			</a>
+		</div>
+	</div>
+	<!-- 쪽지 상황 끝 -->
+	<!-- 쪽지 버튼 영역 시작 -->
+<?php
+// mypage content page
+require_once ($messagesubcontentpath);
+?>
+	<!-- 쪽지 게시판 끝 -->
+</div>

@@ -1,0 +1,596 @@
+﻿@CHARSET "UTF-8";
+
+/*
+ *	-----------------------------------
+ *	투표 보기
+ *	-----------------------------------
+ */
+.voteview, .voteviewarea, .voteinfobox, .voteinfo, .votetitle, .votecate,
+.voteexplain, .voteext, .voteext span, .userinfo, .userinfo img,
+.userinfo span, .votebuttonbox, .votebutton, .voteviewcontext,
+.voteviewcontext ul, .voteviewcontext ul li, .voteviewcontextbox,
+.questionfieldbox, .questionfieldbox img, .questionfieldcont,
+.questionarrow, .questionarrow img, .questiontext,
+.questiontext span, .answerbox, .answeritem, .answeritembox,
+.answeritembox img, .answeritemtext, .textitembox, .voteviewbtncont,
+.voteviewtable, .votevtfield, .votevtdefault, .votevtlong,
+.votecontVideo,
+.votevtcontext, .votevtcontext ul, .votevtcontext ul li, .votevtitem,
+.voteviewcontextbox, .voteresultbuttonbox, .voteresultbutton, .chartbox,
+.votebuttonlonglongbox 
+{
+	float: left;
+}
+
+.voteview, .voteviewarea, .voteinfobox, .votetitle, .votecate,
+.voteexplain, .voteext, .votebuttonbox, .voteviewcontext,
+.voteviewcontext ul, .voteviewcontext ul li, .voteviewcontextbox,
+.questionfieldbox, .questionarrow,
+.questionfield, .questiontext, .questiontext span, .answerbox,
+.answeritem, .longitem, .answeritembox, .textitembox, .voteviewbtncont,
+.voteviewtable, .votevtfield, .votevtcontext, .votevtcontext ul,
+.votevtcontext ul li, .votevtitem, .voteviewcontextbox,
+.voteresultbuttonbox, .voteresultbutton, .chartbox,
+.votebuttonlonglongbox 
+{
+	width: 100%;
+}
+
+.votetitle 
+{
+	font-size: 1.75rem;
+	padding-bottom: 10px;
+	margin-bottom: 10px;
+	border-bottom: 1px #cccccc solid
+}
+
+.votecate, .voteexplain, .voteext 
+{
+	font-size: 1.125rem;
+	margin-bottom: 1px;
+	padding-bottom: 2px;
+}
+
+.catetext, .default, .normal 
+{
+	color: #666666;
+}
+
+.userinfo 
+{
+	width: 130px;
+}
+
+.userinfo img
+{
+	width: 20px;
+	margin-right: 5px;
+} 
+
+.vvwrspace 
+{
+	margin-right: 5px;
+}
+
+.vvwbline, .vvwbsline 
+{
+	border-bottom: 1px #cccccc solid
+}
+
+.vvwbspace 
+{
+	margin-bottom: 10px;
+	padding-bottom: 20px;
+}
+
+.votebuttonbox button, .voteviewbuttonbox button, .votebuttonlongbox button,
+.votebuttonlonglongbox button 
+{
+	padding-top: 5px;
+	padding-bottom: 5px;
+	text-align: center;
+	font-weight: bold;
+	font-size: 1rem;
+	background-color: #ffffff;
+}
+
+.votebuttonlongbox button 
+{
+	margin-top: 30px;
+}
+
+.votebuttonbox .votebutton, .voteviewbuttonbox .votebutton,
+.votebuttonlongbox .votebutton, .votebuttonlonglongbox .votebutton 
+{
+	margin-right: 4px;
+}
+
+.votebutton 
+{
+	border: 1px #d9d9d9 solid;
+	color: #666666;
+}
+
+.stressvotebutton 
+{
+	border: 1px #1c9cd9 solid;
+	color: #1c9cd9;
+}
+
+.rpos 
+{
+	float: right;
+}
+
+.voteviewcontextbox 
+{
+	border: 1px #d9d9d9 solid;
+	padding: 50px 50px 50px 50px;
+}
+
+.voteviewcontext ul, .votevtcontext ul 
+{
+	padding: 0px 0px 0px 0px;
+	margin-top: 0px;
+	margin-bottom: 0px;
+}
+
+.voteviewcontext ul li 
+{
+	padding-bottom: 10px;
+}
+
+.longanswer, .shortanswer 
+{
+	border: 1px #d9d9d9 solid;
+}
+
+.longanswer li 
+{
+	width: 100%;
+}
+
+.shortanswer li 
+{
+	width: 50%;
+}
+
+/*
+.questionfieldbox 
+{
+	border-bottom: 1px #d9d9d9 solid;
+}
+*/
+
+.questionfieldbox 
+{
+	border: 1px #d9d9d9 solid;
+}
+
+.questionarrow 
+{
+	margin-bottom: 10px;
+}
+
+.questionarrow img 
+{
+	margin-left: 100px;
+	margin-top: -1px;
+}
+
+.answerbox 
+{
+	padding-left: 25px;
+	padding-right: 25px;
+	padding-bottom: 25px;
+}
+
+.textitembox 
+{
+	padding-bottom: 5px;
+}
+
+.answeritem 
+{
+	padding: 20px 20px 20px 20px;
+	/*border-bottom: 1px #d9d9d9 solid;*/
+}
+
+/*
+.answeritembox 
+{
+	padding-bottom: 20px;
+}
+*/
+
+.answeritembox img 
+{
+	width: 210px;
+}
+
+.answeritemtext 
+{
+	margin-left: 10px;
+}
+
+.awibline 
+{
+	border-bottom: 1px #d9d9d9 solid;
+}
+
+.questionfield 
+{
+	margin-bottom: 5px;
+}
+
+.questiontext 
+{
+	padding: 5px 5px 5px 15px;
+	margin-bottom: 20px;
+	background-color: #ececec;
+	color: #666666;
+	font-size: 1.4375rem;
+}
+
+.awibspace 
+{
+	margin-bottom: 25px;
+}
+
+.voteviewbuttonbox 
+{
+	width: 215px;
+	margin: 0 auto;
+}
+
+.votebuttonlongbox 
+{
+	width: 555px;
+	margin: 0 auto;
+}
+
+.voteviewtable 
+{
+	border-top: 1px #d9d9d9 solid;
+	border-left: 1px #d9d9d9 solid;
+	border-right: 1px #d9d9d9 solid;
+}
+
+.votevtfield, .votevtitem 
+{
+	border-bottom: 1px #d9d9d9 solid;
+}
+
+.votevtfield 
+{
+	text-align: center;
+	background-color: #f7f7f7;
+	color: #333333;
+	font-size: 1.125rem;
+}
+
+.votevtfield div, .votevtitem div 
+{
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+.votevtitem 
+{
+	text-align: center;
+	color: #666666;
+}
+
+.votevtdefault 
+{
+	border-right: 1px #d9d9d9 solid;
+}
+
+.voteresultbutton 
+{
+	padding-top: 5px;
+	padding-bottom: 5px;
+	text-align: center;
+	font-weight: bold;
+	font-size: 1.25rem;
+	background-color: #ffffff;
+}
+
+.buttonselected 
+{
+	border: 1px #1c9cd9 solid;
+	color: #1c9cd9;
+}
+
+.buttonnoselected 
+{
+	border: 1px #cccccc solid;
+	color: #cccccc;
+}
+
+.chartbox 
+{
+	text-align: center;
+}
+
+.votertbtn 
+{
+	margin: 0 auto;
+}
+
+/*
+ *	-----------------------------------
+ *	1024 이상 화면
+ *	-----------------------------------
+ */
+@media screen and (min-width:1025px) 
+{
+	.voteviewbox 
+	{
+		width: 1024px;
+	}
+	
+	.chart360, .chart800 
+	{
+		display: none;
+	}
+	
+	.chart1024 
+	{
+		width: 95%;
+	}
+}
+
+/*
+ *	-----------------------------------
+ *	800 이상 1024 이하 화면
+ *	-----------------------------------
+ */
+@media screen and (min-width:801px) and (max-width:1024px) 
+{
+	.voteviewbox 
+	{
+		width: 800px;
+	}
+	
+	.chart360, .chart1024 
+	{
+		display: none;
+	}
+	
+	.chart800 
+	{
+		width: 95%;
+	}
+}
+
+/*
+ *	-----------------------------------
+ *	800 이상 화면
+ *	-----------------------------------
+ */
+@media screen and (min-width:801px) 
+{
+	.voteview 
+	{
+		margin-bottom: 150px;
+	}
+	
+	.voteviewbox 
+	{
+		margin: 0 auto;
+	}
+	
+	.voteinfoimg, .voteinfovideo 
+	{
+		margin-right: 30px;
+	}
+	
+	.voteinfo 
+	{
+		width: calc(100% - 380px);
+	}
+	
+	.voteinfobox img, .voteinfobox iframe 
+	{
+		float: left;
+	}
+	
+	.voteviewtable 
+	{
+		margin-top: 30px;
+	}
+	
+	.voteviewcontext 
+	{
+		margin-top: 20px;
+		margin-bottom: 10px;
+	}
+	
+	.questionfieldbox 
+	{
+		padding: 30px 40px 40px 40px;
+	}
+	
+	.questionfieldcont 
+	{
+		width: calc(100% - 300px);
+		margin-left: 20px;
+	}
+	
+	.votebuttonbox button, .voteviewbuttonbox button 
+	{
+		width: 105px;
+	}
+	
+	.votebuttonlongbox button, .votebuttonlonglongbox button 
+	{
+		width: 180px;
+	}
+
+	/*
+	.longitem 
+	{
+		padding: 20px 70px 0px 70px;
+	}
+	*/
+	
+	.shortitem 
+	{
+		padding: 20px 70px 0px 70px;
+	}
+	
+	.vvwbsline 
+	{
+		padding-bottom: 25px;
+		margin-bottom: 5px;
+	}
+	
+	.votertbtn 
+	{
+		width: 420px;
+	}
+	
+	.voteresultbuttonbox 
+	{
+		margin-top: 45px;
+		margin-bottom: 45px;
+	}
+	
+	.voteresultbutton 
+	{
+		width: 140px;
+	}
+	
+	.votevtdefault 
+	{
+		width: 350px;
+	}
+	
+	.votevtlong 
+	{
+		width: calc(100% - 350px);
+	}
+}
+
+/*	
+ *	-----------------------------------
+ *	800 이하 화면
+ *	-----------------------------------
+ */
+@media screen and (max-width:800px) 
+{
+	.voteviewbox 
+	{
+		float: left;
+	}
+	
+	.voteviewbox, .voteinfo 
+	{
+		width: 100%;
+	}
+	
+	.voteviewbox 
+	{
+		text-align: center;
+	}
+	
+	.voteinfo 
+	{
+		padding: 5px 5px 5px 5px;
+	}
+	
+	.voteinfoimg, .voteinfovideo
+	{
+		width: 95%;
+	}
+	
+	.votecate, .voteexplain, .voteext 
+	{
+		text-align: left;
+	}
+	
+	.voteviewcontext 
+	{
+		margin-top: 30px;
+		margin-bottom: 10px;
+	}
+	
+	.awibspace 
+	{
+		padding: 5px 5px 5px 5px;
+	}
+	
+	.questionfieldbox 
+	{
+		padding: 20px 15px 20px 15px;
+	}
+	
+	.questionfieldcont 
+	{
+		width: 100%;
+		margin-top: 10px;
+	}
+	
+	.questionfield, .questiontext 
+	{
+		text-align: left;
+	}
+	
+	.votebuttonbox button, .voteviewbuttonbox button 
+	{
+		width: 80px;
+	}
+	
+	.votebuttonlongbox button, .votebuttonlonglongbox button 
+	{
+		width: 180px;
+	}
+	
+	.longitem 
+	{
+		padding: 20px 10px 0px 10px;
+	}
+	
+	.shortitem 
+	{
+		padding: 20px 85px 0px 85px;
+	}
+	
+	.vvwbsline 
+	{
+		padding-bottom: 30px;
+		margin-bottom: 20px;
+	}
+	
+	.voteresultbuttonbox 
+	{
+		margin-top: 25px;
+		margin-bottom: 25px;
+	}
+	
+	.votertbtn 
+	{
+		width: 300px;
+	}
+	
+	.voteresultbutton 
+	{
+		width: 100px;
+	}
+	
+	.chart800, .chart1024 
+	{
+		display: none;
+	}
+	
+	.votevtdefault 
+	{
+		width: 100px;
+	}
+	
+	.votevtlong 
+	{
+		width: calc(100% - 100px);
+	}
+}

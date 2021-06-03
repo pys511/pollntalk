@@ -1,0 +1,466 @@
+<?php
+?>
+<div class="messagecontent">
+	<!-- 포인트 상황 시작 -->
+	<div class="messagestatus">
+		<div class="messagebox title">
+			<span>포인트</span>
+		</div>
+	</div>
+	<div class="pointstatus">
+		<div class="statustop">
+			<div class="statustopsubject">
+				<span>보유 포인트</span>
+			</div>
+			<div class="statustopdata">
+				<span class="stress">10,200</span> <span>P</span>
+			</div>
+		</div>
+		<!-- 포인트 요약 현황 시작 -->
+		<div class="statusmiddle">
+			<div class="statusmiddlebox">
+				<div class="statusmiddleitem strspace">
+					<span>금일 적립 포인트</span> <span class="title">16,000</span> <span>p</span>
+				</div>
+				<div class="statusmiddleitem strspace">
+					<span>|</span>
+				</div>
+				<div class="statusmiddleitem strspace">
+					<span>금일 적립 횟수</span> <span class="title">50</span> <span>p</span>
+				</div>
+				<div class="statusmiddleitem strspace">
+					<span>|</span>
+				</div>
+				<div class="statusmiddleitem">
+					<span>금일 회원 가입</span> <span class="title">50</span> <span>명</span>
+				</div>
+			</div>
+		</div>
+		<!-- 포인트 요약 현황 끝 -->
+		<!-- 포인트 목록 영역 시작 -->
+		<div class="table">
+			<div class="tablebox">
+				<div class="tableborder">
+					<div class="tablefield">
+						<div class="defaulttableitem wrline">
+							<span>항목</span>
+						</div>
+						<div class="defaulttableitem wrline">
+							<span>포인트</span>
+						</div>
+						<div class="defaulttableitem wrline">
+							<span>비고</span>
+						</div>
+						<div class="defaulttableitem">
+							<span>날짜</span>
+						</div>
+					</div>
+					<div class="tablelist">
+						<!-- 포인트 요약 목록 시작 -->
+						<ul>
+							<li>
+								<div class="defaulttableli">
+									<div class="defaulttableitem wrline">
+										<div class="defaulttablefield mline">
+											<span>항목</span>
+										</div>
+										<div class="defaulttabledata mrline">
+											<span>폴앤톡 무상 적립</span>
+										</div>
+									</div>
+									<div class="pointnumber wrline">
+										<div class="defaulttablefield mline">
+											<span>포인트</span>
+										</div>
+										<div class="defaulttabledata mrline">
+											<span>12p</span>
+										</div>
+									</div>
+									<div class="defaulttableitem wrline">
+										<div class="defaulttablefield mline">
+											<span>비고</span>
+										</div>
+										<div class="defaulttabledata mrline">
+											<span>적립</span>
+										</div>
+									</div>
+									<div class="defaulttableitem">
+										<div class="defaulttablefield mline mbline">
+											<span>날짜</span>
+										</div>
+										<div class="defaulttabledata mrline mbline">
+											<span>2020.07.04</span>
+										</div>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="defaulttableli">
+									<div class="defaulttableitem wrline">
+										<div class="defaulttablefield mline">
+											<span>항목</span>
+										</div>
+										<div class="defaulttabledata mrline">
+											<span>폴앤톡 무상 적립</span>
+										</div>
+									</div>
+									<div class="pointnumber wrline">
+										<div class="defaulttablefield mline">
+											<span>포인트</span>
+										</div>
+										<div class="defaulttabledata mrline">
+											<span>12p</span>
+										</div>
+									</div>
+									<div class="defaulttableitem wrline">
+										<div class="defaulttablefield mline">
+											<span>비고</span>
+										</div>
+										<div class="defaulttabledata mrline">
+											<span>적립</span>
+										</div>
+									</div>
+									<div class="defaulttableitem">
+										<div class="defaulttablefield mline mbline">
+											<span>날짜</span>
+										</div>
+										<div class="defaulttabledata mrline mbline">
+											<span>2020.07.04</span>
+										</div>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="defaulttableli">
+									<div class="defaulttableitem wrline">
+										<div class="defaulttablefield mline">
+											<span>항목</span>
+										</div>
+										<div class="defaulttabledata mrline">
+											<span>폴앤톡 무상 적립</span>
+										</div>
+									</div>
+									<div class="pointnumber wrline">
+										<div class="defaulttablefield mline">
+											<span>포인트</span>
+										</div>
+										<div class="defaulttabledata mrline">
+											<span>12p</span>
+										</div>
+									</div>
+									<div class="defaulttableitem wrline">
+										<div class="defaulttablefield mline">
+											<span>비고</span>
+										</div>
+										<div class="defaulttabledata mrline">
+											<span>적립</span>
+										</div>
+									</div>
+									<div class="defaulttableitem">
+										<div class="defaulttablefield mline mbline">
+											<span>날짜</span>
+										</div>
+										<div class="defaulttabledata mrline mbline">
+											<span>2020.07.04</span>
+										</div>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="defaulttableli">
+									<div class="defaulttableitem wrline">
+										<div class="defaulttablefield mline">
+											<span>항목</span>
+										</div>
+										<div class="defaulttabledata mrline">
+											<span>폴앤톡 무상 적립</span>
+										</div>
+									</div>
+									<div class="pointnumber wrline">
+										<div class="defaulttablefield mline">
+											<span>포인트</span>
+										</div>
+										<div class="defaulttabledata mrline">
+											<span>12p</span>
+										</div>
+									</div>
+									<div class="defaulttableitem wrline">
+										<div class="defaulttablefield mline">
+											<span>비고</span>
+										</div>
+										<div class="defaulttabledata mrline">
+											<span>적립</span>
+										</div>
+									</div>
+									<div class="defaulttableitem">
+										<div class="defaulttablefield mline mbline">
+											<span>날짜</span>
+										</div>
+										<div class="defaulttabledata mrline mbline">
+											<span>2020.07.04</span>
+										</div>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="defaulttableli">
+									<div class="defaulttableitem wrline">
+										<div class="defaulttablefield mline">
+											<span>항목</span>
+										</div>
+										<div class="defaulttabledata mrline">
+											<span>폴앤톡 무상 적립</span>
+										</div>
+									</div>
+									<div class="pointnumber wrline">
+										<div class="defaulttablefield mline">
+											<span>포인트</span>
+										</div>
+										<div class="defaulttabledata mrline">
+											<span>12p</span>
+										</div>
+									</div>
+									<div class="defaulttableitem wrline">
+										<div class="defaulttablefield mline">
+											<span>비고</span>
+										</div>
+										<div class="defaulttabledata mrline">
+											<span>적립</span>
+										</div>
+									</div>
+									<div class="defaulttableitem">
+										<div class="defaulttablefield mline mbline">
+											<span>날짜</span>
+										</div>
+										<div class="defaulttabledata mrline mbline">
+											<span>2020.07.04</span>
+										</div>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="defaulttableli">
+									<div class="defaulttableitem wrline">
+										<div class="defaulttablefield mline">
+											<span>항목</span>
+										</div>
+										<div class="defaulttabledata mrline">
+											<span>폴앤톡 무상 적립</span>
+										</div>
+									</div>
+									<div class="pointnumber wrline">
+										<div class="defaulttablefield mline">
+											<span>포인트</span>
+										</div>
+										<div class="defaulttabledata mrline">
+											<span>12p</span>
+										</div>
+									</div>
+									<div class="defaulttableitem wrline">
+										<div class="defaulttablefield mline">
+											<span>비고</span>
+										</div>
+										<div class="defaulttabledata mrline">
+											<span>적립</span>
+										</div>
+									</div>
+									<div class="defaulttableitem">
+										<div class="defaulttablefield mline mbline">
+											<span>날짜</span>
+										</div>
+										<div class="defaulttabledata mrline mbline">
+											<span>2020.07.04</span>
+										</div>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="defaulttableli">
+									<div class="defaulttableitem wrline">
+										<div class="defaulttablefield mline">
+											<span>항목</span>
+										</div>
+										<div class="defaulttabledata mrline">
+											<span>폴앤톡 무상 적립</span>
+										</div>
+									</div>
+									<div class="pointnumber wrline">
+										<div class="defaulttablefield mline">
+											<span>포인트</span>
+										</div>
+										<div class="defaulttabledata mrline">
+											<span>12p</span>
+										</div>
+									</div>
+									<div class="defaulttableitem wrline">
+										<div class="defaulttablefield mline">
+											<span>비고</span>
+										</div>
+										<div class="defaulttabledata mrline">
+											<span>적립</span>
+										</div>
+									</div>
+									<div class="defaulttableitem">
+										<div class="defaulttablefield mline mbline">
+											<span>날짜</span>
+										</div>
+										<div class="defaulttabledata mrline mbline">
+											<span>2020.07.04</span>
+										</div>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="defaulttableli">
+									<div class="defaulttableitem wrline">
+										<div class="defaulttablefield mline">
+											<span>항목</span>
+										</div>
+										<div class="defaulttabledata mrline">
+											<span>폴앤톡 무상 적립</span>
+										</div>
+									</div>
+									<div class="pointnumber wrline">
+										<div class="defaulttablefield mline">
+											<span>포인트</span>
+										</div>
+										<div class="defaulttabledata mrline">
+											<span>12p</span>
+										</div>
+									</div>
+									<div class="defaulttableitem wrline">
+										<div class="defaulttablefield mline">
+											<span>비고</span>
+										</div>
+										<div class="defaulttabledata mrline">
+											<span>적립</span>
+										</div>
+									</div>
+									<div class="defaulttableitem">
+										<div class="defaulttablefield mline mbline">
+											<span>날짜</span>
+										</div>
+										<div class="defaulttabledata mrline mbline">
+											<span>2020.07.04</span>
+										</div>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="defaulttableli">
+									<div class="defaulttableitem wrline">
+										<div class="defaulttablefield mline">
+											<span>항목</span>
+										</div>
+										<div class="defaulttabledata mrline">
+											<span>폴앤톡 무상 적립</span>
+										</div>
+									</div>
+									<div class="pointnumber wrline">
+										<div class="defaulttablefield mline">
+											<span>포인트</span>
+										</div>
+										<div class="defaulttabledata mrline">
+											<span>12p</span>
+										</div>
+									</div>
+									<div class="defaulttableitem wrline">
+										<div class="defaulttablefield mline">
+											<span>비고</span>
+										</div>
+										<div class="defaulttabledata mrline">
+											<span>적립</span>
+										</div>
+									</div>
+									<div class="defaulttableitem">
+										<div class="defaulttablefield mline mbline">
+											<span>날짜</span>
+										</div>
+										<div class="defaulttabledata mrline mbline">
+											<span>2020.07.04</span>
+										</div>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="defaulttableli">
+									<div class="defaulttableitem wrline">
+										<div class="defaulttablefield mline">
+											<span>항목</span>
+										</div>
+										<div class="defaulttabledata mrline">
+											<span>폴앤톡 무상 적립</span>
+										</div>
+									</div>
+									<div class="pointnumber wrline">
+										<div class="defaulttablefield mline">
+											<span>포인트</span>
+										</div>
+										<div class="defaulttabledata mrline">
+											<span>12p</span>
+										</div>
+									</div>
+									<div class="defaulttableitem wrline">
+										<div class="defaulttablefield mline">
+											<span>비고</span>
+										</div>
+										<div class="defaulttabledata mrline">
+											<span>적립</span>
+										</div>
+									</div>
+									<div class="defaulttableitem">
+										<div class="defaulttablefield mline mbline">
+											<span>날짜</span>
+										</div>
+										<div class="defaulttabledata mrline mbline">
+											<span>2020.07.04</span>
+										</div>
+									</div>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<!-- 포인트 요약 목록 끝 -->
+				<!-- 페이징 시작 -->
+				<div class="paging">
+					<div class="pagingbutton pageleft pagenavinoselect"></div>
+					<div class="pagingbutton">
+						<span>1</span>
+					</div>
+					<div class="pagingbutton pageselect">
+						<span>2</span>
+					</div>
+					<div class="pagingbutton">
+						<span>3</span>
+					</div>
+					<div class="pagingbutton">
+						<span>4</span>
+					</div>
+					<div class="pagingbutton">
+						<span>5</span>
+					</div>
+					<div class="pagingbutton">
+						<span>6</span>
+					</div>
+					<div class="pagingbutton">
+						<span>7</span>
+					</div>
+					<div class="pagingbutton">
+						<span>8</span>
+					</div>
+					<div class="pagingbutton">
+						<span>9</span>
+					</div>
+					<div class="pagingbutton">
+						<span>10</span>
+					</div>
+					<div class="pagingbutton pageright pagenaviselect"></div>
+				</div>
+				<!-- 페이징 끝 -->
+			</div>
+		</div>
+		<!-- 포인트 목록 영역 끝 -->
+	</div>
+	<!-- 포인트 상황 끝 -->
+</div>

@@ -1,0 +1,87 @@
+﻿@CHARSET "UTF-8";
+
+/*
+ *	-----------------------------------
+ *	게시판 보기
+ *	-----------------------------------
+ */
+.boardsubjectbox, .boardsubject, .boardcontext, .boardbuttonbox,
+	.boardbuttonleft {
+	float: left;
+}
+
+.writedate, .boardbuttonright {
+	float: right;
+}
+
+.boardsubjectbox, .boardcontext, .boardbuttonbox {
+	width: 100%;
+}
+
+.writedate {
+	width: 100px;
+	text-align: center;
+}
+
+.boardsubjectbox, .boardcontext {
+	padding: 25px 25px 25px 25px;
+}
+
+.boardsubjectbox, .boardcontext {
+	border-bottom: 1px #e6e6e6 solid;
+}
+
+.boardsubjectbox {
+	background-color: #f9f9f9;
+	border-top: 1px #222222 solid;
+	border-bottom: 1px #e6e6e6 solid;
+}
+
+.boardcontext {
+	margin-bottom: 25px;
+}
+
+.boardbuttonright {
+	text-align: right;
+}
+
+.boardbuttonleft, .boardbuttonright {
+	width: 45%;
+}
+
+.boardbuttonbox button {
+	border-radius: 0px;
+	background-color: #ffffff;
+	border-top: 1px #cccccc solid;
+	border-right: 1px #cccccc solid;
+	border-left: 1px #cccccc solid;
+	border-bottom: 1px #cccccc solid;
+	padding: 5px 15px 5px 15px;
+	color: #444444;
+	font-weight: bold;
+}
+
+/*
+ *	-----------------------------------
+ *	1024 이상 화면
+ *	-----------------------------------
+ */
+@media screen and (min-width:1025px) {
+	.boardsubject {
+		width: calc(100% - 130px);
+	}
+}
+
+/*
+ *	-----------------------------------
+ *	1024 이하 화면
+ *	-----------------------------------
+ */
+@media screen and (max-width:1024px) {
+	.boardsubject {
+		width: 100%;
+	}
+	.boardsubjectbox, .boardcontext {
+		font-size: 1.125rem;
+	}
+}

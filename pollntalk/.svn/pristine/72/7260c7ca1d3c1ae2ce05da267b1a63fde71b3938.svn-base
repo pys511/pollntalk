@@ -1,0 +1,143 @@
+<?php
+
+/**
+ *  @auth   : YS PARK
+ *  @date   : 202010
+ *  관리자 회원관리
+ */
+
+
+class CApp_Handler_Admin_board extends CCore_Lib_Routines_Handler
+{
+    
+    public function __construct()
+    {
+        
+    }
+    
+    /*  
+     * 게시판 리스트 불러오기
+     */
+    public function getBoardList($boardName, $startNum, $listSize)
+    {
+        $query = "SELECT * FROM ".$boardName." order by num desc limit :startNum, :listSize";
+        $this->query($query);
+        $this->bind("startNum", $startNum);
+        $this->bind("listSize", $listSize);
+        $result = $this->execute(CCore_Lib_Routines_Handler::SELECT);
+        
+        return $result;
+    }
+    
+    /*
+     * 게시글 불러오기 
+     */
+    public function getBoardContext($boardName, $num)
+    {
+        $query = "SELECT * FROM ".$boardName." where num = :NUM";
+        $this->query($query);
+        $this->bind("NUM", $num);
+        $result = $this->execute(CCore_Lib_Routines_Handler::SELECT);
+        
+        return $result;
+    }
+    
+    /*
+     * 게시글 저장
+     */
+    public function setBoardContext($boardName)
+    {
+        $query = "INSERT INTO ".$boardName."(`subject`, `context`, `ADMINNAME`, `count`) 
+                  VALUES (:SUBJECT, :CONTEXT, :ADMINNAME, '0')";
+        $this->query($query);
+        $this->bind("SUBJECT", $subject);
+        $this->bind("CONTEXT", $context);
+        $this->bind("ADMINNAME", $adminname);
+        $result = $this->execute(CCore_Lib_Routines_Handler::INSERT);
+        
+        return $result;
+    }
+    
+    /*
+     * 게시글 수정
+     */
+    public function updateBoardContext($boardName, $num)
+    {
+        $query = "UPDATE `".$boardName."` 
+                  SET
+                      `subject`=:SUBJECT,
+                      `context`=:CONTEXT,
+                      `ADMINNAME`=:ADMINNAME,
+                  where num = :NUM";
+        $this->query($query);
+        $this->bind("NUM", $num);
+        $this->bind("SUBJECT", $subject);
+        $this->bind("CONTEXT", $context);
+        $this->bind("ADMINNAME", $adminname);
+        $result = $this->execute(CCore_Lib_Routines_Handler::UPDATE);
+        
+        return $result;
+    }
+    
+    /*
+     * 게시글수 불러오기
+     */
+    public function getboardcount($boardName)
+    {
+        $query = "";
+        $query = "SELECT count(*) FROM ".$boardName;
+        
+        $this->query($query);
+        $result = $this->execute(CCore_Lib_Routines_Handler::SELECT);
+        $count = $result[0]["count(*)"];
+        
+        return $count;
+    }
+    
+    /*
+     * 게시글 조회수 올리기
+     */
+    public function updateBoardCount($boardName, $num)
+    {
+        $query = "";
+        $query = "UPDATE `".$boardName."` SET `count`= count+1 WHERE num = :NUM";
+        
+        $this->query($query);
+        $this->bind("NUM", $num);
+        $result = $this->execute(CCore_Lib_Routines_Handler::UPDATE);
+        
+        return $result;
+    }
+    
+    /*
+     * 이전페이지 번호 구하기
+     */
+    
+    public function getPreView($boardName, $num){
+        $query = "";
+        $query = "select MIN(num) AS pre_num FROM ".$boardName." WHERE num > :NUM";
+        
+        $this->query($query);
+        $this->bind("NUM", $num);
+        $result = $this->execute(CCore_Lib_Routines_Handler::SELECT);
+        
+        return $result;
+    }
+    
+    /*
+     * 다음페이지 번호 구하기
+     */
+    
+    public function getNextView($boardName, $num){
+        $query = "";
+        $query = "select MAX(num) AS next_num FROM ".$boardName." WHERE num < :NUM";
+        
+        $this->query($query);
+        $this->bind("NUM", $num);
+        $result = $this->execute(CCore_Lib_Routines_Handler::SELECT);
+        
+        return $result;
+    }
+   
+}
+?>

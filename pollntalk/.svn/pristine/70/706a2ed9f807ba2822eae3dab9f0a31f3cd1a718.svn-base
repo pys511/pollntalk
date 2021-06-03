@@ -1,0 +1,449 @@
+<?php
+$voteData       = null;
+$vote           = new CApp_Handler_Vote_Ctrl();
+$voteSeq        = $_POST["vote_seq"];
+if ($voteSeq == "")
+{
+    $voteSeq    = $_POST["vote_form_seq"];
+    $voteData   = $vote->getVoteFormInfo($voteSeq);
+    
+    $vote_kind          = $voteData["VOTE_FORM_KIND"];
+    $vote_type          = $voteData["VOTE_TYPE"];
+    $vote_subject       = $voteData["VOTE_SUBJECT"];
+    $vote_cate1_seq     = $voteData["VOTE_CATE_SEQ"];
+    $vote_cate1_name    = $voteData["VOTE_CATE_NAME"];
+    $cate_2dept_seq     = $voteData["VOTE_CATE_SUB_SEQ"];
+    $cate_2dept_name    = $voteData["VOTE_CATE_SUB_NAME"];
+    $vote_real_name     = $voteData["VOTE_RESOURCE_PATH"];
+    $vote_real_type     = $voteData["VOTE_RESOURCE_TYPE"];
+    $vote_context       = $voteData["VOTE_FORM_CONTEXT"];
+    $vote_url           = $voteData["VOTE_URL"];
+}
+else
+{
+    
+}
+?>
+<div class="content">
+	<!-- 카테고리 영역 시작 -->
+	<div class="defaultarea grayback">
+<?php
+require_once ('./app/view/common/category.php');
+?>
+	</div>
+	<form id="frmVote" method="post" action="/controller.php?mode=vote_proc">
+		<input type="hidden" id="vote_seq" name="vote_seq" value="<?php echo($voteSeq); ?>" />
+		<input type="hidden" id="vote_kind" name="vote_kind" value="1" />
+		<input type="hidden" id="vote_temp_path" name="vote_temp_path" value="<?php echo($vote_real_name); ?>" /> 
+		<input type="hidden" id="vote_real_name" name="vote_real_name" value="<?php echo($vote_real_name); ?>" />
+    	<div class="votewritearea">
+    		<div class="votewritebox">
+    			<div class="votewritemenu">
+    				<a href="/?mode=votewrite">
+        				<div class="votewritemenuitem <?php if ($vote_kind == "1") echo("selected"); else echo("noselected"); ?>">
+        					<span>일반 투표 만들기</span>
+        				</div>
+    				</a>
+    				<a href="/?mode=eventvotewrite">
+        				<div class="votewritemenuitem <?php if ($vote_kind == "1") echo("noselected"); else echo("selected"); ?>">
+        					<span>이벤트 투표 만들기</span>
+        				</div>
+    				</a>
+    			</div>
+    			<!-- 투표 입력란 시작 -->
+    			<div class="votewrite">
+    				<div class="votewritetitle">
+    					<img src="/app/images/mark_01.png" /> 
+    					<span class="votetitle">기본 정보</span>
+    				</div>
+    				<div class="votewritecont vtbline">
+    					<div class="votewritecontitem">
+    						<span class="altright semistress">빨간색 : 필수항목</span>
+    						<div class="votewriteinputer">
+    							<div class="votewritefield">
+    								<img class="votemark" src="/app/images/mark_03.png" /> 
+    								<span class="stress">유형</span>
+    							</div>
+    							<div class="votewriteinputbox">
+    								<div class="inputcont">
+    									<select id="vote_type" name="vote_type" class="vrspace">
+    										<option value="0" <?php if ($vote_type == "" || $vote_type == "0") echo("selected"); ?>>-유형 선택-</option>
+    										<option value="1" <?php if ($vote_type == "1") echo("selected"); ?>>투표</option>
+    										<option value="2" <?php if ($vote_type == "2") echo("selected"); ?>>일반 설문</option>
+    										<option value="3" <?php if ($vote_type == "3") echo("selected"); ?>>자유 응답 설문</option>
+    										<option value="4" <?php if ($vote_type == "4") echo("selected"); ?>>퀴즈</option>
+    									</select>
+    								</div>
+    							</div>
+    						</div>
+    						<div class="votewriteinputer">
+    							<div class="votewritefield">
+    								<img class="votemark" src="/app/images/mark_03.png" /> 
+    								<span class="stress">제목</span>
+    							</div>
+    							<div class="votewriteinputbox">
+    								<div class="inputcont">
+    									<input id="vote_subject" name="vote_subject" type="text" value="<?php echo($vote_subject); ?>" />
+    								</div>
+    							</div>
+    						</div>
+    						<div class="votewriteinputer">
+    							<div class="votewritefield">
+    								<img class="votemark" src="/app/images/mark_03.png" /> 
+    								<span class="stress">카테고리</span>
+    							</div>
+    							<div class="votewriteinputbox">
+    								<div class="inputcont">
+    									<input type="hidden" id="cate_seq" name="cate_seq" value="<?php echo($vote_cate1_seq); ?>" />
+    									<select id="vote_cate_seq" name="vote_cate1_seq" class="vrspace">
+    										<option value="0">-1차 카테고리 선택-</option>
+<?php
+$cateCtrl   = new CApp_Handler_Category_Ctrl();
+$depth1Cate = $cateCtrl->getCategoryList();
+
+for ($i = 0; $i < count($depth1Cate); $i ++) 
+{
+    $cate_seq   = $depth1Cate[$i]["CATE_SEQ"];
+    $cate_name  = $depth1Cate[$i]["CATE_NAME"];
+
+    $selected   = "selected";
+?>
+    										<option value="<?php echo($cate_seq);?>" <?php if ($vote_cate1_seq == $cate_seq) echo($selected);?>><?php echo($cate_name); ?></option>
+<?php
+}
+?>
+    									</select> 
+    									<select id="cate_2dept_seq" name="vote_cate2_seq">
+    										<option value="0">-2차 카테고리 선택-</option>
+<?php
+if ($cate_2dept_seq != "" && $cate_2dept_seq != "0") 
+{
+    $cate_sub_seqs = $cateCtrl->getCategorySubList($vote_cate1_seq);
+    foreach ($cate_sub_seqs as $items) 
+    {
+        $cate_sub_seq   = $items["CATE_SEQ"];
+        $cate_sub_name  = $items["CATE_NAME"];
+?>
+											<option value="<?php echo($cate_sub_seq); ?>" <?php if ($cate_2dept_seq == $cate_sub_seq) echo($selected);?>><?php echo($cate_sub_name); ?></option>						
+<?php
+    }
+}
+?>	
+    									</select>
+    								</div>
+    							</div>
+    						</div>
+    						<div class="votewriteinputer">
+    							<div class="votewritefield">
+    								<img class="votemark" src="/app/images/mark_03.png" /> 
+    								<span>내용</span>
+    							</div>
+    							<div class="votewriteinputbox">
+    								<div class="inputcont">
+    									<textarea rows="3"><?php echo($vote_context); ?></textarea>
+    								</div>
+    							</div>
+    						</div>
+    						<div class="votewriteinputer">
+    							<div class="votewritefield">
+    								<img class="votemark" src="/app/images/mark_03.png" /> 
+    								<span>관련사진</span>
+    							</div>
+    							<div class="votewriteinputbox">
+    								<div class="inputcont">
+    									<img class="inputcontImage imageFile" id="voteImageFile" src="/<?php echo($vote_real_name); ?>" width="150" height="150" />
+    									<button class="votebutton fileupload">
+    										<img src="/app/images/up.png" /> 
+    										<span>사진파일선택</span>
+    									</button>
+    								</div>
+    							</div>
+    						</div>
+    						<div class="votewriteinputer">
+    							<div class="votewritefield">
+    								<img class="votemark" src="/app/images/mark_03.png" /> 
+    								<span>관련링크</span>
+    							</div>
+    							<div class="votewriteinputbox">
+    								<div class="inputcont">
+    									<input type="text" value="<?php if ($vote_url == "") echo("www.***"); else echo($vote_url); ?>" />
+    								</div>
+    							</div>
+    						</div>
+    						<div class="votewriteinputer">
+    							<div class="votewritefield">
+    								<img class="votemark" src="/app/images/mark_03.png" /> 
+    								<span>마감일</span>
+    							</div>
+    							<div class="votewriteinputbox">
+    								<button class="votebutton">
+    									<img src="/app/images/calendar.png" /> 
+    									<span class="top05">마감일 선택</span>
+    								</button>
+    							</div>
+    						</div>
+    					</div>
+    				</div>
+    				<div class="question_lst" id="question_lst">
+    					<input class="question_seq" type="hidden" id="question_seq" name="question_seq" /> 
+                		<input class="question_index" type="hidden" id="question_index" name="question_index" />
+                		<input class="question_order" type="hidden" id="question_order" name="question_order" />
+                		<input class="question_temp_path" type="hidden" id="temp_path" name="question_temp_path" /> 
+    					<input class="question_real_name" type="hidden" id="real_name" name="question_real_name" />
+        				<div id="question_lst_item" class="votewritecont vtbline" style="display: none">
+        					<div class="votewritecontitem">
+        						<div class="votewriteinputer questionline">
+        							<div class="votewritefield">
+        								<img class="votemark" src="/app/images/mark_03.png" /> 
+        								<span class="stress question_field">질문 작성</span> 
+        								<img class="bcontrol" src="/app/images/bminus.jpg" />
+        							</div>
+        							<div class="votewriteinputbox">
+        								<div class="inputcontli vbspace">
+        									<input type="text" class="question_subject" id="question_subject" name="question_subject" value="질문을 입력하세요." /> 
+        									<img src="/app/images/bminus.jpg" />
+        								</div>
+        								<div class="inputcont">
+        									<img class="inputcontImage imageFile" width="150" height="150" />
+        									<button class="votebutton">
+        										<img src="/app/images/up.png" /> <span>사진파일선택</span>
+        									</button>
+        									<select class="question_answer_kind" id="question_answer_kind" name="question_answer_kind">
+        										<option>-응답종류 선택-</option>
+        										<option value="1">단일 응답</option>
+												<option value="2">복수 응답</option>
+												<option value="3">단일 응답 / 참여자 신규 응답 추가</option>
+												<option value="4">복수 응답 / 참여자 신규 응답 추가</option>
+        									</select>
+        								</div>
+        							</div>
+        						</div>
+        						<div class="votewriteinputer">
+        							<ul>
+        								<li style="display: none">
+        									<div class="votewritefield">
+        										<img class="votemark" src="/app/images/mark_03.png" /> 
+        										<span class="stress">응답</span> 
+        										<img class="bcontrol" src="/app/images/bplus.jpg" /> 
+        										<img class="bcontrol" src="/app/images/bminus.jpg" />
+        									</div>
+        									<div class="votewriteinputbox">
+        										<div class="inputcontli vbspace">
+        											<input type="text" value="응답을 입력하세요." /> 
+        											<img src="/app/images/bminus.jpg" /> 
+        											<img src="/app/images/bplus.jpg" />
+        										</div>
+        										<div class="inputcont">
+        											<img class="inputcontImage imageFile" width="150" height="150" />
+        											<button class="votebutton fileupload">
+        												<img src="/app/images/up.png" /> 
+        												<span>사진파일선택</span>
+        											</button>
+        											<div class="checkinput">
+        												<input type="checkbox" class="agree" name="agree" id="agree" /> 
+                                    					<label for="agree"> 
+                                    						<span>정답</span>
+                                    					</label>
+        											</div>
+        										</div>
+        									</div>
+        								</li>
+        							</ul>
+        						</div>
+        					</div>
+        				</div>
+<?php
+$questions = $vote->getVoteFormQuestions($voteSeq);
+$i = 0;
+foreach ($questions as $questionItem) 
+{
+    $i ++;
+    $question_image_path    = $questionItem["QUESTION_IMAGE_PATH"];
+    $question_resp_type     = $questionItem["QUESTION_RESP_TYPE"];
+    $question_seq           = $questionItem["QUESTION_SEQ"];
+    $question_index         = $questionItem["QUESTION_INDEX"];
+    $question_subject       = $questionItem["QUESTION_SUBJECT"];
+?>
+    					<input class="question_seq" type="hidden" id="question_seq" name="question_seq" value="<?php echo($question_seq); ?>" /> 
+                		<input class="question_index" type="hidden" id="question_index" name="question_index" value="<?php echo($question_index); ?>" />
+                		<input class="question_order" type="hidden" id="question_order" name="question_order" />
+                		<input class="question_temp_path" type="hidden" id="temp_path" name="question_temp_path" value="<?php echo($question_image_path); ?>" /> 
+    					<input class="question_real_name" type="hidden" id="real_name" name="question_real_name" value="<?php echo($question_image_path); ?>" />
+        				<div id="question_lst_item" class="votewritecont vtbline newWriteItem">
+        					<div class="votewritecontitem">
+            						<div class="votewriteinputer questionline ">
+            							<div class="votewritefield">
+            								<img class="votemark" src="/app/images/mark_03.png" /> 
+            								<span class="stress question_field">질문</span> 
+            								<img class="bcontrol" src="/app/images/bminus.jpg" />
+            							</div>
+            							<div class="votewriteinputbox">
+            								<div class="inputcontli vbspace">
+            									<input type="text" id="question_subject" name="question_subject" value="<?php echo($question_subject); ?>" /> 
+            									<img src="/app/images/bminus.jpg" />
+            								</div>
+            								<div class="inputcont">
+            									<img class="inputcontImage imageFile" src="/<?php echo($question_image_path); ?>" width="150" height="150" />
+            									<button class="votebutton fileupload">
+            										<img src="/app/images/up.png" /> 
+            										<span>사진파일선택</span>
+            									</button>
+            									<select class="question_answer_kind" id="question_answer_kind" name="question_answer_kind">
+            										<option value="0">-응답종류 선택-</option>
+            										<option value="1" <?php if ($question_resp_type == "1") echo("selected"); ?>>단일 응답</option>
+            										<option value="2" <?php if ($question_resp_type == "2") echo("selected"); ?>>복수 응답</option>
+            										<option value="3" <?php if ($question_resp_type == "3") echo("selected"); ?>>단일 응답 / 참여자 신규 응답 추가</option>
+            										<option value="4" <?php if ($question_resp_type == "4") echo("selected"); ?>>복수 응답 / 참여자 신규 응답 추가</option>
+            									</select>
+            								</div>
+	            						</div>
+    	    						</div>
+        							<div class="votewriteinputer">
+        								<ul>
+        									<li style="display: none">
+            									<div class="votewritefield">
+            										<img class="votemark" src="/app/images/mark_03.png" /> 
+            										<span class="stress">응답</span> 
+            										<img class="bcontrol" src="/app/images/bplus.jpg" /> 
+            										<img class="bcontrol" src="/app/images/bminus.jpg" />
+            									</div>
+            									<div class="votewriteinputbox">
+            										<div class="inputcontli vbspace">
+            											<input type="text" value="응답을 입력하세요." />
+            											<img src="/app/images/bminus.jpg" /> 
+            											<img src="/app/images/bplus.jpg" />
+            										</div>
+            										<div class="inputcont">
+            											<img class="inputcontImage imageFile" width="150" height="150" />
+            											<button class="votebutton">
+            												<img src="/app/images/up.png" /> 
+            												<span>사진파일선택</span>
+            											</button>
+            											<div class="checkinput">
+            												<input type="checkbox" class="agree" name="agree" id="agree" /> 
+                                        					<label for="agree"> 
+                                        						<span>정답</span>
+                                        					</label>
+            											</div>
+            										</div>
+            									</div>
+        									</li>
+<?php
+    $answers = $vote->getVoteFormAnswers($voteSeq, $question_seq);
+    $j = 0;
+    foreach ($answers as $answerItem) 
+    {
+        $answer_image_path  = $answerItem["ANSWER_IMAGE_PATH"];
+        $answer_text        = $answerItem["ANSWER_TEXT"];
+        $is_correct         = $answerItem["IS_CORRECT"];
+        //echo($is_correct);
+?>
+            								<li>
+            									<div class="votewritefield">
+            										<img class="votemark" src="/app/images/mark_03.png" /> 
+            										<span class="stress">응답</span> 
+            										<img class="bcontrol" src="/app/images/bplus.jpg" /> 
+            										<img class="bcontrol" src="/app/images/bminus.jpg" />
+            									</div>
+            									<div class="votewriteinputbox">
+            										<div class="inputcontli vbspace">
+            											<input type="text" value="<?php echo($answer_text); ?>" /> 
+            											<img src="/app/images/bminus.jpg" /> 
+            											<img src="/app/images/bplus.jpg" />
+            										</div>
+            										<div class="inputcont">
+														<img class="inputcontImage imageFile" src="/<?php echo($answer_image_path); ?>" width="150" height="150" />
+	        											<button class="votebutton fileupload">
+    	    												<img src="/app/images/up.png" /> 
+        													<span>사진파일선택</span>
+        												</button>
+        												<div class="checkinput answerCorrect">
+        													<input type="checkbox" class="agree" name="agree" id="agree" /> 
+                        	            					<label for="agree"> 
+                            	        						<span>정답</span>
+                                	    					</label>
+        												</div>
+        											</div>
+        										</div>
+        									</li>
+<?php
+    }
+?>
+        							</ul>
+        						</div>
+        					</div>
+        				</div>
+<?php
+}
+?>
+					</div>
+    				<div class="votewritecont">
+    					<div class="appendquestion">
+    						<a id="appendQuestion" href="javascript:void(0);">
+    							<img src="/app/images/vote_append.jpg" />
+    						</a>
+    					</div>
+    				</div>
+    				<div class="votewritetitle">
+    					<img src="/app/images/mark_02.png" /> 
+    					<span class="votetitle">비공개 서비스</span>
+    				</div>
+    				<div class="votewritecont vtbline vtbspace">
+    					<div class="votewritetablebox">
+    						<div class="votewritetable vtbspace">
+    							<div class="votewtfield">
+    								<div class="vtewtdefault wterline">
+    									<span>서비스명</span>
+    								</div>
+    								<div class="votewtlong wterline">
+    									<span>서비스 내용</span>
+    								</div>
+    								<div class="vtewtdefault">
+    									<span>비고</span>
+    								</div>
+    							</div>
+    							<div class="votewtcontext votewt80">
+    								<ul>
+    									<li>
+    										<div class="vtewtdefault wterline">
+    											<input class="agree" id="nopublic" type="checkbox" /> 
+    											<label for="nopublic"><span>투표 비공개 서비스</span></label>
+    										</div>
+    										<div class="votewtlong wterline">
+    											<span>투표 제작 후 제공되는 보안코드를 입력한 회원만 투표 가능(사내, 모임 등 지인끼리 투표 참여 가능)</span>
+    										</div>
+    										<div class="vtewtdefault">
+    											<span>포인트 소진 : 500p</span>
+    										</div>
+    									</li>
+    								</ul>
+    							</div>
+    						</div>
+    					</div>
+    				</div>
+    				<div class="votewritebtncont vttspace">
+    					<div class="votewritebuttonbox">
+    						<div class="votewritebutton defaultbutton">
+    							<span>임시저장</span>
+    						</div>
+    						<div class="votewritebutton defaultbutton">
+    							<span>미리보기</span>
+    						</div>
+    						<div id="registerVote" class="votewritebutton stressbutton">
+    							<span>투표등록</span>
+    						</div>
+    					</div>
+    				</div>
+    			</div>
+    			<!-- 투표 입력란 끝 -->
+    		</div>
+    	</div>
+	</form>
+</div>
+<!-- 파일을 업로드할 폼 -->
+<form id="frmFileUpload" method="post" action="/controller.php?mode=file_vote_upload" target="uploadFrame" enctype="multipart/form-data">
+	<input type="hidden" id="question_upload_index" name="question_upload_index" /> 
+	<input type="hidden" id="answer_upload_index" name="answer_upload_index" /> 
+	<input type="file" id="uploadName" name="uploadName" style="display: none" accept="image/*" />
+</form>
+<!-- 파일을 업로드할 폼 -->

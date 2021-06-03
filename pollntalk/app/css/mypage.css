@@ -1,0 +1,155 @@
+﻿@CHARSET "UTF-8";
+
+/*
+ *	-----------------------------------
+ *	마이페이지
+ *	-----------------------------------
+ */
+.mypagearea, .messagecontent, .messagestatus, .messagestatustitle 
+{
+	float: left;
+}
+
+.mypagearea, .messagecontent, .messagestatus 
+{
+	width: 100%;
+}
+
+.messagebutton 
+{
+	outline: none;
+	border: none;
+	border-radius: 0px;
+	height: 100%;
+}
+
+/*
+ *	쪽지
+ */
+.messagestatus 
+{
+	background-color: #ececec;
+	padding: 25px 25px 25px 25px;
+	margin-bottom: 35px;
+}
+
+.messagestatustitle 
+{
+	width: 180px;
+	font-size: 1.125rem;
+}
+
+.messagebutton 
+{
+	border: 1px #cccccc solid;
+	padding: 5px 10px 5px 10px;
+	background-color: #ffffff;
+	color: #666666;
+}
+
+.imgbox 
+{
+	margin-top: 30px;
+	padding-top: 0px;
+	display: block;
+	margin: auto;
+}
+
+/*
+ *	-----------------------------------
+ *	1024 이상 화면
+ *	-----------------------------------
+ */
+@media screen and (min-width:1025px) 
+{
+	.mypagearea 
+	{
+		margin-top: 30px;
+		margin-bottom: 170px;
+	}
+	
+	.mypagebox 
+	{
+		margin: 0px auto;
+		width: 1024px;
+	}
+	
+	.tabcontent 
+	{
+		width: calc(100% + 30px);
+	}
+}
+
+/*
+ *	-----------------------------------
+ *	800 이상 1024 이하 화면
+ *	-----------------------------------
+ */
+@media screen and (min-width:801px) and (max-width:1024px) 
+{
+	.mypagearea 
+	{
+		margin-top: 25px;
+		margin-bottom: 130px;
+	}
+	
+	.mypagebox 
+	{
+		margin: 0px auto;
+		width: 800px;
+	}
+	
+	.tabcontent 
+	{
+		width: calc(100% + 40px);
+	}
+}
+
+/*
+ *	-----------------------------------
+ *	800 이상 화면
+ *	-----------------------------------
+ */
+@media screen and (min-width:801px) 
+{
+	/*
+	 *	tab 버튼
+	 */
+	.tabbuttonbox 
+	{
+		width: calc(100%/ 7);
+	}
+	
+	.messagebuttonbox 
+	{
+		float: left;
+		width: 100%;
+		margin-bottom: 15px;
+	}
+}
+
+/*	
+ *	-----------------------------------
+ *	800 이하 화면
+ *	-----------------------------------
+ */
+@media screen and (max-width:800px) 
+{
+	.mypagearea 
+	{
+		margin-top: 0px;
+		margin-bottom: 80px;
+	}
+	
+	.mypagebox 
+	{
+		float: left;
+		width: 100%;
+	}
+	
+	.messagebuttonbox 
+	{
+		margin: 0px auto 15px;
+		width: 90%;
+	}
+}

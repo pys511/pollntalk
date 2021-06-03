@@ -1,0 +1,250 @@
+﻿@CHARSET "UTF-8";
+
+/*
+ *	-----------------------------------
+ *	투표 슬라이드
+ *	-----------------------------------
+ */
+.votedisparea, .votedispcont, .votedisptitle, .votedisplist,
+.votedispview, .votesubtitle, .votesubtitle img, .votesubtitle span,
+.allviewbutton span
+{
+	float: left;
+}
+
+.votedisparea, .votedispcont, .votedisptitle, .votedisplist 
+{
+	width: 100%;
+}
+
+.votedisptitle 
+{
+	text-align: center;
+}
+
+.allviewbutton, .naviright 
+{
+	float: right;
+}
+
+.allviewbutton 
+{
+	width: 95px;
+	height: 30px;
+	border: 1px #cccccc solid;
+	margin-bottom: 20px;
+}
+
+.allviewbutton span 
+{
+	width: 100%;
+	height: 100%;
+	margin-top: 3px;
+	text-align: center;
+	font-weight: bold;
+	color: #666666;
+}
+
+.votedisp 
+{
+	overflow: hidden;
+}
+
+.votesubtitle
+{
+	margin-bottom: 15px;
+	margin-left: 50px;
+}
+
+.votesubtitle span
+{
+	margin-top: -3px;
+	margin-left: 10px;
+	font-size: 1.5625rem;
+	font-weight: bold;
+}
+
+/*
+ *	-----------------------------------
+ *	1024 이상 화면
+ *	-----------------------------------
+ */
+@media screen and (min-width:1025px) 
+{
+	/*
+	.votedispcont 
+	{
+		padding-bottom: 70px;
+	}
+	*/
+	
+	.votedispbox 
+	{
+		width: 1134px;
+		margin: 0 auto;
+	}
+	
+	.votedisp 
+	{
+		float: left;
+		width: 1030px;
+		padding: 0 3px 3px 3px;
+	}
+	
+	.votedispview 
+	{
+		width: calc(360px * 20);
+	}
+	
+	.allviewbutton 
+	{
+		margin-right: 55px;
+	}
+	
+	.rspace 
+	{
+		float: left;
+		margin-right: 30px;
+	}
+	
+	.wtitle 
+	{
+		display: block;
+		margin: 0 auto;
+	}
+	
+	.mtitle 
+	{
+		display: none;
+	}
+}
+
+/*
+ *	-----------------------------------
+ *	800 이상 1024 이하 화면
+ *	-----------------------------------
+ */
+@media screen and (min-width:801px) and (max-width:1024px) 
+{
+	.votedisp 
+	{
+		margin: 0 auto;
+		width: 685px;
+		padding: 0 3px 3px 10px;
+	}
+	
+	.mnavi 
+	{
+		position: absolute;
+		width: 100%;
+		display: block;
+	}
+	
+	.wleft, .wright 
+	{
+		display: none;
+	}
+	
+	.mright 
+	{
+		float: right;
+	}
+}
+
+/*
+ *	-----------------------------------
+ *	800 이상 화면
+ *	-----------------------------------
+ */
+@media screen and (min-width:801px) 
+{
+	.navileft 
+	{
+		float: left;
+		margin-right: 7px;
+	}
+	
+	.votedisplist .navileft, .votedisplist .naviright 
+	{
+		margin-top: 150px;
+	}
+}
+
+/*
+ *	-----------------------------------
+ *	1024 이하 화면
+ *	-----------------------------------
+ */
+@media screen and (max-width:1024px) 
+{
+	/*
+	.votedispcont 
+	{
+		padding-bottom: 35px;
+	}
+	*/
+	
+	.votedispbox 
+	{
+		float: left;
+		width: 100%;
+	}
+	
+	.votedispview 
+	{
+		width: calc(360px * 4);
+		margin-left: 2px;
+	}
+	
+	.rspace 
+	{
+		float: left;
+		margin-right: 24px;
+	}
+	
+	.wtitle 
+	{
+		display: none;
+	}
+	
+	.mtitle 
+	{
+		display: block;
+		margin: 0 auto;
+	}
+	
+	.allviewbutton 
+	{
+		margin-right: 10px;
+	}
+	
+	.mleft 
+	{
+		margin-left: 10px;
+	}
+	
+	.mright 
+	{
+		margin-right: 6px;
+	}
+	
+	.mleft, .mright 
+	{
+		margin-top: 145px;
+	}
+}
+
+/*
+ *	-----------------------------------
+ *	1024 이하 화면
+ *	-----------------------------------
+ */
+@media screen and (max-width:800px) 
+{
+	.votedisp 
+	{
+		margin: 0 auto;
+		width: 330px;
+		padding: 0 3px 3px 3px;
+	}
+}

@@ -1,0 +1,292 @@
+﻿@CHARSET "UTF-8";
+
+/*
+ *	-----------------------------------
+ *	게시판
+ *	-----------------------------------
+ */
+.boardarea, .board, .board ul, .board ul li, .larea, .larealong,
+	.larealonglong, .larealonglonglong, .rarea, .rareashort, .marea,
+	.rarealong, .rareashortshort, .rareashortshortshort, .boardcate,
+	.boardtitle, .boarddefault, .boardmember img, .boardcheckbox,
+	.boarddatelong, .boarddefaultlong, .boardtitleshortshort,
+	.boardtitleshort, .boardcateshort, .boarddate, .boarddateshort,
+	.boardshort, .boardshortshort, .boardguide, .boardtopic, .boarddoc,
+	.boardnumber, .boardtitlelong {
+	float: left;
+}
+
+.boardarea, .board ul, .board ul li, .board, .boardguide, .boardtopic,
+	.boarddoc {
+	width: 100%;
+}
+
+.board ul {
+	padding: 0px 0px 0px 0px;
+	margin-top: 0px;
+}
+
+.boardbox {
+	margin: 0 auto;
+}
+
+.boardlist {
+	margin-bottom: 40px;
+}
+
+.boardbox ul, .boardlist ul {
+	border-bottom: 1px #e2e2e2 solid;
+}
+
+.boardbox li, .boardlist li {
+	border-top: 1px #e2e2e2 solid;
+	padding-left: 0px;
+	padding-top: 15px;
+	padding-bottom: 15px;
+	padding-right: 0px;
+}
+
+.boardmember img {
+	margin-right: 3px;
+}
+
+.boardmember span {
+	margin-top: 3px;
+}
+
+.boardcheckbox {
+	width: 65px;
+}
+
+.boardcheckboxshort {
+	width: 40px;
+}
+
+.boardcheckbox input[type=checkbox] {
+	width: 15px;
+	height: 15px;
+	margin-left: 25px;
+}
+
+.boardcheckboxshort input[type=checkbox] {
+	width: 15px;
+	height: 15px;
+	margin-left: 15px;
+}
+
+.boardnumber {
+	width: 65px;
+}
+
+.boardbutton {
+	width: 110px;
+}
+
+.boarddate, .boarddateshort, .boarddatelong, .boardnumber {
+	text-align: center;
+}
+
+.boarddefault {
+	width: 100px;
+}
+
+.boardshort {
+	width: 80px;
+}
+
+.boardguide {
+	margin-bottom: 50px;
+}
+
+.boardtopic {
+	font-size: 1.875rem;
+	font-weight: bold;
+}
+
+.boarddoc {
+	font-size: 1.5625rem;
+}
+
+/*
+ *	-----------------------------------
+ *	1024 이상 화면
+ *	-----------------------------------
+ */
+@media screen and (min-width:1025px) {
+	.boardfieldbox, .boardbutton {
+		float: left;
+	}
+	.boardfieldbox {
+		width: 100%;
+		display: block;
+		border-top: 1px #222222 solid;
+		background-color: #fbfbfb;
+		padding: 10px 0px 10px 0px;
+		font-weight: bold;
+		text-align: center;
+	}
+	.boardbox {
+		width: 1024px;
+	}
+	.boardarea {
+		margin-bottom: 70px;
+	}
+	.boardlist {
+		float: left;
+		width: 100;
+	}
+	.larea {
+		width: 170px;
+	}
+	.lareashort {
+		width: 140px;
+	}
+	.larealong {
+		width: 235px;
+	}
+	.larealonglong {
+		width: 380px;
+	}
+	.larealonglonglong {
+		width: calc(100% - 305px);
+	}
+	.rarea {
+		width: calc(100% - 170px);
+	}
+	.rareashort {
+		width: calc(100% - 235px);
+	}
+	.rareashortshort {
+		width: calc(100% - 380px);
+	}
+	.rarealong {
+		width: calc(100% - 140px);
+	}
+	.rareashortshortshort {
+		width: 305px;
+	}
+	.boardtitle {
+		width: calc(100% - 270px);
+	}
+	.boardtitleshortshort {
+		width: calc(100% - 485px);
+	}
+	.boardtitleshort {
+		width: calc(100% - 405px);
+	}
+	.boardtitlelong {
+		width: calc(100% - 205px);
+	}
+	.boardcate, .boardcate span {
+		width: 100%;
+		text-align: center;
+	}
+	.boardcateshort, .boardcateshort span {
+		width: calc(100% - 40px);
+		text-align: center;
+	}
+	.mview, .boardshortfield {
+		display: none;
+	}
+	.wview {
+		display: block;
+	}
+	.boardmember {
+		float: left;
+		width: 170px;
+	}
+	.boarddate {
+		width: 125px;
+	}
+	.boarddatelong {
+		width: 145px;
+	}
+	.boarddateshort {
+		width: 85px;
+	}
+	.boardlist .boardbutton, .boardshortshort, .boardshort,
+		.boarddefaultlong {
+		text-align: center;
+	}
+	.boardshortshort {
+		width: 60px;
+	}
+	.boarddefaultlong {
+		width: 160px;
+	}
+	.boardnumber {
+		display: block;
+	}
+}
+
+/*
+ *	-----------------------------------
+ *	1024 이하 화면
+ *	-----------------------------------
+ */
+@media screen and (max-width:1024px) {
+	.boardfieldbox {
+		display: none;
+	}
+	.boardbox, .boardlist {
+		width: 90%;
+	}
+	.boardarea {
+		margin-bottom: 35px;
+	}
+	.boardlist {
+		margin: 0 auto;
+	}
+	.larea, .larealong, .rarea, .rareashort, .larealonglong {
+		width: 100%;
+	}
+	.boardcate {
+		width: 130px;
+	}
+	.mview {
+		display: block;
+		float: right;
+	}
+	.board {
+		margin-bottom: 45px;
+	}
+	.wview {
+		display: none;
+	}
+	.boardtitle, .boardtitleshort, .boardtitlelong {
+		margin-bottom: 5px;
+		margin-top: 5px;
+	}
+	.boardtitle, .boardtitleshort, .boardtitlelong {
+		width: 100%;
+	}
+	.boardlist .boardmember {
+		float: left;
+		width: calc(100% - 150px);
+	}
+	.boardbox .boardmember {
+		width: calc(100% - 130px);
+	}
+	.boardmember span {
+		margin-right: 3px;
+	}
+	.boardlist .boardbutton {
+		float: right;
+		text-align: right;
+	}
+	.boardshortshort, .boardshort {
+		text-align: left;
+	}
+	.boarddate {
+		width: 85px;
+	}
+	.boardshortshort, .boardshort {
+		width: 105px;
+	}
+	.boarddefaultlong {
+		width: 150px;
+	}
+	.boardnumber {
+		display: none;
+	}
+}

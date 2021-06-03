@@ -1,0 +1,237 @@
+﻿@CHARSET "UTF-8";
+
+/*
+ *	-----------------------------------
+ *	폴앤톡몰
+ *	-----------------------------------
+ */
+.mallarea, .mallitemtitle, .mallitemcontext, .mallitem, .mallitemdoc,
+	.mallfield, .couponarea, .couponinfobox, .coupontitle, .coupondoc,
+	.coupondata, .couponbutton {
+	float: left;
+}
+
+.mallarea, .mallitemtitle, .malllistbox ul, .couponarea, .coupontitle,
+	.coupondoc, .coupondata {
+	width: 100%;
+}
+
+.malllistbox ul {
+	padding: 0px 0px 0px 0px;
+	margin-top: 0px;
+}
+
+.malllistbox ul li {
+	margin-bottom: 25px;
+}
+
+.mallitembox {
+	border: 1px #cccccc solid;
+}
+
+.mallitemtitle {
+	padding: 10px 10px 10px 10px;
+	font-size: 1.25rem;
+	font-weight: bold;
+	background-color: #ececec;
+}
+
+.mallitemimg {
+	border: 1px #cccccc solid;
+}
+
+.mallitemdoc {
+	margin-bottom: 5px;
+	color: #666666;
+}
+
+.mallfield {
+	font-weight: bold;
+	color: #333333;
+	margin-right: 5px;
+}
+
+.couponimg {
+	width: 280px;
+	border: 1px #cccccc solid;
+}
+
+.coupontitle {
+	padding: 15px 20px 15px 20px;
+	background-color: #ececec;
+	font-size: 1.4375rem;
+}
+
+.coupondoc, .coupondata {
+	margin-top: 10px;
+	font-size: 1.125rem;
+}
+
+.coupondata {
+	margin-bottom: 10px;
+}
+
+.couponbutton {
+	padding: 10px 25px 10px 25px;
+	border: 1px #1c9cd9 solid;
+	color: #1c9cd9;
+	font-weight: bold;
+}
+
+/*
+ *	-----------------------------------
+ *	1024 이상 화면
+ *	-----------------------------------
+ */
+@media screen and (min-width:1025px) {
+	.mallitembox {
+		float: left;
+	}
+	.mallarea, .couponarea {
+		margin-top: 30px;
+		margin-bottom: 170px;
+	}
+	.mallbox {
+		margin: 0px auto;
+	}
+	.mallbox, .couponbox {
+		width: 1024px;
+	}
+	.tabcontent {
+		width: calc(100% + 30px);
+	}
+	.mallitem {
+		width: 490px;
+	}
+	.mallitembox {
+		width: 100%;
+	}
+	.mallitemcontext {
+		margin-left: 30px;
+		margin-top: 30px;
+		margin-bottom: 30px;
+		width: 430px;
+	}
+	.mrspace {
+		margin-right: 45px;
+	}
+	.mallitemimg {
+		float: left;
+		width: 175px;
+		height: 175px;
+	}
+
+	/*
+	 *	폴앤톡
+	 */
+	.couponinfobox, .malliteminfo {
+		float: left;
+		margin-left: 10px;
+	}
+	.malliteminfo {
+		width: calc(100% - 185px);
+	}
+	.couponinfobox {
+		width: calc(100% - 290px);
+	}
+}
+
+/*
+ *	-----------------------------------
+ *	800 이상 1024 이하 화면
+ *	-----------------------------------
+ */
+@media screen and (min-width:801px) and (max-width:1024px) {
+	.mallarea, .couponarea {
+		margin-top: 25px;
+		margin-bottom: 130px;
+	}
+	.mallbox, .couponbox {
+		margin: 0px auto;
+		width: 800px;
+	}
+	.mrspace {
+		margin-right: 30px;
+	}
+	.mallitem {
+		width: 400px;
+	}
+	.mallitembox {
+		float: left;
+		width: 100%;
+	}
+	.tabcontent {
+		width: calc(100% + 40px);
+	}
+}
+
+/*
+ *	-----------------------------------
+ *	1024 이하 화면
+ *	-----------------------------------
+ */
+@media screen and (max-width:1024px) {
+	.mallitemimg {
+		width: 175px;
+		height: 175px;
+		margin: 10px auto;
+	}
+	.malliteminfo {
+		float: left;
+		width: 95%;
+		margin-left: 10px;
+		margin-top: 10px;
+		padding-bottom: 10px;
+	}
+}
+
+/*
+ *	-----------------------------------
+ *	800 이상 화면
+ *	-----------------------------------
+ */
+@media screen and (min-width:801px) {
+	/*
+	 *	tab 버튼
+	 */
+	.tabbuttonbox {
+		width: calc(100%/ 6);
+	}
+	.couponbox, .couponimg {
+		float: left;
+	}
+}
+
+/*	
+ *	-----------------------------------
+ *	800 이하 화면
+ *	-----------------------------------
+ */
+@media screen and (max-width:800px) {
+	.mallarea, .couponarea {
+		margin-top: 0px;
+		margin-bottom: 80px;
+	}
+	.mallbox {
+		float: left;
+		width: 100%;
+	}
+	.malllistbox ul li {
+		width: 100%;
+	}
+	.couponbox {
+		width: 95%;
+		margin: 0 auto;
+	}
+	.mallitembox {
+		width: 320px;
+		height: 395px;
+		margin: 0 auto;
+	}
+	.mallitem {
+		width: 100%;
+	}
+	.couponimg {
+		margin: 0 auto 10px;
+	}
+}

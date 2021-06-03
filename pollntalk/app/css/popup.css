@@ -1,0 +1,474 @@
+@charset "UTF-8";
+/*
+ *	-----------------------------------
+ *	팝업 모음
+ *	-----------------------------------
+ */
+html 
+{
+	font-family: 'Noto Sans KR';
+	font-size: 16px;
+}
+
+html, body 
+{
+	height: 100%;
+	margin: 0px 0px 0px 0px;
+}
+
+div, ul, li, input[type=text] 
+{
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+a, a:link, a:visited, a:hover 
+{
+	text-decoration: none;
+	color: inherit;
+}
+
+.linkitem, .linkline, input[type=text], input[type=password], input[type=checkbox],
+input[type=radio], select, textarea 
+{
+	float: left;
+}
+
+input[type=text], input[type=password], input[type=checkbox], input[type=radio],
+select, textarea 
+{
+	font-size: 16px;
+	font-family: 'Noto Sans KR';
+}
+
+input::placeholder 
+{
+	color: #cccccc;
+}
+
+select 
+{
+	padding: 10px 30px 10px 20px;
+	background: url('../images/select.png') no-repeat 95% 50%;
+	background-color: #ffffff;
+	border: 1px solid #d9d9d9;
+	border-radius: 0px;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	margin-right: 5px;
+	color: #b7b7b7;
+	margin-bottom: 5px;
+}
+
+.options
+{
+	color: #999999;
+}
+
+html, body, .popcontxtarea, .popmessage, .inputer, .linkitem, .linkline,
+.popupbutton, .popupbutton span 
+{
+	width: 100%;
+}
+
+.popcontxtarea, .popmessage, .popmessage span, .inputer, .linkitem,
+.linkline, .popupbutton, .popupbutton span 
+{
+	float: left;
+}
+ 
+.popmessagebox 
+{
+	max-width:430px;
+	height:100px;
+	margin: 0 auto;
+	text-align:center;
+}
+
+.popmessagebox::before
+{
+	display:inline-block;
+	content:"";
+	height:100%;
+	vertical-align:middle;
+}
+
+.popmessagebox .popmessage 
+{
+	display:inline-block;
+	vertical-align:middle;
+	width:100%;
+}
+
+.popmessage
+{
+	text-align:center;
+}
+
+.lineinputer, .shortinputer, .inputer, .shortshortinputer 
+{
+	height: 45px;
+}
+
+.inputer, .shortinputer, .shortshortinputer  
+{
+	border: 1px #cccccc solid;
+}
+
+.inputer img 
+{
+	margin-right: 10px;
+	margin-top: 10px;
+}
+
+.agreetext 
+{
+	margin-top: 8px;
+}
+
+.shortInputButton
+{
+	float: right;
+	margin-top: 2px;
+	margin-right: 5px;
+	display: inline-block;
+	padding: .5em .75em;
+	color: #ff4200;
+	font-size: inherit;
+	line-height: normal;
+	vertical-align: middle;
+	background-color: #fdfdfd;
+	cursor: pointer;
+	border: 1px solid #ebebeb;
+	border-bottom-color: #e2e2e2;
+	border-radius: .25em;
+}
+
+
+.defaultbutton
+{
+	float: right;
+	margin-top: 5px;
+	margin-right: 5px;
+	border-radius: 0px;
+	background-color: #ffffff;
+	border-top: 1px #cccccc solid;
+	border-right: 1px #cccccc solid;
+	border-left: 1px #cccccc solid;
+	border-bottom: 1px #cccccc solid;
+	padding: 5px 15px 5px 15px;
+	color: #888888;
+}
+
+.shortinputer input[type=radio], .shortinputer input[type=checkbox],
+.lineinputer input[type=radio], .lineinputer input[type=checkbox] 
+{
+	margin-top: 13px;
+	margin-left: 10px;
+}
+
+.shortinputer input[type=text], .inputer input[type=text], .inputer input[type=password], .shortshortinputer input[type=text]
+{
+	margin-top: 5px;
+	margin-left: 5px;
+}
+
+.shortinputer input[type=text], .inputer input[type=text], .inputer input[type=password], .shortshortinputer input[type=text]
+{
+	height: 30px;
+	border: 0px;
+}
+
+.inputer input[type=text], .inputer input[type=password] 
+{
+	width: calc(100% - 50px);
+}
+
+.shortshortinputer input[type=text] 
+{
+	width: calc(100% - 160px);
+}
+
+.shortinputer input[type=text] 
+{
+	width: calc(100% - 110px);
+}
+
+.lineinputer span, .shortinputer span 
+{
+	float: left;
+}
+
+/*
+.layerarea
+{
+	position: absolute;
+}
+*/
+
+.popuplogo, .popcontxtbox, .linkbox 
+{
+	margin: 0 auto;
+}
+
+.popuplogo 
+{
+	height: 60px;
+	margin-bottom: 25px;
+	background-image: url('../images/popup_logo.png');
+	background-repeat: no-repeat;
+	background-position: center center;
+}
+
+.popuplogo img, .inputer img 
+{
+	float: right;
+}
+
+.popuplogo img 
+{
+	margin-top: 12px;
+}
+
+.popcontxtarea 
+{
+	margin-bottom: 10px;
+}
+
+.popcontxtbox input[type=checkbox] 
+{
+	display: none;
+}
+
+.popcontxtbox input[type=checkbox]+label 
+{
+	display: inline-block;
+	font-weight: bold;
+	color: #666666;
+}
+
+.popcontxtbox input[type=checkbox]+label span 
+{
+	float: left;
+}
+
+.popcontxtbox input[type=checkbox]+label:before 
+{
+	float: left;
+	content: "";
+	display: inline-block;
+	width: 16px;
+	height: 16px;
+	margin-top: 2px;
+	margin-right: 5px;
+	border: 1px #cccccc solid;
+}
+
+.popcontxtbox input[type=checkbox]:checked+label:before 
+{
+	background-image: url('../images/mark_03.png');
+	background-repeat: no-repeat;
+	background-position: center center;
+}
+
+.popcontxttitle span 
+{
+	font-weight: bold;
+}
+
+.popcontxttitle img 
+{
+	float: right;
+}
+
+.linkbox 
+{
+	margin-top: 15px;
+}
+
+.linkbox .short 
+{
+	width: 85px;
+}
+
+.linkbox .shortshort 
+{
+	width: 60px;
+}
+
+.linkbox .long 
+{
+	width: 120px;
+}
+
+.linkbox .longlong 
+{
+	width: 150px;
+}
+
+.linkbox .normal 
+{
+	width: 105px;
+}
+
+.linkline 
+{
+	width: 1px;
+	height: 13px;
+	margin-top: 5px;
+	background-color: #cccccc;
+}
+
+.popupbutton 
+{
+	height: 55px;
+	background-color: #1c9cd9;
+	text-align: center;
+}
+
+.popupbutton span 
+{
+	margin-top: 11px;
+	color: #ffffff;
+	font-weight: bold;
+	font-size: 1.375rem;
+}
+
+.file_upload 
+{
+	width: 60px;
+	filter: alpha(opacity = 0);
+	opacity: 0;
+	height: 20px;
+}
+
+.agree 
+{
+	display: none;
+}
+
+.agree+label 
+{
+	display: inline-block;
+	color: #333333;
+}
+
+.agree+label span 
+{
+	float: left;
+}
+
+.agree+label:before 
+{
+	float: left;
+	content: "";
+	display: inline-block;
+	width: 16px;
+	height: 16px;
+	margin-top: 2px;
+	margin-right: 5px;
+	border: 1px #cccccc solid;
+}
+
+.agree:checked+label:before 
+{
+	background-image: url('../images/mark_03.png');
+	background-repeat: no-repeat;
+	background-position: center center;
+}
+
+.guidetext
+{
+	font-size: 0.875rem;
+}
+
+/*
+ *	-----------------------------------
+ *	360 이상 화면
+ *	-----------------------------------
+ */
+@media screen and (min-width:361px) 
+{
+	.popcontxtbox 
+	{
+		width: 480px;
+	}
+	
+	.popuplogo 
+	{
+		width: 450px;
+	}
+	
+	.popuplogo 
+	{
+		margin-top: 40px;
+	}
+	
+	.linkbox 
+	{
+		width: 330px;
+		text-align: center;
+	}
+	
+	.popcontxttitle 
+	{
+		margin-top: 25px;
+		margin-bottom: 25px;
+	}
+	
+	.popcontxttitle span 
+	{
+		font-size: 1.875rem;
+	}
+	
+	.popupbutton 
+	{
+		margin-top: 35px;
+	}
+}
+
+/*
+ *	-----------------------------------
+ *	360 이상 화면
+ *	-----------------------------------
+ */
+@media screen and (max-width:360px) 
+{
+	.popcontxtbox 
+	{
+		width: 320px;
+	}
+	
+	.popuplogo 
+	{
+		width: 320px;
+	}
+	
+	.popuplogo 
+	{
+		margin-top: 25px;
+	}
+	
+	.linkbox 
+	{
+		width: 320px;
+		text-align: center;
+	}
+	
+	.popcontxttitle 
+	{
+		margin-top: 15px;
+		margin-bottom: 15px;
+	}
+	
+	.popcontxttitle span 
+	{
+		font-size: 1.375rem;
+	}
+	
+	.popupbutton 
+	{
+		margin-top: 15px;
+	}
+}

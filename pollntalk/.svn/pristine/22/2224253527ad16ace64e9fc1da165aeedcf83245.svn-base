@@ -1,0 +1,115 @@
+<?php
+
+/**
+ *  @auth   : YS PARK
+ *  @date   : 202010
+ *  관리자 회원관리
+ */
+
+
+class CApp_Handler_Admin_member extends CCore_Lib_Routines_Handler
+{
+    
+    public function __construct()
+    {
+    }
+    
+    /*
+     * 회원 리스트
+     */
+    public function getMemberList($startNum, $listSize)
+    {
+        $query = "";
+        $query = "SELECT * FROM member order by member_seq limit :startNum, :listSize";
+        
+        $this->query($query);
+        $this->bind("startNum", $startNum);
+        $this->bind("listSize", $listSize);
+        $result = $this->execute(CCore_Lib_Routines_Handler::SELECT);
+        
+        return $result;
+    }
+    
+    
+    /*
+     * 전체 회원수 가져오기
+     */
+    public function getMembercount()
+    {
+        $query = "";
+        $query = "SELECT count(*) FROM member";
+        
+        $this->query($query);
+        $result = $this->execute(CCore_Lib_Routines_Handler::SELECT);
+        $count = $result[0]["count(*)"];
+        
+        return $count;
+    }
+    
+    /*
+     * 회원검색
+     */
+
+    public function searchMember($kind, $data)
+    {
+        $query = "";
+        if($kind == 1)
+        {
+            $query = "SELECT * FROM member where email = :EMAIL";
+            $this->query($query);
+            $this->bind("EMAIL", $data);
+        }
+        elseif($kind == 2)
+        {
+            $data = '%'.$data.'%';
+            $query = "SELECT * FROM member where uname like :UNAME";
+            $this->query($query);
+            $this->bind("UNAME", $data);
+        }
+        else 
+        {
+            $data = '%'.$data.'%';
+            $query = "SELECT * FROM member where nname like :NNAME";
+            $this->query($query);
+            $this->bind("NNAME", $data);
+        }
+        
+        $result = $this->execute(CCore_Lib_Routines_Handler::SELECT);
+        
+        return $result;
+    }
+    
+    public function searchMemberCount($kind, $data)
+    {
+        $query = "";
+        if($kind == 1)
+        {
+            $query = "SELECT count(*) FROM member where email = :EMAIL";
+            $this->query($query);
+            $this->bind("EMAIL", $data);
+        }
+        elseif($kind == 2)
+        {
+            $data = '%'.$data.'%';
+            $query = "SELECT count(*) FROM member where uname like :UNAME";
+            $this->query($query);
+            $this->bind("UNAME", $data);
+        }
+        else
+        {
+            $data = '%'.$data.'%';
+            $query = "SELECT count(*) FROM member where nname like :NNAME";
+            $this->query($query);
+            $this->bind("NNAME", $data);
+        }
+        
+        $result = $this->execute(CCore_Lib_Routines_Handler::SELECT);
+        $count = $result[0]["count(*)"];
+        
+        return $count;
+    }
+    
+    
+    
+}
+?>

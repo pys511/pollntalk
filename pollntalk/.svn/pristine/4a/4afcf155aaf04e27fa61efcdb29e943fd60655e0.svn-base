@@ -1,0 +1,53 @@
+<?php
+
+class CApp_Handler_Admin_main_Ctrl extends CCore_Lib_Routines_Handler
+{
+    
+    public function __construct()
+    {
+    }
+    
+    public function setText($array)
+    {
+        $main_text1    = $array['main_text1'];
+        $main_text2    = $array['main_text2'];
+        
+        $query  = "SELECT COUNT(*) AS CNT FROM PTP_MAIN WHERE main_seq = 1";
+        
+        $this->query($query);
+        $result = $this->execute(CCore_Lib_Routines_Handler::SELECT);
+        
+        if (intval($result[0]["CNT"]) > 0)
+        {
+            $query  = "INSERT INTO PTP_MAIN
+                    (
+                      m_text1, m_text2
+                    )
+                    VALUES
+                    (
+                      :M_TEXT1, :M_TEXT2
+                    )";
+            $this->query($query);
+            $this->bind("M_TEXT1", $main_text1);
+            $this->bind("M_TEXT2", $main_text2);
+            $result = $this->execute(CCore_Lib_Routines_Handler::INSERT);
+        }
+        else 
+        {
+            $query  = "UPDATE PTP_MAIN set
+                       m_text1 = :M_TEXT1,
+                       m_text2 = :M_TEXT2
+                       WHERE main_seq = 1";
+            $this->query($query);
+            $this->bind("M_TEXT1", $main_text1);
+            $this->bind("M_TEXT2", $main_text2);
+            $result = $this->execute(CCore_Lib_Routines_Handler::UPDATE);
+        }
+           
+        if (! $result)
+            return false;
+                
+            return true;     
+    }
+}
+?>

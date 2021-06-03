@@ -1,0 +1,101 @@
+﻿@CHARSET "UTF-8";
+
+/*
+ *	-----------------------------------
+ *	댓글
+ *	-----------------------------------
+ */
+.replyfield, .replyinputer, .replylist, .replylist ul, .replylist ul li,
+	.replyitem, .replytop, .replydate, .replybottom {
+	float: left;
+}
+
+.replyfield, .replyinputer, .replyinputer textarea, .replylist,
+	.replylist ul, .replylist ul li, .replyitem, .replytop, .replydate,
+	.replybottom {
+	width: 100%;
+}
+
+.replyfield {
+	border-bottom: 1px #cccccc solid;
+}
+
+.replyfield, .replyinputer {
+	padding: 15px 0px 15px 0px;
+}
+
+.replyinputer textarea {
+	margin-bottom: 10px;
+	color: #cdcdcd;
+}
+
+.replyinputer button {
+	width: 90px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	text-align: center;
+	font-weight: bold;
+	font-size: 1rem;
+	background-color: #ffffff;
+}
+
+.replylist ul {
+	padding: 0px 0px 0px 0px;
+	margin-top: 0px;
+	margin-bottom: 0px;
+}
+
+.replyitem {
+	padding: 10px 10px 10px 10px;
+	border-bottom: 1px #cccccc solid;
+}
+
+.replydate {
+	width: 130px;
+	color: #cbcbcb;
+}
+
+.replyctrl {
+	float: right;
+	width: 80px;
+	text-align: right;
+}
+
+.replybottom {
+	text-align: left;
+}
+
+@media screen and (min-width:1025px) {
+	.replybox {
+		width: 1024px;
+	}
+}
+
+/*
+ *	-----------------------------------
+ *	800 이상 화면
+ *	-----------------------------------
+ */
+@media screen and (min-width:801px) {
+	.replybox {
+		width: 800px;
+	}
+	.replybox {
+		margin: 0 auto;
+	}
+}
+
+/*	
+ *	-----------------------------------
+ *	800 이하 화면
+ *	-----------------------------------
+ */
+@media screen and (max-width:800px) {
+	.replybox {
+		float: left;
+	}
+	.replybox {
+		width: 100%;
+		padding: 5px 5px 5px 5px;
+	}
+}

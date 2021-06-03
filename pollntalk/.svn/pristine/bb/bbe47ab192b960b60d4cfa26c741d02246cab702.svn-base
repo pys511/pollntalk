@@ -1,0 +1,29 @@
+/**
+ * @auth   	: JEON JY
+ * @date	: 20200903
+ * 설문 양식 처리
+ */
+
+window.addEventListener("load", function()
+{
+	var voteuses	= document.querySelectorAll(".voteuse");
+	for (var i = 0; i < voteuses.length; i++)
+	{
+		var voteuseitem	= voteuses[i];
+		voteuseitem.addEventListener("click", function()
+		{
+			var frmVote		= document.getElementById("frmVote");
+			var voteformSeq	= document.getElementById("vote_form_seq");
+			if (voteFormSeq.value == "")
+			{
+				alert("부정확한 접근으로 잘못된 폼 양식을 신청하였습니다.");
+				return;
+			}
+			
+			frmVote.submit();
+			
+			return;
+		});
+	}
+	
+});

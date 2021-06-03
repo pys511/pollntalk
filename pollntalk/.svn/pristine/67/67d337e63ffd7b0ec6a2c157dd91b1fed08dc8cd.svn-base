@@ -1,0 +1,52 @@
+<?php
+/**
+ *  @auth   : PARK Y.S.
+ *  @date   : 20210423
+ *  광고 링크처리
+ */
+try
+{
+    $seq        = $_GET["num"];
+    $ip = $_SERVER['REMOTE_ADDR'];
+    
+    $mainCtrl   = new CApp_Handler_Admin_AdSetting();
+    if($seq != "")
+    {
+        $result     = $mainCtrl->getAd($seq);
+    
+        $ad_index         = $result["ad_index"];
+        $ad_subject    = $result["ad_subject"];
+        $ad_url     = $result["ad_url"];
+    }
+
+    $dbctrl = new CApp_Handler_Util_AdLink();
+    $result = $dbctrl->insertDB($ip, $ad_subject);
+    
+    if (! $result)
+    {
+?>
+<script>
+		windows.location.replace("<?php echo($ad_url);?>");
+</script>
+<?php 
+    }
+    else
+    {
+?>
+<script>
+		windows.location.replace("<?php echo($ad_url);?>");
+</script>
+<?php
+    }
+}
+catch (CException $ex)
+{
+    $ex->printException();
+?>
+<script>
+		windows.location.replace("<?php echo($ad_url);?>");
+</script>
+<?php 
+    
+}
+?>

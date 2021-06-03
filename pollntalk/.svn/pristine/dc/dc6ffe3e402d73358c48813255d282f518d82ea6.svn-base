@@ -1,0 +1,250 @@
+var objText			= null;
+var arrFileList		= Array();
+var	nFileIndex		= 0;
+var range			= null;
+
+function selectFontName(strTextEdit, strSelName)
+{
+	objTextEditor	= document.getElementById(strTextEdit);
+	
+	var objSelName		= document.getElementById(strSelName);
+	var strFontName		= objSelName.options[objSelName.selectedIndex].value;
+	
+	objTextEditor.contentDocument.execCommand("fontName", 0, strFontName);
+	objTextEditor.focus();
+}
+
+function selectFontSize(strTextEdit, strSelName)
+{
+	objTextEditor	= document.getElementById(strTextEdit);
+	
+	var objSelName		= document.getElementById(strSelName);
+	var strFontSize		= objSelName.options[objSelName.selectedIndex].value;
+	
+	objTextEditor.contentDocument.execCommand("fontSize", 0, strFontSize);
+	objTextEditor.focus();
+}
+
+function setEditCommand(strTextEdit, strCommand)
+{
+	objTextEditor	= document.getElementById(strTextEdit);
+	
+	objTextEditor.contentDocument.execCommand(strCommand);
+	objTextEditor.focus();
+}
+
+function insertForeColor(strTextEdit)
+{
+	objTextEditor	= document.getElementById(strTextEdit);
+	
+	objText = objTextEditor.contentWindow.getSelection();
+	if (objText.rangeCount && objText.getRangeAt)
+		range	= objText.getRangeAt(0);
+	
+	if (range)
+	{
+		objText.removeAllRanges();
+		objText.addRange(range);
+	}
+		
+	var objElement		= document.getElementById('btnSetForeColor');
+	var	nTop			= 0;
+	var nLeft			= 0;
+	
+	while (objElement)
+	{
+		nTop 			+= objElement.offsetTop;
+		nLeft 			+= objElement.offsetLeft;
+		objElement	= objElement.offsetParent;
+	}
+	
+	nTop				+= 25;
+	
+	var objColorPane	= document.getElementById("dvColorPane");
+	
+	objColorPane.style.top	= nTop + "px";
+	objColorPane.style.left	= nLeft + "px";
+	objColorPane.style.display	= "block";	
+}
+
+
+function selectForeColor(strTextEdit, strColor)
+{
+	objTextEditor	= document.getElementById(strTextEdit);
+	objTextEditor.contentDocument.execCommand("ForeColor", 0, strColor);
+	objTextEdit.focus();
+	objText	= null;
+	
+	var objColorPane	= document.getElementById("dvColorPane");
+	
+	objColorPane.style.display	= "none";	
+}
+
+function insertBackColor(strTextEdit)
+{
+	objTextEditor	= document.getElementById(strTextEdit);
+	
+	objText = objTextEditor.contentWindow.getSelection();
+	if (objText.rangeCount && objText.getRangeAt)
+		range	= objText.getRangeAt(0);
+	
+	if (range)
+	{
+		objText.removeAllRanges();
+		objText.addRange(range);
+	}
+		
+	var objElement		= document.getElementById('btnSetForeColor');
+	var	nTop			= 0;
+	var nLeft			= 0;
+	
+	while (objElement)
+	{
+		nTop 			+= objElement.offsetTop;
+		nLeft 			+= objElement.offsetLeft;
+		objElement	= objElement.offsetParent;
+	}
+	
+	nTop				+= 25;
+	
+	var objColorPane	= document.getElementById("dvColorPane");
+	
+	objColorPane.style.top	= nTop + "px";
+	objColorPane.style.left	= nLeft + "px";
+	objColorPane.style.display	= "block";	
+}
+
+
+function selectBackColor(strTextEdit, strColor)
+{
+	objTextEditor	= document.getElementById(strTextEdit);
+	objTextEditor.contentDocument.execCommand("ForeColor", 0, strColor);
+	objTextEdit.focus();
+	objText	= null;
+	
+	var objColorPane	= document.getElementById("dvColorPane");
+	
+	objColorPane.style.display	= "none";	
+}
+
+function insertEditFile()
+{
+	objFileManager.insertFile("/index.php?target=File_Finder&exec=registerFileInfo", "", "", 0,'height=150,width=320,status=yes,toolbar=no,menubar=no,location=no');
+}
+
+function setEditerFile(strFilePath, strFileName, strRealFileName)
+{
+	var objRealFileName		= document.getElementById("bi_file");
+	objRealFileName.value	= strFileName;
+	
+	var objFileElement		= document.getElementById("bi_filename");
+	objFileElement.value	= strRealFileName;
+	
+	var objFileText			= document.getElementById("fileName");
+	objFileText.innerText	= strRealFileName;
+	
+	var objFileArea			= document.getElementById("fileNameArea");
+	objFileArea.style.display	= "block";
+	
+	return;
+}
+
+function insertEditImage()
+{
+	objFileText.insertFile("/index.php?target=File_FindController&exec=registerFileInfo", "", "", 0,'height=150,width=320,status=yes,toolbar=no,menubar=no,location=no');
+}
+
+function setEditerImage_(strFilePath, strFileName)
+{
+	objTextEditor		= window.getElementById("objTextEdit");
+	objTextEditor.focus();
+	
+	objText = objTextEditor.contentWindow.getSelection();
+	if (objText.rangeCount && objText.getRangeAt)
+		range	= objText.getRangeAt(0);
+	
+	if (range)
+	{
+		objText.removeAllRanges();
+		objText.addRange(range);
+	}
+	
+	var strImageTag			= "<img src=\"" + strFilePath + "/" + strFileName + "\" />";
+	
+	range.pasteHTML(strImageTag);
+	range.select();  
+	
+	arrFileList[nFileIndex]	= strFileName;
+	nFileIndex++;
+}
+
+function setEditerImage(mapItem, result)
+{
+	if (result.realname == "" || result.realname == null || result.realname == undefined)
+		return false;
+	
+	objTextEditor		= document.getElementById("objTextEdit");
+	objText = objTextEditor.contentWindow.getSelection();
+	if (objText.rangeCount && objText.getRangeAt)
+		range	= objText.getRangeAt(0);
+	else
+	{
+		range	= objTextEditor.contentDocument.createRange();
+		range.selectNode(objTextEditor.contentDocument.getElementsByTagName("body").item(0));
+	}
+	
+	if (range)
+	{
+		objText.removeAllRanges();
+		objText.addRange(range);
+	}
+	
+	var img		= document.createElement("img");
+	img.setAttribute("src", "/app/file/" + result.realname);
+	
+	range.insertNode(img);
+	
+	arrFileList[nFileIndex]	= result.realname;
+	nFileIndex++;
+}
+
+function getFileListToJSON()
+{
+	if (arrFileList.length <= 0)
+		return false;
+	
+	var result	= JSON.stringify(arrFileList);
+	return result;
+}
+
+function setContext(contextBody)
+{
+	var objTextEdit		= document.getElementById("objTextEdit");
+	var bodyTag			= "<BODY MONOSPACE STYLE=\"font:10pt arial,sans-serif\">";
+	bodyTag				= bodyTag + contextBody + "</BODY>";  
+	
+	if (objTextEdit != null)
+	{
+		objTextEdit.contentDocument.designMode 	= "On";	
+		objTextEdit.contentDocument.write(bodyTag);
+	}
+}
+
+window.addEventListener("load", function()
+{
+	var bodyTag			= "<BODY MONOSPACE STYLE=\"font:10pt arial,sans-serif\"></BODY>";
+	var objTextEdit		= document.getElementById("objTextEdit");
+	if (objTextEdit != null)
+	{
+		objTextEdit.contentDocument.designMode 	= "On";	
+		objTextEdit.contentDocument.write(bodyTag);
+	}
+
+}, true);
+
+/*
+ *	text를 얻는 방법 
+ *  var contextEdit	= document.getElementById("objTextEdit");
+ *  var contextBody	= contextEdit.contentDocument.getElementByTagName("body").item(0);
+ *  var context		= contextBody.innerHTML; <-- 이 값이 에디터의 내용이에요.
+ */

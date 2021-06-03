@@ -1,0 +1,242 @@
+﻿@CHARSET "UTF-8";
+
+/*
+ *	-----------------------------------
+ *	게시판 쓰기
+ *	-----------------------------------
+ */
+.subContentWriteTitle, .subContentWriteControl 
+{
+	float: left;
+	width: 100%;
+	padding: 5px;
+	margin-bottom: 5px;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.subContentWriteControl 
+{
+	border: 1px #b8c5f0 solid;
+	background-color: #e1e6f7;
+}
+
+.subContentWriteTitle span 
+{
+	float: left;
+	color: #384d91;
+	font-weight: bold;
+	margin-right: 5px;
+}
+
+.subContentWriteTitle .subContentWriteText 
+{
+	float: left;
+	border: 1px #b8c5f0 solid;
+}
+
+.subContentWriteControl .buttonFontGroup .contentListButton,
+.subContentWriteControl .buttonStyleGroup .contentListButton,
+.subContentWriteControl .buttonContextGroup .contentListButton,
+.subContentWriteControl .buttonExtraGroup .contentListButton 
+{
+	float: left;
+	margin-left: -1px;
+}
+
+.subContentWriteControl .buttonText .buttonContextShort,
+.subContentWriteControl .buttonText .buttonContextLarge 
+{
+	float: left;
+}
+
+.contentTextArea 
+{
+	float: left;
+	width: 100%;
+	margin-bottom: 5px;
+}
+
+.contentTextArea .contentTextBox 
+{
+	float: left;
+	width: 100%;
+	border: 1px #b8c5f0 solid;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+/*
+ *	버튼
+ */
+.contentListButton 
+{
+	height: 35px;
+	background-image: url('app/images/buttonBack_02.gif');
+}
+
+.contentListButton .buttonLeft 
+{
+	float: left;
+}
+
+.contentListButton .buttonRight 
+{
+	float: right;
+}
+
+.contentListButton .buttonText 
+{
+	float: left;
+	padding: 10px 3px 10px 3px;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.contentListButton .buttonText span 
+{
+	float: left;
+	margin-top: 2px;
+	text-align: center;
+	color: #384d91;
+}
+
+.boardwritesubject 
+{
+	width: 98.8%;
+	padding: 5px 5px 5px 5px;
+	border-radius: 0px;
+	border-top: 1px #cccccc solid;
+	border-right: 1px #cccccc solid;
+	border-left: 1px #cccccc solid;
+	border-bottom: 1px #cccccc solid;
+	color: #e6e6e6;
+}
+
+/*
+ *	해상도 720px 이상
+ */
+@media screen and (min-width:800px) 
+{
+	.subContentWriteTitle span 
+	{
+		font-size: 12px;
+		margin-top: 7px;
+	}
+	
+	.subContentWriteTitle .subContentWriteText 
+	{
+		float: left;
+		width: 90%;
+		height: 25px;
+	}
+	
+	.subContentWriteControl .buttonFontGroup 
+	{
+		float: left;
+		width: 115px;
+	}
+	
+	.subContentWriteControl .buttonStyleGroup 
+	{
+		float: left;
+		width: 112px;
+	}
+	
+	.subContentWriteControl .buttonContextGroup 
+	{
+		float: left;
+		width: 93px;
+	}
+	
+	.subContentWriteControl .buttonExtraGroup 
+	{
+		float: left;
+		width: 120px;
+	}
+	
+	.subContentWriteControl 
+	{
+		font-size: 12px;
+	}
+	
+	.subContentWriteControl .buttonText .buttonContextShort 
+	{
+		display: block;
+	}
+	
+	.subContentWriteControl .buttonText .buttonContextLarge 
+	{
+		display: none;
+	}
+	
+	.contentTextArea .contentTextBox 
+	{
+		height: 340px;
+	}
+}
+
+/*
+ *	해상도 719px 이하
+ */
+@media screen and (max-width:800px) 
+{
+	.subContentWriteTitle span 
+	{
+		font-size: 16px;
+	}
+	
+	.subContentWriteTitle .subContentWriteText 
+	{
+		float: left;
+		width: 80%;
+		height: 35px;
+	}
+	
+	.subContentWriteControl .buttonFontGroup 
+	{
+		float: left;
+		width: 65px;
+	}
+	
+	.subContentWriteControl .buttonStyleGroup 
+	{
+		float: left;
+		width: 92px;
+	}
+	
+	.subContentWriteControl .buttonContextGroup 
+	{
+		float: left;
+		width: 70px;
+	}
+	
+	.subContentWriteControl .buttonExtraGroup 
+	{
+		float: left;
+		width: 100px;
+	}
+	
+	.subContentWriteControl 
+	{
+		font-size: 14px;
+	}
+	
+	.subContentWriteControl .buttonText .buttonContextShort 
+	{
+		display: none;
+	}
+	
+	.subContentWriteControl .buttonText .buttonContextLarge 
+	{
+		display: block;
+	}
+	
+	.contentTextArea .contentTextBox 
+	{
+		height: 210px;
+	}
+}

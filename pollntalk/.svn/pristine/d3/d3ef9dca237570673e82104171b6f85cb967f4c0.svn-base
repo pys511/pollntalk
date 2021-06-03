@@ -1,0 +1,645 @@
+﻿<!doctype html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link type="text/css" rel="stylesheet" href="css/common.css" />
+<link type="text/css" rel="stylesheet"
+	media="screen and (max-width: 800px)" href="css/mobile.css" />
+<link type="text/css" rel="stylesheet" href="css/sub.css" />
+<link type="text/css" rel="stylesheet" href="css/votewrite.css" />
+<title>온라인 투표 설문 폴앤톡</title>
+</head>
+<body>
+	<div class="page">
+		<!-- 공통 상단 시작 -->
+		<div class="top">
+			<!-- 상단 로고 영역 시작 -->
+			<div class="toparea">
+				<dir class="logo" alt="폴앤톡 로고">
+					<img class="mobilemenubutton" src="images/mobile_menu.png" />
+				</dir>
+				<!-- 로그인, 회원가입 버튼 시작 -->
+				<div class="accountbox" style="display: none;">
+					<div class="login">
+						<img src="images/login.png" /> <span>로그인</span>
+					</div>
+					<div class="join">
+						<img src="images/join.png" /> <span>회원가입</span>
+					</div>
+				</div>
+				<!-- 로그인, 회원가입 버튼 끝 -->
+				<!-- 로그아웃, 회원정보 시작 -->
+				<div class="memberbox">
+					<div class="logout">
+						<img src="images/login.png" /> <span>로그아웃</span>
+					</div>
+					<div class="member">
+						<img src="images/thumb_sample_01.jpg" /> <span>폴앤톡1004</span>
+					</div>
+				</div>
+				<!-- 로그아웃, 회원정보 버튼 끝 -->
+			</div>
+			<!-- 상단 로고 영역 끝 -->
+			<!-- top 메뉴 영역 시작 -->
+			<div class="menubar">
+				<div class="menuarea">
+					<div class="menuitem">
+						<div class="menusign noselect">
+							<span>투표리스트</span>
+						</div>
+					</div>
+					<div class="menuitem">
+						<div class="menusign select">
+							<span>투표만들기</span>
+						</div>
+					</div>
+					<div class="menuitem">
+						<div class="menusign noselect">
+							<span>투표양식</span>
+						</div>
+					</div>
+					<div class="menuitem">
+						<div class="menusign noselect">
+							<span>고객센터</span>
+						</div>
+					</div>
+					<div class="menuitem">
+						<div class="menusign noselect">
+							<span>폴앤톡 mall</span>
+						</div>
+					</div>
+					<div class="menuitem">
+						<div class="menusign noselect">
+							<span>마이페이지</span>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- top 메뉴 영역 끝 -->
+			<!-- 검색 영역 시작 -->
+			<div class="searchbar">
+				<div class="searcharea">
+					<!-- 검색 입력란 시작 -->
+					<dir class="searchbox">
+						<input type="text" class="search" value="검색어를 입력하세요." />
+						<img src="images/search.png" />
+					</dir>
+					<!-- 검색 입력란 끝 -->
+					<!-- 추천 검색어 시작 -->
+					<div class="recommandsearch">
+						<span class="recommandtitle">추천검색어</span>
+						<div class="searchitem">
+							<span>코로나</span>
+						</div>
+						<div class="searchitem">
+							<span>애플</span>
+						</div>
+						<div class="searchitem">
+							<span>부동산</span>
+						</div>
+						<div class="searchitem">
+							<span>야구</span>
+						</div>
+						<div class="searchitem">
+							<span>맛집</span>
+						</div>
+						<div class="searchitem">
+							<span>1인 가구</span>
+						</div>
+						<div class="searchitem">
+							<span>영화</span>
+						</div>
+					</div>
+					<!-- 추천 검색어 끝 -->
+				</div>
+			</div>
+			<!-- 검색 영역 끝 -->
+		</div>
+		<!-- 공통 상단 끝 -->
+		<!-- 컨텐츠 시작-->
+		<div class="content">
+			<div class="votewritearea">
+				<div class="votewritebox">
+					<div class="votewritemenu">
+						<div class="votewritemenuitem noselected">
+							<span>일반 투표 만들기</span>
+						</div>
+						<div class="votewritemenuitem selected">
+							<span>이벤트 투표 신청</span>
+						</div>
+					</div>
+					<!-- 이벤트 투표 설명 시작 -->
+					<div class="voteguidedoc">
+						<div class="voteguidebox">
+							<p>
+								<span class="title">이벤트 투표란?</span>
+							</p>
+							<p>
+								<span class="guidetext">이벤트 투표에 대한 정의를 상무님이 작성하여 전달해주시면 본
+									란에 기재하도록 하겠습니다.</span>
+							</p>
+						</div>
+					</div>
+					<!-- 이벤트 투표 설명 끝 -->
+					<!-- 투표 입력란 시작 -->
+					<div class="votewrite">
+						<div class="votewritetitle">
+							<img src="images/mark_01.png" /> <span class="votetitle">투표
+								설명 작성</span>
+						</div>
+						<div class="votewritecont vtbline">
+							<div class="votewritecontitem">
+								<div class="votewriteinputer">
+									<div class="votewritefield">
+										<img class="votemark" src="images/mark_03.png" /> <span>제목(</span><span
+											class="semistress">필수</span><span>)</span>
+									</div>
+									<div class="votewriteinputbox">
+										<div class="inputcont">
+											<input type="text" value="제목을 입력하세요." />
+										</div>
+									</div>
+								</div>
+								<div class="votewriteinputer">
+									<div class="votewritefield">
+										<img class="votemark" src="images/mark_03.png" /> <span>카테고리(</span><span
+											class="semistress">필수</span><span>)</span>
+									</div>
+									<div class="votewriteinputbox">
+										<div class="inputcont">
+											<select class="vrspace">
+												<option>-1차 카테고리 선택-</option>
+											</select> <select>
+												<option>-2차 카테고리 선택-</option>
+											</select>
+										</div>
+									</div>
+								</div>
+								<div class="votewriteinputer">
+									<div class="votewritefield">
+										<img class="votemark" src="images/mark_03.png" /> <span>내용(</span><span
+											class="semistress">필수</span><span>)</span>
+									</div>
+									<div class="votewriteinputbox">
+										<div class="inputcont">
+											<input type="text" value="투표설문에 대해 설명할 내용이 있으시면 입력하세요." />
+										</div>
+									</div>
+								</div>
+								<div class="votewriteinputer">
+									<div class="votewritefield">
+										<img class="votemark" src="images/mark_03.png" /> <span>관련
+											사진</span>
+									</div>
+									<div class="votewriteinputbox">
+										<div class="inputcont">
+											<div class="imgbox">
+												<span>사진</span>
+											</div>
+											<button class="votebutton">
+												<img src="images/up.png" /> <span>사진 파일 선택</span>
+											</button>
+										</div>
+									</div>
+								</div>
+								<div class="votewriteinputer">
+									<div class="votewritefield">
+										<img class="votemark" src="images/mark_03.png" /> <span>관련
+											링크</span>
+									</div>
+									<div class="votewriteinputbox">
+										<div class="inputcont">
+											<input type="text" value="www.***" />
+										</div>
+									</div>
+								</div>
+								<div class="votewriteinputer">
+									<div class="votewritefield">
+										<img class="votemark" src="images/mark_03.png" /> <span>홍보
+											동영상 링크</span>
+									</div>
+									<div class="votewriteinputbox">
+										<div class="inputcont">
+											<input type="text" value="www.***" />
+										</div>
+									</div>
+								</div>
+								<div class="votewriteinputer">
+									<div class="votewritefield">
+										<img class="votemark" src="images/mark_03.png" /> <span>마감
+											날짜</span>
+									</div>
+									<div class="votewriteinputbox">
+										<button class="votebutton">
+											<img src="images/calendar.png" /> <span class="top05">마감
+												날짜 선택</span>
+										</button>
+									</div>
+								</div>
+								<div class="votewriteinputer">
+									<div class="votewritefield">
+										<img class="votemark" src="images/mark_03.png" /> <span>담당자
+											연락처</span>
+									</div>
+									<div class="votewriteinputbox">
+										<div class="inputcont">
+											<input type="text" value="-없이 번호만 기재" />
+										</div>
+									</div>
+								</div>
+								<div class="votewriteinputer">
+									<div class="votewritefield">
+										<img class="votemark" src="images/mark_03.png" /> <span>투표
+											내용 파일</span>
+									</div>
+									<div class="votewriteinputbox">
+										<div class="inputcont">
+											<button class="votebutton">
+												<img src="images/up.png" /> <span>파일 선택</span>
+											</button>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- 프리미엄 서비스 안내 시작 -->
+						<div class="votewritetitle">
+							<img src="images/mark_06.jpg" /> <span class="votetitle">이벤트
+								투표 서비스 안내</span>
+						</div>
+						<div class="votewritecont">
+							<div class="votewritetablebox">
+								<div class="votewritetable">
+									<div class="votewtfield">
+										<div class="vtewtdefault wterline">
+											<span>서비스명</span>
+										</div>
+										<div class="votewtlong">
+											<span>서비스 내용</span>
+										</div>
+									</div>
+									<div class="votewtcontext votewt130">
+										<ul>
+											<li>
+												<div class="vtewtdefault wterline">
+													<input class="agree" id="nopublic" type="checkbox" /> <label
+														for="nopublic"><span>이벤트 투표 서비스</span></label>
+												</div>
+												<div class="votewtlong">
+													<span class="votewtexp">각 페이지에 투표 상단 배치 (이벤트 투표 투표)</span>
+													<span class="votewtexp">검색 결과 페이지에 투표 상단 배치(이벤트 투표)</span>
+													<span class="votewtexp">투표 테두리 강조</span> <span
+														class="votewtexp">회원 전원에게 투표 공지 쪽지 / 이메일 발송</span>
+												</div>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="votewritecont vtbline">
+							<div class="paybox">
+								<div class="paytable vtbspace">
+									<ul>
+										<li>
+											<div class="payfield">
+												<span class="stress">총 결제금액</span>
+											</div>
+											<div class="payinputer">
+												<input class="payinputshort" type="text" /> <span
+													class="won">원</span>
+											</div>
+										</li>
+										<li>
+											<div class="payfield">
+												<span>결제방법</span>
+											</div>
+											<div class="payinputer">
+												<input class="agree" id="nobankbook" type="checkbox" /> <label
+													for="nobankbook"><span>무통장입금</span></label>
+											</div>
+										</li>
+										<li>
+											<div class="payfield">
+												<span>입금계좌</span>
+											</div>
+											<div class="payinputer">
+												<select>
+													<option>계좌를 선택하세요.</option>
+												</select> <input class="payinputlong" type="text" value="계좌번호" />
+											</div>
+										</li>
+										<li>
+											<div class="payfield">
+												<span>입금자명</span>
+											</div>
+											<div class="payinputer">
+												<input class="payinputshort" type="text" />
+											</div>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<div class="votewritebtncont vttspace">
+							<div class="votewtbtnright">
+								<div class="votewtbutton stressbutton">
+									<span>투표 신청</span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- 투표 입력란 끝 -->
+				</div>
+			</div>
+		</div>
+		<!-- 컨텐츠 끝-->
+		<!-- 하단 시작 -->
+		<div class="footer">
+			<!-- 하단 메뉴 시작 -->
+			<div class="footermenuarea">
+				<div class="footermenubox">
+					<div class="footermenu fspace">
+						<img class="wfootermenu" src="images/footer_menu_01.png" /> <img
+							class="mfootermenu" src="images/footer_menu_m_01.png" />
+						<div class="footermenuitem mfooterline">
+							<span class="footermenutitle">공지사항 / 이벤트</span> <span
+								class="footermenutext">폴앤톡에서 알려드리는 공지사항과 이벤트입니다.</span>
+						</div>
+					</div>
+					<div class="footermenu fspace">
+						<img class="wfootermenu" src="images/footer_menu_02.png" /> <img
+							class="mfootermenu" src="images/footer_menu_m_02.png" />
+						<div class="footermenuitem mfooterline">
+							<span class="footermenutitle">자주하는<br />질문
+							</span> <span class="footermenutext">폴앤톡에 대한 정보가 궁금하다면 이용해주세요.</span>
+						</div>
+					</div>
+					<div class="footermenu">
+						<img class="wfootermenu" src="images/footer_menu_03.png" /> <img
+							class="mfootermenu" src="images/footer_menu_m_03.png" />
+						<div class="footermenuitem">
+							<span class="footermenutitle">서비스요청 / 에러신고</span> <span
+								class="footermenutext">필요한 서비스/기능이나 에러가 있으면 알려주세요.</span>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- 하단 메뉴 끝 -->
+			<!-- 하단 공통 시작 -->
+			<div class="footercommonarea">
+				<div class="footercommonbox">
+					<img src="images/footer_logo.png" />
+					<div class="footercommon">
+						<!-- 하단 안내 메뉴 시작 -->
+						<div class="footerlayer">
+							<div class="footerguidemenu">
+								<span class="glspace grspace">서비스 소개</span> <span
+									class="grspace">이용약관</span> <span class="grspace">개인정보처리방침</span>
+								<span class="grspace">이메일 무단수집거부</span> <span>책임의 한계와
+									법적고지</span>
+							</div>
+						</div>
+						<!-- 하단 안내 메뉴 끝 -->
+						<!-- 하단 안내 시작 -->
+						<div class="footerlayer">
+							<div class="footerguidebox">
+								<div class="footerguide">
+									<span>피에스발텍</span> <span>주소 : 경기도 평택시 서탄면 수월암2길 88-12,
+										2층 1호</span> <span>사업자등록번호 : 578-76-00226</span>
+								</div>
+								<div class="footerguide">
+									<span>통신판매업신고 : 2020-경기평택-*****</span> <span>개인정보책임자 :
+										고형석</span> <span>이메일 : admin@pollntalk.com</span>
+								</div>
+								<div class="footerguide">
+									<span>대표전화 : 070-7633-4520</span>
+								</div>
+								<div class="footerguide fbottom">
+									<span>Copyright(c) 2020 PS VALTEC Corp. All right
+										Reserved.</span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- 하단 안내 끝 -->
+				</div>
+			</div>
+			<!-- 하단 공통 끝 -->
+		</div>
+		<!-- 하단 끝 -->
+		<!-- 모바일 추천 검색어 시작 -->
+		<div class="mrecommsearchlayer" style="display: none">
+			<div class="mrecommsearcharea">
+				<div class="msearch">
+					<img class="msearchclose" src="images/search_close.png" />
+					<!-- 검색 입력란 시작 -->
+					<div class="msearchbox">
+						<input type="text" class="search" value="검색어를 입력하세요." /> <img
+							src="images/search.png" />
+					</div>
+					<!-- 검색 입력란 끝 -->
+				</div>
+				<div class="mrecommsearch">
+					<div class="mrecommtitle">
+						<span>추천 검색어</span>
+					</div>
+					<div class="mrecommlist">
+						<ul>
+							<li><span class="mrecommnumber">1</span> <span>코로나</span></li>
+							<li><span class="mrecommnumber">2</span> <span>애플</span></li>
+							<li><span class="mrecommnumber">3</span> <span>부동산</span></li>
+							<li><span class="mrecommnumber">4</span> <span>야구</span></li>
+							<li><span class="mrecommnumber">5</span> <span>맛집</span></li>
+							<li><span class="mrecommnumber">6</span> <span>1인 가구</span>
+							</li>
+							<li><span class="mrecommnumber">7</span> <span>영화</span></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- 모바일 추천 검색어 끝 -->
+		<!-- 모바일 메뉴 시작 -->
+		<div class="mmenulayer" style="display: none;">
+			<div class="mobilemenuarea">
+				<div class="mobilemenu">
+					<div class="mobilemenubox">
+						<div class="menutop">
+							<img class="mobilelogo" src="images/mobile_logo.png" /> <img
+								class="close" src="images/close.png" />
+						</div>
+					</div>
+					<!-- 로그인, 회원가입 버튼 시작 -->
+					<div class="accountbox">
+						<div class="login">
+							<img src="images/mobile_login.png" /> <span>로그인</span>
+						</div>
+						<div class="join">
+							<img src="images/mobile_join.png" /> <span>회원가입</span>
+						</div>
+					</div>
+					<div class="menubox">
+						<ul>
+							<li><span>투표리스트</span></li>
+							<li><span>투표만들기</span></li>
+							<li><span>투표양식</span></li>
+							<li><span>고객센터</span></li>
+							<li><span>폴앤톡 mall</span></li>
+							<li><span>마이페이지</span></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- 모바일 메뉴 끝 -->
+		<!-- 로그인 팝업 시작 -->
+		<div class="layerarea" style="display: none">
+			<div class="layerbox">
+				<div class="popuparea">
+					<div class="popupbox">
+						<div class="popcontxtarea">
+							<div class="popuplogo">
+								<img src="images/close.png" />
+							</div>
+						</div>
+						<div class="popcontxtarea">
+							<div class="popcontxtbox">
+								<div class="inputer">
+									<input type="text" value="이메일주소" /> <img src="images/init.png" />
+								</div>
+							</div>
+						</div>
+						<div class="popcontxtarea">
+							<div class="popcontxtbox">
+								<div class="inputer">
+									<input type="text" value="비밀번호" style="display: block;" /> <input
+										type="password" style="display: none;" /> <img
+										src="images/init.png" />
+								</div>
+							</div>
+						</div>
+						<div class="popcontxtarealspace">
+							<div class="popcontxtbox">
+								<input id="saveid" type="checkbox" /> <label for="saveid"><span>아이디
+										저장</span></label>
+							</div>
+						</div>
+						<div class="popcontxtarea">
+							<div class="popcontxtbox">
+								<div class="loginbutton">
+									<span>로그인</span>
+								</div>
+							</div>
+						</div>
+						<div class="popcontxtarea lspace">
+							<div class="linkbox">
+								<div class="linkitem normal">
+									<span>아이디 찾기</span>
+								</div>
+								<div class="linkline"></div>
+								<div class="linkitem long">
+									<span>비밀번호 찾기</span>
+								</div>
+								<div class="linkline"></div>
+								<div class="linkitem short">
+									<span>회원가입</span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- 로그인 팝업 끝 -->
+		<!-- 회원가입 팝업 시작 -->
+		<div class="layerarea" style="display: none">
+			<div class="layerbox">
+				<div class="popuparea">
+					<div class="popupbox">
+						<div class="popcontxtarea">
+							<div class="popcontxtbox popcontxttitle">
+								<span>회원가입</span> <img src="images/close.png" />
+							</div>
+						</div>
+						<div class="popcontxtarea">
+							<div class="popcontxtbox">
+								<div class="inputer">
+									<input type="text" value="이메일주소" />
+								</div>
+							</div>
+						</div>
+						<div class="popcontxtarea">
+							<div class="popcontxtbox">
+								<div class="inputer">
+									<input type="text" value="비밀번호" style="display: block;" /> <input
+										type="password" style="display: none;" />
+								</div>
+							</div>
+						</div>
+						<div class="popcontxtarea">
+							<div class="popcontxtbox">
+								<div class="inputer">
+									<input type="text" value="비밀번호 확인" style="display: block;" />
+									<input type="password" style="display: none;" />
+								</div>
+							</div>
+						</div>
+						<div class="popcontxtarea">
+							<div class="popcontxtbox">
+								<div class="inputer">
+									<input type="text" value="이름" style="display: block;" />
+								</div>
+							</div>
+						</div>
+						<div class="popcontxtarea">
+							<div class="popcontxtbox">
+								<div class="inputer">
+									<input type="text" value="닉네임" style="display: block;" />
+								</div>
+							</div>
+						</div>
+						<div class="popcontxtarea">
+							<div class="popcontxtbox">
+								<div class="shortinputer">
+									<input type="text" value="생년월일" style="display: block;" /> <input
+										type="radio" id="female" name="sex" /> <label for="male">
+										<span>여자</span>
+									</label> <input type="radio" id="male" name="sex" /> <label for="male">
+										<span>남자</span>
+									</label>
+								</div>
+							</div>
+						</div>
+						<div class="popcontxtarea">
+							<div class="linkbox">
+								<div class="linkitem short">
+									<span>이용약관</span>
+								</div>
+								<div class="linkline"></div>
+								<div class="linkitem longlong">
+									<span>개인정보처리방침</span>
+								</div>
+								<div class="linkitem shortshort">
+									<input type="checkbox" class="agree" id="agree" /> <label
+										for="agree"> <span>동의</span>
+									</label>
+								</div>
+							</div>
+						</div>
+						<div class="popcontxtarea">
+							<div class="popcontxtbox">
+								<div class="popupbutton">
+									<span>회원가입</span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- 회원가입 팝업 끝 -->
+	</div>
+</body>
+</html>

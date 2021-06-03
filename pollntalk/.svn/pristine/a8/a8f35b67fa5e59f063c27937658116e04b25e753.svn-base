@@ -1,0 +1,107 @@
+<?php
+/**
+ *  @auth   : JY JEON
+ *  @date   : 20201123
+ *  구독 신청 하기
+ */
+class CApp_Handler_Subscribe_Ctrl extends CCore_Lib_Routines_Handler
+{
+    public function __construct()
+    {
+    }
+    
+    public function setSubscribe($array)
+    {
+        $targetMemberSeq    = $array["subscribe_member_seq"];
+        $query              = "SELECT COUNT(*) AS CNT FROM SUBSCRIBE_VOTE_LIST WHERE USER_SEQ = :USER_SEQ";
+        
+        $this->query($query);
+        $this->bind("USER_SEQ", $targetMemberSeq);
+        $result = $this->execute(CCore_Lib_Routines_Handler::SELECT);
+        
+        if (intval($result[0]["CNT"]) > 0)
+            return -1;
+        
+        $query  = "INSERT INTO SUBSCRIBE_VOTE_LIST
+                    (
+                      MEMBER_SEQ,
+                      USER_SEQ
+                    )
+                    VALUES
+                    (
+                      :MEMBER_SEQ,
+                      :USER_SEQ
+                    )";
+        
+        
+        $this->query($query);
+        $this->bind("MEMBER_SEQ", $_SESSION["member_seq"]);
+        $this->bind("USER_SEQ", $targetMemberSeq);
+        $result = $this->execute(CCore_Lib_Routines_Handler::INSERT);
+        
+        if (! $result)
+            return false;
+            
+        return true;
+    }
+    
+    /*
+     *  받은 메시지 개수
+     */
+    public function getSubscribeListToYouCount($keyword)
+    {
+        $query  = "SELECT COUNT(*) AS CNT FROM SUBSCRIBE_VOTE_LIST WHERE USER_SEQ = :USER_SEQ";
+        
+        $this->query($query);
+        $this->bind("USER_SEQ", $_SESSION["member_seq"]);
+        
+        $result     = $this->execute(CCore_Lib_Routines_Handler::SELECT);
+        
+        return $result[0]["CNT"];
+    }
+    
+    /*
+     *  받은 메시지 조회
+     */
+    public function getRecvMessageListToYou($keyword, $paging)
+    {
+        $query  = "SELECT
+                        MESSAGE_SEQ,
+                        MESSAGE_TYPE,
+                        SENDER,
+                        CASE WHEN B.member_seq IS NOT NULL THEN B.nname
+                    		 WHEN SENDER IS NULL           THEN '관리자'
+                    		 ELSE ''
+                        END AS NNAME,
+                    	CASE WHEN B.member_seq IS NOT NULL THEN B.pic
+                    		 WHEN SENDER IS NULL	       THEN 'app/images/admin/admin.png'
+                    		 ELSE ''
+                        END AS PIC,
+                        RECVER,
+                        VIEW_CHECK,
+                        MESSAGE_POS,
+                        MESSAGE_CONTEXT,
+                        MESSAGE_REF_URL,
+                        MESSAGE_REGI_DATE
+                    FROM
+                        MESSAGE A
+                        LEFT JOIN
+                        MEMBER B
+                        ON A.SENDER = B.member_seq
+                    WHERE
+                        A.RECVER = :RECVER
+                    ORDER BY MESSAGE_SEQ DESC
+                    LIMIT :start, :length";
+        
+        $this->query($query);
+        $start = (((integer) $paging["current"]) - 1) * 15; // 현재 페이지의 시작 항목
+        $this->bind("start", $start);
+        $this->bind("length", 15);
+        $this->bind("RECVER", $_SESSION["member_seq"]);
+        
+        $result     = $this->execute(CCore_Lib_Routines_Handler::SELECT);
+        
+        return $result;
+    }
+}
+?>

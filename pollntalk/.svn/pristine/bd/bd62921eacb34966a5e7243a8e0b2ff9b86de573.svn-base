@@ -1,0 +1,341 @@
+<?php
+?>
+<div class="messagebuttonbox">
+	<button class="messagebutton">
+		<span>답장</span>
+	</button>
+	<button class="messagebutton">
+		<span>삭제</span>
+	</button>
+</div>
+<!-- 쪽지 버튼 영역 끝 -->
+<!-- 쪽지 게시판 시작  -->
+<div class="board">
+	<!-- 쪽지 필드 시작 -->
+	<div class="boardfieldbox">
+		<div class="larealong">
+			<div class="boardcheckbox">
+				<input type="checkbox" />
+			</div>
+			<div class="boardmember">
+				<span>보낸 사람</span>
+			</div>
+		</div>
+		<div class="rareashort">
+			<div class="boardtitle">
+				<span>내용</span>
+			</div>
+			<div class="boarddate">
+				<span>날짜</span>
+			</div>
+			<div class="boardbutton">
+				<span>차단</span>
+			</div>
+		</div>
+	</div>
+	<!-- 쪽지 필드 끝 -->
+	<!-- 쪽지 게시판 목록 시작 -->
+	<div class="boardlist">
+		<!-- 쪽지 게시판 목록 시작 -->
+		<ul>
+			<li>
+				<div class="larealong">
+					<div class="boardcheckbox">
+						<input type="checkbox" />
+					</div>
+					<div class="boardmember">
+						<img src="images/thumb_sample.png" /> <span>폴앤톡관리자</span>
+					</div>
+					<div class="boarddate mview">
+						<span>2020.07.04</span>
+					</div>
+				</div>
+				<div class="rareashort">
+					<div class="boardtitle">
+						<span>안녕하세요. 폴앤톡 관리자입니다.</span>
+					</div>
+					<div class="boarddate wview">
+						<span>2020.07.04</span>
+					</div>
+					<div class="boardbutton">
+						<button class="messagebutton">
+							<span>차단</span>
+						</button>
+					</div>
+				</div>
+			</li>
+			<li>
+				<div class="larealong">
+					<div class="boardcheckbox">
+						<input type="checkbox" />
+					</div>
+					<div class="boardmember">
+						<img src="images/thumb_sample.png" /> <span>폴앤톡관리자</span>
+					</div>
+					<div class="boarddate mview">
+						<span>2020.07.04</span>
+					</div>
+				</div>
+				<div class="rareashort">
+					<div class="boardtitle">
+						<span>안녕하세요. 폴앤톡 관리자입니다.</span>
+					</div>
+					<div class="boarddate wview">
+						<span>2020.07.04</span>
+					</div>
+					<div class="boardbutton">
+						<button class="messagebutton">
+							<span>차단</span>
+						</button>
+					</div>
+				</div>
+			</li>
+			<li>
+				<div class="larealong">
+					<div class="boardcheckbox">
+						<input type="checkbox" />
+					</div>
+					<div class="boardmember">
+						<img src="images/thumb_sample.png" /> <span>폴앤톡관리자</span>
+					</div>
+					<div class="boarddate mview">
+						<span>2020.07.04</span>
+					</div>
+				</div>
+				<div class="rareashort">
+					<div class="boardtitle">
+						<span>안녕하세요. 폴앤톡 관리자입니다.</span>
+					</div>
+					<div class="boarddate wview">
+						<span>2020.07.04</span>
+					</div>
+					<div class="boardbutton">
+						<button class="messagebutton">
+							<span>차단</span>
+						</button>
+					</div>
+				</div>
+			</li>
+			<li>
+				<div class="larealong">
+					<div class="boardcheckbox">
+						<input type="checkbox" />
+					</div>
+					<div class="boardmember">
+						<img src="images/thumb_sample.png" /> <span>폴앤톡관리자</span>
+					</div>
+					<div class="boarddate mview">
+						<span>2020.07.04</span>
+					</div>
+				</div>
+				<div class="rareashort">
+					<div class="boardtitle">
+						<span>안녕하세요. 폴앤톡 관리자입니다.</span>
+					</div>
+					<div class="boarddate wview">
+						<span>2020.07.04</span>
+					</div>
+					<div class="boardbutton">
+						<button class="messagebutton">
+							<span>차단</span>
+						</button>
+					</div>
+				</div>
+			</li>
+			<li>
+				<div class="larealong">
+					<div class="boardcheckbox">
+						<input type="checkbox" />
+					</div>
+					<div class="boardmember">
+						<img src="images/thumb_sample.png" /> <span>폴앤톡관리자</span>
+					</div>
+					<div class="boarddate mview">
+						<span>2020.07.04</span>
+					</div>
+				</div>
+				<div class="rareashort">
+					<div class="boardtitle">
+						<span>안녕하세요. 폴앤톡 관리자입니다.</span>
+					</div>
+					<div class="boarddate wview">
+						<span>2020.07.04</span>
+					</div>
+					<div class="boardbutton">
+						<button class="messagebutton">
+							<span>차단</span>
+						</button>
+					</div>
+				</div>
+			</li>
+			<li>
+				<div class="larealong">
+					<div class="boardcheckbox">
+						<input type="checkbox" />
+					</div>
+					<div class="boardmember">
+						<img src="images/thumb_sample.png" /> <span>폴앤톡관리자</span>
+					</div>
+					<div class="boarddate mview">
+						<span>2020.07.04</span>
+					</div>
+				</div>
+				<div class="rareashort">
+					<div class="boardtitle">
+						<span>안녕하세요. 폴앤톡 관리자입니다.</span>
+					</div>
+					<div class="boarddate wview">
+						<span>2020.07.04</span>
+					</div>
+					<div class="boardbutton">
+						<button class="messagebutton">
+							<span>차단</span>
+						</button>
+					</div>
+				</div>
+			</li>
+			<li>
+				<div class="larealong">
+					<div class="boardcheckbox">
+						<input type="checkbox" />
+					</div>
+					<div class="boardmember">
+						<img src="images/thumb_sample.png" /> <span>폴앤톡관리자</span>
+					</div>
+					<div class="boarddate mview">
+						<span>2020.07.04</span>
+					</div>
+				</div>
+				<div class="rareashort">
+					<div class="boardtitle">
+						<span>안녕하세요. 폴앤톡 관리자입니다.</span>
+					</div>
+					<div class="boarddate wview">
+						<span>2020.07.04</span>
+					</div>
+					<div class="boardbutton">
+						<button class="messagebutton">
+							<span>차단</span>
+						</button>
+					</div>
+				</div>
+			</li>
+			<li>
+				<div class="larealong">
+					<div class="boardcheckbox">
+						<input type="checkbox" />
+					</div>
+					<div class="boardmember">
+						<img src="images/thumb_sample.png" /> <span>폴앤톡관리자</span>
+					</div>
+					<div class="boarddate mview">
+						<span>2020.07.04</span>
+					</div>
+				</div>
+				<div class="rareashort">
+					<div class="boardtitle">
+						<span>안녕하세요. 폴앤톡 관리자입니다.</span>
+					</div>
+					<div class="boarddate wview">
+						<span>2020.07.04</span>
+					</div>
+					<div class="boardbutton">
+						<button class="messagebutton">
+							<span>차단</span>
+						</button>
+					</div>
+				</div>
+			</li>
+			<li>
+				<div class="larealong">
+					<div class="boardcheckbox">
+						<input type="checkbox" />
+					</div>
+					<div class="boardmember">
+						<img src="images/thumb_sample.png" /> <span>폴앤톡관리자</span>
+					</div>
+					<div class="boarddate mview">
+						<span>2020.07.04</span>
+					</div>
+				</div>
+				<div class="rareashort">
+					<div class="boardtitle">
+						<span>안녕하세요. 폴앤톡 관리자입니다.</span>
+					</div>
+					<div class="boarddate wview">
+						<span>2020.07.04</span>
+					</div>
+					<div class="boardbutton">
+						<button class="messagebutton">
+							<span>차단</span>
+						</button>
+					</div>
+				</div>
+			</li>
+			<li>
+				<div class="larealong">
+					<div class="boardcheckbox">
+						<input type="checkbox" />
+					</div>
+					<div class="boardmember">
+						<img src="images/thumb_sample.png" /> <span>폴앤톡관리자</span>
+					</div>
+					<div class="boarddate mview">
+						<span>2020.07.04</span>
+					</div>
+				</div>
+				<div class="rareashort">
+					<div class="boardtitle">
+						<span>안녕하세요. 폴앤톡 관리자입니다.</span>
+					</div>
+					<div class="boarddate wview">
+						<span>2020.07.04</span>
+					</div>
+					<div class="boardbutton">
+						<button class="messagebutton">
+							<span>차단</span>
+						</button>
+					</div>
+				</div>
+			</li>
+		</ul>
+		<!-- 쪽지 게시판 목록 끝 -->
+		<!-- 페이징 시작 -->
+		<div class="paging">
+			<div class="pagingbutton pageleft pagenavinoselect"></div>
+			<div class="pagingbutton">
+				<span>1</span>
+			</div>
+			<div class="pagingbutton pageselect">
+				<span>2</span>
+			</div>
+			<div class="pagingbutton">
+				<span>3</span>
+			</div>
+			<div class="pagingbutton">
+				<span>4</span>
+			</div>
+			<div class="pagingbutton">
+				<span>5</span>
+			</div>
+			<div class="pagingbutton">
+				<span>6</span>
+			</div>
+			<div class="pagingbutton">
+				<span>7</span>
+			</div>
+			<div class="pagingbutton">
+				<span>8</span>
+			</div>
+			<div class="pagingbutton">
+				<span>9</span>
+			</div>
+			<div class="pagingbutton">
+				<span>10</span>
+			</div>
+			<div class="pagingbutton pageright pagenaviselect"></div>
+		</div>
+		<!-- 페이징 끝 -->
+	</div>
+	<!-- 쪽지 게시판 목록 영역 끝 -->
+</div>

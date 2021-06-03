@@ -1,0 +1,93 @@
+<?php
+/**
+ *  @auth   : JEON JY
+ *  @date   : 20200905
+ *  투표 응답 처리
+ */
+class CApp_Handler_Vote_Respctrl extends CCore_Lib_Routines_Handler
+{
+    public function __construct()
+    {
+    }
+    
+    /*
+     *  투표 응답 정보 저장
+     */
+    public function registerVoteRespInfo($array)
+    {
+        //print_r($array);
+        //exit;
+        $vate_seq               = $array["vote_seq"];
+        $question_seqs          = $array["question_seq"];
+        $question_indexs        = $array["question_index"];
+        $question_resp_types    = $array["question_resp_types"];
+        
+        $query      = "INSERT INTO VOTE_RESP_LOG
+                        (
+                          VOTE_SEQ,
+                          VOTE_QUESTION_SEQ,
+                          VOTE_QUESTION_RESP_TYPE,
+                          VOTE_QUESTION_INDEX,
+                          VOTE_ANSWER_SELECT_SEQ,
+                          VOTE_MEMBER_SEQ,
+                          VOTE_RESP_REGI_DATE
+                        )
+                        VALUES
+                        (
+                          :VOTE_SEQ,
+                          :VOTE_QUESTION_SEQ,
+                          :VOTE_QUESTION_RESP_TYPE,
+                          :VOTE_QUESTION_INDEX,
+                          :VOTE_ANSWER_SELECT_SEQ,
+                          :VOTE_MEMBER_SEQ
+                        );";
+        
+        for($i = 0; $i < count($question_seqs); $i++)
+        {
+            $questionSeq            = $question_seqs[$i];
+            $questionIndex          = $question_indexs[$i];
+            $question_resp_type     = $question_resp_types[$i];
+            $questionAnswer         = $array["answer_".$questionIndex];
+            
+            $this->query($query);
+            $this->bind("VOTE_SEQ", $vate_seq);
+            $this->bind("VOTE_QUESTION_SEQ", $questionSeq);
+            $this->bind("VOTE_QUESTION_RESP_TYPE", $question_resp_type);
+            $this->bind("VOTE_QUESTION_INDEX", $questionIndex);
+            $this->bind("VOTE_ANSWER_SELECT_SEQ", $questionAnswer);
+            $this->bind("VOTE_MEMBER_SEQ", $_SESSION["member_seq"]);
+            
+            $result = $this->execute(CCore_Lib_Routines_Handler::INSERT);
+            if (! $result)
+                return false;
+        }
+        
+        return true;
+    }
+    
+    public function getVoteResult($vote_seq)
+    {
+        $query  = "SELECT 
+                        VOTE_RESP_SEQ,
+                        VOTE_SEQ,
+                        VOTE_QUESTION_SEQ,
+                        VOTE_QUESTION_RESP_TYPE,
+                        VOTE_QUESTION_INDEX,
+                        VOTE_ANSWER_SELECT_SEQ,
+                        VOTE_MEMBER_SEQ,
+                        VOTE_RESP_REGI_DATE
+                    FROM 
+                        VOTE_RESP_LOG
+                    WHERE 
+                        VOTE_SEQ = :VOTE_SEQ;";
+        
+        $this->query($query);
+        $this->bind("VOTE_SEQ", $vote_seq);
+        
+        $result = $this->execute(CCore_Lib_Routines_Handler::SELECT);
+        if (! $result)
+            return false;
+        
+        return $result;
+    }
+}

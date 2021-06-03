@@ -1,0 +1,12 @@
+<?php
+/*
+ * 메인 css
+ */
+?>
+<link type="text/css" rel="stylesheet" href="/app/css/main.css?v=1.1" />
+<link type="text/css" rel="stylesheet"
+	href="/app/css/category.css?v=1.1" />
+<link type="text/css" rel="stylesheet"
+	href="/app/css/voteslide.css?v=1.1" />
+<link type="text/css" rel="stylesheet" href="/app/css/vote.css?v=1.0" />
+<link type="text/css" rel="stylesheet" href="/app/css/list.css" />

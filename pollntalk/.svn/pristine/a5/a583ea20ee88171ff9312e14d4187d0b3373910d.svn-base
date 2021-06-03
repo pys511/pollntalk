@@ -1,0 +1,10 @@
+<?php
+?>
+<link type="text/css" rel="stylesheet" href="/app/css/sub.css" />
+<link type="text/css" rel="stylesheet"
+	href="/app/css/category.css?v=1.1" />
+<link type="text/css" rel="stylesheet" href="/app/css/customer.css" />
+<link type="text/css" rel="stylesheet" href="/app/css/tabmenu.css" />
+<link type="text/css" rel="stylesheet" href="/app/css/list.css" />
+<link type="text/css" rel="stylesheet" href="/app/css/paging.css" />
+<link type="text/css" rel="stylesheet" href="/app/css/boardview.css" />

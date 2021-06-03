@@ -1,0 +1,182 @@
+﻿@CHARSET "UTF-8";
+
+/*
+ *	-----------------------------------
+ *	텝메뉴
+ *	-----------------------------------
+ */
+.tabmenu, .tabbuttonbox, .tabbuttonon, .tabbuttonoff, .tabcontent,
+	.tabitem, .tabitemmark, .tabitemtxt, .tabitem span {
+	float: left;
+}
+
+.tabmenu, .tabbuttonon, .tabbuttonoff, .tabitemmark, .tabitemtxt,
+	.tabitem span {
+	width: 100%;
+}
+
+/*
+ *	tab 버튼
+ */
+.tabmenu {
+	background-color: #fafafa;
+	margin-bottom: 50px;
+}
+
+.tabbuttonon, .tabbuttonoff, .tabempty {
+	outline: none;
+	border: none;
+	border-radius: 0px;
+	height: 100%;
+}
+
+.tabbuttonon {
+	background-color: #ffffff;
+	border-top: 1px #1c9cd9 solid;
+	border-right: 1px #1c9cd9 solid;
+	border-left: 1px #1c9cd9 solid;
+}
+
+.tabbuttonoff {
+	border-top: 1px #d9d9d9 solid;
+	border-right: 1px #d9d9d9 solid;
+	border-bottom: 1px #1c9cd9 solid;
+}
+
+.tabempty {
+	border-bottom: 1px #1c9cd9 solid;
+}
+
+.tabbuttonbox span {
+	font-weight: bold;
+}
+
+.disabletitle {
+	color: #cccccc;
+}
+
+.tabitem {
+	text-align: center;
+	font-size: 1.0625rem;
+	width: 235px;
+	height: 230px;
+}
+
+.taboff {
+	background-color: #fafafa;
+}
+
+.tabon {
+	background-color: #1c9cd9;
+}
+
+.taboff span {
+	color: #666666;
+}
+
+.tabon span {
+	color: #ffffff;
+}
+
+.tabbuttonon, .tabbuttonoff {
+	text-align: center;
+}
+
+/*
+ *	-----------------------------------
+ *	1024 이상 화면
+ *	-----------------------------------
+ */
+@media screen and (min-width:1025px) {
+	/*
+	 *	tab 버튼
+	 */
+	.tabbuttonbox {
+		height: 55px;
+	}
+	.tabitem {
+		margin-right: 28px;
+		margin-top: 20px;
+	}
+	.tdefaultspace {
+		padding-top: 50px;
+	}
+	.ttopspace {
+		padding-top: 20px;
+	}
+}
+
+/*
+ *	-----------------------------------
+ *	800 이상 1024 이하 화면
+ *	-----------------------------------
+ */
+@media screen and (min-width:801px) and (max-width:1024px) {
+	/*
+	 *	tab 버튼
+	 */
+	.tabitem {
+		margin-right: 45px;
+		margin-top: 25px;
+	}
+	.tdefaultspace {
+		padding-top: 50px;
+	}
+	.ttopspace {
+		padding-top: 20px;
+	}
+}
+
+/*
+ *	-----------------------------------
+ *	800 이상 화면
+ *	-----------------------------------
+ */
+@media screen and (min-width:801px) {
+	/*
+	 *	tab 버튼
+	 */
+	.tabbuttonbox {
+		height: 55px;
+	}
+	.tabbuttonbox span {
+		font-size: 1.125rem;
+	}
+}
+
+/*	
+ *	-----------------------------------
+ *	800 이하 화면
+ *	-----------------------------------
+ */
+@media screen and (max-width:800px) {
+	/*
+	 *	tab 버튼
+	 */
+	.tabcontent {
+		width: 100%;
+	}
+	.tabbuttonbox {
+		width: 100%;
+	}
+	.tabitem {
+		margin-left: 65px;
+		margin-right: 0px;
+		margin-top: 25px;
+	}
+	.tdefaultspace {
+		padding-top: 50px;
+	}
+	.ttopspace {
+		padding-top: 20px;
+	}
+	.tabbuttonbox {
+		height: 55px;
+	}
+	.tabbuttonbox span {
+		font-size: 1.1875rem;
+	}
+	.tabempty, .tabemptybox {
+		display: none;
+	}
+}

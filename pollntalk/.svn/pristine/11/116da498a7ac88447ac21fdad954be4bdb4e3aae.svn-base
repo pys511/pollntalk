@@ -1,0 +1,245 @@
+<?php
+/**
+ *  @auth   : 
+ *  @date   : 
+ *  
+ */
+
+try {
+    // 공지 사항 처리
+    $num = $_GET["num"];
+    
+    if($num != ""){
+        $ask = new CApp_Handler_Admin_board();
+        $result = $ask->getBoardContext("notice", $num);
+    }
+} catch (CException $ex) {
+    $ex->printException();
+}
+
+
+
+?>
+<!doctype html>
+<html id="start" xmlns="http://www.w3.org/1999/xhtml">
+<?php
+require_once ('./app/view/admin/header.php');
+?>
+
+<body id="body">
+	<div id="mobilemenu" class="mobileMenu" style="display: none;">
+		<!-- 서브메뉴 -->
+	</div>
+	<div class="pageArea">
+<?php
+require_once ('./app/view/admin/common.php');
+?>	
+		<div id="content" class="pageBox">
+			<!-- content -->
+			<div class="contentArea">
+<?php
+require_once ('./app/view/admin/submenu.php');
+?>
+        		<!-- 컨탠츠 -->
+				<div class="contentBox">
+					<form id="frmRegisterBoard" action="/?request=admin" method="post">
+						<div class="boardTitle">
+							<img src="/app/images/admin/title_mark.gif" /> 
+							<span>공지사항 작성</span>
+						</div>
+						<!-- 관리자 등록 -->
+						<div class="boardBox">
+							<input type="hidden" id="board_seq" name="board_seq" /> 
+							<input type="hidden" id="board_type" name="board_type" /> 
+							<input type="hidden" id="board_kind" name="board_kind" />
+							<div class="boardWriteItem">
+								<div class="boardName">
+									<span>제목</span>
+								</div>
+								<div class="boardInputBox">
+									<input id="notice_title" name="notice_title" type="text" class="longInput" value = "<?php if($num != ""){echo($result[0]["subject"]);}else{}?>">
+								</div>
+							</div>
+							<div class="boardWriteItem">
+								<div class="boardName">
+									<span>내용</span>
+								</div>
+								<div class="boardContextBox" id="context">
+									<div class="subContentWriteControl">
+										<div class="buttonFontGroup">
+											<div class="contentListButton">
+												<select size="1" id="selFontName" onChange="selectFontName('objTextEdit', 'selFontName')">
+													<option value="굴림">굴림</option>
+													<option value="궁서">궁서</option>
+													<option value="돋움">돋움</option>
+													<option value="바탕">바탕</option>
+												</select>
+											</div>
+											<div class="contentListButton">
+												<select size="1" id="selFontSize" onChange="selectFontSize('objTextEdit', 'selFontSize')">
+													<option value="8">8pt</option>
+													<option value="9">9pt</option>
+													<option value="10">10pt</option>
+													<option value="12">12pt</option>
+													<option value="14">14pt</option>
+													<option value="18">18pt</option>
+													<option value="24">24pt</option>
+													<option value="36">36pt</option>
+												</select>
+											</div>
+										</div>
+										<div class="buttonStyleGroup">
+											<div class="contentListButton">
+												<img class="buttonLeft" src="/app/images/buttonBack_01.gif" alt="버튼 테두리" />
+												<div class="buttonText">
+													<a href="javascript:setEditCommand('objTextEdit', 'Bold')">
+														<span style="font-weight: bold;">가</span>
+													</a>
+												</div>
+												<img class="buttonRight" src="/app/images/buttonBack_03.gif" alt="버튼 테두리" />
+											</div>
+											<div class="contentListButton">
+												<img class="buttonLeft" src="/app/images/buttonBack_01.gif" alt="버튼 테두리" />
+												<div class="buttonText">
+													<a href="javascript:setEditCommand('objTextEdit', 'Underline')">
+														<span style="text-decoration: underline;">가</span>
+													</a>
+												</div>
+												<img class="buttonRight" src="/app/images/buttonBack_03.gif" alt="버튼 테두리" />
+											</div>
+											<div class="contentListButton">
+												<img class="buttonLeft" src="/app/images/buttonBack_01.gif" alt="버튼 테두리" />
+												<div class="buttonText">
+													<a href="javascript:setEditCommand('objTextEdit', 'Italic')">
+														<span style="font-style: italic;">가</span>
+													</a>
+												</div>
+												<img class="buttonRight" src="/app/images/buttonBack_03.gif" alt="버튼 테두리" />
+											</div>
+											<div class="contentListButton">
+												<img class="buttonLeft" src="/app/images/buttonBack_01.gif" alt="버튼 테두리" />
+												<div class="buttonText">
+													<a href="javascript:setEditCommand('objTextEdit', 'strikeThrough')">
+														<span style="text-decoration: line-through">가</span>
+													</a>
+												</div>
+												<img class="buttonRight" src="/app/images/buttonBack_03.gif" alt="버튼 테두리" />
+											</div>
+										</div>
+										<div class="buttonContextGroup">
+											<div class="contentListButton">
+												<img class="buttonLeft" src="/app/images/buttonBack_01.gif" alt="버튼 테두리" />
+												<div class="buttonText">
+													<a href="javascript:setEditCommand('objTextEdit', 'JustifyLeft')">
+														<img class="buttonContextShort" src="/app/images/button_14.gif" alt="문단 버튼" /> 
+														<img class="buttonContextLarge" src="/app/images/button_14_01.gif" alt="문단 버튼" />
+													</a>
+												</div>
+												<img class="buttonRight" src="/app/images/buttonBack_03.gif" alt="버튼 테두리" />
+											</div>
+											<div class="contentListButton">
+												<img class="buttonLeft" src="/app/images/buttonBack_01.gif" alt="버튼 테두리" />
+												<div class="buttonText">
+													<a href="javascript:setEditCommand('objTextEdit', 'JustifyCenter')">
+														<img class="buttonContextShort" src="/app/images/button_15.gif" alt="문단 버튼" /> 
+														<img class="buttonContextLarge" src="/app/images/button_15_01.gif" alt="문단 버튼" />
+													</a>
+												</div>
+												<img class="buttonRight" src="/app/images/buttonBack_03.gif" alt="버튼 테두리" />
+											</div>
+											<div class="contentListButton">
+												<img class="buttonLeft" src="/app/images/buttonBack_01.gif"
+													alt="버튼 테두리" />
+												<div class="buttonText">
+													<a href="javascript:setEditCommand('objTextEdit', 'JustifyRight')">
+														<img class="buttonContextShort" src="/app/images/button_16.gif" alt="문단 버튼" /> 
+														<img class="buttonContextLarge" src="/app/images/button_16_01.gif" alt="문단 버튼" />
+													</a>
+												</div>
+												<img class="buttonRight" src="/app/images/buttonBack_03.gif" alt="버튼 테두리" />
+											</div>
+										</div>
+										<div class="buttonExtraGroup">
+											<div class="contentListButton">
+												<img class="buttonLeft" src="/app/images/buttonBack_01.gif" alt="버튼 테두리" /> 
+												<a href="javascript:insertForeColor('objTextEdit')"> 
+												<img src="/app/images/button_18.png" alt="글자색" />
+												</a> 
+												<img class="buttonRight" src="/app/images/buttonBack_03.gif" alt="버튼 테두리" />
+											</div>
+											<div class="contentListButton">
+												<img class="buttonLeft" src="/app/images/buttonBack_01.gif" alt="버튼 테두리" /> 
+												<a href="javascript:insertBackColor('objTextEdit')"> 
+												<img src="/app/images/button_19.png" alt="배경색" />
+												</a> 
+												<img class="buttonRight" src="/app/images/buttonBack_03.gif" alt="버튼 테두리" />
+											</div>
+										</div>
+										<div class="buttonExtraGroup">
+											<div class="contentListButton">
+												<img class="buttonLeft" src="/app/images/buttonBack_01.gif" alt="버튼 테두리" />
+												<div class="buttonText">
+													<a href="javascript:setEditCommand('objTextEdit', 'createLink')">
+														<span style="font-weight: bold;">URL</span>
+													</a>
+												</div>
+												<img class="buttonRight" src="/app/images/buttonBack_03.gif" alt="버튼 테두리" />
+											</div>
+											<div class="contentListButton">
+												<img class="buttonLeft" src="/app/images/buttonBack_01.gif" alt="버튼 테두리" />
+												<div class="buttonText">
+													<a href="javascript:insertEditImage()"> 
+														<img class="buttonContextShort" src="/app/images/button_17.gif" alt="문단 버튼" /> 
+														<img class="buttonContextLarge" src="/app/images/button_17_01.gif" alt="문단 버튼" />
+													</a>
+												</div>
+												<img class="buttonRight" src="/app/images/buttonBack_03.gif" alt="버튼 테두리" />
+											</div>
+											<div class="contentListButton">
+												<img class="buttonLeft" src="/app/images/buttonBack_01.gif" alt="버튼 테두리" />
+												<div class="buttonText">
+													<span style="font-style: italic;">HTML</span>
+												</div>
+												<img class="buttonRight" src="/app/images/buttonBack_03.gif" alt="버튼 테두리" />
+											</div>
+										</div>
+
+									</div>
+									<div class="contentTextArea">
+										<iframe id="objTextEdit" name="objTextEdit" style="width: 100%; height: calc(100vh - 350px); border: 1px #BFBFBF solid;">
+										</iframe>
+									</div>
+									<input type="hidden" id="board_context" name="board_context" />
+									<input type="hidden" id="image_list" name="/app/image_list" />
+								</div>
+							</div>
+
+						</div>
+						<!-- 버튼 -->
+						<div class="boardListButtonBox">
+							<div id="registerBoard" class="buttonBox">
+								<a href="javascript:registerBoard('objTextEdit')">
+								<span class="buttonText">등록하기</span>
+								</a>
+							</div>
+						</div>
+					</form>
+				</div>
+
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript" src="/app/js/editor.js">
+	</script>
+	<script type="text/javascript">
+		var num = "<?php echo $result[0]["num"] ?>";
+		var context = "<?php echo $result[0]["context"] ?>";
+		if(num != ''){
+			setContext(context);
+		}
+	</script>
+<?php
+require_once ('./app/view/admin/footer.php');
+?>
+</body>
+</html>

@@ -1,0 +1,190 @@
+﻿@CHARSET "UTF-8";
+
+/*
+ *	-----------------------------------
+ *	게시판 보기
+ *	-----------------------------------
+ */
+.boardsubjectbox, .boardsubject, .boardcontext, .boardbuttonbox, .boardwriterbox,
+.boardbuttonleft, .memberinfo, .memberinfo span,
+.boardfilebox, .boardfilebox span
+{
+	float: left;
+}
+
+.writedate, .boardbuttonright, .viewcount, .viewcount span
+{
+	float: right;
+}
+
+.boardsubjectbox, .boardcontext, .boardbuttonbox, .boardwriterbox,
+.boardfilebox 
+{
+	width: 100%;
+}
+
+.writedate 
+{
+	width: 180px;
+	text-align: center;
+}
+
+.boardsubjectbox  
+{
+	padding: 15px 25px 15px 25px;
+}
+
+.boardcontext
+{
+	padding: 25px 25px 25px 25px;
+}
+
+.boardfilebox
+{
+	padding: 15px 15px 5px 15px;
+}
+
+.boardsubjectbox, .boardwriterbox, .boardcontext 
+{
+	border-bottom: 1px #e6e6e6 solid;
+}
+
+.boardsubjectbox 
+{
+	background-color: #f9f9f9;
+	border-top: 1px #222222 solid;
+	border-bottom: 1px #e6e6e6 solid;
+}
+
+.boardsubject 
+{
+	padding-bottom: 10px;
+}
+
+.boardwriterbox
+{
+	padding: 10px 25px 10px 25px;
+}
+
+.boardcontext 
+{
+	margin-bottom: 25px;
+}
+
+.boardviewbox
+{
+	margin: 0 auto;
+}
+
+.boardviewbox li
+{
+	padding-left: 0px;
+	padding-top: 15px;
+	padding-bottom: 15px;
+	padding-right: 0px;
+}
+
+.memberinfo, .viewcount
+{
+	width: 130px;
+}
+
+.memberinfo span
+{
+	text-align: left;
+}
+
+.viewcount span
+{
+	text-align: right;
+}
+
+.boardbuttonright 
+{
+	text-align: right;
+}
+
+.boardbuttonleft, .boardbuttonright 
+{
+	width: 45%;
+}
+
+.boardbuttonbox
+{
+	margin-bottom: 10px;
+}
+
+.boardbuttonbox button 
+{
+	border-radius: 0px;
+	background-color: #ffffff;
+	border-top: 1px #cccccc solid;
+	border-right: 1px #cccccc solid;
+	border-left: 1px #cccccc solid;
+	border-bottom: 1px #cccccc solid;
+	padding: 5px 15px 5px 15px;
+	color: #444444;
+	font-weight: bold;
+}
+
+.boardfilebox
+{
+	border: 1px #e6e6e6 solid;
+}
+
+.boardfilelist
+{
+	border-bottom: 0px; 
+}
+
+.boardfilebox .boardfiletitle
+{
+	font-weight: bold;
+	color: #444444;
+}
+
+/*
+ *	-----------------------------------
+ *	1024 이상 화면
+ *	-----------------------------------
+ */
+@media screen and (min-width:1025px) 
+{
+	.boardsubject 
+	{
+		width: 100%;
+	}
+	
+	.boardviewbox 
+	{
+		width: 1024px;
+	}
+}
+
+/*
+ *	-----------------------------------
+ *	1024 이하 화면
+ *	-----------------------------------
+ */
+@media screen and (max-width:1024px) 
+{
+	.boardsubject 
+	{
+		width: 100%;
+	}
+	
+	.boardviewbox
+	{
+		width: 90%;
+	}
+	
+	.boardviewbox 
+	{
+		width: calc(100% - 130px);
+	}
+	
+	.boardsubjectbox, .boardcontext 
+	{
+		font-size: 1.125rem;
+	}
+}

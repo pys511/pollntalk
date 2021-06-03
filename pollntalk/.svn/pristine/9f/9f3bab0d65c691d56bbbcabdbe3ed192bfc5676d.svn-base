@@ -1,0 +1,911 @@
+﻿<!doctype html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link type="text/css" rel="stylesheet" href="css/common.css" />
+<link type="text/css" rel="stylesheet"
+	media="screen and (max-width: 800px)" href="css/mobile.css" />
+<link type="text/css" rel="stylesheet" href="css/sub.css" />
+<link type="text/css" rel="stylesheet" href="css/voteview.css" />
+<link type="text/css" rel="stylesheet" href="css/reply.css" />
+<title>온라인 투표 설문 폴앤톡</title>
+</head>
+<body>
+	<div class="page">
+		<!-- 공통 상단 시작 -->
+		<div class="top">
+			<!-- 상단 로고 영역 시작 -->
+			<div class="toparea">
+				<dir class="logo" alt="폴앤톡 로고">
+					<img class="mobilemenubutton" src="images/mobile_menu.png" />
+				</dir>
+				<!-- 로그인, 회원가입 버튼 시작 -->
+				<div class="accountbox" style="display: none;">
+					<div class="login">
+						<img src="images/login.png" /> <span>로그인</span>
+					</div>
+					<div class="join">
+						<img src="images/join.png" /> <span>회원가입</span>
+					</div>
+				</div>
+				<!-- 로그인, 회원가입 버튼 끝 -->
+				<!-- 로그아웃, 회원정보 시작 -->
+				<div class="memberbox">
+					<div class="logout">
+						<img src="images/login.png" /> <span>로그아웃</span>
+					</div>
+					<div class="member">
+						<img src="images/thumb_sample_01.jpg" /> <span>폴앤톡1004</span>
+					</div>
+				</div>
+				<!-- 로그아웃, 회원정보 버튼 끝 -->
+			</div>
+			<!-- 상단 로고 영역 끝 -->
+			<!-- top 메뉴 영역 시작 -->
+			<div class="menubar">
+				<div class="menuarea">
+					<div class="menuitem">
+						<div class="menusign noselect">
+							<span>투표리스트</span>
+						</div>
+					</div>
+					<div class="menuitem">
+						<div class="menusign select">
+							<span>투표만들기</span>
+						</div>
+					</div>
+					<div class="menuitem">
+						<div class="menusign noselect">
+							<span>투표양식</span>
+						</div>
+					</div>
+					<div class="menuitem">
+						<div class="menusign noselect">
+							<span>고객센터</span>
+						</div>
+					</div>
+					<div class="menuitem">
+						<div class="menusign noselect">
+							<span>폴앤톡 mall</span>
+						</div>
+					</div>
+					<div class="menuitem">
+						<div class="menusign noselect">
+							<span>마이페이지</span>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- top 메뉴 영역 끝 -->
+			<!-- 검색 영역 시작 -->
+			<div class="searchbar">
+				<div class="searcharea">
+					<!-- 검색 입력란 시작 -->
+					<dir class="searchbox">
+						<input type="text" class="search" value="검색어를 입력하세요." />
+						<img src="images/search.png" />
+					</dir>
+					<!-- 검색 입력란 끝 -->
+					<!-- 추천 검색어 시작 -->
+					<div class="recommandsearch">
+						<span class="recommandtitle">추천검색어</span>
+						<div class="searchitem">
+							<span>코로나</span>
+						</div>
+						<div class="searchitem">
+							<span>애플</span>
+						</div>
+						<div class="searchitem">
+							<span>부동산</span>
+						</div>
+						<div class="searchitem">
+							<span>야구</span>
+						</div>
+						<div class="searchitem">
+							<span>맛집</span>
+						</div>
+						<div class="searchitem">
+							<span>1인 가구</span>
+						</div>
+						<div class="searchitem">
+							<span>영화</span>
+						</div>
+					</div>
+					<!-- 추천 검색어 끝 -->
+				</div>
+			</div>
+			<!-- 검색 영역 끝 -->
+		</div>
+		<!-- 공통 상단 끝 -->
+		<!-- 컨텐츠 시작-->
+		<div class="content">
+			<!-- 광고 베너 영역 시작 -->
+			<div class="adverbannerarea boundray">
+				<div class="adverbannerbox">
+					<img class="wad" src="images/ad_sample_01.jpg" /> <img class="mad"
+						src="images/ad_sample_m_01.png" />
+				</div>
+			</div>
+			<!-- 광고 베너 영역 끝 -->
+			<!-- 투표 보기 영역 시작 -->
+			<div class="voteview">
+				<!-- 투표 정보 보기 시작 -->
+				<div class="voteviewarea vvwbsline">
+					<div class="voteviewbox">
+						<div class="voteinfobox">
+							<img class="voteinfoimg" src="images/sample_08.jpg" />
+							<div class="voteinfo">
+								<div class="votetitle">
+									<span class="strong vvwrspace">제목 : </span> <span class="title">내
+										생애 최고의 화장품은 무엇인가요?</span>
+								</div>
+								<div class="votecate">
+									<span class="strong vvwrspace">카테고리 : </span> <span
+										class="catetext">문화 > 예술</span>
+								</div>
+								<div class="voteexplain">
+									<span class="strong vvwrspace">설명 : </span> <span
+										class="default">내생애 최고의 화장품은 무엇인가요? 내생애 최고의 화장품은 무엇인가요?
+										내생애 최고의 화장품은 무엇인가요? 내생애 최고의 화장품은 무엇인가요? 내생애 최고의 화장품은 무엇인가요? </span>
+								</div>
+								<div class="voteext">
+									<span class="strong vvwrspace">관련링크 : </span> <span
+										class="normal">www.naver.com</span>
+								</div>
+								<div class="voteext">
+									<span class="strong vvwrspace">작성자 : </span>
+									<div class="userinfo">
+										<img src="images/thumb_sample.png" /> <span class="normal">폴앤톡1004</span>
+									</div>
+								</div>
+								<div class="voteext">
+									<span class="strong vvwrspace">참여 : </span> <span
+										class="stress vvwrspace">556</span> <span
+										class="divtxt vvwrspace">/</span> <span
+										class="strong vvwrspace">댓글 : </span> <span
+										class="stress vvwrspace">589</span> <span
+										class="divtxt vvwrspace">/</span> <span
+										class="strong vvwrspace">좋아요 : </span> <span
+										class="stress vvwrspace">50</span>
+								</div>
+								<div class="voteext vvwbspace vvwbline">
+									<span class="strong vvwrspace">투표 적립 포인트 : </span> <span
+										class="stress">50</span>
+								</div>
+								<div class="votebuttonbox">
+									<button class="votebutton">
+										<span>구독</span>
+									</button>
+									<button class="votebutton">
+										<span>좋아요</span>
+									</button>
+									<button class="votebutton">
+										<span>신고</span>
+									</button>
+									<button class="stressvotebutton rpos">
+										<span>결과보기</span>
+									</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- 투표 정보 보기 끝-->
+				<!-- 투표 이벤트 정보 보기 시작 -->
+				<div class="voteviewarea vvwbsline">
+					<div class="voteviewbox">
+						<div class="voteinfobox">
+							<img class="voteinfoimg" src="images/sample_12.png" />
+							<div class="voteinfo">
+								<div class="voteext">
+									<span class="strong vvwrspace">이벤트 쿠폰 : </span> <span
+										class="normal">오페라 립틴트 한정색상 2종</span>
+								</div>
+								<div class="voteext">
+									<span class="strong vvwrspace">쿠폰 혜택: </span> <span
+										class="normal">체험하시는 분들 중 리뷰를 남겨주시는 분은 오페라 기프트 박스를 추가
+										증정</span>
+								</div>
+								<div class="voteext">
+									<span class="strong vvwrspace">쿠폰 유효 기간: </span> <span
+										class="normal">~2020년 10월 31일</span>
+								</div>
+								<div class="voteext">
+									<span class="strong vvwrspace">크폰 지급 인원: </span> <span
+										class="normal">50명</span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- 투표 이벤트 정보 보기 끝 -->
+				<!-- 투표 내용 시작 -->
+				<div class="voteviewarea">
+					<div class="voteviewbox">
+						<div class="voteviewcontext">
+							<ul>
+								<li class="awibspace">
+									<div class="voteviewcontextbox">
+										<div class="questionfieldbox">
+											<div class="questionfield">
+												<span>질문</span>
+											</div>
+											<div class="questiontext">
+												<span>내 생애 최고의 화장품은 무엇인가요?</span>
+											</div>
+											<img src="images/sample_14.png" />
+										</div>
+										<div class="answerbox">
+											<ul class="longanswer">
+												<li>
+													<div class="answeritem longitem">
+														<div class="answeritembox awibline">
+															<div class="answeritemtext">
+																<input class="agree" type="checkbox" /> <label
+																	for="nopublic"><span>LG생활건강 더 히스로리 오브 후</span></label>
+															</div>
+															<img src="images/sample_15.jpg" />
+														</div>
+													</div>
+												</li>
+												<li>
+													<div class="answeritem longitem">
+														<div class="answeritembox awibline">
+															<div class="answeritemtext">
+																<input class="agree" type="checkbox" /> <label
+																	for="nopublic"><span>LG생활건강 더 히스로리 오브 후</span></label>
+															</div>
+															<img src="images/sample_16.jpg" />
+														</div>
+													</div>
+												</li>
+												<li>
+													<div class="answeritem longitem">
+														<div class="answeritembox awibline">
+															<div class="answeritemtext">
+																<input class="agree" type="checkbox" /> <label
+																	for="nopublic"><span>LG생활건강 더 히스로리 오브 후</span></label>
+															</div>
+															<img src="images/sample_16.jpg" />
+														</div>
+													</div>
+												</li>
+												<li>
+													<div class="answeritem longitem">
+														<div class="answeritembox">
+															<div class="answeritemtext">
+																<input class="agree" type="checkbox" /> <label
+																	for="nopublic"><span>LG생활건강 더 히스로리 오브 후</span></label>
+															</div>
+															<img src="images/sample_16.jpg" />
+														</div>
+													</div>
+												</li>
+											</ul>
+										</div>
+									</div>
+								</li>
+								<li class="awibspace">
+									<div class="voteviewcontextbox">
+										<div class="questionfieldbox">
+											<div class="questionfield">
+												<span>질문</span>
+											</div>
+											<div class="questiontext">
+												<span>내 생애 최고의 화장품은 무엇인가요?</span>
+											</div>
+											<img src="images/sample_14.png" />
+										</div>
+										<div class="answerbox">
+											<ul class="shortanswer">
+												<li>
+													<div class="answeritem shortitem">
+														<div class="answeritembox">
+															<div class="answeritemtext">
+																<input class="agree" type="checkbox" /> <label
+																	for="nopublic"><span>랑콤</span></label>
+															</div>
+															<img src="images/sample_15.jpg" />
+														</div>
+													</div>
+												</li>
+												<li>
+													<div class="answeritem shortitem">
+														<div class="answeritembox">
+															<div class="answeritemtext">
+																<input class="agree" type="checkbox" /> <label
+																	for="nopublic"><span>랑콤</span></label>
+															</div>
+															<img src="images/sample_16.jpg" />
+														</div>
+													</div>
+												</li>
+												<li>
+													<div class="answeritem shortitem">
+														<div class="answeritembox">
+															<div class="answeritemtext">
+																<input class="agree" type="checkbox" /> <label
+																	for="nopublic"><span>랑콤</span></label>
+															</div>
+															<img src="images/sample_16.jpg" />
+														</div>
+													</div>
+												</li>
+												<li>
+													<div class="answeritem shortitem">
+														<div class="answeritembox">
+															<div class="answeritemtext">
+																<input class="agree" type="checkbox" /> <label
+																	for="nopublic"><span>랑콤</span></label>
+															</div>
+															<img src="images/sample_16.jpg" />
+														</div>
+													</div>
+												</li>
+											</ul>
+										</div>
+									</div>
+								</li>
+								<li class="awibspace">
+									<div class="voteviewcontextbox">
+										<div class="questionfieldbox">
+											<div class="questionfield">
+												<span>질문</span>
+											</div>
+											<div class="questiontext">
+												<span>내 생애 최고의 화장품은 무엇인가요?</span>
+											</div>
+											<img src="images/sample_14.png" />
+										</div>
+										<div class="answerbox">
+											<ul class="longanswer">
+												<li>
+													<div class="answeritem longitem">
+														<div class="textitembox">
+															<div class="answeritemtext">
+																<input class="agree" type="checkbox" /> <label
+																	for="nopublic"><span>LG생활건강 더 히스로리 오브 후</span></label>
+															</div>
+														</div>
+													</div>
+												</li>
+												<li>
+													<div class="answeritem longitem">
+														<div class="textitembox">
+															<div class="answeritemtext">
+																<input class="agree" type="checkbox" /> <label
+																	for="nopublic"><span>LG생활건강 더 히스로리 오브 후</span></label>
+															</div>
+														</div>
+													</div>
+												</li>
+												<li>
+													<div class="answeritem longitem">
+														<div class="textitembox">
+															<div class="answeritemtext">
+																<input class="agree" type="checkbox" /> <label
+																	for="nopublic"><span>LG생활건강 더 히스로리 오브 후</span></label>
+															</div>
+														</div>
+													</div>
+												</li>
+												<li>
+													<div class="answeritem longitem">
+														<div class="textitembox">
+															<div class="answeritemtext">
+																<input class="agree" type="checkbox" /> <label
+																	for="nopublic"><span>LG생활건강 더 히스로리 오브 후</span></label>
+															</div>
+														</div>
+													</div>
+												</li>
+											</ul>
+										</div>
+									</div>
+								</li>
+							</ul>
+						</div>
+						<div class="voteviewbtncont vvwbspace">
+							<div class="voteviewbuttonbox">
+								<button class="votebutton">
+									<span>응답완료</span>
+								</button>
+								<button class="stressvotebutton">
+									<span>결과보기</span>
+								</button>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- 투표 내용 끝 -->
+				<!-- 댓글 시작 -->
+				<div class="voteviewarea">
+					<div class="replybox">
+						<div class="replyfield">
+							<span>댓글 </span><span class="title">10</span>
+						</div>
+						<div class="replyinputer">
+							<textarea>여러분의 소중한 댓글을 입력해주세요.</textarea>
+							<button class="votebutton rpos">
+								<span>댓글 달기</span>
+							</button>
+						</div>
+						<div class="replylist">
+							<ul>
+								<li>
+									<div class="replyitem">
+										<div class="replytop">
+											<div class="userinfo">
+												<img src="images/thumb_sample.png" /> <span class="normal">폴앤톡1004</span>
+											</div>
+											<div class="replydate">
+												<span>2020.07.19 11:45</span>
+											</div>
+											<div class="replyctrl">
+												<span>삭제</span>
+											</div>
+										</div>
+										<div class="replybottom">
+											<span>코로나19ㅣ 북한, 여전히 확진자 0명 주장속 방역 강화 뜻 밝혀.</span>
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="replyitem">
+										<div class="replytop">
+											<div class="userinfo">
+												<img src="images/thumb_sample.png" /> <span class="normal">폴앤톡1004</span>
+											</div>
+											<div class="replydate">
+												<span>2020.07.19 11:45</span>
+											</div>
+											<div class="replyctrl">
+												<span>삭제</span>
+											</div>
+										</div>
+										<div class="replybottom">
+											<span>코로나19ㅣ 북한, 여전히 확진자 0명 주장속 방역 강화 뜻 밝혀.</span>
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="replyitem">
+										<div class="replytop">
+											<div class="userinfo">
+												<img src="images/thumb_sample.png" /> <span class="normal">폴앤톡1004</span>
+											</div>
+											<div class="replydate">
+												<span>2020.07.19 11:45</span>
+											</div>
+											<div class="replyctrl">
+												<span>삭제</span>
+											</div>
+										</div>
+										<div class="replybottom">
+											<span>코로나19ㅣ 북한, 여전히 확진자 0명 주장속 방역 강화 뜻 밝혀.</span>
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="replyitem">
+										<div class="replytop">
+											<div class="userinfo">
+												<img src="images/thumb_sample.png" /> <span class="normal">폴앤톡1004</span>
+											</div>
+											<div class="replydate">
+												<span>2020.07.19 11:45</span>
+											</div>
+											<div class="replyctrl">
+												<span>삭제</span>
+											</div>
+										</div>
+										<div class="replybottom">
+											<span>코로나19ㅣ 북한, 여전히 확진자 0명 주장속 방역 강화 뜻 밝혀.</span>
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="replyitem">
+										<div class="replytop">
+											<div class="userinfo">
+												<img src="images/thumb_sample.png" /> <span class="normal">폴앤톡1004</span>
+											</div>
+											<div class="replydate">
+												<span>2020.07.19 11:45</span>
+											</div>
+											<div class="replyctrl">
+												<span>삭제</span>
+											</div>
+										</div>
+										<div class="replybottom">
+											<span>코로나19ㅣ 북한, 여전히 확진자 0명 주장속 방역 강화 뜻 밝혀.</span>
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="replyitem">
+										<div class="replytop">
+											<div class="userinfo">
+												<img src="images/thumb_sample.png" /> <span class="normal">폴앤톡1004</span>
+											</div>
+											<div class="replydate">
+												<span>2020.07.19 11:45</span>
+											</div>
+											<div class="replyctrl">
+												<span>삭제</span>
+											</div>
+										</div>
+										<div class="replybottom">
+											<span>코로나19ㅣ 북한, 여전히 확진자 0명 주장속 방역 강화 뜻 밝혀.</span>
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="replyitem">
+										<div class="replytop">
+											<div class="userinfo">
+												<img src="images/thumb_sample.png" /> <span class="normal">폴앤톡1004</span>
+											</div>
+											<div class="replydate">
+												<span>2020.07.19 11:45</span>
+											</div>
+											<div class="replyctrl">
+												<span>삭제</span>
+											</div>
+										</div>
+										<div class="replybottom">
+											<span>코로나19ㅣ 북한, 여전히 확진자 0명 주장속 방역 강화 뜻 밝혀.</span>
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="replyitem">
+										<div class="replytop">
+											<div class="userinfo">
+												<img src="images/thumb_sample.png" /> <span class="normal">폴앤톡1004</span>
+											</div>
+											<div class="replydate">
+												<span>2020.07.19 11:45</span>
+											</div>
+											<div class="replyctrl">
+												<span>삭제</span>
+											</div>
+										</div>
+										<div class="replybottom">
+											<span>코로나19ㅣ 북한, 여전히 확진자 0명 주장속 방역 강화 뜻 밝혀.</span>
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="replyitem">
+										<div class="replytop">
+											<div class="userinfo">
+												<img src="images/thumb_sample.png" /> <span class="normal">폴앤톡1004</span>
+											</div>
+											<div class="replydate">
+												<span>2020.07.19 11:45</span>
+											</div>
+											<div class="replyctrl">
+												<span>삭제</span>
+											</div>
+										</div>
+										<div class="replybottom">
+											<span>코로나19ㅣ 북한, 여전히 확진자 0명 주장속 방역 강화 뜻 밝혀.</span>
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="replyitem">
+										<div class="replytop">
+											<div class="userinfo">
+												<img src="images/thumb_sample.png" /> <span class="normal">폴앤톡1004</span>
+											</div>
+											<div class="replydate">
+												<span>2020.07.19 11:45</span>
+											</div>
+											<div class="replyctrl">
+												<span>삭제</span>
+											</div>
+										</div>
+										<div class="replybottom">
+											<span>코로나19ㅣ 북한, 여전히 확진자 0명 주장속 방역 강화 뜻 밝혀.</span>
+										</div>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<!-- 댓글 끝 -->
+			</div>
+		</div>
+		<!-- 컨텐츠 끝-->
+		<!-- 하단 시작 -->
+		<div class="footer">
+			<!-- 하단 메뉴 시작 -->
+			<div class="footermenuarea">
+				<div class="footermenubox">
+					<div class="footermenu fspace">
+						<img class="wfootermenu" src="images/footer_menu_01.png" /> <img
+							class="mfootermenu" src="images/footer_menu_m_01.png" />
+						<div class="footermenuitem mfooterline">
+							<span class="footermenutitle">공지사항 / 이벤트</span> <span
+								class="footermenutext">폴앤톡에서 알려드리는 공지사항과 이벤트입니다.</span>
+						</div>
+					</div>
+					<div class="footermenu fspace">
+						<img class="wfootermenu" src="images/footer_menu_02.png" /> <img
+							class="mfootermenu" src="images/footer_menu_m_02.png" />
+						<div class="footermenuitem mfooterline">
+							<span class="footermenutitle">자주하는<br />질문
+							</span> <span class="footermenutext">폴앤톡에 대한 정보가 궁금하다면 이용해주세요.</span>
+						</div>
+					</div>
+					<div class="footermenu">
+						<img class="wfootermenu" src="images/footer_menu_03.png" /> <img
+							class="mfootermenu" src="images/footer_menu_m_03.png" />
+						<div class="footermenuitem">
+							<span class="footermenutitle">서비스요청 / 에러신고</span> <span
+								class="footermenutext">필요한 서비스/기능이나 에러가 있으면 알려주세요.</span>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- 하단 메뉴 끝 -->
+			<!-- 하단 공통 시작 -->
+			<div class="footercommonarea">
+				<div class="footercommonbox">
+					<img src="images/footer_logo.png" />
+					<div class="footercommon">
+						<!-- 하단 안내 메뉴 시작 -->
+						<div class="footerlayer">
+							<div class="footerguidemenu">
+								<span class="glspace grspace">서비스 소개</span> <span
+									class="grspace">이용약관</span> <span class="grspace">개인정보처리방침</span>
+								<span class="grspace">이메일 무단수집거부</span> <span>책임의 한계와
+									법적고지</span>
+							</div>
+						</div>
+						<!-- 하단 안내 메뉴 끝 -->
+						<!-- 하단 안내 시작 -->
+						<div class="footerlayer">
+							<div class="footerguidebox">
+								<div class="footerguide">
+									<span>피에스발텍</span> <span>주소 : 경기도 평택시 서탄면 수월암2길 88-12,
+										2층 1호</span> <span>사업자등록번호 : 578-76-00226</span>
+								</div>
+								<div class="footerguide">
+									<span>통신판매업신고 : 2020-경기평택-*****</span> <span>개인정보책임자 :
+										고형석</span> <span>이메일 : admin@pollntalk.com</span>
+								</div>
+								<div class="footerguide">
+									<span>대표전화 : 070-7633-4520</span>
+								</div>
+								<div class="footerguide fbottom">
+									<span>Copyright(c) 2020 PS VALTEC Corp. All right
+										Reserved.</span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- 하단 안내 끝 -->
+				</div>
+			</div>
+			<!-- 하단 공통 끝 -->
+		</div>
+		<!-- 하단 끝 -->
+		<!-- 모바일 추천 검색어 시작 -->
+		<div class="mrecommsearchlayer" style="display: none;">
+			<div class="mrecommsearcharea">
+				<div class="msearch">
+					<img class="msearchclose" src="images/search_close.png" />
+					<!-- 검색 입력란 시작 -->
+					<div class="msearchbox">
+						<input type="text" class="search" value="검색어를 입력하세요." /> <img
+							src="images/search.png" />
+					</div>
+					<!-- 검색 입력란 끝 -->
+				</div>
+				<div class="mrecommsearch">
+					<div class="mrecommtitle">
+						<span>추천 검색어</span>
+					</div>
+					<div class="mrecommlist">
+						<ul>
+							<li><span class="mrecommnumber">1</span> <span>코로나</span></li>
+							<li><span class="mrecommnumber">2</span> <span>애플</span></li>
+							<li><span class="mrecommnumber">3</span> <span>부동산</span></li>
+							<li><span class="mrecommnumber">4</span> <span>야구</span></li>
+							<li><span class="mrecommnumber">5</span> <span>맛집</span></li>
+							<li><span class="mrecommnumber">6</span> <span>1인 가구</span>
+							</li>
+							<li><span class="mrecommnumber">7</span> <span>영화</span></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- 모바일 추천 검색어 끝 -->
+		<!-- 모바일 메뉴 시작 -->
+		<div class="mmenulayer" style="display: none;">
+			<div class="mobilemenuarea">
+				<div class="mobilemenu">
+					<div class="mobilemenubox">
+						<div class="menutop">
+							<img class="mobilelogo" src="images/mobile_logo.png" /> <img
+								class="close" src="images/close.png" />
+						</div>
+					</div>
+					<!-- 로그인, 회원가입 버튼 시작 -->
+					<div class="accountbox">
+						<div class="login">
+							<img src="images/mobile_login.png" /> <span>로그인</span>
+						</div>
+						<div class="join">
+							<img src="images/mobile_join.png" /> <span>회원가입</span>
+						</div>
+					</div>
+					<div class="menubox">
+						<ul>
+							<li><span>투표리스트</span></li>
+							<li><span>투표만들기</span></li>
+							<li><span>투표양식</span></li>
+							<li><span>고객센터</span></li>
+							<li><span>폴앤톡 mall</span></li>
+							<li><span>마이페이지</span></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- 모바일 메뉴 끝 -->
+		<!-- 로그인 팝업 시작 -->
+		<div class="layerarea" style="display: none">
+			<div class="layerbox">
+				<div class="popuparea">
+					<div class="popupbox">
+						<div class="popcontxtarea">
+							<div class="popuplogo">
+								<img src="images/close.png" />
+							</div>
+						</div>
+						<div class="popcontxtarea">
+							<div class="popcontxtbox">
+								<div class="inputer">
+									<input type="text" value="이메일주소" /> <img src="images/init.png" />
+								</div>
+							</div>
+						</div>
+						<div class="popcontxtarea">
+							<div class="popcontxtbox">
+								<div class="inputer">
+									<input type="text" value="비밀번호" style="display: block;" /> <input
+										type="password" style="display: none;" /> <img
+										src="images/init.png" />
+								</div>
+							</div>
+						</div>
+						<div class="popcontxtarealspace">
+							<div class="popcontxtbox">
+								<input id="saveid" type="checkbox" /> <label for="saveid"><span>아이디
+										저장</span></label>
+							</div>
+						</div>
+						<div class="popcontxtarea">
+							<div class="popcontxtbox">
+								<div class="loginbutton">
+									<span>로그인</span>
+								</div>
+							</div>
+						</div>
+						<div class="popcontxtarea lspace">
+							<div class="linkbox">
+								<div class="linkitem normal">
+									<span>아이디 찾기</span>
+								</div>
+								<div class="linkline"></div>
+								<div class="linkitem long">
+									<span>비밀번호 찾기</span>
+								</div>
+								<div class="linkline"></div>
+								<div class="linkitem short">
+									<span>회원가입</span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- 로그인 팝업 끝 -->
+		<!-- 회원가입 팝업 시작 -->
+		<div class="layerarea" style="display: none">
+			<div class="layerbox">
+				<div class="popuparea">
+					<div class="popupbox">
+						<div class="popcontxtarea">
+							<div class="popcontxtbox popcontxttitle">
+								<span>회원가입</span> <img src="images/close.png" />
+							</div>
+						</div>
+						<div class="popcontxtarea">
+							<div class="popcontxtbox">
+								<div class="inputer">
+									<input type="text" value="이메일주소" />
+								</div>
+							</div>
+						</div>
+						<div class="popcontxtarea">
+							<div class="popcontxtbox">
+								<div class="inputer">
+									<input type="text" value="비밀번호" style="display: block;" /> <input
+										type="password" style="display: none;" />
+								</div>
+							</div>
+						</div>
+						<div class="popcontxtarea">
+							<div class="popcontxtbox">
+								<div class="inputer">
+									<input type="text" value="비밀번호 확인" style="display: block;" />
+									<input type="password" style="display: none;" />
+								</div>
+							</div>
+						</div>
+						<div class="popcontxtarea">
+							<div class="popcontxtbox">
+								<div class="inputer">
+									<input type="text" value="이름" style="display: block;" />
+								</div>
+							</div>
+						</div>
+						<div class="popcontxtarea">
+							<div class="popcontxtbox">
+								<div class="inputer">
+									<input type="text" value="닉네임" style="display: block;" />
+								</div>
+							</div>
+						</div>
+						<div class="popcontxtarea">
+							<div class="popcontxtbox">
+								<div class="shortinputer">
+									<input type="text" value="생년월일" style="display: block;" /> <input
+										type="radio" id="female" name="sex" /> <label for="male">
+										<span>여자</span>
+									</label> <input type="radio" id="male" name="sex" /> <label for="male">
+										<span>남자</span>
+									</label>
+								</div>
+							</div>
+						</div>
+						<div class="popcontxtarea">
+							<div class="linkbox">
+								<div class="linkitem short">
+									<span>이용약관</span>
+								</div>
+								<div class="linkline"></div>
+								<div class="linkitem longlong">
+									<span>개인정보처리방침</span>
+								</div>
+								<div class="linkitem shortshort">
+									<input type="checkbox" class="agree" id="agree" /> <label
+										for="agree"> <span>동의</span>
+									</label>
+								</div>
+							</div>
+						</div>
+						<div class="popcontxtarea">
+							<div class="popcontxtbox">
+								<div class="popupbutton">
+									<span>회원가입</span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- 회원가입 팝업 끝 -->
+	</div>
+</body>
+</html>

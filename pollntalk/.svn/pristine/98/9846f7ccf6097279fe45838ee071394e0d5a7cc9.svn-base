@@ -1,0 +1,114 @@
+<?php
+?>
+<div class="subMenu" style="display: block;">
+	<div id="subpagemenu" class="sideMenu" style="display: block;">
+		<!-- 서브 메뉴 -->
+		<ul id="submenu" class="menuCategory">
+			<li class="menuCateItem">
+				<div class="menuCateTitle">
+					<a id="submenu02" href="/admin_manager.php?mode=adminlist"> 
+						<span>회원 관리</span>
+					</a>
+				</div>
+				<ul id="adminmenu" class="menuItem">
+					<li>
+						<a href="/admin_manager.php?mode=memberlist">
+							<span>회원 목록</span>
+						</a>
+					</li>
+				</ul>
+			</li>
+			<li class="menuCateItem">
+				<div class="menuCateTitle">
+					<a id="submenu02" href="/admin_manager.php?mode=adminlist"> 
+						<span>관리자 관리</span>
+					</a>
+				</div>
+				<ul id="adminmenu" class="menuItem">
+					<li>
+						<a href="/admin_manager.php?mode=adminlist">
+							<span>관리자 목록</span>
+						</a>
+					</li>
+					<li>
+						<a href="/admin_manager.php?mode=adminregister">
+							<span>관리자 등록</span>
+						</a>
+					</li>
+				</ul>
+			</li>
+			<li class="menuCateItem">
+				<div class="menuCateTitle">
+					<a id="submenu02" href="/admin_manager.php?mode=category"> 
+						<span>투표관리</span>
+					</a>
+				</div>
+				<ul id="adminmenu" class="menuItem">
+					<li>
+						<a href="/admin_manager.php?mode=category">
+							<span>카테고리 관리</span>
+						</a>
+					</li>
+					<li>
+						<a href="/admin_manager.php?mode=votelist">
+							<span>투표 목록</span>
+						</a>
+					</li>
+					<li>
+						<a href="/admin_manager.php?mode=voteformlist">
+							<span>투표 양식</span>
+						</a>
+					</li>
+				</ul>
+			</li>
+			<li class="menuCateItem">
+				<div class="menuCateTitle">
+					<a id="submenu02" href="/admin_manager.php?mode=product"> 
+						<span>상품/판매 관리</span>
+					</a>
+				</div>
+				<ul id="adminmenu" class="menuItem">
+					<li>
+						<a href="/admin_manager.php?mode=product">
+							<span>상품 관리</span>
+						</a>
+					</li>
+					<li>
+						<a href="/admin_manager.php?mode=salelist">
+							<span>판매 관리</span>
+						</a>
+					</li>
+					<li>
+						<a href="/admin_manager.php?mode=bankaccount">
+							<span>입금 계좌 관리</span>
+						</a>
+					</li>
+				</ul>
+			</li>
+			<li class="menuCateItem">
+				<div class="menuCateTitle">
+					<a id="submenu03" href="/admin_manager.php?mode=boardnoticelist">
+						<span>고객센터</span>
+					</a>
+				</div>
+				<ul id="servermenu" class="menuItem">
+					<li>
+						<a href="/admin_manager.php?mode=boardnoticelist">
+							<span>공지사항 목록</span>
+						</a>
+					</li>
+					<li>
+						<a href="/admin_manager.php?mode=boardsupportlist">
+							<span>1:1고객지원 목록</span>
+						</a>
+					</li>
+					<li>
+						<a href="/admin_manager.php?mode=boardfaqlist">
+							<span>자주하는 질문 목록</span>
+						</a>
+					</li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+</div>

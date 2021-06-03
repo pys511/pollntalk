@@ -1,0 +1,132 @@
+﻿@CHARSET "UTF-8";
+
+/*
+ *	-----------------------------------
+ *	모바일 화면(800 이하 화면)
+ *	모바일 메뉴, 추천 검색어
+ *	-----------------------------------
+ */
+.mmenulayer, .mobilemenu, .mobilemenubox, .menutop, .mobilelogo,
+	.mobilemenu .accountbox, .mobilemenu .accountbox .login, .mobilemenu .accountbox .join,
+	.mobilemenu .accountbox img, .mobilemenu .accountbox span, .menubox,
+	.mrecommsearchlayer, .msearch, .mrecommsearch, .msearchtitle,
+	.mrecommlist {
+	float: left;
+}
+
+.mmenulayer, .mobilemenu, .mobilemenuarea, .mobilemenubox, .menutop,
+	.mobilemenu .accountbox, .menubox, .menubox ul, .menubox ul li,
+	.mrecommsearchlayer, .mrecommsearcharea, .msearch, .mrecommsearch,
+	.msearchtitle, .mrecommlist, .mrecommlist ul, .mrecommlist ul li {
+	width: 100%;
+}
+
+li {
+	font-size: 1.0625rem;
+}
+
+.mobilemenuarea, .mrecommsearcharea {
+	height: 100%;
+}
+
+.mobilemenuarea {
+	background-color: rgba(0, 0, 0, 0.5);
+}
+
+.mobilemenuarea, .mrecommsearcharea {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+}
+
+.mobilemenu, .menutop, .mrecommsearcharea {
+	background-color: #ffffff;
+}
+
+.mobilemenu, .menutop .close, .msearchbox {
+	float: right;
+}
+
+.close {
+	margin-right: 5px;
+}
+
+.mobilemenu {
+	width: 70%;
+	height: 100%;
+}
+
+.menutop, .mrecommtitle {
+	padding: 15px 10px 15px 0px;
+}
+
+.mobilemenu .accountbox {
+	background-color: #199bda;
+	padding: 10px 10px 10px 10px;
+}
+
+.mobilemenu .accountbox .login, .mobilemenu .accountbox .join {
+	width: 100px;
+	color: #ffffff;
+}
+
+.mobilemenu .accountbox span {
+	margin-left: 5px;
+}
+
+.menubox ul {
+	padding: 0px 10px 10px 10px;
+}
+
+.menubox ul li {
+	padding: 10px 10px 10px 15px;
+	border-bottom: 1px #eeeeee solid;
+	color: #666666;
+}
+
+.msearch {
+	padding: 15px 15px 15px 20px;
+}
+
+.msearch, .msearchclose {
+	float: left;
+}
+
+.msearchbox {
+	width: calc(100% - 40px);
+	padding: 5px 5px 5px 5px;
+	border: 1px #cccccc solid;
+	border-radius: 30px;
+}
+
+.msearchbox img {
+	float: left;
+	margin-top: 3px;
+}
+
+.mrecommtitle {
+	border-top: 1px #cccccc solid;
+	border-bottom: 1px #cccccc solid;
+	text-align: center;
+	color: #199bda;
+	font-weight: bold;
+}
+
+.mrecommlist {
+	padding: 10px 30px 10px 30px;
+}
+
+.mrecommlist ul {
+	padding: 0px 0px 0px 0px;
+}
+
+.mrecommlist ul li {
+	padding: 10px 0px 10px 0px;
+}
+
+.mrecommnumber {
+	float: left;
+	font-weight: bold;
+	margin-right: 10px;
+	color: #ff6600;
+}

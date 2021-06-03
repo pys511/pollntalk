@@ -1,0 +1,109 @@
+/**
+ * @auth   	: JEON JY
+ * @date	: 20200903
+ * 설문 결제 처리 
+ */
+
+window.addEventListener("load", function()
+{
+	var vote_service_type	= document.getElementById("vote_service_seq");
+	vote_service_type.addEventListener("change", function()
+	{
+		var serviceSeq		= this.options[this.selectedIndex].value;
+		var productSeq		= document.getElementById("productSeq");
+		
+		productSeq.value	= serviceSeq;
+		var query			= core_ajax.instance().makeQuery(null, "productSeq", null);
+		if (!query)
+			return false;
+		core_ajax.instance().send(query, null, "/controller.php?mode=get_product", function(result)
+		{
+			if (result == "FALSE")
+			{
+				alert("서비스 정보를 요청하였으나 조회가 되지 않았습니다.");
+				return;
+			}
+				
+			var vote_service_price		= document.getElementById("vote_service_price");
+			result			= JSON.parse(result);
+			
+			vote_service_price.value	= numberWithCommas(result.SERVICE_PRICE);			
+		});
+		
+	}.bind(vote_service_type));
+	
+	var service_account_type	= document.getElementById("service_account_type");
+	service_account_type.addEventListener("change", function()
+	{
+		var account_type		= this.options[this.selectedIndex].value;
+		if (account_type == "-")
+			return;
+		
+		var pay_account_type	= document.getElementById("bank_account_seq");
+		pay_account_type.value	= account_type;
+		
+		var query	= core_ajax.instance().makeQuery(null, "bank_account_seq", null);
+		if (!query)
+			return false;
+		core_ajax.instance().send(query, null, "/controller.php?mode=get_account", function(result)
+		{
+			var vote_service_account	= document.getElementById("vote_service_account");	
+			result	= JSON.parse(result);
+			vote_service_account.value	= result.ACCOUNT_NUMBER;
+		});	
+	}.bind(service_account_type));	
+	
+	var vote_is_preminum	= document.getElementById("vote_is_preminum");
+	vote_is_preminum.addEventListener("click", function()
+	{
+		var paymentbox	= document.getElementById("paymentbox");
+		if (this.checked)
+		{
+			if (paymentbox.style.display == "none")
+				paymentbox.style.display	= "block";
+		}
+		else
+			paymentbox.style.display	= "none";
+		
+		return;
+	}.bind(vote_is_preminum));
+	
+	var payProduct				= document.getElementById("payProduct");
+	payProduct.addEventListener("click", function()
+	{
+		var vote_service_price		= document.getElementById("vote_service_price");
+		if (vote_service_price.value == "")
+		{
+			alert("원하는 서비스를 선택하셔야 합니다.");
+			vote_service_price.focus();
+			return;
+		}
+		
+		var vote_payment_type		= document.getElementById("vote_payment_type");
+		if (!vote_payment_type.checked)
+		{
+			alert("결제방법을 선택하세요.");
+			vote_payment_type.focus();
+			return;
+		}
+		
+		var service_account_type	= document.getElementById("service_account_type");
+		if (service_account_type.options[service_account_type.selectedIndex].value == "")
+		{
+			alert("계좌번호를 선택하세요.");
+			vote_service_account.focus();
+			return;
+		}
+		
+		var vote_service_payer		= document.getElementById("vote_service_payer");
+		if (vote_service_payer.value == "")
+		{
+			alert("입금자명을 선택하세요.");
+			vote_service_payer.focus();
+			return;
+		}
+		
+		var frmVote		= document.getElementById("frmVote");
+		frmVote.submit();
+	});
+});

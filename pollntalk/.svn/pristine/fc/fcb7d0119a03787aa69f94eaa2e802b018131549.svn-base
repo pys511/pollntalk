@@ -1,0 +1,104 @@
+﻿@CHARSET "UTF-8";
+
+/*
+ *	-----------------------------------
+ *	투표리스트
+ *	-----------------------------------
+ */
+.votelistarea, .votelistbox,
+.votelistbox 
+{
+	float: left;
+}
+
+.votelistarea, .votelistbox 
+{
+	width: 100%;
+}
+
+/*
+ *	-----------------------------------
+ *	1024 이상 화면
+ *	-----------------------------------
+ */
+@media screen and (min-width:1025px) 
+{
+	.votelistarea 
+	{
+		margin-bottom: 80px;
+	}
+	
+	.votelist, .catetitle 
+	{
+		margin: 0px auto;
+		width: 1024px;
+	}
+	
+	.votelistbox 
+	{
+		width: 1056px;
+	}
+	
+	.votespace 
+	{
+		margin-right: 32px;
+		margin-bottom: 30px;
+	}
+}
+
+/*
+ *	-----------------------------------
+ *	1024 이하 화면
+ *	-----------------------------------
+ */
+@media screen and (max-width:1024px) 
+{
+	.votelistarea 
+	{
+		margin-bottom: 40px;
+	}
+	
+	.votespace 
+	{
+		margin-right: 24px;
+		margin-bottom: 20px;
+	}
+}
+
+/*
+ *	-----------------------------------
+ *	800 이상 1024 이하 화면
+ *	-----------------------------------
+ */
+@media screen and (min-width: 801px) and (max-width: 1024px) 
+{
+	.votelist, .catetitle 
+	{
+		margin: 0px auto;
+		width: 660px;
+	}
+	
+	.votelistview 
+	{
+		width: 824px;
+	}
+}
+
+/*
+ *	-----------------------------------
+ *	800 이상 1024 이하 화면
+ *	-----------------------------------
+ */
+@media screen and (max-width: 800px) 
+{
+	.votelist, .catetitle 
+	{
+		margin: 0px auto;
+		width: 320px;
+	}
+	
+	.votelistview 
+	{
+		width: 378px;
+	}
+}

@@ -1,0 +1,48 @@
+@charset "UTF-8";
+
+.ca_arrow {
+	text-align: center;
+	font-family: 돋움체;
+	font-size: small;
+	color: #FFFFFF;
+}
+
+.cal_header {
+	background-color: #00A4D3;
+}
+
+.cal_box {
+	background-color: #ffffff;
+	border: 1px solid #00A4D3;
+}
+
+.cal_box a {
+	font-family: 돋움체;
+	text-align: right;
+	font-size: small;
+	color: #FFFFFF;
+}
+
+.cal_week {
+	height: 25px;
+	font-family: 돋움체;
+	font-size: small;
+	text-align: center;
+}
+
+.cal_empty {
+	height: 25px;
+	font-family: 돋움체;
+	text-align: right;
+	font-size: small;
+}
+
+.cal_sunday {
+	height: 25px;
+	background-color: #800000;
+}
+
+.cal_date {
+	height: 25px;
+	background-color: #00A4D3;
+}

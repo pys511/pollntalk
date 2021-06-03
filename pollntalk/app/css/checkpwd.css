@@ -1,0 +1,82 @@
+﻿@CHARSET "UTF-8";
+
+.pwdarea, .pwdInputbox, .pwdInputItem, .pwdInputtitle, .pwdInputtitle span, .pwdInputdoc, .buttonbox
+{
+	float: left;	
+}
+
+.pwdarea, .pwdInputbox, .pwdInputItem, .pwdInputtitle, .pwdInputdoc, .buttonbox
+{
+	width: 100%;
+}
+
+.buttonright, .buttonright button
+{
+	float: right;
+}
+
+.buttonright
+{
+	width: 250px;
+}
+
+.pwdarea
+{
+	margin-top: 10px;
+	margin-bottom: 170px;
+}
+
+.pwdbox, .pwdInputbox
+{
+	padding: 25px 25px 25px 25px;
+}
+
+.pwdInputbox
+{
+	border: 1px #1c9cd9 solid;
+	border-radius: 15px;
+	margin-bottom: 15px;
+}
+
+.pwdInputtitle, .pwdInputdoc, .pwdInputItem
+{
+	margin-bottom: 10px;
+}
+
+.pwdInputtitle span
+{
+	font-size: 1.25rem;
+	font-weight: bold;
+}
+
+.pwdInputItem input
+{
+	width: 100%;
+}
+
+.buttonright button
+{
+	
+	border-radius: 0px;
+	background-color: #ffffff;
+	border-top: 1px #cccccc solid;
+	border-right: 1px #cccccc solid;
+	border-left: 1px #cccccc solid;
+	border-bottom: 1px #cccccc solid;
+	padding: 5px 15px 5px 15px;
+	color: #444444;
+	font-weight: bold;
+}
+
+@media screen and (min-width: 500px)
+{
+	.pwdbox
+	{
+		width: 500px;
+	}
+	
+	.pwdbox
+	{
+		margin: 0px auto;
+	}
+}

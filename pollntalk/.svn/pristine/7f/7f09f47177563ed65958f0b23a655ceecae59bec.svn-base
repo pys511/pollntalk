@@ -1,0 +1,179 @@
+<?php
+
+try {
+    // 게시판View 처리
+    $num = $_GET["num"];
+    $sub = $_GET["sub"];
+    
+    $ask = new CApp_Handler_Admin_board();
+    $result = $ask->getBoardContext($sub, $num);
+    $updatcount = $ask->updateBoardCount($sub, $num);
+    
+    $preNum = $ask->getPreView($sub, $num);
+    $nextNum = $ask->getNextView($sub, $num);
+    
+    
+} catch (CException $ex) {
+    $ex->printException();
+}
+
+?>
+<div class="content">
+	<!-- 게시판 영역 시작 -->
+	<div class="boardarea">
+		<div class="boardbox">
+			<div class="tabmenu">
+				<?php 
+				if($sub == "notice"){
+				    echo("<div class='tabbuttonbox'>
+				        <button class='tabbuttonon'>
+				        <span class='title'>공지사항/이벤트</span>
+				        </button>
+				        </div>
+				        <div class='tabbuttonbox'>
+				        <a href='/?mode=customer&sub=qna'>
+                        <button class='tabbuttonoff'>                        				        
+                        <span class='disabletitle'>자주하는 질문</span>
+				        </button>
+                        </a>
+				        </div>
+				        <div class='tabbuttonbox'>
+                        <a href='/?mode=customer&sub=support'>
+				        <button class='tabbuttonoff'>
+				        <span class='disabletitle'>서비스요청/에러신고</span>
+				        </button>
+				        </a>
+                        </div>"
+				        );
+				}
+				else if($sub == "qna"){
+				    echo("<div class='tabbuttonbox'>
+                        <a href='/?mode=customer&sub=notice'>
+				        <button class='tabbuttonoff'>
+				        <span class='disabletitle'>공지사항/이벤트</span>
+				        </button>
+                        </a>
+				        </div>
+				        <div class='tabbuttonbox'>
+				        <button class='tabbuttonon'>
+				        <span class='title'>자주하는 질문</span>
+				        </button>
+				        </div>
+				        <div class='tabbuttonbox'>
+				        <a href='/?mode=customer&sub=support'>
+                        <button class='tabbuttonoff'>
+				        <span class='disabletitle'>서비스요청/에러신고</span>
+				        </button>
+                        </a>
+				        </div>"
+				        );
+				}else{
+				    echo("<div class='tabbuttonbox'>
+                        <a href='/?mode=customer&sub=notice'>
+				        <button class='tabbuttonoff'>
+				        <span class='disabletitle'>공지사항/이벤트</span>
+				        </button>
+                        </a>
+				        </div>
+				        <div class='tabbuttonbox'>
+                        <a href='/?mode=customer&sub=qna'>
+				        <button class='tabbuttonoff'>
+				        <span class='disabletitle'>자주하는 질문</span>
+				        </button>
+                        </a>
+				        </div>
+				        <div class='tabbuttonbox'>
+				        <button class='tabbuttonon'>
+				        <span class='title'>서비스요청/에러신고</span>
+				        </button>
+				        </div>"
+				        );
+				}
+				?>
+			</div>
+			<!-- 게시판 안내 -->
+			<div class="boardguide">
+			<?php 
+				if($sub == "notice"){
+				    echo("<div class='boardtopic'>
+				        <span>공지사항/이벤트</span>
+				        </div>
+				        <div class='boarddoc'>
+				        <span>폴앤톡에서 알려드리는 공지사항과 이벤트입니다.</span>
+				        </div>"
+				        );
+				}
+				else if($sub == "qna"){
+				    echo("<div class='boardtopic'>
+				        <span>자주하는 질문</span>
+				        </div>
+				        <div class='boarddoc'>
+				        <span>폴앤톡에 자주하는질문입니다.</span>
+				        </div>"
+				        );
+				}
+				else{
+				    echo("<div class='boardtopic'>
+				        <span>서비스요청/에러신고</span>
+				        </div>
+				        <div class='boarddoc'>
+				        <span>폴앤톡에 서비스요청및 에러신고입니다.</span>
+				        </div>"
+				        );
+				}
+		    ?>
+			</div>
+			<div class="boardcontent">
+				<!-- 게시판 View 시작  -->
+				<div class="boardcontent">
+						<!-- 게시판 보기 시작  -->
+						<div class="boardsubjectbox">
+							<div class="boardsubject">
+								<span><?php echo($result[0]["subject"]); ?></span>
+							</div>
+							<div class="writedate">
+								<span><?php echo($result[0]["creat_date"]); ?></span>
+							</div>
+						</div>
+						<div class="boardcontext">
+							<span><?php echo($result[0]["context"]); ?></span>
+						</div>
+					</div>
+					<div class="boardbuttonbox">
+							<div class="boardbuttonleft">
+								<?php 
+								if($preNum[0]['pre_num'] != ""){  
+								?>
+								<a href="/?mode=boardView&sub=<?php echo($sub.'&num='.$preNum[0]['pre_num']);?>">
+								<button>
+									<span>< 이전</span>
+								</button>
+								</a>
+								<?php }
+								?>
+								<?php 
+								if($nextNum[0]['next_num'] != ""){  
+								?>
+								<a href="/?mode=boardView&sub=<?php echo($sub.'&num='.$nextNum[0]['next_num']);?>">
+								<button>
+									<span>다음 ></span>
+								</button>
+								</a>
+								<?php }
+								?>
+							</div>
+							<div class="boardbuttonright">
+								<a href="/?mode=customer&sub=<?php echo($sub); ?>">
+									<button id="closeViewPopup">
+										<span>목록</span>
+									</button>
+								</a>
+							</div>
+					</div>
+				<!-- 게시판 View 끝 -->
+			</div>
+			<!-- 텝 컨텐츠 끝 -->
+		</div>
+	</div>
+	<!-- 게시판 영역 끝 -->
+</div>

@@ -1,0 +1,36 @@
+<!doctype html>
+<html id="start" xmlns="http://www.w3.org/1999/xhtml">
+<head id="head">
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link type="text/css" rel="stylesheet"
+	href="/app/css/admin/common.css?test=1.1" />
+<link type="text/css" rel="stylesheet" href="/app/css/admin/default.css" />
+<link type="text/css" rel="stylesheet" href="/app/css/admin/login.css" />
+<link type="text/css" rel="stylesheet"
+	href="/app/css/admin/sub.css?test=1.1" />
+<title>알찬스 관리자 모드</title>
+</head>
+<body id="body">
+	<div id="mobilemenu" class="mobileMenu" style="display: none;">
+		<!-- 서브메뉴 -->
+	</div>
+	<div class="pageArea">
+		<div id="top" class="pageBox">
+			<!-- TOP -->
+		</div>
+		<div id="menu" class="pageBox">
+			<!-- menu -->
+		</div>
+		<div id="content" class="pageBox">
+			<!-- content -->
+		</div>
+	</div>
+	<script type="text/javascript" src="/app/js/editor.js">
+	</script>
+	<script type="text/javascript" src="/app/js/form.js">
+	</script>
+	<script type="text/javascript" src="/resources/js/core/wdk_core.js">
+	</script>
+</body>
+</html>

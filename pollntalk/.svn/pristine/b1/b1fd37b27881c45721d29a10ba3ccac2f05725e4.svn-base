@@ -1,0 +1,125 @@
+<?php
+
+class CApp_Handler_Util_Email extends CCore_Lib_Routines_Handler
+{
+    private static  $m_instance = null;
+
+    private function __construct()
+    {
+        
+    }
+
+    /*
+    * instance 반환
+    */
+    public static function instance ()
+    {
+        if (is_null(CApp_Handler_Util_Email::$m_instance))
+            CApp_Handler_Util_Email::$m_instance = new CApp_Handler_Util_Email();
+        
+            return CApp_Handler_Util_Email::$m_instance;
+    }
+    
+    public function sendEmail($array) {
+        
+        $charset = "UTF-8";
+        $to = "=?$charset?B?".base64_encode($array["mailTo"])."?=";
+        $subject = "=?$charset?B?".base64_encode($array["subject"])."?=";
+        $uid = md5(uniqid(time()));
+        $mail_from = $array["mailFrom"];
+        
+        $header = "From: $mail_from\r\n";
+        $header .="MIME-Version: 1.0\r\n";
+        $header .="Content-Type: Multipart/mixed; boundary=\"$uid\"";
+        
+        $mail_body = "This is a multi-part message in MIME format.\r\n\r\n";
+        $mail_body .=     "--$uid\r\n";
+        $mail_body .=     "Content-Type: text/html; charset=UTF-8\r\n";
+        $mail_body .=     "Content-Transfer-Encoding: 8bit\r\n\r\n".$array["mail_context"]."\r\n";
+        $mail_body .=      "--$uid\r\n";
+        
+        $filelist   = json_decode($array["file_list"], true);
+        $itemCount = 0;
+        $lastCount = count($filelist);
+        
+        foreach ($filelist as $item){
+            
+            $realName = $item["real_name"];
+            $fileName = $item["temp_name"];
+            $size = filesize($fileName);
+            
+            
+            $file2 = fopen($fileName,'r');
+            $content = fread($file2, $size);
+            fclose($file2);
+            
+            $mail_body .= "Content-Type: application/octet-stream;charset=utf-8; name=\"".$realName."\"\r\n";
+            $mail_body .= "Content-Transfer-Encoding: base64 \r\n";
+            $mail_body .= "Content-Disposition: attachment; filename=\"".$realName."\"\r\n\r\n";
+            $mail_body .= base64_encode($content)."\r\n";
+            if(++$itemCount === $lastCount){
+                $mail_body .= "--".$uid."--";
+            } else {
+                $mail_body .= "--".$uid."\r\n";
+            }
+        }
+        
+        $email = mail($to, $subject, $mail_body, $header);
+        
+        if(!$email){
+           return false;
+        } else {
+            $result = CApp_Handler_Util_Email::instance()->insertMailDB($array);
+            return $result;
+        }
+        
+        
+    }
+    
+    public function insertMailDB($array) {
+        $mail_to             = $array["mailTo"];
+        $mail_subject        = $array["subject"];
+        $mail_context        = $array["mail_context"];
+        
+        $query      = "INSERT INTO `admin_mail`(`MAIL_TO`, `MAIL_SUBJECT`, `MAIL_CONTEXT`) VALUES (:MAIL_TO, :MAIL_SUBJECT, :MAIL_CONTEXT)";
+        
+        $this->query($query);
+        
+        $this->bind("MAIL_TO", $mail_to);
+        $this->bind("MAIL_SUBJECT", $mail_subject);
+        $this->bind("MAIL_CONTEXT", $mail_context);
+        $result     = $this->execute(CCore_Lib_Routines_Handler::INSERT);
+            
+        $query      = "SELECT MAIL_NUM FROM ADMIN_MAIL ORDER BY MAIL_NUM DESC LIMIT 1";
+        $this->query($query);
+        $result     = $this->execute(CCore_Lib_Routines_Handler::SELECT);
+        $mailSeq   = $result[0]["MAIL_NUM"];
+            
+            $filelist   = json_decode($array["file_list"], true);
+            $query      = "INSERT INTO MAIL_ATTACH_FILE
+                        (
+                          MAIL_SEQ,
+                          FILE_PATH,
+                          FILE_NAME
+                        )
+                        VALUES
+                        (
+                          :MAIL_SEQ,
+                          :FILE_PATH,
+                          :FILE_NAME
+                        )";
+            
+            
+            foreach($filelist as $item)
+            {
+                $this->query($query);
+                $this->bind("MAIL_SEQ", $mailSeq);
+                $this->bind("FILE_PATH", $item["temp_name"]);
+                $this->bind("FILE_NAME", $item["real_name"]);
+                $result     = $this->execute(CCore_Lib_Routines_Handler::INSERT);
+            }
+            
+    
+        return $result;
+    }
+}

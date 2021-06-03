@@ -1,0 +1,194 @@
+﻿@CHARSET "UTF-8";
+
+/*
+ *	-----------------------------------
+ *	댓글
+ *	-----------------------------------
+ */
+.replyfield, .replyinputer, .replylist, .replyitembox, .replylist ul li,
+.replyitem, .replyitem img, .replytop, .replydate, .replybottom,
+.subreplyarea, .subreply, .subreplylist, .subreplybox, .answerTextBottom,
+.subreplyitem, .subreplycontext, .replyfield img
+{
+	float: left;
+}
+
+.replyfield, .replyinputer, .replyinputer textarea, .replylist,
+.replyitembox, .replylist ul li, .replyitem, .replytop, .replydate,
+.subreplyarea, .subreply, .subreplylist, .subreplybox, .replybottom,
+.subreplyitem, .subreplycontext 
+{
+	width: 100%;
+}
+
+.replyfield 
+{
+	border-bottom: 1px #cccccc solid;
+}
+
+.replyfield, .replyinputer 
+{
+	padding: 15px 0px 15px 0px;
+}
+
+.replyfield img
+{
+	width: 35px;
+	margin-right: 5px;
+}
+
+.replyfield span
+{
+	float: left;
+	color: #1c9cd9;
+	font-weight: bold;
+	margin-top: 3px;
+}
+
+.subreplyinputer
+{
+	margin-bottom: 10px	
+}
+
+.replyinputer textarea, .subreplycontext
+{
+	margin-bottom: 10px;
+}
+
+.replyinputer button, .subreply button
+{
+	width: 110px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	text-align: center;
+	font-weight: bold;
+	font-size: 1rem;
+	background-color: #ffffff;
+}
+
+.replybox textarea
+{
+	float: left;
+	margin-right: 5px;
+}
+
+.replylist
+{
+	margin-bottom: 15px;
+}
+
+.replylist ul 
+{
+	padding: 0px 0px 0px 0px;
+	margin-top: 0px;
+	margin-bottom: 0px;
+	width: 100%;
+}
+
+.replyitem 
+{
+	padding: 10px 10px 10px 10px;
+	border-bottom: 1px #cccccc solid;
+}
+
+.subreplycontext
+{
+	width: calc(100% - 55px);
+}
+
+.replydate 
+{
+	width: 160px;
+	color: #cbcbcb;
+}
+
+.replyctrl 
+{
+	float: right;
+	width: 70px;
+	text-align: right;
+}
+
+.replybottom, .answerTextBottom 
+{
+	text-align: left;
+}
+
+.replybottom
+{
+	padding-left: 5px;
+	padding-right: 5px;
+	word-spacing: 2px;
+}
+
+.answerTextBottom
+{
+	width: 80%;
+}
+
+.divsubreply
+{
+	padding: 10px 10px 10px 10px;
+	background-color: #f0f0f0;
+}
+
+.replybox
+{
+	width: 100%;
+}
+
+.replybox button
+{
+	float: right;
+}
+
+.subreplybox li
+{
+	float: left;
+	width: 100%;
+}
+
+@media screen and (min-width:1025px) 
+{
+	.replybox 
+	{
+		width: 1024px;
+	}
+}
+
+/*
+ *	-----------------------------------
+ *	800 이상 화면
+ *	-----------------------------------
+ */
+@media screen and (min-width:801px) 
+{
+	.replybox 
+	{
+		width: 1024px;
+	}
+	
+	.replybox 
+	{
+		margin: 0 auto;
+	}
+}
+
+/*	
+ *	-----------------------------------
+ *	800 이하 화면
+ *	-----------------------------------
+ */
+@media screen and (max-width:800px) 
+{
+	.replybox 
+	{
+		float: left;
+	}
+	
+	.replybox 
+	{
+		width: 100%;
+		padding: 5px 5px 5px 5px;
+	}
+}

@@ -1,0 +1,90 @@
+﻿@CHARSET "UTF-8";
+
+/*
+ *	-----------------------------------
+ *	페이지 처리
+ *	-----------------------------------
+ */
+.paging {
+	margin: 0px auto;
+}
+
+.pagingbutton, .pagingbutton span {
+	float: left;
+}
+
+.pagingbutton span {
+	width: 100%;
+	text-align: center;
+}
+
+.pagenavinoselect {
+	border: 1px #e1e1e1 solid;
+}
+
+.pagenaviselect {
+	border: 1px #1c9cd9 solid;
+}
+
+.pageselect {
+	background-color: #1c9cd9;
+}
+
+/*
+ *	-----------------------------------
+ *	1024 이상 화면
+ *	-----------------------------------
+ */
+@media screen and (min-width:1025px) {
+	.paging {
+		width: 465px;
+	}
+	.pagingbutton {
+		width: 28px;
+		height: 28px;
+		margin-right: 5px;
+	}
+	.pagingbutton span {
+		margin-top: 3px;
+	}
+	.pageleftend {
+		background-image: url('../images/paging_left_end.png');
+	}
+	.pageleft {
+		background-image: url('../images/paging_left.png');
+	}
+	.pagerightend {
+		background-image: url('../images/paging_right_end.png');
+	}
+	.pageright {
+		background-image: url('../images/paging_right.png');
+	}
+}
+
+/*
+ *	-----------------------------------
+ *	1024 이하 화면
+ *	-----------------------------------
+ */
+@media screen and (max-width:1024px) {
+	.paging {
+		width: 310px;
+	}
+	.pagingbutton {
+		width: 21px;
+		height: 21px;
+		margin-right: 1px;
+	}
+	.pageleftend {
+		background-image: url('../images/paging_m_left_end.png');
+	}
+	.pageleft {
+		background-image: url('../images/paging_m_left.png');
+	}
+	.pagerightend {
+		background-image: url('../images/paging_m_right_end.png');
+	}
+	.pageright {
+		background-image: url('../images/paging_m_right.png');
+	}
+}

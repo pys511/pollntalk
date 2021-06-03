@@ -1,0 +1,148 @@
+<?php
+/**
+ *  @auth   : PARK Y.S.
+ *  @date   : 20210421
+ *  메인화면 처리
+ */
+class CApp_Handler_Admin_AdSetting extends CCore_Lib_Routines_Handler
+{
+    
+    public function __construct()
+    {
+    }
+    
+    /*
+     * 광고 저장
+     */
+    public function setAdver($array)
+    {
+        
+        $ad_index                = $array["ad_index"];
+        $ad_subject         = $array['ad_subject'];
+        $ad_position   = $array['ad_position'];
+        $ad_use          = $array['ad_use'];
+        $ad_realimg     = $array['real_name'];
+        $ad_tempimg     = $array['temp_path'];
+        $ad_url           = $array['ad_url'];
+        
+        trigger_error ( print_r($array, true), E_USER_ERROR );
+        if ($ad_index == "")
+        {
+            $query  = "INSERT INTO ptp_ad
+                        (
+                          ad_subject,
+                          ad_position,
+                          ad_use,
+                          ad_realimg,
+                          ad_tempimg,
+                          ad_url
+                        )
+                        VALUES
+                        (
+                          :AD_SUBJECT,
+                          :AD_POSITION,
+                          :AD_USE,
+                          :AD_REALIMG,
+                          :AD_TEMPIMG,
+                          :AD_URL
+                        )";
+        }
+        else
+        {
+            $query  = "UPDATE ptp_ad
+                        SET
+                          ad_subject = :AD_SUBJECT,
+                          ad_position = :AD_POSITION,
+                          ad_use = :AD_USE,
+                          ad_realimg = :AD_REALIMG,
+                          ad_tempimg = :AD_TEMPIMG,
+                          ad_url = :AD_URL
+                        WHERE
+                          ad_index = :AD_INDEX";
+        }
+        
+        $this->query($query);
+        if ($ad_index != "")
+            $this->bind("AD_INDEX", $ad_index);
+            
+            $this->bind("AD_SUBJECT", $ad_subject);
+            $this->bind("AD_POSITION", $ad_position);
+            $this->bind("AD_USE", $ad_use);
+            $this->bind("AD_REALIMG", $ad_realimg);
+            $this->bind("AD_TEMPIMG", $ad_tempimg);
+            $this->bind("AD_URL", $ad_url);
+            
+            if ($ad_index == "")
+            {
+                $result = $this->execute(CCore_Lib_Routines_Handler::INSERT);
+            }
+            else
+            {
+                $result = $this->execute(CCore_Lib_Routines_Handler::UPDATE);
+            }
+            
+            trigger_error ( print_r($query, true), E_USER_ERROR );
+            
+            if (! $result)
+                return false;
+                
+                return true;
+    }
+    
+    
+    /*
+     * index로 광고가져오기
+     */
+    public function getAd($num)
+    {
+        $query  = "SELECT
+                          ad_index,
+                          ad_subject,
+                          ad_position,
+                          ad_use,
+                          ad_realimg,
+                          ad_tempimg,
+                          ad_url
+                    FROM
+                        ptp_ad A
+                    WHERE
+                        ad_index = :AD_INDEX";
+        $this->query($query);
+        $this->bind("AD_INDEX", $num);
+        $result = $this->execute(CCore_Lib_Routines_Handler::SELECT);
+        
+        return $result[0];
+    }
+    
+    /*
+     * 광고 리스트 가져오기
+     */
+    public function getAdList($paging)
+    {
+        $query  = "SELECT * FROM ptp_ad order by ad_index limit :start, :length";
+        
+        $this->query($query);
+        $start = (((integer) $paging["current"]) - 1) * 10; // 현재 페이지의 시작 항목
+        $this->bind("start", $start);
+        $this->bind("length", 10);
+        $result = $this->execute(CCore_Lib_Routines_Handler::SELECT);
+        
+        return $result;
+    }
+    
+    /*
+     * 광고 카운트 가져오기
+     */
+    public function getAdCount()
+    {
+        $query = "";
+        $query = "SELECT count(*) FROM ptp_ad";
+        
+        $this->query($query);
+        $result = $this->execute(CCore_Lib_Routines_Handler::SELECT);
+        $count = $result[0]["count(*)"];
+        
+        return $count;
+    }
+}
+?>

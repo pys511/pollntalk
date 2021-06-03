@@ -1,0 +1,27 @@
+<?php
+/**
+ *  @auth   : Park Yoon Sik
+ *  @date   : 20201006
+ *
+ */
+try
+{
+    //print_r($_POST);
+    //exit;
+    $respCtrl   = new CApp_Handler_Vote_Respctrl();
+    $result     = $respCtrl->getVoteRespChart($_GET["vote_seq"], $_POST["question_seq"][0]);
+    if (!$result)
+    {
+        echo ("FALSE");
+        exit();
+    }
+    
+    $json       = json_encode($result, JSON_UNESCAPED_UNICODE);
+    echo ($json);
+}
+catch (CException $ex)
+{
+    $ex->printException();
+}
+exit();
+?>

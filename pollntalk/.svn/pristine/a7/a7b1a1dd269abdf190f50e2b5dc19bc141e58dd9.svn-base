@@ -1,0 +1,254 @@
+﻿@CHARSET "UTF-8";
+
+/*
+ *	-----------------------------------
+ *	표 관련
+ *	-----------------------------------
+ */
+.pointstatus, .couponstatus, .statustop, .statustopsubject,
+	.statustopdata, .statusmiddle, .statusmiddleitem, .table, .tablefield,
+	.defaulttableitem, .defaulttableitemshort, .defaulttableitemshortshort,
+	.pointnumber, .pointnumbershort, .pointnumbershortshort, .tableborder,
+	.tablelist, .defaulttabledata, .memberstatus, .membertableitem,
+	.membertableitemlong, .memberinfoitem, .memberinfolong,
+	.memberinfolayer, .memberinfo {
+	float: left;
+}
+
+.pointstatus, .couponstatus, .statustop, .statustopsubject,
+	.statusmiddle, .table, .tablefield, .tableborder, .tablelist,
+	.memberstatus {
+	width: 100%;
+}
+
+.statustop {
+	border-bottom: 1px #d9d9d9 solid;
+	border-top: 1px #d9d9d9 solid;
+	margin-bottom: 20px;
+}
+
+.statusmiddle {
+	margin-bottom: 35px;
+}
+
+.statustopsubject, .statustopdata {
+	text-align: center;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	font-size: 1.125rem;
+}
+
+.statustopsubject, .statusmiddleitem {
+	font-weight: bold;
+}
+
+.statustopsubject {
+	background-color: #f7f7f7;
+	border-right: 1px #d9d9d9 solid;
+	font-weight: bold;
+	color: #333333;
+}
+
+.statusmiddleitem {
+	display: inline-block;
+}
+
+.strspace {
+	margin-right: 10px;
+}
+
+.tablebox, .statusmiddlebox {
+	margin: 0 auto;
+}
+
+.defaulttableitem, .defaulttableitemshort, .defaulttableitemshortshort,
+	.defaulttableitem, .membertableitem, .membertableitemlong {
+	text-align: center;
+}
+
+.table ul {
+	padding: 0px 0px 0px 0px;
+	margin-top: 0px;
+	margin-block-end: 0px;
+}
+
+.tableborder {
+	margin-bottom: 25px;
+}
+
+.tpadding {
+	padding: 5px 5px 5px 5px;
+}
+
+/*
+ *	-----------------------------------
+ *	1024 이상 화면
+ *	-----------------------------------
+ */
+@media screen and (min-width:1025px) {
+	.statustopsubject {
+		width: 330px;
+	}
+	.statustopdata {
+		width: calc(100% - 330px);
+	}
+	.statusmiddlebox {
+		width: 550px;
+	}
+	.tablebox {
+		width: 975px;
+	}
+	.tableborder {
+		border-top: 1px #d9d9d9 solid;
+		border-left: 1px #d9d9d9 solid;
+		border-right: 1px #d9d9d9 solid;
+		margin-bottom: 25px;
+	}
+	.tablefield {
+		font-weight: bold;
+		color: #333333;
+		border-bottom: 1px #d9d9d9 solid;
+		display: block;
+		background-color: #f7f7f7;
+	}
+	.table ul, .table ul li {
+		width: 100%;
+		height: 100%;
+		border-bottom: 1px #d9d9d9 solid;
+	}
+	.tablelist .pointnumber, .tablelist .pointnumbershort,
+		.pointnumbershortshort {
+		padding-right: 5px;
+		text-align: right;
+	}
+	.defaulttableli {
+		float: left;
+		width: 100%;
+	}
+	.defaulttablefield {
+		display: none;
+	}
+	.defaulttableitem, .pointnumber, .membertableitem,
+		.defaulttableitemshort, .pointnumbershort, .defaulttableitemshortshort,
+		.pointnumbershortshort, .memberinfoitem, .memberinfo {
+		padding-top: 14px;
+		padding-bottom: 14px;
+	}
+	.membertableitemlong {
+		width: calc(100% - 427px);
+	}
+	.membertableitem {
+		width: 213px;
+	}
+	.defaulttableitem, .pointnumber {
+		width: 243px;
+	}
+	.memberinfolong {
+		width: 362px;
+	}
+	.memberinfoitem {
+		width: 181px;
+	}
+	.memberinfo {
+		width: 182px;
+	}
+	.defaulttableitemshort, .pointnumbershort {
+		width: 182px;
+	}
+	.defaulttableitemshortshort, .pointnumbershortshort {
+		width: 131.7px;
+	}
+	.defaulttabledata {
+		width: 100%;
+	}
+	.wrline {
+		border-right: 1px #d9d9d9 solid;
+	}
+	.wlline {
+		border-left: 1px #d9d9d9 solid;
+	}
+	.wbline {
+		border-bottom: 1px #d9d9d9 solid;
+	}
+	.wtline {
+		border-top: 1px #d9d9d9 solid;
+	}
+}
+
+/*
+ *	-----------------------------------
+ *	1024 이하 화면
+ *	-----------------------------------
+ */
+@media screen and (max-width:1024px) {
+	.statustopsubject {
+		width: 130px;
+	}
+	.tablebox, .statusmiddlebox {
+		width: 95%;
+	}
+	.tablefield {
+		display: none;
+	}
+	.table ul li {
+		margin-top: 10px;
+	}
+	.defaulttableli {
+		margin: 0 auto;
+		width: 95%;
+	}
+	.defaulttablefield {
+		float: left;
+		display: block;
+		width: 130px;
+		padding-top: 14px;
+		padding-bottom: 14px;
+		text-align: center;
+	}
+	.defaulttableitem, .pointnumber, .defaulttableitemshort,
+		.pointnumbershort, .defaulttableitemshortshort, .pointnumbershortshort,
+		.membertableitem, .memberinfolong, .memberinfolayer, .memberinfoitem,
+		.memberinfo {
+		width: 100%;
+	}
+	.memberinfoitem {
+		width: 50%;
+	}
+	.membertableitem, .memberinfoitem, .memberinfo {
+		padding-top: 10px;
+		padding-bottom: 10px;
+	}
+	.defaulttabledata {
+		width: calc(100% - 130px);
+		padding-top: 14px;
+		padding-bottom: 14px;
+		padding-right: 15px;
+		text-align: right;
+	}
+	.defaulttablefield {
+		font-weight: bold;
+		color: #333333;
+		background-color: #f7f7f7;
+	}
+	.mline {
+		border-left: 1px #d9d9d9 solid;
+		border-right: 1px #d9d9d9 solid;
+		border-top: 1px #d9d9d9 solid;
+	}
+	.mrline {
+		border-top: 1px #d9d9d9 solid;
+		border-right: 1px #d9d9d9 solid;
+	}
+	.mlline {
+		border-left: 1px #d9d9d9 solid;
+	}
+	.mbline {
+		border-bottom: 1px #d9d9d9 solid;
+	}
+	.wview {
+		display: none;
+	}
+	.mborder {
+		border: 1px #d9d9d9 solid;
+	}
+}
